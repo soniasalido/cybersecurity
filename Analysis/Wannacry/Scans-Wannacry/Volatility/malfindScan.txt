@@ -1,0 +1,652 @@
+Process: MsMpEng.exe Pid: 3444 Address: 0x17a805b0000
+Vad Tag: VadS Protection: PAGE_EXECUTE_READWRITE
+Flags: PrivateMemory: 1, Protection: 6
+
+0x0000017a805b0000  56 57 53 55 41 54 41 55 41 56 41 57 48 83 ec 28   VWSUATAUAVAWH..(
+0x0000017a805b0010  4c 8d 3c 24 48 8b e9 48 8d b1 98 38 00 00 ff e2   L.<$H..H...8....
+0x0000017a805b0020  49 8d 67 28 41 5f 41 5e 41 5d 41 5c 5d 5b 5f 5e   I.g(A_A^A]A\][_^
+0x0000017a805b0030  c3 00 00 40 00 80 00 00 00 48 89 e9 48 b8 60 77   ...@.....H..H.`w
+
+0x00000000805b0000 56               PUSH ESI
+0x00000000805b0001 57               PUSH EDI
+0x00000000805b0002 53               PUSH EBX
+0x00000000805b0003 55               PUSH EBP
+0x00000000805b0004 41               INC ECX
+0x00000000805b0005 54               PUSH ESP
+0x00000000805b0006 41               INC ECX
+0x00000000805b0007 55               PUSH EBP
+0x00000000805b0008 41               INC ECX
+0x00000000805b0009 56               PUSH ESI
+0x00000000805b000a 41               INC ECX
+0x00000000805b000b 57               PUSH EDI
+0x00000000805b000c 48               DEC EAX
+0x00000000805b000d 83ec28           SUB ESP, 0x28
+0x00000000805b0010 4c               DEC ESP
+0x00000000805b0011 8d3c24           LEA EDI, [ESP]
+0x00000000805b0014 48               DEC EAX
+0x00000000805b0015 8be9             MOV EBP, ECX
+0x00000000805b0017 48               DEC EAX
+0x00000000805b0018 8db198380000     LEA ESI, [ECX+0x3898]
+0x00000000805b001e ffe2             JMP EDX
+0x00000000805b0020 49               DEC ECX
+0x00000000805b0021 8d6728           LEA ESP, [EDI+0x28]
+0x00000000805b0024 41               INC ECX
+0x00000000805b0025 5f               POP EDI
+0x00000000805b0026 41               INC ECX
+0x00000000805b0027 5e               POP ESI
+0x00000000805b0028 41               INC ECX
+0x00000000805b0029 5d               POP EBP
+0x00000000805b002a 41               INC ECX
+0x00000000805b002b 5c               POP ESP
+0x00000000805b002c 5d               POP EBP
+0x00000000805b002d 5b               POP EBX
+0x00000000805b002e 5f               POP EDI
+0x00000000805b002f 5e               POP ESI
+0x00000000805b0030 c3               RET
+0x00000000805b0031 0000             ADD [EAX], AL
+0x00000000805b0033 40               INC EAX
+0x00000000805b0034 008000000048     ADD [EAX+0x48000000], AL
+0x00000000805b003a 89e9             MOV ECX, EBP
+0x00000000805b003c 48               DEC EAX
+0x00000000805b003d b8               DB 0xb8
+0x00000000805b003e 60               PUSHA
+0x00000000805b003f 77               DB 0x77
+
+Process: MsMpEng.exe Pid: 3444 Address: 0x17a804a0000
+Vad Tag: VadS Protection: PAGE_EXECUTE_READWRITE
+Flags: PrivateMemory: 1, Protection: 6
+
+0x0000017a804a0000  56 57 53 55 41 54 41 55 41 56 41 57 48 83 ec 28   VWSUATAUAVAWH..(
+0x0000017a804a0010  4c 8d 3c 24 48 8b e9 48 8d b1 98 38 00 00 ff e2   L.<$H..H...8....
+0x0000017a804a0020  49 8d 67 28 41 5f 41 5e 41 5d 41 5c 5d 5b 5f 5e   I.g(A_A^A]A\][_^
+0x0000017a804a0030  c3 00 00 40 00 80 00 00 00 48 89 e9 48 b8 60 77   ...@.....H..H.`w
+
+0x00000000804a0000 56               PUSH ESI
+0x00000000804a0001 57               PUSH EDI
+0x00000000804a0002 53               PUSH EBX
+0x00000000804a0003 55               PUSH EBP
+0x00000000804a0004 41               INC ECX
+0x00000000804a0005 54               PUSH ESP
+0x00000000804a0006 41               INC ECX
+0x00000000804a0007 55               PUSH EBP
+0x00000000804a0008 41               INC ECX
+0x00000000804a0009 56               PUSH ESI
+0x00000000804a000a 41               INC ECX
+0x00000000804a000b 57               PUSH EDI
+0x00000000804a000c 48               DEC EAX
+0x00000000804a000d 83ec28           SUB ESP, 0x28
+0x00000000804a0010 4c               DEC ESP
+0x00000000804a0011 8d3c24           LEA EDI, [ESP]
+0x00000000804a0014 48               DEC EAX
+0x00000000804a0015 8be9             MOV EBP, ECX
+0x00000000804a0017 48               DEC EAX
+0x00000000804a0018 8db198380000     LEA ESI, [ECX+0x3898]
+0x00000000804a001e ffe2             JMP EDX
+0x00000000804a0020 49               DEC ECX
+0x00000000804a0021 8d6728           LEA ESP, [EDI+0x28]
+0x00000000804a0024 41               INC ECX
+0x00000000804a0025 5f               POP EDI
+0x00000000804a0026 41               INC ECX
+0x00000000804a0027 5e               POP ESI
+0x00000000804a0028 41               INC ECX
+0x00000000804a0029 5d               POP EBP
+0x00000000804a002a 41               INC ECX
+0x00000000804a002b 5c               POP ESP
+0x00000000804a002c 5d               POP EBP
+0x00000000804a002d 5b               POP EBX
+0x00000000804a002e 5f               POP EDI
+0x00000000804a002f 5e               POP ESI
+0x00000000804a0030 c3               RET
+0x00000000804a0031 0000             ADD [EAX], AL
+0x00000000804a0033 40               INC EAX
+0x00000000804a0034 008000000048     ADD [EAX+0x48000000], AL
+0x00000000804a003a 89e9             MOV ECX, EBP
+0x00000000804a003c 48               DEC EAX
+0x00000000804a003d b8               DB 0xb8
+0x00000000804a003e 60               PUSHA
+0x00000000804a003f 77               DB 0x77
+
+Process: MsMpEng.exe Pid: 3444 Address: 0x17a80c40000
+Vad Tag: VadS Protection: PAGE_EXECUTE_READWRITE
+Flags: PrivateMemory: 1, Protection: 6
+
+0x0000017a80c40000  56 57 53 55 41 54 41 55 41 56 41 57 48 83 ec 28   VWSUATAUAVAWH..(
+0x0000017a80c40010  4c 8d 3c 24 48 8b e9 48 8d b1 98 38 00 00 ff e2   L.<$H..H...8....
+0x0000017a80c40020  49 8d 67 28 41 5f 41 5e 41 5d 41 5c 5d 5b 5f 5e   I.g(A_A^A]A\][_^
+0x0000017a80c40030  c3 00 00 40 00 80 00 00 00 48 89 e9 48 b8 60 77   ...@.....H..H.`w
+
+0x0000000080c40000 56               PUSH ESI
+0x0000000080c40001 57               PUSH EDI
+0x0000000080c40002 53               PUSH EBX
+0x0000000080c40003 55               PUSH EBP
+0x0000000080c40004 41               INC ECX
+0x0000000080c40005 54               PUSH ESP
+0x0000000080c40006 41               INC ECX
+0x0000000080c40007 55               PUSH EBP
+0x0000000080c40008 41               INC ECX
+0x0000000080c40009 56               PUSH ESI
+0x0000000080c4000a 41               INC ECX
+0x0000000080c4000b 57               PUSH EDI
+0x0000000080c4000c 48               DEC EAX
+0x0000000080c4000d 83ec28           SUB ESP, 0x28
+0x0000000080c40010 4c               DEC ESP
+0x0000000080c40011 8d3c24           LEA EDI, [ESP]
+0x0000000080c40014 48               DEC EAX
+0x0000000080c40015 8be9             MOV EBP, ECX
+0x0000000080c40017 48               DEC EAX
+0x0000000080c40018 8db198380000     LEA ESI, [ECX+0x3898]
+0x0000000080c4001e ffe2             JMP EDX
+0x0000000080c40020 49               DEC ECX
+0x0000000080c40021 8d6728           LEA ESP, [EDI+0x28]
+0x0000000080c40024 41               INC ECX
+0x0000000080c40025 5f               POP EDI
+0x0000000080c40026 41               INC ECX
+0x0000000080c40027 5e               POP ESI
+0x0000000080c40028 41               INC ECX
+0x0000000080c40029 5d               POP EBP
+0x0000000080c4002a 41               INC ECX
+0x0000000080c4002b 5c               POP ESP
+0x0000000080c4002c 5d               POP EBP
+0x0000000080c4002d 5b               POP EBX
+0x0000000080c4002e 5f               POP EDI
+0x0000000080c4002f 5e               POP ESI
+0x0000000080c40030 c3               RET
+0x0000000080c40031 0000             ADD [EAX], AL
+0x0000000080c40033 40               INC EAX
+0x0000000080c40034 008000000048     ADD [EAX+0x48000000], AL
+0x0000000080c4003a 89e9             MOV ECX, EBP
+0x0000000080c4003c 48               DEC EAX
+0x0000000080c4003d b8               DB 0xb8
+0x0000000080c4003e 60               PUSHA
+0x0000000080c4003f 77               DB 0x77
+
+Process: MsMpEng.exe Pid: 3444 Address: 0x17a82f00000
+Vad Tag: VadS Protection: PAGE_EXECUTE_READWRITE
+Flags: PrivateMemory: 1, Protection: 6
+
+0x0000017a82f00000  56 57 53 55 41 54 41 55 41 56 41 57 48 83 ec 28   VWSUATAUAVAWH..(
+0x0000017a82f00010  4c 8d 3c 24 48 8b e9 48 8d b1 98 38 00 00 ff e2   L.<$H..H...8....
+0x0000017a82f00020  49 8d 67 28 41 5f 41 5e 41 5d 41 5c 5d 5b 5f 5e   I.g(A_A^A]A\][_^
+0x0000017a82f00030  c3 00 00 40 00 80 00 00 00 48 89 e9 48 b8 60 77   ...@.....H..H.`w
+
+0x0000000082f00000 56               PUSH ESI
+0x0000000082f00001 57               PUSH EDI
+0x0000000082f00002 53               PUSH EBX
+0x0000000082f00003 55               PUSH EBP
+0x0000000082f00004 41               INC ECX
+0x0000000082f00005 54               PUSH ESP
+0x0000000082f00006 41               INC ECX
+0x0000000082f00007 55               PUSH EBP
+0x0000000082f00008 41               INC ECX
+0x0000000082f00009 56               PUSH ESI
+0x0000000082f0000a 41               INC ECX
+0x0000000082f0000b 57               PUSH EDI
+0x0000000082f0000c 48               DEC EAX
+0x0000000082f0000d 83ec28           SUB ESP, 0x28
+0x0000000082f00010 4c               DEC ESP
+0x0000000082f00011 8d3c24           LEA EDI, [ESP]
+0x0000000082f00014 48               DEC EAX
+0x0000000082f00015 8be9             MOV EBP, ECX
+0x0000000082f00017 48               DEC EAX
+0x0000000082f00018 8db198380000     LEA ESI, [ECX+0x3898]
+0x0000000082f0001e ffe2             JMP EDX
+0x0000000082f00020 49               DEC ECX
+0x0000000082f00021 8d6728           LEA ESP, [EDI+0x28]
+0x0000000082f00024 41               INC ECX
+0x0000000082f00025 5f               POP EDI
+0x0000000082f00026 41               INC ECX
+0x0000000082f00027 5e               POP ESI
+0x0000000082f00028 41               INC ECX
+0x0000000082f00029 5d               POP EBP
+0x0000000082f0002a 41               INC ECX
+0x0000000082f0002b 5c               POP ESP
+0x0000000082f0002c 5d               POP EBP
+0x0000000082f0002d 5b               POP EBX
+0x0000000082f0002e 5f               POP EDI
+0x0000000082f0002f 5e               POP ESI
+0x0000000082f00030 c3               RET
+0x0000000082f00031 0000             ADD [EAX], AL
+0x0000000082f00033 40               INC EAX
+0x0000000082f00034 008000000048     ADD [EAX+0x48000000], AL
+0x0000000082f0003a 89e9             MOV ECX, EBP
+0x0000000082f0003c 48               DEC EAX
+0x0000000082f0003d b8               DB 0xb8
+0x0000000082f0003e 60               PUSHA
+0x0000000082f0003f 77               DB 0x77
+
+Process: MsMpEng.exe Pid: 3444 Address: 0x17a9aa10000
+Vad Tag: VadS Protection: PAGE_EXECUTE_READWRITE
+Flags: PrivateMemory: 1, Protection: 6
+
+0x0000017a9aa10000  cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc   ................
+0x0000017a9aa10010  cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc   ................
+0x0000017a9aa10020  cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc   ................
+0x0000017a9aa10030  cc 08 00 42 00 00 00 00 05 48 8b 45 20 48 89 c2   ...B.....H.E.H..
+
+0x000000009aa10000 cc               INT 3
+0x000000009aa10001 cc               INT 3
+0x000000009aa10002 cc               INT 3
+0x000000009aa10003 cc               INT 3
+0x000000009aa10004 cc               INT 3
+0x000000009aa10005 cc               INT 3
+0x000000009aa10006 cc               INT 3
+0x000000009aa10007 cc               INT 3
+0x000000009aa10008 cc               INT 3
+0x000000009aa10009 cc               INT 3
+0x000000009aa1000a cc               INT 3
+0x000000009aa1000b cc               INT 3
+0x000000009aa1000c cc               INT 3
+0x000000009aa1000d cc               INT 3
+0x000000009aa1000e cc               INT 3
+0x000000009aa1000f cc               INT 3
+0x000000009aa10010 cc               INT 3
+0x000000009aa10011 cc               INT 3
+0x000000009aa10012 cc               INT 3
+0x000000009aa10013 cc               INT 3
+0x000000009aa10014 cc               INT 3
+0x000000009aa10015 cc               INT 3
+0x000000009aa10016 cc               INT 3
+0x000000009aa10017 cc               INT 3
+0x000000009aa10018 cc               INT 3
+0x000000009aa10019 cc               INT 3
+0x000000009aa1001a cc               INT 3
+0x000000009aa1001b cc               INT 3
+0x000000009aa1001c cc               INT 3
+0x000000009aa1001d cc               INT 3
+0x000000009aa1001e cc               INT 3
+0x000000009aa1001f cc               INT 3
+0x000000009aa10020 cc               INT 3
+0x000000009aa10021 cc               INT 3
+0x000000009aa10022 cc               INT 3
+0x000000009aa10023 cc               INT 3
+0x000000009aa10024 cc               INT 3
+0x000000009aa10025 cc               INT 3
+0x000000009aa10026 cc               INT 3
+0x000000009aa10027 cc               INT 3
+0x000000009aa10028 cc               INT 3
+0x000000009aa10029 cc               INT 3
+0x000000009aa1002a cc               INT 3
+0x000000009aa1002b cc               INT 3
+0x000000009aa1002c cc               INT 3
+0x000000009aa1002d cc               INT 3
+0x000000009aa1002e cc               INT 3
+0x000000009aa1002f cc               INT 3
+0x000000009aa10030 cc               INT 3
+0x000000009aa10031 0800             OR [EAX], AL
+0x000000009aa10033 42               INC EDX
+0x000000009aa10034 0000             ADD [EAX], AL
+0x000000009aa10036 0000             ADD [EAX], AL
+0x000000009aa10038 05488b4520       ADD EAX, 0x20458b48
+0x000000009aa1003d 48               DEC EAX
+0x000000009aa1003e 89c2             MOV EDX, EAX
+
+Process: MsMpEng.exe Pid: 3444 Address: 0x17a9bbd0000
+Vad Tag: VadS Protection: PAGE_EXECUTE_READWRITE
+Flags: PrivateMemory: 1, Protection: 6
+
+0x0000017a9bbd0000  cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc   ................
+0x0000017a9bbd0010  cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc   ................
+0x0000017a9bbd0020  cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc cc   ................
+0x0000017a9bbd0030  cc 0c 00 4e 00 0c 00 01 05 48 8b 55 28 48 8b 8d   ...N.....H.U(H..
+
+0x000000009bbd0000 cc               INT 3
+0x000000009bbd0001 cc               INT 3
+0x000000009bbd0002 cc               INT 3
+0x000000009bbd0003 cc               INT 3
+0x000000009bbd0004 cc               INT 3
+0x000000009bbd0005 cc               INT 3
+0x000000009bbd0006 cc               INT 3
+0x000000009bbd0007 cc               INT 3
+0x000000009bbd0008 cc               INT 3
+0x000000009bbd0009 cc               INT 3
+0x000000009bbd000a cc               INT 3
+0x000000009bbd000b cc               INT 3
+0x000000009bbd000c cc               INT 3
+0x000000009bbd000d cc               INT 3
+0x000000009bbd000e cc               INT 3
+0x000000009bbd000f cc               INT 3
+0x000000009bbd0010 cc               INT 3
+0x000000009bbd0011 cc               INT 3
+0x000000009bbd0012 cc               INT 3
+0x000000009bbd0013 cc               INT 3
+0x000000009bbd0014 cc               INT 3
+0x000000009bbd0015 cc               INT 3
+0x000000009bbd0016 cc               INT 3
+0x000000009bbd0017 cc               INT 3
+0x000000009bbd0018 cc               INT 3
+0x000000009bbd0019 cc               INT 3
+0x000000009bbd001a cc               INT 3
+0x000000009bbd001b cc               INT 3
+0x000000009bbd001c cc               INT 3
+0x000000009bbd001d cc               INT 3
+0x000000009bbd001e cc               INT 3
+0x000000009bbd001f cc               INT 3
+0x000000009bbd0020 cc               INT 3
+0x000000009bbd0021 cc               INT 3
+0x000000009bbd0022 cc               INT 3
+0x000000009bbd0023 cc               INT 3
+0x000000009bbd0024 cc               INT 3
+0x000000009bbd0025 cc               INT 3
+0x000000009bbd0026 cc               INT 3
+0x000000009bbd0027 cc               INT 3
+0x000000009bbd0028 cc               INT 3
+0x000000009bbd0029 cc               INT 3
+0x000000009bbd002a cc               INT 3
+0x000000009bbd002b cc               INT 3
+0x000000009bbd002c cc               INT 3
+0x000000009bbd002d cc               INT 3
+0x000000009bbd002e cc               INT 3
+0x000000009bbd002f cc               INT 3
+0x000000009bbd0030 cc               INT 3
+0x000000009bbd0031 0c00             OR AL, 0x0
+0x000000009bbd0033 4e               DEC ESI
+0x000000009bbd0034 000c00           ADD [EAX+EAX], CL
+0x000000009bbd0037 0105488b5528     ADD [0x28558b48], EAX
+0x000000009bbd003d 48               DEC EAX
+0x000000009bbd003e 8b               DB 0x8b
+0x000000009bbd003f 8d               DB 0x8d
+
+Process: igfxEM.exe Pid: 3172 Address: 0x25134620000
+Vad Tag: VadS Protection: PAGE_EXECUTE_READWRITE
+Flags: PrivateMemory: 1, Protection: 6
+
+0x0000025134620000  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0x0000025134620010  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0x0000025134620020  00 00 62 34 51 02 00 00 00 00 00 00 00 00 00 00   ..b4Q...........
+0x0000025134620030  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+
+0x0000000034620000 0000             ADD [EAX], AL
+0x0000000034620002 0000             ADD [EAX], AL
+0x0000000034620004 0000             ADD [EAX], AL
+0x0000000034620006 0000             ADD [EAX], AL
+0x0000000034620008 0000             ADD [EAX], AL
+0x000000003462000a 0000             ADD [EAX], AL
+0x000000003462000c 0000             ADD [EAX], AL
+0x000000003462000e 0000             ADD [EAX], AL
+0x0000000034620010 0000             ADD [EAX], AL
+0x0000000034620012 0000             ADD [EAX], AL
+0x0000000034620014 0000             ADD [EAX], AL
+0x0000000034620016 0000             ADD [EAX], AL
+0x0000000034620018 0000             ADD [EAX], AL
+0x000000003462001a 0000             ADD [EAX], AL
+0x000000003462001c 0000             ADD [EAX], AL
+0x000000003462001e 0000             ADD [EAX], AL
+0x0000000034620020 0000             ADD [EAX], AL
+0x0000000034620022 623451           BOUND ESI, [ECX+EDX*2]
+0x0000000034620025 0200             ADD AL, [EAX]
+0x0000000034620027 0000             ADD [EAX], AL
+0x0000000034620029 0000             ADD [EAX], AL
+0x000000003462002b 0000             ADD [EAX], AL
+0x000000003462002d 0000             ADD [EAX], AL
+0x000000003462002f 0000             ADD [EAX], AL
+0x0000000034620031 0000             ADD [EAX], AL
+0x0000000034620033 0000             ADD [EAX], AL
+0x0000000034620035 0000             ADD [EAX], AL
+0x0000000034620037 0000             ADD [EAX], AL
+0x0000000034620039 0000             ADD [EAX], AL
+0x000000003462003b 0000             ADD [EAX], AL
+0x000000003462003d 0000             ADD [EAX], AL
+0x000000003462003f 00               DB 0x0
+
+Process: igfxHK.exe Pid: 2600 Address: 0x1fecfbc0000
+Vad Tag: VadS Protection: PAGE_EXECUTE_READWRITE
+Flags: PrivateMemory: 1, Protection: 6
+
+0x000001fecfbc0000  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0x000001fecfbc0010  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0x000001fecfbc0020  00 00 bc cf fe 01 00 00 00 00 00 00 00 00 00 00   ................
+0x000001fecfbc0030  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+
+0x00000000cfbc0000 0000             ADD [EAX], AL
+0x00000000cfbc0002 0000             ADD [EAX], AL
+0x00000000cfbc0004 0000             ADD [EAX], AL
+0x00000000cfbc0006 0000             ADD [EAX], AL
+0x00000000cfbc0008 0000             ADD [EAX], AL
+0x00000000cfbc000a 0000             ADD [EAX], AL
+0x00000000cfbc000c 0000             ADD [EAX], AL
+0x00000000cfbc000e 0000             ADD [EAX], AL
+0x00000000cfbc0010 0000             ADD [EAX], AL
+0x00000000cfbc0012 0000             ADD [EAX], AL
+0x00000000cfbc0014 0000             ADD [EAX], AL
+0x00000000cfbc0016 0000             ADD [EAX], AL
+0x00000000cfbc0018 0000             ADD [EAX], AL
+0x00000000cfbc001a 0000             ADD [EAX], AL
+0x00000000cfbc001c 0000             ADD [EAX], AL
+0x00000000cfbc001e 0000             ADD [EAX], AL
+0x00000000cfbc0020 0000             ADD [EAX], AL
+0x00000000cfbc0022 bccffe0100       MOV ESP, 0x1fecf
+0x00000000cfbc0027 0000             ADD [EAX], AL
+0x00000000cfbc0029 0000             ADD [EAX], AL
+0x00000000cfbc002b 0000             ADD [EAX], AL
+0x00000000cfbc002d 0000             ADD [EAX], AL
+0x00000000cfbc002f 0000             ADD [EAX], AL
+0x00000000cfbc0031 0000             ADD [EAX], AL
+0x00000000cfbc0033 0000             ADD [EAX], AL
+0x00000000cfbc0035 0000             ADD [EAX], AL
+0x00000000cfbc0037 0000             ADD [EAX], AL
+0x00000000cfbc0039 0000             ADD [EAX], AL
+0x00000000cfbc003b 0000             ADD [EAX], AL
+0x00000000cfbc003d 0000             ADD [EAX], AL
+0x00000000cfbc003f 00               DB 0x0
+
+Process: igfxTray.exe Pid: 4276 Address: 0x24097440000
+Vad Tag: VadS Protection: PAGE_EXECUTE_READWRITE
+Flags: PrivateMemory: 1, Protection: 6
+
+0x0000024097440000  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0x0000024097440010  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0x0000024097440020  00 00 44 97 40 02 00 00 00 00 00 00 00 00 00 00   ..D.@...........
+0x0000024097440030  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+
+0x0000000097440000 0000             ADD [EAX], AL
+0x0000000097440002 0000             ADD [EAX], AL
+0x0000000097440004 0000             ADD [EAX], AL
+0x0000000097440006 0000             ADD [EAX], AL
+0x0000000097440008 0000             ADD [EAX], AL
+0x000000009744000a 0000             ADD [EAX], AL
+0x000000009744000c 0000             ADD [EAX], AL
+0x000000009744000e 0000             ADD [EAX], AL
+0x0000000097440010 0000             ADD [EAX], AL
+0x0000000097440012 0000             ADD [EAX], AL
+0x0000000097440014 0000             ADD [EAX], AL
+0x0000000097440016 0000             ADD [EAX], AL
+0x0000000097440018 0000             ADD [EAX], AL
+0x000000009744001a 0000             ADD [EAX], AL
+0x000000009744001c 0000             ADD [EAX], AL
+0x000000009744001e 0000             ADD [EAX], AL
+0x0000000097440020 0000             ADD [EAX], AL
+0x0000000097440022 44               INC ESP
+0x0000000097440023 97               XCHG EDI, EAX
+0x0000000097440024 40               INC EAX
+0x0000000097440025 0200             ADD AL, [EAX]
+0x0000000097440027 0000             ADD [EAX], AL
+0x0000000097440029 0000             ADD [EAX], AL
+0x000000009744002b 0000             ADD [EAX], AL
+0x000000009744002d 0000             ADD [EAX], AL
+0x000000009744002f 0000             ADD [EAX], AL
+0x0000000097440031 0000             ADD [EAX], AL
+0x0000000097440033 0000             ADD [EAX], AL
+0x0000000097440035 0000             ADD [EAX], AL
+0x0000000097440037 0000             ADD [EAX], AL
+0x0000000097440039 0000             ADD [EAX], AL
+0x000000009744003b 0000             ADD [EAX], AL
+0x000000009744003d 0000             ADD [EAX], AL
+0x000000009744003f 00               DB 0x0
+
+Process: SearchApp.exe Pid: 5800 Address: 0x1e0bbe20000
+Vad Tag: VadS Protection: PAGE_EXECUTE_READWRITE
+Flags: PrivateMemory: 1, Protection: 6
+
+0x000001e0bbe20000  48 89 54 24 10 48 89 4c 24 08 4c 89 44 24 18 4c   H.T$.H.L$.L.D$.L
+0x000001e0bbe20010  89 4c 24 20 48 8b 41 28 48 8b 48 08 48 8b 51 50   .L$.H.A(H.H.H.QP
+0x000001e0bbe20020  48 83 e2 f8 48 8b ca 48 b8 60 00 e2 bb e0 01 00   H...H..H.`......
+0x000001e0bbe20030  00 48 2b c8 48 81 f9 70 0f 00 00 76 09 48 c7 c1   .H+.H..p...v.H..
+
+0x00000000bbe20000 48               DEC EAX
+0x00000000bbe20001 89542410         MOV [ESP+0x10], EDX
+0x00000000bbe20005 48               DEC EAX
+0x00000000bbe20006 894c2408         MOV [ESP+0x8], ECX
+0x00000000bbe2000a 4c               DEC ESP
+0x00000000bbe2000b 89442418         MOV [ESP+0x18], EAX
+0x00000000bbe2000f 4c               DEC ESP
+0x00000000bbe20010 894c2420         MOV [ESP+0x20], ECX
+0x00000000bbe20014 48               DEC EAX
+0x00000000bbe20015 8b4128           MOV EAX, [ECX+0x28]
+0x00000000bbe20018 48               DEC EAX
+0x00000000bbe20019 8b4808           MOV ECX, [EAX+0x8]
+0x00000000bbe2001c 48               DEC EAX
+0x00000000bbe2001d 8b5150           MOV EDX, [ECX+0x50]
+0x00000000bbe20020 48               DEC EAX
+0x00000000bbe20021 83e2f8           AND EDX, -0x8
+0x00000000bbe20024 48               DEC EAX
+0x00000000bbe20025 8bca             MOV ECX, EDX
+0x00000000bbe20027 48               DEC EAX
+0x00000000bbe20028 b86000e2bb       MOV EAX, 0xbbe20060
+0x00000000bbe2002d e001             LOOPNZ 0xbbe20030
+0x00000000bbe2002f 0000             ADD [EAX], AL
+0x00000000bbe20031 48               DEC EAX
+0x00000000bbe20032 2bc8             SUB ECX, EAX
+0x00000000bbe20034 48               DEC EAX
+0x00000000bbe20035 81f9700f0000     CMP ECX, 0xf70
+0x00000000bbe2003b 7609             JBE 0xbbe20046
+0x00000000bbe2003d 48               DEC EAX
+0x00000000bbe2003e c7               DB 0xc7
+0x00000000bbe2003f c1               DB 0xc1
+
+Process: SearchApp.exe Pid: 5800 Address: 0x1e0ce1c0000
+Vad Tag: VadS Protection: PAGE_EXECUTE_READWRITE
+Flags: PrivateMemory: 1, Protection: 6
+
+0x000001e0ce1c0000  e9 fb ff fd ef ff ff ff ff cc cc cc cc cc cc cc   ................
+0x000001e0ce1c0010  e9 eb 03 fe ef ff ff ff ff cc cc cc cc cc cc cc   ................
+0x000001e0ce1c0020  e9 db 0f fe ef ff ff ff ff cc cc cc cc cc cc cc   ................
+0x000001e0ce1c0030  e9 cb 17 fe ef ff ff ff ff cc cc cc cc cc cc cc   ................
+
+0x00000000ce1c0000 e9fbfffdef       JMP 0xbe1a0000
+0x00000000ce1c0005 ff               DB 0xff
+0x00000000ce1c0006 ff               DB 0xff
+0x00000000ce1c0007 ff               DB 0xff
+0x00000000ce1c0008 ffcc             DEC ESP
+0x00000000ce1c000a cc               INT 3
+0x00000000ce1c000b cc               INT 3
+0x00000000ce1c000c cc               INT 3
+0x00000000ce1c000d cc               INT 3
+0x00000000ce1c000e cc               INT 3
+0x00000000ce1c000f cc               INT 3
+0x00000000ce1c0010 e9eb03feef       JMP 0xbe1a0400
+0x00000000ce1c0015 ff               DB 0xff
+0x00000000ce1c0016 ff               DB 0xff
+0x00000000ce1c0017 ff               DB 0xff
+0x00000000ce1c0018 ffcc             DEC ESP
+0x00000000ce1c001a cc               INT 3
+0x00000000ce1c001b cc               INT 3
+0x00000000ce1c001c cc               INT 3
+0x00000000ce1c001d cc               INT 3
+0x00000000ce1c001e cc               INT 3
+0x00000000ce1c001f cc               INT 3
+0x00000000ce1c0020 e9db0ffeef       JMP 0xbe1a1000
+0x00000000ce1c0025 ff               DB 0xff
+0x00000000ce1c0026 ff               DB 0xff
+0x00000000ce1c0027 ff               DB 0xff
+0x00000000ce1c0028 ffcc             DEC ESP
+0x00000000ce1c002a cc               INT 3
+0x00000000ce1c002b cc               INT 3
+0x00000000ce1c002c cc               INT 3
+0x00000000ce1c002d cc               INT 3
+0x00000000ce1c002e cc               INT 3
+0x00000000ce1c002f cc               INT 3
+0x00000000ce1c0030 e9cb17feef       JMP 0xbe1a1800
+0x00000000ce1c0035 ff               DB 0xff
+0x00000000ce1c0036 ff               DB 0xff
+0x00000000ce1c0037 ff               DB 0xff
+0x00000000ce1c0038 ffcc             DEC ESP
+0x00000000ce1c003a cc               INT 3
+0x00000000ce1c003b cc               INT 3
+0x00000000ce1c003c cc               INT 3
+0x00000000ce1c003d cc               INT 3
+0x00000000ce1c003e cc               INT 3
+0x00000000ce1c003f cc               INT 3
+
+Process: OneDrive.exe Pid: 7060 Address: 0x7660000
+Vad Tag: VadS Protection: PAGE_EXECUTE_READWRITE
+Flags: PrivateMemory: 1, Protection: 6
+
+0x0000000007660000  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0x0000000007660010  f8 ff 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0x0000000007660020  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0x0000000007660030  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+
+0x0000000007660000 0000             ADD [EAX], AL
+0x0000000007660002 0000             ADD [EAX], AL
+0x0000000007660004 0000             ADD [EAX], AL
+0x0000000007660006 0000             ADD [EAX], AL
+0x0000000007660008 0000             ADD [EAX], AL
+0x000000000766000a 0000             ADD [EAX], AL
+0x000000000766000c 0000             ADD [EAX], AL
+0x000000000766000e 0000             ADD [EAX], AL
+0x0000000007660010 f8               CLC
+0x0000000007660011 ff00             INC DWORD [EAX]
+0x0000000007660013 0000             ADD [EAX], AL
+0x0000000007660015 0000             ADD [EAX], AL
+0x0000000007660017 0000             ADD [EAX], AL
+0x0000000007660019 0000             ADD [EAX], AL
+0x000000000766001b 0000             ADD [EAX], AL
+0x000000000766001d 0000             ADD [EAX], AL
+0x000000000766001f 0000             ADD [EAX], AL
+0x0000000007660021 0000             ADD [EAX], AL
+0x0000000007660023 0000             ADD [EAX], AL
+0x0000000007660025 0000             ADD [EAX], AL
+0x0000000007660027 0000             ADD [EAX], AL
+0x0000000007660029 0000             ADD [EAX], AL
+0x000000000766002b 0000             ADD [EAX], AL
+0x000000000766002d 0000             ADD [EAX], AL
+0x000000000766002f 0000             ADD [EAX], AL
+0x0000000007660031 0000             ADD [EAX], AL
+0x0000000007660033 0000             ADD [EAX], AL
+0x0000000007660035 0000             ADD [EAX], AL
+0x0000000007660037 0000             ADD [EAX], AL
+0x0000000007660039 0000             ADD [EAX], AL
+0x000000000766003b 0000             ADD [EAX], AL
+0x000000000766003d 0000             ADD [EAX], AL
+0x000000000766003f 00               DB 0x0
+
+Process: smartscreen.ex Pid: 3516 Address: 0x25bb2ba0000
+Vad Tag: VadS Protection: PAGE_EXECUTE_READWRITE
+Flags: PrivateMemory: 1, Protection: 6
+
+0x0000025bb2ba0000  48 89 54 24 10 48 89 4c 24 08 4c 89 44 24 18 4c   H.T$.H.L$.L.D$.L
+0x0000025bb2ba0010  89 4c 24 20 48 8b 41 28 48 8b 48 08 48 8b 51 50   .L$.H.A(H.H.H.QP
+0x0000025bb2ba0020  48 83 e2 f8 48 8b ca 48 b8 60 00 ba b2 5b 02 00   H...H..H.`...[..
+0x0000025bb2ba0030  00 48 2b c8 48 81 f9 70 0f 00 00 76 09 48 c7 c1   .H+.H..p...v.H..
+
+0x00000000b2ba0000 48               DEC EAX
+0x00000000b2ba0001 89542410         MOV [ESP+0x10], EDX
+0x00000000b2ba0005 48               DEC EAX
+0x00000000b2ba0006 894c2408         MOV [ESP+0x8], ECX
+0x00000000b2ba000a 4c               DEC ESP
+0x00000000b2ba000b 89442418         MOV [ESP+0x18], EAX
+0x00000000b2ba000f 4c               DEC ESP
+0x00000000b2ba0010 894c2420         MOV [ESP+0x20], ECX
+0x00000000b2ba0014 48               DEC EAX
+0x00000000b2ba0015 8b4128           MOV EAX, [ECX+0x28]
+0x00000000b2ba0018 48               DEC EAX
+0x00000000b2ba0019 8b4808           MOV ECX, [EAX+0x8]
+0x00000000b2ba001c 48               DEC EAX
+0x00000000b2ba001d 8b5150           MOV EDX, [ECX+0x50]
+0x00000000b2ba0020 48               DEC EAX
+0x00000000b2ba0021 83e2f8           AND EDX, -0x8
+0x00000000b2ba0024 48               DEC EAX
+0x00000000b2ba0025 8bca             MOV ECX, EDX
+0x00000000b2ba0027 48               DEC EAX
+0x00000000b2ba0028 b86000bab2       MOV EAX, 0xb2ba0060
+0x00000000b2ba002d 5b               POP EBX
+0x00000000b2ba002e 0200             ADD AL, [EAX]
+0x00000000b2ba0030 00482b           ADD [EAX+0x2b], CL
+0x00000000b2ba0033 c84881f9         ENTER 0x8148, 0xf9
+0x00000000b2ba0037 700f             JO 0xb2ba0048
+0x00000000b2ba0039 0000             ADD [EAX], AL
+0x00000000b2ba003b 7609             JBE 0xb2ba0046
+0x00000000b2ba003d 48               DEC EAX
+0x00000000b2ba003e c7               DB 0xc7
+0x00000000b2ba003f c1               DB 0xc1
+
