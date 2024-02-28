@@ -1,0 +1,1 @@
+Me (entusiasma, apasiona, motiva) la (ciberseguridad, seguridad, seguridad de la información) y disfruto al (desarrollar, crear, contribuir a) soluciones que puedan impactar de forma positiva en una organización y en las personas a las que esta sirve.
