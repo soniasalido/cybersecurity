@@ -26,6 +26,35 @@ Crea una declaración central que represente tu propósito o intención. En este
 
 Explica cómo tus puntos fuertes y valores que elegiste te ayudan a cumplir tu declaración principal.
 
+
+------
+Tu declaración profesional incluye fortalezas. 
+Tu declaración profesional incluye valores.
+Tu declaración profesional explica tu interés en la profesión de ciberseguridad.
+Tu declaración profesional explica quién eres y cómo puedes agregar valor a una organización.
+Tu declaración profesional está libre de errores gramaticales, ortográficos y de puntuación. 
+-------------------------------------------------------------------------------
+## Professional statement exemplar
+
+### Fictional persona:
+Following is a fictional persona that may represent someone interested in
+becoming a cybersecurity analyst.
+Melodie is a high school graduate and her strongest subjects in school were
+math and science. She enjoys learning and excelled in school. She likes creating
+spreadsheets to organize everyday tasks. She also likes analyzing complex tasks.
+Melodie has a passion for technology and enjoys helping others. She is
+interested in the field of security but has no previous experience. She wants an
+entry-level cybersecurity position that will utilize her drive and thirst for
+knowledge. She believes the Google Cybersecurity Certificate will make her a
+better candidate and will help her develop the professional skills she lacks.
+
+### Fictional persona’s draft professional statement:
+My name is Melodie. I am driven and passionate about safeguarding people’s
+security, including their financial well being. I enjoy working with technology and
+analyzing and solving complex problems.
+
+
+
 -------------------------------------------------------------------------------
 Técnico Sistemas microinformáticos
 Desarrollo aplicaciones Web
