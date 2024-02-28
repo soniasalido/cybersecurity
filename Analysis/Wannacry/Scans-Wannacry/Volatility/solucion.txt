@@ -1,0 +1,853 @@
+
+**************************************************************
+**************************************************************
+MALFIND:
+PIP positivos virustotal de resultados malfind:
+
+
+igfxHK.exe pid:   2600
+Command line : igfxHK.exe 
+
+
+igfxEM.exe pid:   3172
+Command line : igfxEM.exe 
+
+
+igfxTray.exe pid:   4276
+Command line : igfxTray.exe 
+
+
+SearchApp.exe pid:   5800
+Command line : "C:\Windows\SystemApps\Microsoft.Windows.Search_cw5n1h2txyewy\SearchApp.exe" -ServerName:CortanaUI.AppX8z9r6jm96hw4bsbneegw0kyxx296wr9t.mca
+
+
+OneDrive.exe pid:   7060
+Command line : "C:\Users\usuario\AppData\Local\Microsoft\OneDrive\OneDrive.exe" /background
+
+
+**************************************************************
+PIP falsosPositivos virustotal de resultados malfind:
+MsMpEng.exe pid:   3444
+Command line : "C:\ProgramData\Microsoft\Windows Defender\platform\4.18.23110.3-0\MsMpEng.exe"
+
+smartscreen.ex pid:   3516
+Command line : C:\Windows\System32\smartscreen.exe -Embedding
+
+
+**************************************************************
+**************************************************************
+
+Procesos sospechosos Yara
+
+
+
+*************************************************************************************
+**************************************************************************************
+
+netscan:
+
+0x9e89a045d6a0     UDPv4    0.0.0.0:0                      *:*                                   574565835 ?G8YN?v???WZ?p? 2024-02-16 12:08:47 UTC+0000
+
+
+pip: 574565835
+owner: ?G8YN?v???WZ?p
+
+
+*******************************************************************************************
+pslistScan POSITIVOS :
+
+No sale postivo en Virustotal --> 0xffff9e8996cec080 igfxCUIService         2060    696      4        0      0      0 2024-02-16 11:59:13 UTC+0000                                 
+
+
+0xffff9e899dd39300 igfxEM.exe             3172   4976      4        0      1      0 2024-02-16 11:59:30 UTC+0000 
+
+
+0xffff9e899dd9a300 igfxHK.exe             2600   4976      4        0      1      0 2024-02-16 11:59:30 UTC+0000      
+
+0xffff9e899dd89300 igfxTray.exe           4276   4976      4        0      1      0 2024-02-16 11:59:31 UTC+0000                                 
+
+
+No sale postivo en Virustotal --> 0xffff9e899d3d5240 conhost.exe            5380   5344      3        0      1      0 2024-02-16 11:59:33 UTC+0000                                 
+
+
+No sale postivo en Virustotal --> 0xffff9e899b514300 conhost.exe            2300   7228      3        0      1      0 2024-02-16 12:06:42 UTC+0000                                 
+
+
+0xffff9e899eb30080 ed01ebfbc9eb5b         8700   5316      9        0      1      1 2024-02-16 12:29:40 UTC+0000                                 
+
+
+
+No sale postivo en Virustotal --> 3276	1800	mintty.exe	0x9e899e8d9080	6	-	1	False	2024-02-16 12:06:42.000000 	N/A	Disabled
+
+
+Positivo -->3636	 pip --> 3276	mintty.exe	0x9e89985ab080	0	-	1	False	2024-02-16 12:06:42.000000 	2024-02-16 12:06:43.000000 	Disable
+
+
+8700	5316	ed01ebfbc9eb5b	0x9e899eb30080	9	-	1	True	2024-02-16 12:29:40.000000 	N/A	Disabled
+
+
+
+******************************************************
+Proceso Wannacry: 8700
+
+
+*****************************************************************
+PSTREE de procesos positivos
+Name                                                  Pid   PPid   Thds   Hnds Time
+-------------------------------------------------- ------ ------ ------ ------ ----
+
+Positivo --> 532 -- 3276  --- 7060 --- 8700 
+. 0xffff9e899cc57080:dwm.exe                          532   1008     15      0 2024-02-16 11:59:11 UTC+0000
+. 0xffff9e899dbc62c0:userinit.exe                    5264   1008      0 ------ 2024-02-16 11:59:33 UTC+0000
+.. 0xffff9e899df2b080:explorer.exe                   5316   5264     82      0 2024-02-16 11:59:33 UTC+0000
+... 0xffff9e899e23c0c0:SecurityHealth                6912   5316      2      0 2024-02-16 11:59:59 UTC+0000
+... 0xffff9e899e69f080:git-bash.exe                  1800   5316      1      0 2024-02-16 12:06:42 UTC+0000
+.... 0xffff9e899e8d9080:mintty.exe                   3276   1800      6      0 2024-02-16 12:06:42 UTC+0000
+..... 0xffff9e89985ab080:mintty.exe                  3636   3276      0 ------ 2024-02-16 12:06:42 UTC+0000
+...... 0xffff9e899e3b9300:bash.exe                   1348   3636      3      0 2024-02-16 12:06:43 UTC+0000
+...... 0xffff9e899e3cc080:cygwin-console             7228   3636      0 ------ 2024-02-16 12:06:42 UTC+0000
+....... 0xffff9e899b514300:conhost.exe               2300   7228      3      0 2024-02-16 12:06:42 UTC+0000
+... 0xffff9e899e8bf080:chrome.exe                    3856   5316      0 ------ 2024-02-16 12:00:49 UTC+0000
+... 0xffff9e899e495080:OneDrive.exe                  7060   5316     18      0 2024-02-16 12:00:00 UTC+0000
+... 0xffff9e899edda340:FTK Imager.exe                5384   5316     17      0 2024-02-16 12:23:42 UTC+0000
+... 0xffff9e899eb30080:ed01ebfbc9eb5b                8700   5316      9      0 2024-02-16 12:29:40 UTC+0000
+
+
+
+Positivo --> 2600   
+0xffff9e899dd9a300:igfxHK.exe                       2600   4976      4      0 2024-02-16 11:59:30 UTC+0000
+
+
+Positivo --> 3172  
+0xffff9e899dd39300:igfxEM.exe                       3172   4976      4      0 2024-02-16 11:59:30 UTC+0000
+
+
+Positivo --> 4276
+0xffff9e899dd89300:igfxTray.exe                     4276   4976      4      0 2024-02-16 11:59:31 UTC+0000
+
+
+Positivo --> 5800  - 628  - 3188  - 3368
+ 0xffff9e899c404080:wininit.exe                       628    472      1      0 2024-02-16 11:59:10 UTC+0000
+. 0xffff9e899c4391c0:services.exe                     696    628      6      0 2024-02-16 11:59:10 UTC+0000
+.. 0xffff9e899d251300:svchost.exe                    2568    696      5      0 2024-02-16 11:59:14 UTC+0000
+.. 0xffff9e899d74c340:MsMpEng.exe                    3444    696     11      0 2024-02-16 11:59:15 UTC+0000
+.. 0xffff9e8996cec080:igfxCUIService                 2060    696      4      0 2024-02-16 11:59:13 UTC+0000
+.. 0xffff9e899e39d080:svchost.exe                    6488    696      5      0 2024-02-16 11:59:54 UTC+0000
+.. 0xffff9e899dd8e280:svchost.exe                    3608    696     10      0 2024-02-16 11:59:31 UTC+0000
+.. 0xffff9e899d1302c0:svchost.exe                    2308    696      8      0 2024-02-16 11:59:13 UTC+0000
+.. 0xffff9e899f0fb080:svchost.exe                    8372    696      4      0 2024-02-16 12:24:42 UTC+0000
+.. 0xffff9e899d76e240:svchost.exe                    3620    696      6      0 2024-02-16 11:59:16 UTC+0000
+.. 0xffff9e899d60d300:svchost.exe                    3128    696      7      0 2024-02-16 11:59:15 UTC+0000
+.. 0xffff9e899ccb92c0:svchost.exe                     692    696      2      0 2024-02-16 11:59:11 UTC+0000
+.. 0xffff9e8996c86080:svchost.exe                    2108    696      2      0 2024-02-16 11:59:13 UTC+0000
+.. 0xffff9e899d6020c0:svchost.exe                    3136    696     10      0 2024-02-16 11:59:15 UTC+0000
+... 0xffff9e899d922080:AggregatorHost                3868   3136      1      0 2024-02-16 11:59:20 UTC+0000
+.. 0xffff9e899db1b300:svchost.exe                    4704    696      6      0 2024-02-16 11:59:29 UTC+0000
+.. 0xffff9e8996c84080:svchost.exe                    2116    696      4      0 2024-02-16 11:59:13 UTC+0000
+.. 0xffff9e899ce88080:svchost.exe                    1608    696      7      0 2024-02-16 11:59:12 UTC+0000
+... 0xffff9e899db0d080:sihost.exe                    4608   1608     13      0 2024-02-16 11:59:29 UTC+0000
+.. 0xffff9e899dd902c0:svchost.exe                    4776    696      7      0 2024-02-16 11:59:31 UTC+0000
+.. 0xffff9e899d6482c0:svchost.exe                    3156    696     15      0 2024-02-16 11:59:15 UTC+0000
+.. 0xffff9e899ccf8080:svchost.exe                    1124    696      1      0 2024-02-16 11:59:11 UTC+0000
+.. 0xffff9e899cced0c0:svchost.exe                    1116    696      5      0 2024-02-16 11:59:11 UTC+0000
+.. 0xffff9e8998b06280:svchost.exe                    2656    696     14      0 2024-02-16 11:59:14 UTC+0000
+.. 0xffff9e899e1a8080:svchost.exe                    2156    696      4      0 2024-02-16 12:24:38 UTC+0000
+.. 0xffff9e899cc8b080:svchost.exe                     624    696      6      0 2024-02-16 11:59:11 UTC+0000
+.. 0xffff9e899d6900c0:dynabookHDDPro                 3188    696      3      0 2024-02-16 11:59:15 UTC+0000
+.. 0xffff9e899f0f9340:svchost.exe                    2084    696      1      0 2024-02-16 12:03:33 UTC+0000
+.. 0xffff9e899ce90080:svchost.exe                    1668    696      2      0 2024-02-16 11:59:12 UTC+0000
+.. 0xffff9e89985be340:svchost.exe                    7304    696      8      0 2024-02-16 12:01:21 UTC+0000
+.. 0xffff9e899bdfa080:svchost.exe                    1232    696      1      0 2024-02-16 11:59:12 UTC+0000
+.. 0xffff9e899eb64080:svchost.exe                    7796    696      2      0 2024-02-16 12:24:41 UTC+0000
+.. 0xffff9e899d811240:svchost.exe                    3732    696     11      0 2024-02-16 11:59:16 UTC+0000
+.. 0xffff9e899cce3300:svchost.exe                    1096    696      7      0 2024-02-16 11:59:11 UTC+0000
+.. 0xffff9e899d2e1240:svchost.exe                    2720    696      3      0 2024-02-16 11:59:14 UTC+0000
+.. 0xffff9e899d694240:svchost.exe                    3240    696      7      0 2024-02-16 11:59:15 UTC+0000
+.. 0xffff9e8996d66080:svchost.exe                    1708    696      9      0 2024-02-16 11:59:13 UTC+0000
+.. 0xffff9e899d9c5080:svchost.exe                    8136    696     10      0 2024-02-16 12:01:18 UTC+0000
+.. 0xffff9e899ce8d300:svchost.exe                    1652    696      5      0 2024-02-16 11:59:12 UTC+0000
+.. 0xffff9e899e661080:svchost.exe                    1724    696      5      0 2024-02-16 12:24:40 UTC+0000
+.. 0xffff9e899d726080:RMService.exe                  3360    696      8      0 2024-02-16 11:59:15 UTC+0000
+.. 0xffff9e899b414300:svchost.exe                    7884    696      2      0 2024-02-16 12:01:22 UTC+0000
+.. 0xffff9e899cec5240:svchost.exe                    1744    696      8      0 2024-02-16 11:59:12 UTC+0000
+.. 0xffff9e899cd87080:svchost.exe                    1240    696      6      0 2024-02-16 11:59:12 UTC+0000
+... 0xffff9e899dcf7300:taskhostw.exe                 4788   1240      8      0 2024-02-16 11:59:29 UTC+0000
+... 0xffff9e899dcf8080:MicrosoftEdgeU                4812   1240      3      0 2024-02-16 11:59:29 UTC+0000
+.. 0xffff9e899e273280:SecurityHealth                 6948    696     10      0 2024-02-16 11:59:59 UTC+0000
+.. 0xffff9e899cf61240:svchost.exe                    1756    696      3      0 2024-02-16 11:59:12 UTC+0000
+.. 0xffff9e899d6ee2c0:svchost.exe                    3280    696      1      0 2024-02-16 11:59:15 UTC+0000
+.. 0xffff9e899d7230c0:svchost.exe                    3316    696      7      0 2024-02-16 11:59:15 UTC+0000
+.. 0xffff9e899cd88080:svchost.exe                    1272    696     11      0 2024-02-16 11:59:12 UTC+0000
+.. 0xffff9e899cd8b280:svchost.exe                    1280    696      6      0 2024-02-16 11:59:12 UTC+0000
+.. 0xffff9e899d8a0240:SearchIndexer.                 3844    696     15      0 2024-02-16 11:59:16 UTC+0000
+... 0xffff9e899f38c340:SearchProtocol                6584   3844      9      0 2024-02-16 12:29:44 UTC+0000
+... 0xffff9e899e61c080:SearchFilterHo                8800   3844      6      0 2024-02-16 12:29:45 UTC+0000
+.. 0xffff9e899da7e300:svchost.exe                    4360    696      8      0 2024-02-16 11:59:25 UTC+0000
+.. 0xffff9e899d35b080:spoolsv.exe                    2832    696      7      0 2024-02-16 11:59:14 UTC+0000
+.. 0xffff9e899ebbb0c0:svchost.exe                    6932    696      3      0 2024-02-16 12:01:19 UTC+0000
+.. 0xffff9e899d6f3080:DSDFunctionKey                 3352    696      1      0 2024-02-16 11:59:15 UTC+0000
+... 0xffff9e899db130c0:DSDFunctionKey                4636   3352      5      0 2024-02-16 11:59:29 UTC+0000
+.. 0xffff9e899d72f080:dynabookSystem                 3368    696      7      0 2024-02-16 11:59:15 UTC+0000
+.. 0xffff9e899d6f0280:svchost.exe                    3292    696      3      0 2024-02-16 11:59:15 UTC+0000
+.. 0xffff9e899dea6080:svchost.exe                    6452    696      5      0 2024-02-16 12:25:02 UTC+0000
+.. 0xffff9e899d3c42c0:svchost.exe                    2880    696     12      0 2024-02-16 11:59:14 UTC+0000
+.. 0xffff9e899cebf2c0:svchost.exe                    1860    696      6      0 2024-02-16 11:59:12 UTC+0000
+.. 0xffff9e8996d6b080:svchost.exe                    1872    696      5      0 2024-02-16 11:59:12 UTC+0000
+.. 0xffff9e899dbca280:svchost.exe                    4952    696      3      0 2024-02-16 11:59:30 UTC+0000
+... 0xffff9e899dd28280:ctfmon.exe                    5116   4952     11      0 2024-02-16 11:59:30 UTC+0000
+.. 0xffff9e8996d53080:svchost.exe                    1888    696      6      0 2024-02-16 11:59:12 UTC+0000
+.. 0xffff9e899cdaf2c0:svchost.exe                    1380    696      2      0 2024-02-16 11:59:12 UTC+0000
+.. 0xffff9e899d74a2c0:svchost.exe                    3432    696      4      0 2024-02-16 11:59:15 UTC+0000
+.. 0xffff9e899eb46340:svchost.exe                    2412    696      2      0 2024-02-16 12:05:29 UTC+0000
+.. 0xffff9e8996d47080:svchost.exe                    1908    696      2      0 2024-02-16 11:59:12 UTC+0000
+.. 0xffff9e899c5622c0:svchost.exe                     896    696     10      0 2024-02-16 11:59:11 UTC+0000
+.. 0xffff9e899d1c4300:svchost.exe                    2452    696      7      0 2024-02-16 11:59:14 UTC+0000
+.. 0xffff9e899db20300:svchost.exe                    4676    696      9      0 2024-02-16 11:59:29 UTC+0000
+.. 0xffff9e899d1c5080:svchost.exe                    2460    696      5      0 2024-02-16 11:59:14 UTC+0000
+.. 0xffff9e899d42e300:svchost.exe                    2976    696      5      0 2024-02-16 11:59:15 UTC+0000
+.. 0xffff9e899d1c6080:svchost.exe                    2472    696     11      0 2024-02-16 11:59:14 UTC+0000
+.. 0xffff9e899f4c8340:SgrmBroker.exe                 3500    696      6      0 2024-02-16 12:01:20 UTC+0000
+.. 0xffff9e899d60f280:HidMonitorSvc.                 3144    696      2      0 2024-02-16 11:59:15 UTC+0000
+... 0xffff9e899db0c300:Apoint.exe                    4600   3144      3      0 2024-02-16 11:59:29 UTC+0000
+.... 0xffff9e899df2a080:hidfind.exe                  5296   4600      1      0 2024-02-16 11:59:33 UTC+0000
+.... 0xffff9e899dd8a080:ApMsgFwd.exe                 4264   4600      2      0 2024-02-16 11:59:31 UTC+0000
+.. 0xffff9e899c5a9240:svchost.exe                     948    696      5      0 2024-02-16 11:59:11 UTC+0000
+.. 0xffff9e899dd04240:svchost.exe                    5052    696      4      0 2024-02-16 11:59:30 UTC+0000
+.. 0xffff9e899d9c3080:svchost.exe                    8164    696      6      0 2024-02-16 12:01:19 UTC+0000
+.. 0xffff9e899dbc8240:svchost.exe                    5024    696      1      0 2024-02-16 11:59:30 UTC+0000
+.. 0xffff9e899df26080:svchost.exe                    5576    696      5      0 2024-02-16 11:59:35 UTC+0000
+.. 0xffff9e899e0ef080:svchost.exe                    8676    696      0 ------ 2024-02-16 12:02:13 UTC+0000
+.. 0xffff9e899d442280:svchost.exe                    3036    696      1      0 2024-02-16 11:59:15 UTC+0000
+.. 0xffff9e899c4bf240:svchost.exe                     800    696     14      0 2024-02-16 11:59:10 UTC+0000
+... 0xffff9e899d2bf080:RuntimeBroker.                2576    800     13      0 2024-02-16 12:00:35 UTC+0000
+... 0xffff9e899e2d4080:SkypeBackgroun                5748    800      4      0 2024-02-16 11:59:48 UTC+0000
+... 0xffff9e899eec4300:RuntimeBroker.                7768    800      1      0 2024-02-16 12:01:03 UTC+0000
+... 0xffff9e899df25080:StartMenuExper                5392    800      7      0 2024-02-16 11:59:40 UTC+0000
+... 0xffff9e899ee52080:smartscreen.ex                3516    800      7      0 2024-02-16 12:23:36 UTC+0000
+... 0xffff9e899e1e3080:SearchApp.exe                 5800    800     28      0 2024-02-16 11:59:44 UTC+0000
+
+
+
+#####################################################################
+psxviewScan
+
+0x000000001274d102 ??                      0 False  False  False    False  True  False   False    9308-06-01 13:06:52 UTC+0000
+
+########################################################################
+netscan
+pid: 574565835
+owner: ?G8YN?v???WZ?p?
+
+0x9e89a045d6a0     UDPv4    0.0.0.0:0      *:*      574565835 ?G8YN?v???WZ?p? 2024-02-16 12:08:47 UTC+0000
+
+
+#################################################333
+cmdlineScan
+
+532	dwm.exe	"dwm.exe"
+628	wininit.exe	wininit.exe
+2600	igfxHK.exe	igfxHK.exe 
+3172	igfxEM.exe	igfxEM.exe 
+
+3188	dynabookHDDPro	C:\Windows\System32\DriverStore\FileRepository\dhpevm.inf_amd64_dc22ceb838778a98\dynabookHDDProtection.exe
+
+3276	mintty.exe	usr\bin\mintty.exe --nodaemon -o AppID=GitForWindows.Bash -o AppLaunchCmd="C:\Program Files\Git\git-bash.exe" -o AppName="Git Bash" -i "C:\Program Files\Git\git-bash.exe" --store-taskbar-properties -- /usr/bin/bash --login -i
+
+
+3368	dynabookSystem	C:\Windows\System32\DriverStore\FileRepository\dsrvctldrv.inf_amd64_9a8e578dc9a18977\dynabookSystemService.exe
+
+
+4276	igfxTray.exe	igfxTray.exe 
+
+5800	SearchApp.exe	"C:\Windows\SystemApps\Microsoft.Windows.Search_cw5n1h2txyewy\SearchApp.exe" -ServerName:CortanaUI.AppX8z9r6jm96hw4bsbneegw0kyxx296wr9t.mca
+
+
+7060	OneDrive.exe	"C:\Users\usuario\AppData\Local\Microsoft\OneDrive\OneDrive.exe" /background
+
+8700	ed01ebfbc9eb5b	"C:\Users\usuario\Documents\theZoo\malware\Binaries\Ransomware.WannaCry\Ransomware.WannaCry\ed01ebfbc9eb5bbea545af4d01bf5f1071661840480439c6e5babe8e080e41aa.exe" 
+
+
+6584	SearchProtocol	"C:\Windows\system32\SearchProtocolHost.exe" Global\UsGthrFltPipeMssGthrPipe3_ Global\UsGthrCtrlFltPipeMssGthrPipe3 1 -2147483646 "Software\Microsoft\Windows Search" "Mozilla/4.0 (compatible; MSIE 6.0; Windows NT; MS Search 4.0 Robot)" "C:\ProgramData\Microsoft\Search\Data\Temp\usgthrsvc" "DownLevelDaemon" 
+
+
+
+3576	TextInputHost.	"C:\Windows\SystemApps\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\TextInputHost.exe" -ServerName:InputApp.AppXjd5de1g66v206tj52m9d0dtpppx4cgpn.mca
+
+
+
+5344	ApntEx.exe	"Apntex.exe"
+
+
+
+######################################################################################3
+DLLLIST
+
+ed01ebfbc9eb5b pid:   8700
+Command line : "C:\Users\usuario\Documents\theZoo\malware\Binaries\Ransomware.WannaCry\Ransomware.WannaCry\ed01ebfbc9eb5bbea545af4d01bf5f1071661840480439c6e5babe8e080e41aa.exe" 
+
+
+Base                             Size          LoadCount LoadTime                       Path
+------------------ ------------------ ------------------ ------------------------------ ----
+0x0000000000400000           0x35a000             0xffff 2024-02-16 12:29:40 UTC+0000   C:\Users\usuario\Documents\theZoo\malware\Binaries\Ransomware.WannaCry\Ransomware.WannaCry\ed01ebfbc9eb5bbea545af4d01bf5f1071661840480439c6e5babe8e080e41aa.exe
+0x00007ff9f2eb0000           0x1f8000             0xffff 2024-02-16 12:29:40 UTC+0000   C:\Windows\SYSTEM32\ntdll.dll
+0x00007ff9f15e0000            0x59000             0xffff 2024-02-16 12:29:40 UTC+0000   C:\Windows\System32\wow64.dll
+0x00007ff9f1b50000            0x83000                0x6 2024-02-16 12:29:40 UTC+0000   C:\Windows\System32\wow64win.dll
+0x0000000077260000             0xa000                0x6 2024-02-16 12:29:40 UTC+0000   C:\Windows\System32\wow64cpu.dll
+0x0000000000400000           0x35a000             0xffff 2024-02-16 12:29:40 UTC+0000   C:\Users\usuario\Documents\theZoo\malware\Binaries\Ransomware.WannaCry\Ransomware.WannaCry\ed01ebfbc9eb5bbea545af4d01bf5f1071661840480439c6e5babe8e080e41aa.exe
+0x0000000077270000           0x1a4000             0xffff 2024-02-16 12:29:40 UTC+0000   C:\Windows\SYSTEM32\ntdll.dll
+0x00000000751a0000            0xf0000             0xffff 2024-02-16 12:29:40 UTC+0000   C:\Windows\System32\KERNEL32.DLL
+0x0000000076790000           0x23a000             0xffff 2024-02-16 12:29:40 UTC+0000   C:\Windows\System32\KERNELBASE.dll
+0x000000006c0d0000            0x9f000             0xffff 2024-02-16 12:29:40 UTC+0000   C:\Windows\SYSTEM32\apphelp.dll
+0x0000000076dd0000           0x19c000                0x6 2024-02-16 12:29:40 UTC+0000   C:\Windows\System32\USER32.dll
+0x00000000752f0000            0x18000                0x6 2024-02-16 12:29:40 UTC+0000   C:\Windows\System32\win32u.dll
+0x0000000076b20000            0x23000                0x6 2024-02-16 12:29:40 UTC+0000   C:\Windows\System32\GDI32.dll
+0x0000000075cf0000            0xe5000                0x6 2024-02-16 12:29:40 UTC+0000   C:\Windows\System32\gdi32full.dll
+0x00000000754f0000            0x7b000                0x6 2024-02-16 12:29:40 UTC+0000   C:\Windows\System32\msvcp_win.dll
+0x00000000770e0000           0x120000                0x6 2024-02-16 12:29:40 UTC+0000   C:\Windows\System32\ucrtbase.dll
+0x0000000075c70000            0x7e000                0x6 2024-02-16 12:29:40 UTC+0000   C:\Windows\System32\ADVAPI32.dll
+0x00000000753a0000            0xbf000                0x6 2024-02-16 12:29:40 UTC+0000   C:\Windows\System32\msvcrt.dll
+0x0000000075bf0000            0x78000                0x6 2024-02-16 12:29:40 UTC+0000   C:\Windows\System32\sechost.dll
+0x0000000076b60000            0xbf000                0x6 2024-02-16 12:29:40 UTC+0000   C:\Windows\System32\RPCRT4.dll
+0x0000000075380000            0x19000                0x6 2024-02-16 12:29:40 UTC+0000   C:\Windows\System32\bcrypt.dll
+0x0000000075310000            0x26000                0x6 2024-02-16 12:29:40 UTC+0000   C:\Windows\System32\IMM32.DLL
+0x00000000742e0000            0x13000                0x6 2024-02-16 12:29:41 UTC+0000   C:\Windows\SYSTEM32\CRYPTSP.dll
+0x00000000742b0000            0x2f000                0x6 2024-02-16 12:29:41 UTC+0000   C:\Windows\system32\rsaenh.dll
+0x0000000074300000             0xa000                0x6 2024-02-16 12:29:41 UTC+0000   C:\Windows\SYSTEM32\CRYPTBASE.dll
+0x0000000077200000            0x5f000             0xffff 2024-02-16 12:29:41 UTC+0000   C:\Windows\System32\bcryptPrimitives.dll
+0x00000000760b0000           0x5b7000                0x6 2024-02-16 12:29:41 UTC+0000   C:\Windows\System32\SHELL32.dll
+0x000000006c200000            0x70000                0x6 2024-02-16 12:29:41 UTC+0000   C:\Windows\SYSTEM32\MSVCP60.dll
+0x000000006f280000            0x29000                0x6 2024-02-16 12:29:41 UTC+0000   C:\Windows\SYSTEM32\ntmarta.dll
+0x0000000074570000           0x613000                0x6 2024-02-16 12:29:43 UTC+0000   C:\Windows\SYSTEM32\windows.storage.dll
+0x0000000075e30000           0x280000                0x6 2024-02-16 12:29:43 UTC+0000   C:\Windows\System32\combase.dll
+0x0000000074540000            0x25000                0x6 2024-02-16 12:29:43 UTC+0000   C:\Windows\SYSTEM32\Wldp.dll
+0x00000000766f0000            0x96000                0x6 2024-02-16 12:29:43 UTC+0000   C:\Windows\System32\OLEAUT32.dll
+0x0000000075460000            0x87000                0x6 2024-02-16 12:29:43 UTC+0000   C:\Windows\System32\SHCORE.dll
+0x0000000076d80000            0x45000                0x6 2024-02-16 12:29:43 UTC+0000   C:\Windows\System32\shlwapi.dll
+************************************************************************
+SESSIONS Scan
+
+
+**************************************************
+Session(V): ffff818123b9d000 ID: 1 Processes: 51
+PagedPoolStart: ffffe74880000000 PagedPoolEnd ffffe7687fffffff
+
+
+############################################3
+Threads SCAN
+------
+ETHREAD: 0xffff9e899cd98080 Pid: 532 Tid: 1372
+Tags: 
+Created: 2024-02-16 11:59:12 UTC+0000
+Exited: 1970-01-01 00:00:00 UTC+0000
+Owning Process: dwm.exe
+Attached Process: dwm.exe
+State: Waiting:DelayExecution
+BasePriority: 0xf
+Priority: 0xf
+TEB: 0xd4a9e06000
+StartAddress: 0x7ff9f2f02690 ntdll.dll
+Win32Thread: 0x00000000
+CrossThreadFlags: PS_CROSS_THREAD_FLAGS_DEADTHREAD
+0x7ff9f2f02690 4883ec78         SUB RSP, 0x78
+0x7ff9f2f02694 4c8bc9           MOV R9, RCX
+0x7ff9f2f02697 488b0552991100   MOV RAX, [RIP+0x119952]
+0x7ff9f2f0269e 4885c0           TEST RAX, RAX
+0x7ff9f2f026a1 7410             JZ 0x7ff9f2f026b3
+0x7ff9f2f026a3 4c8bc2           MOV R8, RDX
+0x7ff9f2f026a6 48               DB 0x48
+0x7ff9f2f026a7 8b               DB 0x8b
+------
+------
+ETHREAD: 0xffff9e899c405080 Pid: 628 Tid: 632
+Tags: 
+Created: 2024-02-16 11:59:10 UTC+0000
+Exited: 1970-01-01 00:00:00 UTC+0000
+Owning Process: wininit.exe
+Attached Process: wininit.exe
+State: Waiting:UserRequest
+BasePriority: 0xf
+Priority: 0xf
+TEB: 0x535872e000
+StartAddress: 0x7ff9f2f02690 ntdll.dll
+Win32Thread: 0xffff9e899bcf3600
+CrossThreadFlags: PS_CROSS_THREAD_FLAGS_DEADTHREAD, PS_CROSS_THREAD_FLAGS_HARD_ERRORS_DISABLED
+0x7ff9f2f02690 4883ec78         SUB RSP, 0x78
+0x7ff9f2f02694 4c8bc9           MOV R9, RCX
+0x7ff9f2f02697 488b0552991100   MOV RAX, [RIP+0x119952]
+0x7ff9f2f0269e 4885c0           TEST RAX, RAX
+0x7ff9f2f026a1 7410             JZ 0x7ff9f2f026b3
+0x7ff9f2f026a3 4c8bc2           MOV R8, RDX
+0x7ff9f2f026a6 48               DB 0x48
+0x7ff9f2f026a7 8b               DB 0x8b
+----------
+------
+ETHREAD: 0xffff9e899d681040 Pid: 2600 Tid: 1076
+Tags: 
+Created: 2024-02-16 12:28:41 UTC+0000
+Exited: 1970-01-01 00:00:00 UTC+0000
+Owning Process: igfxHK.exe
+Attached Process: igfxHK.exe
+State: Waiting:WrQueue
+BasePriority: 0x8
+Priority: 0x8
+TEB: 0x676f228000
+StartAddress: 0x7ff9f2f02690 ntdll.dll
+Win32Thread: 0x00000000
+CrossThreadFlags: PS_CROSS_THREAD_FLAGS_DEADTHREAD
+0x7ff9f2f02690 4883ec78         SUB RSP, 0x78
+0x7ff9f2f02694 4c8bc9           MOV R9, RCX
+0x7ff9f2f02697 488b0552991100   MOV RAX, [RIP+0x119952]
+0x7ff9f2f0269e 4885c0           TEST RAX, RAX
+0x7ff9f2f026a1 7410             JZ 0x7ff9f2f026b3
+0x7ff9f2f026a3 4c8bc2           MOV R8, RDX
+0x7ff9f2f026a6 48               DB 0x48
+0x7ff9f2f026a7 8b               DB 0x8b
+
+
+------
+ETHREAD: 0xffff9e899df1b080 Pid: 3172 Tid: 5216
+Tags: 
+Created: 2024-02-16 11:59:32 UTC+0000
+Exited: 1970-01-01 00:00:00 UTC+0000
+Owning Process: igfxEM.exe
+Attached Process: igfxEM.exe
+State: Waiting:UserRequest
+BasePriority: 0x8
+Priority: 0x8
+TEB: 0xe561a14000
+StartAddress: 0x7ff9f2f02690 ntdll.dll
+Win32Thread: 0x00000000
+CrossThreadFlags: PS_CROSS_THREAD_FLAGS_DEADTHREAD
+0x7ff9f2f02690 4883ec78         SUB RSP, 0x78
+0x7ff9f2f02694 4c8bc9           MOV R9, RCX
+0x7ff9f2f02697 488b0552991100   MOV RAX, [RIP+0x119952]
+0x7ff9f2f0269e 4885c0           TEST RAX, RAX
+0x7ff9f2f026a1 7410             JZ 0x7ff9f2f026b3
+0x7ff9f2f026a3 4c8bc2           MOV R8, RDX
+0x7ff9f2f026a6 48               DB 0x48
+0x7ff9f2f026a7 8b               DB 0x8b
+------
+------
+ETHREAD: 0xffff9e899d69e080 Pid: 3188 Tid: 3324
+Tags: 
+Created: 2024-02-16 11:59:15 UTC+0000
+Exited: 1970-01-01 00:00:00 UTC+0000
+Owning Process: dynabookHDDPro
+Attached Process: dynabookHDDPro
+State: Waiting:Executive
+BasePriority: 0x8
+Priority: 0x8
+TEB: 0xae6a14c000
+StartAddress: 0xffffc48f24d16fc0 UNKNOWN
+Win32Thread: 0x00000000
+CrossThreadFlags: PS_CROSS_THREAD_FLAGS_DEADTHREAD
+0xffffc48f24d16fc0 c8e4699d         ENTER 0x69e4, 0x9d
+0xffffc48f24d16fc4 899effffc8e4     MOV [RSI-0x1b370001], EBX
+0xffffc48f24d16fca 699d899effffd06fd124 IMUL EBX, [RBP-0x6177], 0x24d16fd0
+0xffffc48f24d16fd4 8fc4             POP RSP
+0xffffc48f24d16fd6 ff               DB 0xff
+0xffffc48f24d16fd7 ff               DB 0xff
+------
+
+------
+ETHREAD: 0x9e899dab6080 Pid: 3276 Tid: 6632
+Tags: ScannerOnly
+Created: 2024-02-16 12:06:43 UTC+0000
+Exited: 1970-01-01 00:00:00 UTC+0000
+Owning Process: mintty.exe
+Attached Process: mintty.exe
+State: Waiting:Executive
+BasePriority: 0x8
+Priority: 0x8
+TEB: 0x003d8000
+StartAddress: 0x7ff9f2f02690 ntdll.dll
+Win32Thread: 0x00000000
+CrossThreadFlags: PS_CROSS_THREAD_FLAGS_DEADTHREAD
+0x7ff9f2f02690 4883ec78         SUB RSP, 0x78
+0x7ff9f2f02694 4c8bc9           MOV R9, RCX
+0x7ff9f2f02697 488b0552991100   MOV RAX, [RIP+0x119952]
+0x7ff9f2f0269e 4885c0           TEST RAX, RAX
+0x7ff9f2f026a1 7410             JZ 0x7ff9f2f026b3
+0x7ff9f2f026a3 4c8bc2           MOV R8, RDX
+0x7ff9f2f026a6 48               DB 0x48
+0x7ff9f2f026a7 8b               DB 0x8b
+------
+
+------
+ETHREAD: 0xffff9e899dab0080 Pid: 3368 Tid: 4448
+Tags: 
+Created: 2024-02-16 11:59:25 UTC+0000
+Exited: 1970-01-01 00:00:00 UTC+0000
+Owning Process: dynabookSystem
+Attached Process: dynabookSystem
+State: Waiting:WrUserRequest
+BasePriority: 0x8
+Priority: 0xa
+TEB: 0x3f89a59000
+StartAddress: 0x7ff9f2f02690 ntdll.dll
+Win32Thread: 0xffff9e899d9b4af0
+CrossThreadFlags: PS_CROSS_THREAD_FLAGS_DEADTHREAD
+0x7ff9f2f02690 4883ec78         SUB RSP, 0x78
+0x7ff9f2f02694 4c8bc9           MOV R9, RCX
+0x7ff9f2f02697 488b0552991100   MOV RAX, [RIP+0x119952]
+0x7ff9f2f0269e 4885c0           TEST RAX, RAX
+0x7ff9f2f026a1 7410             JZ 0x7ff9f2f026b3
+0x7ff9f2f026a3 4c8bc2           MOV R8, RDX
+0x7ff9f2f026a6 48               DB 0x48
+0x7ff9f2f026a7 8b               DB 0x8b
+
+------
+ETHREAD: 0xffff9e899ccac080 Pid: 3576 Tid: 3776
+Tags: 
+Created: 2024-02-16 12:00:41 UTC+0000
+Exited: 1970-01-01 00:00:00 UTC+0000
+Owning Process: TextInputHost.
+Attached Process: TextInputHost.
+State: Waiting:UserRequest
+BasePriority: 0x8
+Priority: 0x8
+TEB: 0x4b460cd000
+StartAddress: 0xffffc48f27cea080 UNKNOWN
+Win32Thread: 0x00000000
+CrossThreadFlags: PS_CROSS_THREAD_FLAGS_DEADTHREAD
+0xffffc48f27cea080 c8c4ca9c         ENTER 0xcac4, 0x9c
+0xffffc48f27cea084 899effffa09e     MOV [RSI-0x615f0001], EBX
+0xffffc48f27cea08a ce               DB 0xce
+0xffffc48f27cea08b 27               DB 0x27
+0xffffc48f27cea08c 8fc4             POP RSP
+0xffffc48f27cea08e ff               DB 0xff
+0xffffc48f27cea08f ff90a0ce278f     CALL QWORD [RAX-0x70d83160]
+0xffffc48f27cea095 c4               DB 0xc4
+0xffffc48f27cea096 ff               DB 0xff
+0xffffc48f27cea097 ff               DB 0xff
+------
+------
+ETHREAD: 0xffff9e899e207040 Pid: 4276 Tid: 8948
+Tags: 
+Created: 2024-02-16 12:28:41 UTC+0000
+Exited: 2024-02-16 12:30:48 UTC+0000
+Owning Process: igfxTray.exe
+Attached Process: igfxTray.exe
+State: Terminated
+BasePriority: 0x8
+Priority: 0x8
+TEB: 0x00000000
+StartAddress: 0x7ff9f2f02690 ntdll.dll
+Win32Thread: 0x00000000
+CrossThreadFlags: PS_CROSS_THREAD_FLAGS_DEADTHREAD, PS_CROSS_THREAD_FLAGS_TERMINATED
+0x7ff9f2f02690 4883ec78         SUB RSP, 0x78
+0x7ff9f2f02694 4c8bc9           MOV R9, RCX
+0x7ff9f2f02697 488b0552991100   MOV RAX, [RIP+0x119952]
+0x7ff9f2f0269e 4885c0           TEST RAX, RAX
+0x7ff9f2f026a1 7410             JZ 0x7ff9f2f026b3
+0x7ff9f2f026a3 4c8bc2           MOV R8, RDX
+0x7ff9f2f026a6 48               DB 0x48
+0x7ff9f2f026a7 8b               DB 0x8b
+------
+------
+ETHREAD: 0xffff9e899df0b080 Pid: 5344 Tid: 5376
+Tags: 
+Created: 2024-02-16 11:59:33 UTC+0000
+Exited: 1970-01-01 00:00:00 UTC+0000
+Owning Process: ApntEx.exe
+Attached Process: ApntEx.exe
+State: Waiting:UserRequest
+BasePriority: 0x8
+Priority: 0x9
+TEB: 0x0024c000
+StartAddress: 0x7ff9f2f02690 ntdll.dll
+Win32Thread: 0x00000000
+CrossThreadFlags: PS_CROSS_THREAD_FLAGS_DEADTHREAD
+0x7ff9f2f02690 4883ec78         SUB RSP, 0x78
+0x7ff9f2f02694 4c8bc9           MOV R9, RCX
+0x7ff9f2f02697 488b0552991100   MOV RAX, [RIP+0x119952]
+0x7ff9f2f0269e 4885c0           TEST RAX, RAX
+0x7ff9f2f026a1 7410             JZ 0x7ff9f2f026b3
+0x7ff9f2f026a3 4c8bc2           MOV R8, RDX
+0x7ff9f2f026a6 48               DB 0x48
+0x7ff9f2f026a7 8b               DB 0x8b
+------
+
+------
+ETHREAD: 0xffff9e899d8fb080 Pid: 5800 Tid: 4432
+Tags: 
+Created: 2024-02-16 11:59:50 UTC+0000
+Exited: 1970-01-01 00:00:00 UTC+0000
+Owning Process: SearchApp.exe
+Attached Process: SearchApp.exe
+State: Waiting:UserRequest
+BasePriority: 0x8
+Priority: 0x9
+TEB: 0x47747b4000
+StartAddress: 0x7ff9f2f02690 ntdll.dll
+Win32Thread: 0xffff9e899e5b29a0
+CrossThreadFlags: PS_CROSS_THREAD_FLAGS_DEADTHREAD, PS_CROSS_THREAD_FLAGS_SKIP_TERMINATION_MSG
+0x7ff9f2f02690 4883ec78         SUB RSP, 0x78
+0x7ff9f2f02694 4c8bc9           MOV R9, RCX
+0x7ff9f2f02697 488b0552991100   MOV RAX, [RIP+0x119952]
+0x7ff9f2f0269e 4885c0           TEST RAX, RAX
+0x7ff9f2f026a1 7410             JZ 0x7ff9f2f026b3
+0x7ff9f2f026a3 4c8bc2           MOV R8, RDX
+0x7ff9f2f026a6 48               DB 0x48
+0x7ff9f2f026a7 8b               DB 0x8b
+
+------
+ETHREAD: 0xffff9e899b515080 Pid: 3128 Tid: 5684
+Tags: 
+Created: 2024-02-16 12:00:48 UTC+0000
+Exited: 1970-01-01 00:00:00 UTC+0000
+Owning Process: svchost.exe
+Attached Process: svchost.exe
+State: Waiting:WrQueue
+BasePriority: 0x8
+Priority: 0x8
+TEB: 0x7a5f447000
+StartAddress: 0x7ff9f2f02690 ntdll.dll
+Win32Thread: 0x00000000
+CrossThreadFlags: PS_CROSS_THREAD_FLAGS_DEADTHREAD
+0x7ff9f2f02690 4883ec78         SUB RSP, 0x78
+0x7ff9f2f02694 4c8bc9           MOV R9, RCX
+0x7ff9f2f02697 488b0552991100   MOV RAX, [RIP+0x119952]
+0x7ff9f2f0269e 4885c0           TEST RAX, RAX
+0x7ff9f2f026a1 7410             JZ 0x7ff9f2f026b3
+0x7ff9f2f026a3 4c8bc2           MOV R8, RDX
+0x7ff9f2f026a6 48               DB 0x48
+0x7ff9f2f026a7 8b               DB 0x8b
+------
+
+
+------
+ETHREAD: 0xffff9e8996da0080 Pid: 7060 Tid: 6568
+Tags: 
+Created: 2024-02-16 12:00:13 UTC+0000
+Exited: 1970-01-01 00:00:00 UTC+0000
+Owning Process: OneDrive.exe
+Attached Process: OneDrive.exe
+State: Waiting:WrQueue
+BasePriority: 0x8
+Priority: 0x8
+TEB: 0x0456c000
+StartAddress: 0x7ff9f2f02690 ntdll.dll
+Win32Thread: 0x00000000
+CrossThreadFlags: PS_CROSS_THREAD_FLAGS_DEADTHREAD
+0x7ff9f2f02690 4883ec78         SUB RSP, 0x78
+0x7ff9f2f02694 4c8bc9           MOV R9, RCX
+0x7ff9f2f02697 488b0552991100   MOV RAX, [RIP+0x119952]
+0x7ff9f2f0269e 4885c0           TEST RAX, RAX
+0x7ff9f2f026a1 7410             JZ 0x7ff9f2f026b3
+0x7ff9f2f026a3 4c8bc2           MOV R8, RDX
+0x7ff9f2f026a6 48               DB 0x48
+0x7ff9f2f026a7 8b               DB 0x8b
+------
+
+
+------
+ETHREAD: 0xffff9e899ccb7240 Pid: 8700 Tid: 6780
+Tags: 
+Created: 2024-02-16 12:29:43 UTC+0000
+Exited: 1970-01-01 00:00:00 UTC+0000
+Owning Process: ed01ebfbc9eb5b
+Attached Process: ed01ebfbc9eb5b
+State: Waiting:DelayExecution
+BasePriority: 0x8
+Priority: 0x8
+TEB: 0x002b4000
+StartAddress: 0x7ff9f2f02690 ntdll.dll
+Win32Thread: 0x00000000
+CrossThreadFlags: PS_CROSS_THREAD_FLAGS_DEADTHREAD
+0x7ff9f2f02690 4883ec78         SUB RSP, 0x78
+0x7ff9f2f02694 4c8bc9           MOV R9, RCX
+0x7ff9f2f02697 488b0552991100   MOV RAX, [RIP+0x119952]
+0x7ff9f2f0269e 4885c0           TEST RAX, RAX
+0x7ff9f2f026a1 7410             JZ 0x7ff9f2f026b3
+0x7ff9f2f026a3 4c8bc2           MOV R8, RDX
+0x7ff9f2f026a6 48               DB 0x48
+0x7ff9f2f026a7 8b               DB 0x8b
+------
+
+------
+ETHREAD: 0xffff9e899ea30080 Pid: 8700 Tid: 7508
+Tags: 
+Created: 2024-02-16 12:29:43 UTC+0000
+Exited: 1970-01-01 00:00:00 UTC+0000
+Owning Process: ed01ebfbc9eb5b
+Attached Process: ed01ebfbc9eb5b
+State: Waiting:DelayExecution
+BasePriority: 0x8
+Priority: 0x8
+TEB: 0x002b1000
+StartAddress: 0x7ff9f2f02690 ntdll.dll
+Win32Thread: 0x00000000
+CrossThreadFlags: PS_CROSS_THREAD_FLAGS_DEADTHREAD
+0x7ff9f2f02690 4883ec78         SUB RSP, 0x78
+0x7ff9f2f02694 4c8bc9           MOV R9, RCX
+0x7ff9f2f02697 488b0552991100   MOV RAX, [RIP+0x119952]
+0x7ff9f2f0269e 4885c0           TEST RAX, RAX
+0x7ff9f2f026a1 7410             JZ 0x7ff9f2f026b3
+0x7ff9f2f026a3 4c8bc2           MOV R8, RDX
+0x7ff9f2f026a6 48               DB 0x48
+0x7ff9f2f026a7 8b               DB 0x8b
+
+------
+ETHREAD: 0xffff9e899b851080 Pid: 8700 Tid: 6200
+Tags: 
+Created: 2024-02-16 12:29:43 UTC+0000
+Exited: 1970-01-01 00:00:00 UTC+0000
+Owning Process: ed01ebfbc9eb5b
+Attached Process: ed01ebfbc9eb5b
+State: Waiting:DelayExecution
+BasePriority: 0x8
+Priority: 0x8
+TEB: 0x002a5000
+StartAddress: 0x7ff9f2f02690 ntdll.dll
+Win32Thread: 0x00000000
+CrossThreadFlags: PS_CROSS_THREAD_FLAGS_DEADTHREAD
+0x7ff9f2f02690 4883ec78         SUB RSP, 0x78
+0x7ff9f2f02694 4c8bc9           MOV R9, RCX
+0x7ff9f2f02697 488b0552991100   MOV RAX, [RIP+0x119952]
+0x7ff9f2f0269e 4885c0           TEST RAX, RAX
+0x7ff9f2f026a1 7410             JZ 0x7ff9f2f026b3
+0x7ff9f2f026a3 4c8bc2           MOV R8, RDX
+0x7ff9f2f026a6 48               DB 0x48
+0x7ff9f2f026a7 8b               DB 0x8b
+------
+------
+ETHREAD: 0xffff9e899d085080 Pid: 8700 Tid: 7588
+Tags: 
+Created: 2024-02-16 12:29:43 UTC+0000
+Exited: 1970-01-01 00:00:00 UTC+0000
+Owning Process: ed01ebfbc9eb5b
+Attached Process: ed01ebfbc9eb5b
+State: Waiting:DelayExecution
+BasePriority: 0x8
+Priority: 0x8
+TEB: 0x002a8000
+StartAddress: 0x7ff9f2f02690 ntdll.dll
+Win32Thread: 0x00000000
+CrossThreadFlags: PS_CROSS_THREAD_FLAGS_DEADTHREAD
+0x7ff9f2f02690 4883ec78         SUB RSP, 0x78
+0x7ff9f2f02694 4c8bc9           MOV R9, RCX
+0x7ff9f2f02697 488b0552991100   MOV RAX, [RIP+0x119952]
+0x7ff9f2f0269e 4885c0           TEST RAX, RAX
+0x7ff9f2f026a1 7410             JZ 0x7ff9f2f026b3
+0x7ff9f2f026a3 4c8bc2           MOV R8, RDX
+0x7ff9f2f026a6 48               DB 0x48
+0x7ff9f2f026a7 8b               DB 0x8b
+------
+------
+ETHREAD: 0xffff9e899e716040 Pid: 8700 Tid: 8872
+Tags: 
+Created: 2024-02-16 12:30:11 UTC+0000
+Exited: 1970-01-01 00:00:00 UTC+0000
+Owning Process: ed01ebfbc9eb5b
+Attached Process: ed01ebfbc9eb5b
+State: Waiting:WrQueue
+BasePriority: 0x8
+Priority: 0x8
+TEB: 0x002b7000
+StartAddress: 0x7ff9f2f02690 ntdll.dll
+Win32Thread: 0x00000000
+CrossThreadFlags: PS_CROSS_THREAD_FLAGS_DEADTHREAD
+0x7ff9f2f02690 4883ec78         SUB RSP, 0x78
+0x7ff9f2f02694 4c8bc9           MOV R9, RCX
+0x7ff9f2f02697 488b0552991100   MOV RAX, [RIP+0x119952]
+0x7ff9f2f0269e 4885c0           TEST RAX, RAX
+0x7ff9f2f026a1 7410             JZ 0x7ff9f2f026b3
+0x7ff9f2f026a3 4c8bc2           MOV R8, RDX
+0x7ff9f2f026a6 48               DB 0x48
+0x7ff9f2f026a7 8b               DB 0x8b
+------
+------
+ETHREAD: 0xffff9e899e5a0080 Pid: 8700 Tid: 7440
+Tags: 
+Created: 2024-02-16 12:29:40 UTC+0000
+Exited: 1970-01-01 00:00:00 UTC+0000
+Owning Process: ed01ebfbc9eb5b
+Attached Process: ed01ebfbc9eb5b
+State: Waiting:Executive
+BasePriority: 0x8
+Priority: 0x8
+TEB: 0x0029c000
+StartAddress: 0x7ff9f2f02690 ntdll.dll
+Win32Thread: 0xffff9e899d1feb00
+CrossThreadFlags: PS_CROSS_THREAD_FLAGS_DEADTHREAD
+0x7ff9f2f02690 4883ec78         SUB RSP, 0x78
+0x7ff9f2f02694 4c8bc9           MOV R9, RCX
+0x7ff9f2f02697 488b0552991100   MOV RAX, [RIP+0x119952]
+0x7ff9f2f0269e 4885c0           TEST RAX, RAX
+0x7ff9f2f026a1 7410             JZ 0x7ff9f2f026b3
+0x7ff9f2f026a3 4c8bc2           MOV R8, RDX
+0x7ff9f2f026a6 48               DB 0x48
+0x7ff9f2f026a7 8b               DB 0x8b
+------
+------
+ETHREAD: 0xffff9e899cda3080 Pid: 8700 Tid: 2892
+Tags: 
+Created: 2024-02-16 12:29:43 UTC+0000
+Exited: 1970-01-01 00:00:00 UTC+0000
+Owning Process: ed01ebfbc9eb5b
+Attached Process: ed01ebfbc9eb5b
+State: Waiting:DelayExecution
+BasePriority: 0x8
+Priority: 0x8
+TEB: 0x002ae000
+StartAddress: 0x7ff9f2f02690 ntdll.dll
+Win32Thread: 0x00000000
+CrossThreadFlags: PS_CROSS_THREAD_FLAGS_DEADTHREAD
+0x7ff9f2f02690 4883ec78         SUB RSP, 0x78
+0x7ff9f2f02694 4c8bc9           MOV R9, RCX
+0x7ff9f2f02697 488b0552991100   MOV RAX, [RIP+0x119952]
+0x7ff9f2f0269e 4885c0           TEST RAX, RAX
+0x7ff9f2f026a1 7410             JZ 0x7ff9f2f026b3
+0x7ff9f2f026a3 4c8bc2           MOV R8, RDX
+0x7ff9f2f026a6 48               DB 0x48
+0x7ff9f2f026a7 8b               DB 0x8b
+------
+
+------
+ETHREAD: 0xffff9e899cd9e080 Pid: 8700 Tid: 6816
+Tags: 
+Created: 2024-02-16 12:29:43 UTC+0000
+Exited: 1970-01-01 00:00:00 UTC+0000
+Owning Process: ed01ebfbc9eb5b
+Attached Process: ed01ebfbc9eb5b
+State: Waiting:DelayExecution
+BasePriority: 0x8
+Priority: 0x8
+TEB: 0x002ab000
+StartAddress: 0x7ff9f2f02690 ntdll.dll
+Win32Thread: 0x00000000
+CrossThreadFlags: PS_CROSS_THREAD_FLAGS_DEADTHREAD
+0x7ff9f2f02690 4883ec78         SUB RSP, 0x78
+0x7ff9f2f02694 4c8bc9           MOV R9, RCX
+0x7ff9f2f02697 488b0552991100   MOV RAX, [RIP+0x119952]
+0x7ff9f2f0269e 4885c0           TEST RAX, RAX
+0x7ff9f2f026a1 7410             JZ 0x7ff9f2f026b3
+0x7ff9f2f026a3 4c8bc2           MOV R8, RDX
+0x7ff9f2f026a6 48               DB 0x48
+0x7ff9f2f026a7 8b               DB 0x8b
+------
+
+------
+ETHREAD: 0xffff9e899d2c4080 Pid: 8700 Tid: 7152
+Tags: 
+Created: 2024-02-16 12:30:11 UTC+0000
+Exited: 1970-01-01 00:00:00 UTC+0000
+Owning Process: ed01ebfbc9eb5b
+Attached Process: ed01ebfbc9eb5b
+State: Waiting:WrQueue
+BasePriority: 0x8
+Priority: 0x8
+TEB: 0x002ba000
+StartAddress: 0x7ff9f2f02690 ntdll.dll
+Win32Thread: 0x00000000
+CrossThreadFlags: PS_CROSS_THREAD_FLAGS_DEADTHREAD
+0x7ff9f2f02690 4883ec78         SUB RSP, 0x78
+0x7ff9f2f02694 4c8bc9           MOV R9, RCX
+0x7ff9f2f02697 488b0552991100   MOV RAX, [RIP+0x119952]
+0x7ff9f2f0269e 4885c0           TEST RAX, RAX
+0x7ff9f2f026a1 7410             JZ 0x7ff9f2f026b3
+0x7ff9f2f026a3 4c8bc2           MOV R8, RDX
+0x7ff9f2f026a6 48               DB 0x48
+0x7ff9f2f026a7 8b               DB 0x8b
+------

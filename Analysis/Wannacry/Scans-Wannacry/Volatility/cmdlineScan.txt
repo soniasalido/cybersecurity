@@ -1,0 +1,149 @@
+Volatility 3 Framework 2.5.2
+
+PID	Process	Args
+
+4	System	Required memory at 0x20 is not valid (process exited?)
+92	Registry	Required memory at 0x20 is not valid (process exited?)
+348	smss.exe	\SystemRoot\System32\smss.exe
+480	csrss.exe	%SystemRoot%\system32\csrss.exe ObjectDirectory=\Windows SharedSection=1024,20480,768 Windows=On SubSystemType=Windows ServerDll=basesrv,1 ServerDll=winsrv:UserServerDllInitialization,3 ServerDll=sxssrv,4 ProfileControl=Off MaxRequestThreads=16
+628	wininit.exe	wininit.exe
+640	csrss.exe	%SystemRoot%\system32\csrss.exe ObjectDirectory=\Windows SharedSection=1024,20480,768 Windows=On SubSystemType=Windows ServerDll=basesrv,1 ServerDll=winsrv:UserServerDllInitialization,3 ServerDll=sxssrv,4 ProfileControl=Off MaxRequestThreads=16
+696	services.exe	C:\Windows\system32\services.exe
+712	lsass.exe	C:\Windows\system32\lsass.exe
+800	svchost.exe	C:\Windows\system32\svchost.exe -k DcomLaunch -p
+816	fontdrvhost.ex	"fontdrvhost.exe"
+896	svchost.exe	C:\Windows\system32\svchost.exe -k RPCSS -p
+948	svchost.exe	C:\Windows\system32\svchost.exe -k DcomLaunch -p -s LSM
+1008	winlogon.exe	winlogon.exe
+288	fontdrvhost.ex	"fontdrvhost.exe"
+532	dwm.exe	"dwm.exe"
+624	svchost.exe	C:\Windows\system32\svchost.exe -k netsvcs -p -s DsmSvc
+692	svchost.exe	C:\Windows\system32\svchost.exe -k LocalServiceNoNetwork -p
+1096	svchost.exe	C:\Windows\System32\svchost.exe -k LocalServiceNetworkRestricted -p -s EventLog
+1116	svchost.exe	C:\Windows\System32\svchost.exe -k LocalSystemNetworkRestricted -p -s NcbService
+1124	svchost.exe	C:\Windows\system32\svchost.exe -k LocalServiceNetworkRestricted -p -s TimeBrokerSvc
+1232	svchost.exe	C:\Windows\system32\svchost.exe -k LocalService -p -s DispBrokerDesktopSvc
+1240	svchost.exe	C:\Windows\system32\svchost.exe -k netsvcs -p -s Schedule
+1272	svchost.exe	C:\Windows\system32\svchost.exe -k LocalSystemNetworkRestricted -p -s DisplayEnhancementService
+1280	svchost.exe	C:\Windows\system32\svchost.exe -k LocalSystemNetworkRestricted -p -s hidserv
+1360	svchost.exe	C:\Windows\system32\svchost.exe -k netsvcs -p -s ProfSvc
+1380	svchost.exe	C:\Windows\system32\svchost.exe -k LocalService -p -s nsi
+1608	svchost.exe	C:\Windows\system32\svchost.exe -k netsvcs -p -s UserManager
+1652	svchost.exe	C:\Windows\system32\svchost.exe -k LocalServiceNetworkRestricted -p -s Dhcp
+1668	svchost.exe	C:\Windows\system32\svchost.exe -k LocalService -p
+1744	svchost.exe	C:\Windows\system32\svchost.exe -k appmodel -p -s StateRepository
+1756	svchost.exe	C:\Windows\system32\svchost.exe -k appmodel -p -s camsvc
+1860	svchost.exe	C:\Windows\system32\svchost.exe -k LocalService -p -s EventSystem
+1872	svchost.exe	C:\Windows\System32\svchost.exe -k NetworkService -p -s NlaSvc
+1888	svchost.exe	C:\Windows\system32\svchost.exe -k LocalSystemNetworkRestricted -p -s SysMain
+1908	svchost.exe	C:\Windows\System32\svchost.exe -k netsvcs -p -s Themes
+1976	MemCompression	Required memory at 0x20 is not valid (process exited?)
+2020	svchost.exe	C:\Windows\system32\svchost.exe -k netsvcs -p -s SENS
+1708	svchost.exe	C:\Windows\System32\svchost.exe -k LocalService -p -s netprofm
+2060	igfxCUIService	C:\Windows\system32\igfxCUIService.exe
+2108	svchost.exe	C:\Windows\System32\svchost.exe -k LocalSystemNetworkRestricted -p -s AudioEndpointBuilder
+2116	svchost.exe	C:\Windows\system32\svchost.exe -k LocalService -p -s FontCache
+2216	svchost.exe	C:\Windows\system32\svchost.exe -k netsvcs -p -s Winmgmt
+2308	svchost.exe	C:\Windows\System32\svchost.exe -k LocalServiceNetworkRestricted -p
+2452	svchost.exe	C:\Windows\system32\svchost.exe -k NetworkService -p -s Dnscache
+2460	svchost.exe	C:\Windows\System32\svchost.exe -k LocalServiceNetworkRestricted -p
+2472	svchost.exe	C:\Windows\system32\svchost.exe -k LocalServiceNetworkRestricted -p
+2568	svchost.exe	C:\Windows\system32\svchost.exe -k LocalServiceNetworkRestricted -p -s WinHttpAutoProxySvc
+2656	svchost.exe	C:\Windows\system32\svchost.exe -k LocalSystemNetworkRestricted -p
+2720	svchost.exe	C:\Windows\System32\svchost.exe -k netsvcs -p -s ShellHWDetection
+2832	spoolsv.exe	C:\Windows\System32\spoolsv.exe
+2880	svchost.exe	C:\Windows\system32\svchost.exe -k LocalServiceNoNetworkFirewall -p
+2976	svchost.exe	C:\Windows\System32\svchost.exe -k NetworkService -p -s LanmanWorkstation
+3036	svchost.exe	C:\Windows\system32\svchost.exe -k LocalSystemNetworkRestricted -p -s DeviceAssociationService
+3128	svchost.exe	C:\Windows\system32\svchost.exe -k NetworkService -p -s CryptSvc
+3136	svchost.exe	C:\Windows\System32\svchost.exe -k utcsvc -p
+3144	HidMonitorSvc.	"C:\Program Files\Apoint2K\HidMonitorSvc.exe"
+3156	svchost.exe	C:\Windows\System32\svchost.exe -k LocalServiceNoNetwork -p -s DPS
+3188	dynabookHDDPro	C:\Windows\System32\DriverStore\FileRepository\dhpevm.inf_amd64_dc22ceb838778a98\dynabookHDDProtection.exe
+3240	svchost.exe	C:\Windows\System32\svchost.exe -k NetSvcs -p -s iphlpsvc
+3280	svchost.exe	C:\Windows\system32\svchost.exe -k LocalService -p -s SstpSvc
+3292	svchost.exe	C:\Windows\System32\svchost.exe -k LocalSystemNetworkRestricted -p -s TrkWks
+3316	svchost.exe	C:\Windows\system32\svchost.exe -k netsvcs -p -s WpnService
+3352	DSDFunctionKey	C:\Windows\System32\DriverStore\FileRepository\dsrvctldrv.inf_amd64_9a8e578dc9a18977\DSDFunctionKeyCtlService.exe
+3360	RMService.exe	C:\Windows\System32\DriverStore\FileRepository\dsrvctldrv.inf_amd64_9a8e578dc9a18977\RMService.exe
+3368	dynabookSystem	C:\Windows\System32\DriverStore\FileRepository\dsrvctldrv.inf_amd64_9a8e578dc9a18977\dynabookSystemService.exe
+3432	svchost.exe	C:\Windows\System32\svchost.exe -k LocalService -p -s WdiServiceHost
+3444	MsMpEng.exe	"C:\ProgramData\Microsoft\Windows Defender\platform\4.18.23110.3-0\MsMpEng.exe"
+3620	svchost.exe	C:\Windows\system32\svchost.exe -k netsvcs -p -s LanmanServer
+3732	svchost.exe	C:\Windows\System32\svchost.exe -k netsvcs
+3844	SearchIndexer.	C:\Windows\system32\SearchIndexer.exe /Embedding
+3868	AggregatorHost	AggregatorHost.exe
+4360	svchost.exe	C:\Windows\System32\svchost.exe -k LocalServiceNetworkRestricted -s RmSvc
+4600	Apoint.exe	"C:\Program Files\Apoint2K\Apoint.exe"
+4608	sihost.exe	sihost.exe
+4636	DSDFunctionKey	"C:\Windows\System32\DriverStore\FileRepository\dsrvctldrv.inf_amd64_9a8e578dc9a18977\DSDFunctionKeyCtlService.exe" -user
+4676	svchost.exe	C:\Windows\system32\svchost.exe -k UnistackSvcGroup -s CDPUserSvc
+4704	svchost.exe	C:\Windows\system32\svchost.exe -k UnistackSvcGroup -s WpnUserService
+4788	taskhostw.exe	taskhostw.exe {222A245B-E637-4AE9-A93F-A59CA119A75E}
+4812	MicrosoftEdgeU	Required memory at 0xfd2140 is inaccessible (swapped)
+4952	svchost.exe	C:\Windows\System32\svchost.exe -k LocalSystemNetworkRestricted -p -s TabletInputService
+5024	svchost.exe	C:\Windows\system32\svchost.exe -k netsvcs -p -s Appinfo
+5052	svchost.exe	C:\Windows\system32\svchost.exe -k netsvcs -p -s TokenBroker
+5116	ctfmon.exe	"ctfmon.exe"
+3172	igfxEM.exe	igfxEM.exe 
+2600	igfxHK.exe	igfxHK.exe 
+4264	ApMsgFwd.exe	"C:\Program Files\Apoint2K\ApMsgFwd.exe" -s{05FA8492-C047-4207-BE65-780D8591C113}
+4276	igfxTray.exe	igfxTray.exe 
+3608	svchost.exe	C:\Windows\system32\svchost.exe -k LocalSystemNetworkRestricted -p -s PcaSvc
+4776	svchost.exe	C:\Windows\system32\svchost.exe -k LocalService -p -s CDPSvc
+5264	userinit.exe	Required memory at 0xc1da8bf020 is not valid (process exited?)
+5296	hidfind.exe	"C:\Program Files\Apoint2K\HidFind.exe" 
+5316	explorer.exe	C:\Windows\Explorer.EXE
+5344	ApntEx.exe	"Apntex.exe"
+5380	conhost.exe	\??\C:\Windows\system32\conhost.exe 0x4
+5576	svchost.exe	C:\Windows\system32\svchost.exe -k ClipboardSvcGroup -p -s cbdhsvc
+5392	StartMenuExper	"C:\Windows\SystemApps\Microsoft.Windows.StartMenuExperienceHost_cw5n1h2txyewy\StartMenuExperienceHost.exe" -ServerName:App.AppXywbrabmsek0gm3tkwpr5kwzbs55tkqay.mca
+5772	RuntimeBroker.	C:\Windows\System32\RuntimeBroker.exe -Embedding
+5800	SearchApp.exe	"C:\Windows\SystemApps\Microsoft.Windows.Search_cw5n1h2txyewy\SearchApp.exe" -ServerName:CortanaUI.AppX8z9r6jm96hw4bsbneegw0kyxx296wr9t.mca
+4900	RuntimeBroker.	C:\Windows\System32\RuntimeBroker.exe -Embedding
+5748	SkypeBackgroun	Required memory at 0x6e9b4c2020 is inaccessible (swapped)
+6488	svchost.exe	C:\Windows\System32\svchost.exe -k LocalService -p -s LicenseManager
+6912	SecurityHealth	"C:\Windows\System32\SecurityHealthSystray.exe" 
+6948	SecurityHealth	C:\Windows\system32\SecurityHealthService.exe
+7060	OneDrive.exe	"C:\Users\usuario\AppData\Local\Microsoft\OneDrive\OneDrive.exe" /background
+6628	GoogleCrashHan	Required memory at 0x1322196 is inaccessible (swapped)
+64	GoogleCrashHan	Required memory at 0xb81d10a020 is inaccessible (swapped)
+1184	RuntimeBroker.	C:\Windows\System32\RuntimeBroker.exe -Embedding
+1896	ShellExperienc	"C:\Windows\SystemApps\ShellExperienceHost_cw5n1h2txyewy\ShellExperienceHost.exe" -ServerName:App.AppXtk181tbxbce2qsex02s8tw7hfxa9xb3t.mca
+2576	RuntimeBroker.	C:\Windows\System32\RuntimeBroker.exe -Embedding
+3576	TextInputHost.	"C:\Windows\SystemApps\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\TextInputHost.exe" -ServerName:InputApp.AppXjd5de1g66v206tj52m9d0dtpppx4cgpn.mca
+4528	SkypeApp.exe	Required memory at 0x3a26c39020 is inaccessible (swapped)
+3856	chrome.exe	Required memory at 0xc85792b020 is not valid (process exited?)
+7768	RuntimeBroker.	C:\Windows\System32\RuntimeBroker.exe -Embedding
+8136	svchost.exe	C:\Windows\System32\svchost.exe -k NetworkService -p -s DoSvc
+8164	svchost.exe	C:\Windows\system32\svchost.exe -k LocalServiceAndNoImpersonation -p -s SSDPSRV
+6932	svchost.exe	C:\Windows\System32\svchost.exe -k LocalSystemNetworkRestricted -p -s StorSvc
+3500	SgrmBroker.exe	C:\Windows\system32\SgrmBroker.exe
+3560	svchost.exe	C:\Windows\system32\svchost.exe -k netsvcs -p -s UsoSvc
+7304	svchost.exe	C:\Windows\System32\svchost.exe -k LocalServiceNetworkRestricted -p -s wscsvc
+7884	svchost.exe	C:\Windows\system32\svchost.exe -k UnistackSvcGroup
+8676	svchost.exe	Required memory at 0xf036bf4020 is not valid (process exited?)
+1520	ApplicationFra	C:\Windows\system32\ApplicationFrameHost.exe -Embedding
+7988	WinStore.App.e	Required memory at 0x971b9d4020 is inaccessible (swapped)
+6524	RuntimeBroker.	C:\Windows\System32\RuntimeBroker.exe -Embedding
+1044	SystemSettings	Required memory at 0xd3791e3020 is inaccessible (swapped)
+8108	UserOOBEBroker	C:\Windows\System32\oobe\UserOOBEBroker.exe -Embedding
+2084	svchost.exe	C:\Windows\system32\svchost.exe -k wusvcs -p -s WaaSMedicSvc
+2412	svchost.exe	C:\Windows\System32\svchost.exe -k LocalSystemNetworkRestricted -p -s WdiSystemHost
+1800	git-bash.exe	"C:\Program Files\Git\git-bash.exe" "--cd=C:\Users\usuario\Documents."
+3276	mintty.exe	usr\bin\mintty.exe --nodaemon -o AppID=GitForWindows.Bash -o AppLaunchCmd="C:\Program Files\Git\git-bash.exe" -o AppName="Git Bash" -i "C:\Program Files\Git\git-bash.exe" --store-taskbar-properties -- /usr/bin/bash --login -i
+3636	mintty.exe	Required memory at 0x211020 is not valid (process exited?)
+7228	cygwin-console	Required memory at 0xff4f323020 is not valid (process exited?)
+2300	conhost.exe	\??\C:\Windows\system32\conhost.exe 0x4
+1348	bash.exe	"C:\Program Files\Git\usr\bin\bash.exe" --login -i
+3516	smartscreen.ex	C:\Windows\System32\smartscreen.exe -Embedding
+5384	FTK Imager.exe	"C:\Program Files\AccessData\FTK Imager\FTK Imager.exe" 
+2156	svchost.exe	C:\Windows\system32\svchost.exe -k LocalService -p -s BthAvctpSvc
+1724	svchost.exe	C:\Windows\system32\svchost.exe -k netsvcs -p -s gpsvc
+7796	svchost.exe	C:\Windows\system32\svchost.exe -k LocalServiceNetworkRestricted -p -s NgcCtnrSvc
+8372	svchost.exe	C:\Windows\system32\svchost.exe -k WbioSvcGroup -s WbioSrvc
+6452	svchost.exe	C:\Windows\system32\svchost.exe -k wsappx -p -s AppXSvc
+9096	git.exe	Required memory at 0x9ac7dac020 is not valid (process exited?)
+8700	ed01ebfbc9eb5b	"C:\Users\usuario\Documents\theZoo\malware\Binaries\Ransomware.WannaCry\Ransomware.WannaCry\ed01ebfbc9eb5bbea545af4d01bf5f1071661840480439c6e5babe8e080e41aa.exe" 
+6584	SearchProtocol	"C:\Windows\system32\SearchProtocolHost.exe" Global\UsGthrFltPipeMssGthrPipe3_ Global\UsGthrCtrlFltPipeMssGthrPipe3 1 -2147483646 "Software\Microsoft\Windows Search" "Mozilla/4.0 (compatible; MSIE 6.0; Windows NT; MS Search 4.0 Robot)" "C:\ProgramData\Microsoft\Search\Data\Temp\usgthrsvc" "DownLevelDaemon" 
+8800	SearchFilterHo	"C:\Windows\system32\SearchFilterHost.exe" 0 820 824 832 8192 828 804 

@@ -1,0 +1,152 @@
+Offset(P)          Name                    PID pslist psscan thrdproc pspcid csrss session deskthrd ExitTime
+------------------ -------------------- ------ ------ ------ -------- ------ ----- ------- -------- --------
+0x000000000fd29300 svchost.exe            1096 True   True   False    False  True  True    False    
+0x0000000030815080 mintty.exe             3276 True   False  True     False  True  True    False    
+0x000000001573a080 svchost.exe            1668 True   False  False    False  True  True    False    
+0x000000005c9370c0 svchost.exe            6932 True   True   False    False  True  True    False    
+0x00000000c86d40c0 ApplicationFra         1520 True   True   True     False  True  True    False    
+0x00000000852d7080 svchost.exe            8372 True   True   False    False  True  True    False    
+0x000000000d9d5140 fontdrvhost.ex          288 True   True   True     False  True  True    False    
+0x0000000113609240 svchost.exe            5052 True   True   False    False  True  True    False    
+0x000000011b7be340 svchost.exe            7304 True   True   False    False  True  True    False    
+0x000000010f6e6280 svchost.exe            4952 True   True   False    False  True  True    False    
+0x000000001eb232c0 svchost.exe            2880 True   True   False    False  True  True    False    
+0x0000000033368300 svchost.exe            4676 True   True   True     False  True  True    False    
+0x0000000102622300 igfxEM.exe             3172 True   True   False    False  True  True    False    
+0x000000000e82d340 fontdrvhost.ex          816 True   True   True     False  True  True    False    
+0x00000000c4533080 WinStore.App.e         7988 True   True   False    False  True  True    False    
+0x000000000c13c080 wininit.exe             628 True   True   False    False  True  True    False    
+0x000000000d91a080 TextInputHost.         3576 True   True   False    False  True  True    False    
+0x000000010fbc0080 svchost.exe            1232 True   False  False    False  True  True    False    
+0x000000004ecab0c0 SecurityHealth         6912 True   False  False    False  True  True    False    
+0x0000000108f63080 svchost.exe            8164 True   True   True     False  True  True    False    
+0x000000000f151240 svchost.exe             948 True   False  True     False  True  True    False    
+
+0x0000000117cbc080 ed01ebfbc9eb5b         8700 True   False  False    False  True  True    False    
+
+0x000000001d60a080 RuntimeBroker.         2576 True   True   True     False  True  True    False    
+0x000000011d56b080 svchost.exe            1872 True   False  True     False  True  True    False    
+0x000000011004c080 AggregatorHost         3868 True   False  False    False  True  True    False    
+0x000000002533b240 SearchIndexer.         3844 True   True   True     False  True  True    False    
+0x000000002046b080 sihost.exe             4608 True   True   True     False  True  True    False    
+0x00000000353ef080 ApMsgFwd.exe           4264 True   False  False    False  True  True    False    
+0x000000005d6ee080 SystemSettings         1044 True   True   True     False  True  True    False    
+0x00000000c3e31080 RuntimeBroker.         4900 True   False  False    False  True  True    False    
+0x000000002390f0c0 dynabookHDDPro         3188 True   True   False    False  True  True    False    
+0x000000003a8f3080 hidfind.exe            5296 True   False  False    False  True  True    False    
+0x00000000c278d280 SecurityHealth         6948 True   True   True     False  True  True    False    
+0x00000000379412c0 svchost.exe            4776 True   False  False    False  True  True    False    
+0x0000000022093080 RMService.exe          3360 True   False  False    False  True  True    False    
+0x00000000220900c0 svchost.exe            3316 True   False  False    False  True  True    False    
+0x00000000369f7080 svchost.exe            6452 True   True   False    False  True  True    False    
+0x00000000547d8080 svchost.exe            7796 True   True   False    False  True  True    False    
+0x000000000f266240 svchost.exe            1360 True   False  False    False  True  True    False    
+0x0000000024d47280 HidMonitorSvc.         3144 True   True   False    False  True  True    False    
+0x0000000101f06280 svchost.exe            2656 True   True   True     False  True  True    False    
+0x00000000203b82c0 svchost.exe            3156 True   False  True     False  True  True    False    
+0x0000000024d45300 svchost.exe            3128 True   True   True     False  True  True    False    
+0x00000000273e6340 svchost.exe            3560 True   False  False    False  True  True    False    
+0x000000002661e080 DSDFunctionKey         3352 True   True   False    False  True  True    False    
+0x000000008e505340 svchost.exe            2084 True   False  False    False  True  True    False    
+0x000000000fd41080 svchost.exe            1124 True   False  False    False  True  True    False    
+0x000000004f1f3080 OneDrive.exe           7060 True   False  True     False  True  True    False    
+0x000000000fd330c0 svchost.exe            1116 True   False  False    False  True  True    False    
+0x000000006c209340 UserOOBEBroker         8108 True   False  False    False  True  True    False    
+0x00000000c2b8f2c0 GoogleCrashHan           64 True   False  False    False  True  True    False    
+0x00000000399f3280 svchost.exe            3608 True   True   True     False  True  True    False    
+0x000000001c039240 conhost.exe            5380 True   False  False    False  True  True    False    
+0x00000000c48aa080 SkypeBackgroun         5748 True   True   True     False  True  True    False    
+0x000000011d4ec080 igfxCUIService         2060 True   False  False    False  True  True    False    
+0x000000010d314300 conhost.exe            2300 True   True   True     False  True  True    False    
+0x000000010d214300 svchost.exe            7884 True   True   True     False  True  True    False    
+0x00000000385ef080 svchost.exe            5576 True   False  False    False  True  True    False    
+0x000000001cfad300 svchost.exe            2568 True   True   True     False  True  True    False    
+0x000000003a8f0080 GoogleCrashHan         6628 True   False  False    False  True  True    False    
+0x0000000012e5f240 RuntimeBroker.         5772 True   False  False    False  True  True    False    
+0x0000000017040240 svchost.exe            1756 True   True   False    False  True  True    False    
+0x0000000014932080 svchost.exe            1608 True   False  False    False  True  True    False    
+0x000000002db23080 ShellExperienc         1896 True   False  True     False  True  True    False    
+0x000000001ae9e300 svchost.exe            2452 True   True   True     False  True  True    False    
+0x000000011d486080 svchost.exe            2108 True   True   True     False  True  True    False   
+
+0x000000001274d102 ??                      0 False  False  False    False  True  False   False    9308-06-01 13:06:52 UTC+0000
+
+0x000000003a8f4080 explorer.exe           5316 True   False  True     False  True  True    False    
+0x000000002fb63300 svchost.exe            4704 True   True   True     False  True  True    False    
+0x0000000019ca0080 svchost.exe            2472 True   False  True     False  True  True    False    
+0x000000000a9450c0 lsass.exe               712 True   False  True     False  True  True    False    
+0x00000000cc678080 SearchFilterHo         8800 True   True   False    False  True  True    False    
+0x0000000025d2b240 svchost.exe            3620 True   True   True     False  True  True    False    
+0x00000001169ba080 RuntimeBroker.         6524 True   True   False    False  True  True    False    
+0x00000000221192c0 svchost.exe            3280 True   False  False    False  True  True    False    
+0x000000002b7aa300 svchost.exe            4360 True   True   True     False  True  True    False    
+0x000000008a0c7340 svchost.exe            2412 True   True   True     False  True  True    False    
+0x000000011e743300 RuntimeBroker.         7768 True   False  False    False  True  True    False    
+0x0000000032288300 taskhostw.exe          4788 True   True   True     False  True  True    False    
+0x0000000012e5d080 svchost.exe            1240 True   False  True     False  True  True    False    
+0x000000000cda72c0 svchost.exe             896 True   True   False    False  True  True    False    
+0x0000000019d9f080 svchost.exe            2460 True   False  False    False  True  True    False    
+0x00000000c4889300 bash.exe               1348 True   False  True     False  True  True    False    
+0x000000003216a300 Apoint.exe             4600 True   True   False    False  True  True    False    
+0x00000000220b9340 MsMpEng.exe            3444 True   True   True     False  True  True    False    
+0x000000011d484080 svchost.exe            2116 True   False  True     False  True  True    False    
+0x0000000027565080 svchost.exe            8136 True   False  True     False  True  True    False    
+0x00000000369ee300 igfxTray.exe           4276 True   False  False    False  True  True    False    
+0x000000002d8e9080 svchost.exe            2156 True   True   False    False  True  True    False    
+0x000000003584b300 igfxHK.exe             2600 True   True   False    False  True  True    False    
+0x000000000d76c080 winlogon.exe           1008 True   False  False    False  True  True    False    
+0x000000001c00c080 spoolsv.exe            2832 True   True   True     False  True  True    False    
+0x000000002c66d080 svchost.exe            6488 True   True   False    False  True  True    False    
+0x00000000220b72c0 svchost.exe            3432 True   True   False    False  True  True    False    
+0x000000002211b280 svchost.exe            3292 True   True   False    False  True  True    False    
+0x000000003a8f1080 RuntimeBroker.         1184 True   False  True     False  True  True    False    
+0x000000000fbbb2c0 svchost.exe             692 True   False  False    False  True  True    False    
+0x000000002229b280 svchost.exe            3036 True   False  False    False  True  True    False    
+0x00000000090c5240 svchost.exe             800 True   False  True     False  True  True    False    
+0x00000000d0bf5080 SkypeApp.exe           4528 True   True   True     False  True  True    False    
+0x000000000d1d5080 svchost.exe             624 True   True   False    False  True  True    False    
+0x0000000024d3a0c0 svchost.exe            3136 True   False  False    False  True  True    False    
+0x0000000103ea3280 ctfmon.exe             5116 True   True   True     False  True  True    False    
+0x000000000d918080 dwm.exe                 532 True   False  True     False  True  True    False    
+0x000000000ab361c0 services.exe            696 True   True   False    False  True  True    False    
+0x0000000050f79080 svchost.exe            1724 True   True   False    False  True  True    False    
+0x0000000025998240 svchost.exe            3732 True   True   True     False  True  True    False    
+0x0000000012e61280 svchost.exe            1280 True   False  True     False  True  True    False    
+0x000000000f26a2c0 svchost.exe            1380 True   False  True     False  True  True    False    
+0x0000000015737300 svchost.exe            1652 True   True   False    False  True  True    False    
+0x000000011ccc8340 SgrmBroker.exe         3500 True   False  False    False  True  True    False    
+0x000000002209c080 dynabookSystem         3368 True   False  True     False  True  True    False    
+0x0000000095dc1340 SearchProtocol         6584 True   False  True     False  True  True    False    
+0x000000003205b0c0 DSDFunctionKey         4636 True   True   True     False  True  True    False    
+0x0000000012e5e080 svchost.exe            1272 True   False  True     False  True  True    False    
+0x0000000023f4d240 svchost.exe            3240 True   False  True     False  True  True    False    
+0x000000011e66a2c0 svchost.exe            2308 True   False  False    False  True  True    False    
+0x0000000011b57080 SearchApp.exe          5800 True   True   True     False  True  True    False    
+0x000000002170a300 svchost.exe            2976 True   False  False    False  True  True    False    
+0x0000000013b8a1c0 svchost.exe            2020 True   False  True     False  True  True    False    
+0x00000000715ed080 smartscreen.ex         3516 True   True   True     False  True  True    False    
+0x000000011d566080 svchost.exe            1708 True   False  True     False  True  True    False    
+0x000000009a48b340 FTK Imager.exe         5384 True   True   True     False  True  True    False    
+0x000000011d547080 svchost.exe            1908 True   False  False    False  True  True    False    
+0x0000000019e36240 svchost.exe            2720 True   True   True     False  True  True    False    
+0x00000000cfed3080 git-bash.exe           1800 True   True   False    False  True  True    False    
+0x0000000032389080 MicrosoftEdgeU         4812 True   False  True     False  True  True    False    
+0x000000010bbba240 svchost.exe            5024 True   True   False    False  True  True    False    
+0x0000000013bd1340 svchost.exe            2216 True   True   True     False  True  True    False    
+0x000000003a8ee080 StartMenuExper         5392 True   False  True     False  True  True    False    
+0x00000000152992c0 svchost.exe            1860 True   True   False    False  True  True    False    
+0x0000000011480240 svchost.exe            1744 True   True   False    False  True  True    False    
+0x000000003a8f2080 ApntEx.exe             5344 True   False  False    False  True  True    False    
+0x000000011d553080 svchost.exe            1888 True   False  True     False  True  True    False    
+0x000000011c61a080 csrss.exe               480 True   True   True     False  False True    False    
+0x0000000102b74040 smss.exe                348 True   False  False    False  False False   False    
+0x00000000357732c0 userinit.exe           5264 True   False  False    False  False True    False    2024-02-16 12:00:02 UTC+0000
+0x000000011d515080 Registry                 92 True   False  False    False  False False   False    
+0x00000000c359c080 cygwin-console         7228 True   True   False    False  False True    False    2024-02-16 12:06:43 UTC+0000
+0x000000004d72e080 svchost.exe            8676 True   False  False    False  False True    False    2024-02-16 12:02:20 UTC+0000
+0x000000011d5b3040 MemCompression         1976 True   False  True     False  False False   False    
+0x0000000038e59080 git.exe                9096 True   True   False    False  False True    False    2024-02-16 12:28:26 UTC+0000
+0x000000011b7ab080 mintty.exe             3636 True   True   False    False  False True    False    2024-02-16 12:06:43 UTC+0000
+0x000000011a189080 chrome.exe             3856 True   True   False    False  False True    False    2024-02-16 12:23:29 UTC+0000
+0x000000011c7e1180 csrss.exe               640 True   True   False    False  False True    False    
+0x000000011d47c040 System                    4 True   False  True     False  False False   False    

@@ -1,0 +1,6670 @@
+Offset: 0x2523fc46b20
+Order: 185
+Start: SERVICE_DEMAND_START
+Process ID: 1280
+Service Name: hidserv
+Display Name: Servicio de dispositivo de interfaz humana
+Service Type: SERVICE_WIN32_OWN_PROCESS, SERVICE_WIN32_SHARE_PROCESS
+Service State: SERVICE_RUNNING
+Binary Path: C:\Windows\system32\svchost.exe -k LocalSystemNetworkRestricted -p
+
+Offset: 0x2523fc4a2a0
+Order: 184
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: HidIr
+Display Name: HidIr
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc4ba60
+Order: 183
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: hidinterrupt
+Display Name: hidinterrupt
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc4a170
+Order: 182
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: hidi2c
+Display Name: hidi2c
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc4b5a0
+Order: 181
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: HidBth
+Display Name: HidBth
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc4b340
+Order: 180
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: HidBatt
+Display Name: HidBatt
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc4aaf0
+Order: 179
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: HDAudBus
+Display Name: Controlador de bus Microsoft UAA para High Definition Audio
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_RUNNING
+Binary Path: \Driver\HDAudBus
+
+Offset: 0x2523fc4b930
+Order: 178
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: HdAudAddService
+Display Name: Controlador de la funci?n Microsoft 1.1 UAA para el servicio High Definition Audio
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_RUNNING
+Binary Path: \Driver\HdAudAddService
+
+Offset: 0x2523fc46950
+Order: 177
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: gupdatem
+Display Name: Servicio de Google Update (gupdatem)
+Service Type: SERVICE_WIN32_OWN_PROCESS
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc46210
+Order: 176
+Start: SERVICE_AUTO_START
+Process ID: -
+Service Name: gupdate
+Display Name: Servicio de Google Update (gupdate)
+Service Type: SERVICE_WIN32_OWN_PROCESS
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc463e0
+Order: 175
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: GraphicsPerfSvc
+Display Name: GraphicsPerfSvc
+Service Type: SERVICE_WIN32_SHARE_PROCESS
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc4bdf0
+Order: 174
+Start: SERVICE_SYSTEM_START
+Process ID: -
+Service Name: GpuEnergyDrv
+Display Name: GPU Energy Driver
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_RUNNING
+Binary Path: \Driver\GpuEnergyDrv
+
+Offset: 0x2523fc47d40
+Order: 173
+Start: SERVICE_AUTO_START
+Process ID: 1724
+Service Name: gpsvc
+Display Name: Cliente de directiva de grupo
+Service Type: SERVICE_WIN32_OWN_PROCESS, SERVICE_WIN32_SHARE_PROCESS
+Service State: SERVICE_RUNNING
+Binary Path: C:\Windows\system32\svchost.exe -k netsvcs -p
+
+Offset: 0x2523fc4bcc0
+Order: 172
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: GPIOClx0101
+Display Name: GPIOClx0101
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc47090
+Order: 171
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: GoogleChromeElevationService
+Display Name: Google Chrome Elevation Service (GoogleChromeElevationService)
+Service Type: SERVICE_WIN32_OWN_PROCESS
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc4a890
+Order: 170
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: genericusbfn
+Display Name: genericusbfn
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc4b470
+Order: 169
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: gencounter
+Display Name: gencounter
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc47b70
+Order: 168
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: GameInputSvc
+Display Name: GameInput Service
+Service Type: SERVICE_WIN32_OWN_PROCESS
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc4a500
+Order: 167
+Start: SERVICE_BOOT_START
+Process ID: -
+Service Name: fvevol
+Display Name: Controlador del filtro de Cifrado de unidad BitLocker
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_RUNNING
+Binary Path: \Driver\fvevol
+
+Offset: 0x2523fc4b800
+Order: 166
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: FsDepends
+Display Name: FsDepends
+Service Type: SERVICE_FILE_SYSTEM_DRIVER
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc46ec0
+Order: 165
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: FrameServer
+Display Name: Servicio FrameServer de la C?mara de Windows
+Service Type: SERVICE_WIN32_OWN_PROCESS, SERVICE_WIN32_SHARE_PROCESS
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc477d0
+Order: 164
+Start: SERVICE_AUTO_START
+Process ID: 2116
+Service Name: FontCache
+Display Name: Servicio de cach? de fuentes de Windows
+Service Type: SERVICE_WIN32_OWN_PROCESS, SERVICE_WIN32_SHARE_PROCESS
+Service State: SERVICE_RUNNING
+Binary Path: C:\Windows\system32\svchost.exe -k LocalService -p
+
+Offset: 0x2523fc4b0e0
+Order: 163
+Start: SERVICE_BOOT_START
+Process ID: -
+Service Name: FltMgr
+Display Name: FltMgr
+Service Type: SERVICE_FILE_SYSTEM_DRIVER
+Service State: SERVICE_RUNNING
+Binary Path: \FileSystem\FltMgr
+
+Offset: 0x2523fc4bb90
+Order: 162
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: flpydisk
+Display Name: flpydisk
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc3c890
+Order: 161
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: Filetrace
+Display Name: Filetrace
+Service Type: SERVICE_FILE_SYSTEM_DRIVER
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc3c760
+Order: 160
+Start: SERVICE_BOOT_START
+Process ID: -
+Service Name: FileInfo
+Display Name: File Information FS MiniFilter
+Service Type: SERVICE_FILE_SYSTEM_DRIVER
+Service State: SERVICE_RUNNING
+Binary Path: \FileSystem\FileInfo
+
+Offset: 0x2523fc3c170
+Order: 159
+Start: SERVICE_SYSTEM_START
+Process ID: -
+Service Name: FileCrypt
+Display Name: FileCrypt
+Service Type: SERVICE_FILE_SYSTEM_DRIVER
+Service State: SERVICE_RUNNING
+Binary Path: \FileSystem\FileCrypt
+
+Offset: 0x2523fc46780
+Order: 158
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: fhsvc
+Display Name: Servicio de historial de archivos
+Service Type: SERVICE_WIN32_SHARE_PROCESS
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc479a0
+Order: 157
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: FDResPub
+Display Name: Publicaci?n de recurso de detecci?n de funci?n
+Service Type: SERVICE_WIN32_SHARE_PROCESS
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc46040
+Order: 156
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: fdPHost
+Display Name: Host de proveedor de detecci?n de funci?n
+Service Type: SERVICE_WIN32_SHARE_PROCESS
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc3d5a0
+Order: 155
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: fdc
+Display Name: fdc
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc46cf0
+Order: 154
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: Fax
+Display Name: Fax
+Service Type: SERVICE_WIN32_OWN_PROCESS
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc3c040
+Order: 153
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: fastfat
+Display Name: fastfat
+Service Type: SERVICE_FILE_SYSTEM_DRIVER
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc3dcc0
+Order: 152
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: exfat
+Display Name: exfat
+Service Type: SERVICE_FILE_SYSTEM_DRIVER
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc465b0
+Order: 151
+Start: SERVICE_AUTO_START
+Process ID: 1860
+Service Name: EventSystem
+Display Name: Sistema de eventos COM+
+Service Type: SERVICE_WIN32_OWN_PROCESS, SERVICE_WIN32_SHARE_PROCESS
+Service State: SERVICE_RUNNING
+Binary Path: C:\Windows\system32\svchost.exe -k LocalService -p
+
+Offset: 0x2523fc47260
+Order: 150
+Start: SERVICE_AUTO_START
+Process ID: 1096
+Service Name: EventLog
+Display Name: Registro de eventos de Windows
+Service Type: SERVICE_WIN32_OWN_PROCESS, SERVICE_WIN32_SHARE_PROCESS
+Service State: SERVICE_RUNNING
+Binary Path: C:\Windows\System32\svchost.exe -k LocalServiceNetworkRestricted -p
+
+Offset: 0x2523fc3da60
+Order: 149
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: ErrDev
+Display Name: ErrDev
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc459a0
+Order: 148
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: EntAppSvc
+Display Name: Servicio de administraci?n de aplicaciones de empresa
+Service Type: SERVICE_WIN32_SHARE_PROCESS
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc45090
+Order: 147
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: embeddedmode
+Display Name: Modo incrustado
+Service Type: SERVICE_WIN32_SHARE_PROCESS
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc3c630
+Order: 146
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: EhStorTcgDrv
+Display Name: EhStorTcgDrv
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc3d470
+Order: 145
+Start: SERVICE_BOOT_START
+Process ID: -
+Service Name: EhStorClass
+Display Name: Enhanced Storage Filter Driver
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_RUNNING
+Binary Path: \Driver\EhStorClass
+
+Offset: 0x2523fc44cf0
+Order: 144
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: EFS
+Display Name: Sistema de cifrado de archivos (EFS)
+Service Type: SERVICE_WIN32_SHARE_PROCESS
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc45600
+Order: 143
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: edgeupdatem
+Display Name: Microsoft Edge Update Service (edgeupdatem)
+Service Type: SERVICE_WIN32_OWN_PROCESS
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc44780
+Order: 142
+Start: SERVICE_AUTO_START
+Process ID: -
+Service Name: edgeupdate
+Display Name: Microsoft Edge Update Service (edgeupdate)
+Service Type: SERVICE_WIN32_OWN_PROCESS
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc3c2a0
+Order: 141
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: ebdrv
+Display Name: ebdrv
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc44ec0
+Order: 140
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: Eaphost
+Display Name: Protocolo de autenticaci?n extensible
+Service Type: SERVICE_WIN32_SHARE_PROCESS
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc457d0
+Order: 139
+Start: SERVICE_AUTO_START
+Process ID: 3368
+Service Name: dynabookSettingService
+Display Name: dynabookSettingService
+Service Type: SERVICE_WIN32_OWN_PROCESS
+Service State: SERVICE_RUNNING
+Binary Path: C:\Windows\System32\DriverStore\FileRepository\dsrvctldrv.inf_amd64_9a8e578dc9a18977\dynabookSystemService.exe
+
+Offset: 0x2523fc3d800
+Order: 138
+Start: SERVICE_SYSTEM_START
+Process ID: -
+Service Name: DXGKrnl
+Display Name: LDDM Graphics Subsystem
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_RUNNING
+Binary Path: \Driver\DXGKrnl
+
+Offset: 0x2523fc445b0
+Order: 137
+Start: SERVICE_AUTO_START
+Process ID: 2460
+Service Name: DusmSvc
+Display Name: Uso de datos
+Service Type: SERVICE_WIN32_OWN_PROCESS
+Service State: SERVICE_RUNNING
+Binary Path: C:\Windows\System32\svchost.exe -k LocalServiceNetworkRestricted -p
+
+Offset: 0x2523fc45b70
+Order: 136
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: DsSvc
+Display Name: Servicio de uso compartido de datos
+Service Type: SERVICE_WIN32_SHARE_PROCESS
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc3db90
+Order: 135
+Start: SERVICE_SYSTEM_START
+Process ID: -
+Service Name: dsrvctldrv
+Display Name: dynabook Service Control Driver
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_RUNNING
+Binary Path: \Driver\dsrvctldrv
+
+Offset: 0x2523fc44210
+Order: 134
+Start: SERVICE_DEMAND_START
+Process ID: 624
+Service Name: DsmSvc
+Display Name: Administrador de configuraci?n de dispositivos
+Service Type: SERVICE_WIN32_OWN_PROCESS, SERVICE_WIN32_SHARE_PROCESS
+Service State: SERVICE_RUNNING
+Binary Path: C:\Windows\system32\svchost.exe -k netsvcs -p
+
+Offset: 0x2523fc44950
+Order: 133
+Start: SERVICE_AUTO_START
+Process ID: 3360
+Service Name: DSDWirelessLEDCtlService
+Display Name: DSDWirelessLEDCtlService
+Service Type: SERVICE_WIN32_OWN_PROCESS
+Service State: SERVICE_RUNNING
+Binary Path: C:\Windows\System32\DriverStore\FileRepository\dsrvctldrv.inf_amd64_9a8e578dc9a18977\RMService.exe
+
+Offset: 0x2523fc443e0
+Order: 132
+Start: SERVICE_AUTO_START
+Process ID: -
+Service Name: DSDTabletControlService
+Display Name: DSDTabletControlService
+Service Type: SERVICE_WIN32_OWN_PROCESS
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc44b20
+Order: 131
+Start: SERVICE_AUTO_START
+Process ID: 3188
+Service Name: DSDHDDProtectService
+Display Name: DSDHDDProtectService
+Service Type: SERVICE_WIN32_OWN_PROCESS
+Service State: SERVICE_RUNNING
+Binary Path: C:\Windows\System32\DriverStore\FileRepository\dhpevm.inf_amd64_dc22ceb838778a98\dynabookHDDProtection.exe
+
+Offset: 0x2523fc45260
+Order: 130
+Start: SERVICE_AUTO_START
+Process ID: 3352
+Service Name: DSDFunctionKeyCtlService
+Display Name: dynabook Function Key control service
+Service Type: SERVICE_WIN32_OWN_PROCESS
+Service State: SERVICE_RUNNING
+Binary Path: C:\Windows\System32\DriverStore\FileRepository\dsrvctldrv.inf_amd64_9a8e578dc9a18977\DSDFunctionKeyCtlService.exe
+
+Offset: 0x2523fc3d930
+Order: 129
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: drmkaud
+Display Name: drmkaud
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc44040
+Order: 128
+Start: SERVICE_AUTO_START
+Process ID: 3156
+Service Name: DPS
+Display Name: Servicio de directivas de diagn?stico
+Service Type: SERVICE_WIN32_OWN_PROCESS, SERVICE_WIN32_SHARE_PROCESS
+Service State: SERVICE_RUNNING
+Binary Path: C:\Windows\System32\svchost.exe -k LocalServiceNoNetwork -p
+
+Offset: 0x2523fc45430
+Order: 127
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: dot3svc
+Display Name: Configuraci?n autom?tica de redes cableadas
+Service Type: SERVICE_WIN32_SHARE_PROCESS
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc45d40
+Order: 126
+Start: SERVICE_AUTO_START
+Process ID: 8136
+Service Name: DoSvc
+Display Name: Optimizaci?n de distribuci?n
+Service Type: SERVICE_WIN32_OWN_PROCESS, SERVICE_WIN32_SHARE_PROCESS
+Service State: SERVICE_RUNNING
+Binary Path: C:\Windows\System32\svchost.exe -k NetworkService -p
+
+Offset: 0x2523fc42b20
+Order: 125
+Start: SERVICE_AUTO_START
+Process ID: 2452
+Service Name: Dnscache
+Display Name: Cliente DNS
+Service Type: SERVICE_WIN32_OWN_PROCESS, SERVICE_WIN32_SHARE_PROCESS
+Service State: SERVICE_RUNNING
+Binary Path: C:\Windows\system32\svchost.exe -k NetworkService -p
+
+Offset: 0x2523fc42ec0
+Order: 124
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: dmwappushservice
+Display Name: Servicio de enrutamiento de mensajes de inserci?n del Protocolo de aplicaci?n inal?mbrica (WAP) de administraci?n de dispositivos
+Service Type: SERVICE_WIN32_SHARE_PROCESS
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc3d340
+Order: 123
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: dmvsc
+Display Name: dmvsc
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc423e0
+Order: 122
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: DmEnrollmentSvc
+Display Name: Servicio de inscripci?n de administraci?n de dispositivos
+Service Type: SERVICE_WIN32_OWN_PROCESS
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc43430
+Order: 121
+Start: SERVICE_DEMAND_START
+Process ID: 1272
+Service Name: DisplayEnhancementService
+Display Name: Servicio de mejora de visualizaci?n
+Service Type: SERVICE_WIN32_OWN_PROCESS, SERVICE_WIN32_SHARE_PROCESS
+Service State: SERVICE_RUNNING
+Binary Path: C:\Windows\system32\svchost.exe -k LocalSystemNetworkRestricted -p
+
+Offset: 0x2523fc42210
+Order: 120
+Start: SERVICE_AUTO_START
+Process ID: 1232
+Service Name: DispBrokerDesktopSvc
+Display Name: Mostrar el servicio de directivas
+Service Type: SERVICE_WIN32_OWN_PROCESS, SERVICE_WIN32_SHARE_PROCESS
+Service State: SERVICE_RUNNING
+Binary Path: C:\Windows\system32\svchost.exe -k LocalService -p
+
+Offset: 0x2523fc3c500
+Order: 119
+Start: SERVICE_BOOT_START
+Process ID: -
+Service Name: disk
+Display Name: Controlador de disco
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_RUNNING
+Binary Path: \Driver\disk
+
+Offset: 0x2523fc43d40
+Order: 118
+Start: SERVICE_DISABLED
+Process ID: -
+Service Name: DialogBlockingService
+Display Name: DialogBlockingService
+Service Type: SERVICE_WIN32_SHARE_PROCESS
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc43b70
+Order: 117
+Start: SERVICE_AUTO_START
+Process ID: 3136
+Service Name: DiagTrack
+Display Name: Experiencias del usuario y telemetr?a asociadas
+Service Type: SERVICE_WIN32_OWN_PROCESS
+Service State: SERVICE_RUNNING
+Binary Path: C:\Windows\System32\svchost.exe -k utcsvc -p
+
+Offset: 0x2523fc437d0
+Order: 116
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: diagsvc
+Display Name: Diagnostic Execution Service
+Service Type: SERVICE_WIN32_SHARE_PROCESS
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc43090
+Order: 115
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: diagnosticshub.standardcollector.service
+Display Name: Servicio Recopilador est?ndar del concentrador de diagn?sticos de Microsoft (R)
+Service Type: SERVICE_WIN32_OWN_PROCESS
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc3d210
+Order: 114
+Start: SERVICE_BOOT_START
+Process ID: -
+Service Name: dhpevm
+Display Name: dynabook HDD Protection - Shock Sensor Driver
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_RUNNING
+Binary Path: \Driver\dhpevm
+
+Offset: 0x2523fc42780
+Order: 113
+Start: SERVICE_AUTO_START
+Process ID: 1652
+Service Name: Dhcp
+Display Name: Cliente DHCP
+Service Type: SERVICE_WIN32_OWN_PROCESS, SERVICE_WIN32_SHARE_PROCESS
+Service State: SERVICE_RUNNING
+Binary Path: C:\Windows\system32\svchost.exe -k LocalServiceNetworkRestricted -p
+
+Offset: 0x2523fc3d0e0
+Order: 112
+Start: SERVICE_SYSTEM_START
+Process ID: -
+Service Name: Dfsc
+Display Name: Controlador cliente del espacio de nombres DFS
+Service Type: SERVICE_FILE_SYSTEM_DRIVER
+Service State: SERVICE_RUNNING
+Binary Path: \FileSystem\Dfsc
+
+Offset: 0x2523fc439a0
+Order: 111
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: DevQueryBroker
+Display Name: Agente de detecci?n en segundo plano de DevQuery
+Service Type: SERVICE_WIN32_SHARE_PROCESS
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc43260
+Order: 110
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: DevicesFlowUserSvc
+Display Name: DevicesFlow
+Service Type: SERVICE_WIN32_SHARE_PROCESS
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc43600
+Order: 109
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: DevicePickerUserSvc
+Display Name: DevicePicker
+Service Type: SERVICE_WIN32_SHARE_PROCESS
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc42950
+Order: 108
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: DeviceInstall
+Display Name: Servicio de instalaci?n de dispositivos
+Service Type: SERVICE_WIN32_SHARE_PROCESS
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc42040
+Order: 107
+Start: SERVICE_DEMAND_START
+Process ID: 3036
+Service Name: DeviceAssociationService
+Display Name: Servicio de asociaci?n de dispositivos
+Service Type: SERVICE_WIN32_OWN_PROCESS, SERVICE_WIN32_SHARE_PROCESS
+Service State: SERVICE_RUNNING
+Binary Path: C:\Windows\system32\svchost.exe -k LocalSystemNetworkRestricted -p
+
+Offset: 0x2523fc425b0
+Order: 106
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: DeviceAssociationBrokerSvc
+Display Name: DeviceAssociationBroker
+Service Type: SERVICE_WIN32_SHARE_PROCESS
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc42cf0
+Order: 105
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: defragsvc
+Display Name: Optimizar unidades
+Service Type: SERVICE_WIN32_OWN_PROCESS
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc29cf0
+Order: 104
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: dcsvc
+Display Name: dcsvc
+Service Type: SERVICE_WIN32_OWN_PROCESS
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc2a260
+Order: 103
+Start: SERVICE_AUTO_START
+Process ID: 800
+Service Name: DcomLaunch
+Display Name: Iniciador de procesos de servidor DCOM
+Service Type: SERVICE_WIN32_SHARE_PROCESS
+Service State: SERVICE_RUNNING
+Binary Path: C:\Windows\system32\svchost.exe -k DcomLaunch -p
+
+Offset: 0x2523fc3ddf0
+Order: 102
+Start: SERVICE_SYSTEM_START
+Process ID: -
+Service Name: dam
+Display Name: dam
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc29950
+Order: 101
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: CscService
+Display Name: Archivos sin conexi?n
+Service Type: SERVICE_WIN32_SHARE_PROCESS
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc3d6d0
+Order: 100
+Start: SERVICE_SYSTEM_START
+Process ID: -
+Service Name: CSC
+Display Name: Controlador de archivos sin conexi?n
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_RUNNING
+Binary Path: \Driver\CSC
+
+Offset: 0x2523fc29210
+Order: 99
+Start: SERVICE_AUTO_START
+Process ID: 3128
+Service Name: CryptSvc
+Display Name: Servicios de cifrado
+Service Type: SERVICE_WIN32_OWN_PROCESS, SERVICE_WIN32_SHARE_PROCESS
+Service State: SERVICE_RUNNING
+Binary Path: C:\Windows\system32\svchost.exe -k NetworkService -p
+
+Offset: 0x2523fc29040
+Order: 98
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: CredentialEnrollmentManagerUserSvc
+Display Name: CredentialEnrollmentManagerUserSvc
+Service Type: SERVICE_WIN32_OWN_PROCESS
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc29780
+Order: 97
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: cphs
+Display Name: Intel(R) Content Protection HECI Service
+Service Type: SERVICE_WIN32_OWN_PROCESS
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc295b0
+Order: 96
+Start: SERVICE_AUTO_START
+Process ID: 692
+Service Name: CoreMessagingRegistrar
+Display Name: CoreMessaging
+Service Type: SERVICE_WIN32_SHARE_PROCESS
+Service State: SERVICE_RUNNING
+Binary Path: C:\Windows\system32\svchost.exe -k LocalServiceNoNetwork -p
+
+Offset: 0x2523fc2ad40
+Order: 95
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: ConsentUxUserSvc
+Display Name: ConsentUX
+Service Type: SERVICE_WIN32_SHARE_PROCESS
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc3ce80
+Order: 94
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: condrv
+Display Name: Console Driver
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_RUNNING
+Binary Path: \Driver\condrv
+
+Offset: 0x2523fc2ab70
+Order: 93
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: COMSysApp
+Display Name: Aplicaci?n del sistema COM+
+Service Type: SERVICE_WIN32_OWN_PROCESS
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc3c9c0
+Order: 92
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: CompositeBus
+Display Name: Controlador de enumerador de bus compuesto
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_RUNNING
+Binary Path: \Driver\CompositeBus
+
+Offset: 0x2523fc3cfb0
+Order: 91
+Start: SERVICE_DISABLED
+Process ID: -
+Service Name: cnghwassist
+Display Name: cnghwassist
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc3cd50
+Order: 90
+Start: SERVICE_BOOT_START
+Process ID: -
+Service Name: CNG
+Display Name: CNG
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_RUNNING
+Binary Path: \Driver\CNG
+
+Offset: 0x2523fc3c3d0
+Order: 89
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: CmBatt
+Display Name: Controlador de bater?a de m?todo de control ACPI de Microsoft
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_RUNNING
+Binary Path: \Driver\CmBatt
+
+Offset: 0x2523fc2a9a0
+Order: 88
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: cloudidsvc
+Display Name: Servicio de identidad en la nube de Microsoft
+Service Type: SERVICE_WIN32_OWN_PROCESS
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc2a090
+Order: 87
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: ClipSVC
+Display Name: Servicio de licencia de cliente (ClipSVC)
+Service Type: SERVICE_WIN32_OWN_PROCESS, SERVICE_WIN32_SHARE_PROCESS
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc3cc20
+Order: 86
+Start: SERVICE_BOOT_START
+Process ID: -
+Service Name: CLFS
+Display Name: Common Log (CLFS)
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_RUNNING
+Binary Path: \Driver\CLFS
+
+Offset: 0x2523fc3caf0
+Order: 85
+Start: SERVICE_AUTO_START
+Process ID: -
+Service Name: CldFlt
+Display Name: Windows Cloud Files Filter Driver
+Service Type: SERVICE_FILE_SYSTEM_DRIVER
+Service State: SERVICE_RUNNING
+Binary Path: \FileSystem\CldFlt
+
+Offset: 0x2523fc1dd50
+Order: 84
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: circlass
+Display Name: circlass
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc1d9c0
+Order: 83
+Start: SERVICE_SYSTEM_START
+Process ID: -
+Service Name: CimFS
+Display Name: CimFS
+Service Type: SERVICE_FILE_SYSTEM_DRIVER
+Service State: SERVICE_RUNNING
+Binary Path: \FileSystem\CimFS
+
+Offset: 0x2523fc1dfb0
+Order: 82
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: cht4vbd
+Display Name: cht4vbd
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc1d3d0
+Order: 81
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: cht4iscsi
+Display Name: cht4iscsi
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc293e0
+Order: 80
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: CertPropSvc
+Display Name: Propagaci?n de certificados
+Service Type: SERVICE_WIN32_SHARE_PROCESS
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc1d170
+Order: 79
+Start: SERVICE_SYSTEM_START
+Process ID: -
+Service Name: cdrom
+Display Name: Controlador de CD-ROM
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_RUNNING
+Binary Path: \Driver\cdrom
+
+Offset: 0x2523fc2a7d0
+Order: 78
+Start: SERVICE_AUTO_START
+Process ID: -
+Service Name: CDPUserSvc
+Display Name: Servicio de usuario de plataforma de dispositivos conectados
+Service Type: SERVICE_WIN32_SHARE_PROCESS
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc2a600
+Order: 77
+Start: SERVICE_AUTO_START
+Process ID: 4776
+Service Name: CDPSvc
+Display Name: Servicio de plataforma de dispositivos conectados
+Service Type: SERVICE_WIN32_OWN_PROCESS, SERVICE_WIN32_SHARE_PROCESS
+Service State: SERVICE_RUNNING
+Binary Path: C:\Windows\system32\svchost.exe -k LocalService -p
+
+Offset: 0x2523fc1de80
+Order: 76
+Start: SERVICE_DISABLED
+Process ID: -
+Service Name: cdfs
+Display Name: cdfs
+Service Type: SERVICE_FILE_SYSTEM_DRIVER
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc2a430
+Order: 75
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: cbdhsvc
+Display Name: Servicio de usuario del portapapeles
+Service Type: SERVICE_WIN32_SHARE_PROCESS
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc29b20
+Order: 74
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: CaptureService
+Display Name: CaptureService
+Service Type: SERVICE_WIN32_SHARE_PROCESS
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc29ec0
+Order: 73
+Start: SERVICE_DEMAND_START
+Process ID: 1756
+Service Name: camsvc
+Display Name: Servicio Administrador de funcionalidad de acceso
+Service Type: SERVICE_WIN32_OWN_PROCESS, SERVICE_WIN32_SHARE_PROCESS
+Service State: SERVICE_RUNNING
+Binary Path: C:\Windows\system32\svchost.exe -k appmodel -p
+
+Offset: 0x2523fc1d040
+Order: 72
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: CAD
+Display Name: Controlador de arbitraje de carga
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_RUNNING
+Binary Path: \Driver\CAD
+
+Offset: 0x2523fc1dc20
+Order: 71
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: buttonconverter
+Display Name: buttonconverter
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc1ea60
+Order: 70
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: bttflt
+Display Name: bttflt
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc1e800
+Order: 69
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: BTHUSB
+Display Name: BTHUSB
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc28040
+Order: 68
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: bthserv
+Display Name: Servicio de compatibilidad con Bluetooth
+Service Type: SERVICE_WIN32_SHARE_PROCESS
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc1e930
+Order: 67
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: BTHPORT
+Display Name: BTHPORT
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc1edf0
+Order: 66
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: BTHMODEM
+Display Name: BTHMODEM
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc1e0e0
+Order: 65
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: BthMini
+Display Name: BthMini
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc1e6d0
+Order: 64
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: BthLEEnum
+Display Name: BthLEEnum
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc1e5a0
+Order: 63
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: BthHFEnum
+Display Name: BthHFEnum
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc1d2a0
+Order: 62
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: BthEnum
+Display Name: BthEnum
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc28cf0
+Order: 61
+Start: SERVICE_DEMAND_START
+Process ID: 2156
+Service Name: BthAvctpSvc
+Display Name: Servicio AVCTP
+Service Type: SERVICE_WIN32_OWN_PROCESS, SERVICE_WIN32_SHARE_PROCESS
+Service State: SERVICE_RUNNING
+Binary Path: C:\Windows\system32\svchost.exe -k LocalService -p
+
+Offset: 0x2523fc1ecc0
+Order: 60
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: BthA2dp
+Display Name: BthA2dp
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc28950
+Order: 59
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: BTAGService
+Display Name: Servicio de puerta de enlace de audio de Bluetooth
+Service Type: SERVICE_WIN32_SHARE_PROCESS
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc28210
+Order: 58
+Start: SERVICE_AUTO_START
+Process ID: 800
+Service Name: BrokerInfrastructure
+Display Name: Servicio de infraestructura de tareas en segundo plano
+Service Type: SERVICE_WIN32_SHARE_PROCESS
+Service State: SERVICE_RUNNING
+Binary Path: C:\Windows\system32\svchost.exe -k DcomLaunch -p
+
+Offset: 0x2523fc1daf0
+Order: 57
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: bowser
+Display Name: Explorador
+Service Type: SERVICE_FILE_SYSTEM_DRIVER
+Service State: SERVICE_RUNNING
+Binary Path: \FileSystem\bowser
+
+Offset: 0x2523fc285b0
+Order: 56
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: BluetoothUserService
+Display Name: Servicio de soporte t?cnico de usuario de Bluetooth
+Service Type: SERVICE_WIN32_SHARE_PROCESS
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc283e0
+Order: 55
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: BITS
+Display Name: Servicio de transferencia inteligente en segundo plano (BITS)
+Service Type: SERVICE_WIN32_SHARE_PROCESS
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc1d760
+Order: 54
+Start: SERVICE_AUTO_START
+Process ID: -
+Service Name: bindflt
+Display Name: Windows Bind Filter Driver
+Service Type: SERVICE_FILE_SYSTEM_DRIVER
+Service State: SERVICE_RUNNING
+Binary Path: \FileSystem\bindflt
+
+Offset: 0x2523fc28b20
+Order: 53
+Start: SERVICE_AUTO_START
+Process ID: 2880
+Service Name: BFE
+Display Name: Motor de filtrado de base
+Service Type: SERVICE_WIN32_SHARE_PROCESS
+Service State: SERVICE_RUNNING
+Binary Path: C:\Windows\system32\svchost.exe -k LocalServiceNoNetworkFirewall -p
+
+Offset: 0x2523fc1e470
+Order: 52
+Start: SERVICE_SYSTEM_START
+Process ID: -
+Service Name: Beep
+Display Name: Beep
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_RUNNING
+Binary Path: \Driver\Beep
+
+Offset: 0x2523fc28780
+Order: 51
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: BDESVC
+Display Name: Servicio Cifrado de unidad BitLocker
+Service Type: SERVICE_WIN32_SHARE_PROCESS
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc1d890
+Order: 50
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: bcmfn2
+Display Name: bcmfn2
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc11be0
+Order: 49
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: BcastDVRUserService
+Display Name: Servicio de usuario de difusi?n y GameDVR
+Service Type: SERVICE_WIN32_SHARE_PROCESS
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc1eb90
+Order: 48
+Start: SERVICE_SYSTEM_START
+Process ID: -
+Service Name: BasicRender
+Display Name: BasicRender
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_RUNNING
+Binary Path: \Driver\BasicRender
+
+Offset: 0x2523fc1e210
+Order: 47
+Start: SERVICE_SYSTEM_START
+Process ID: -
+Service Name: BasicDisplay
+Display Name: BasicDisplay
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_RUNNING
+Binary Path: \Driver\BasicDisplay
+
+Offset: 0x2523fc1d630
+Order: 46
+Start: SERVICE_SYSTEM_START
+Process ID: -
+Service Name: bam
+Display Name: Background Activity Moderator Driver
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_RUNNING
+Binary Path: \Driver\bam
+
+Offset: 0x2523fc1d500
+Order: 45
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: b06bdrv
+Display Name: b06bdrv
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc11a00
+Order: 44
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: AxInstSV
+Display Name: Instalador de ActiveX (AxInstSV)
+Service Type: SERVICE_WIN32_SHARE_PROCESS
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc11820
+Order: 43
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: autotimesvc
+Display Name: Hora de la red de telefon?a m?vil
+Service Type: SERVICE_WIN32_OWN_PROCESS
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc11640
+Order: 42
+Start: SERVICE_AUTO_START
+Process ID: 2308
+Service Name: Audiosrv
+Display Name: Audio de Windows
+Service Type: SERVICE_WIN32_OWN_PROCESS
+Service State: SERVICE_RUNNING
+Binary Path: C:\Windows\System32\svchost.exe -k LocalServiceNetworkRestricted -p
+
+Offset: 0x2523fc11230
+Order: 41
+Start: SERVICE_AUTO_START
+Process ID: 2108
+Service Name: AudioEndpointBuilder
+Display Name: Compilador de extremo de audio de Windows
+Service Type: SERVICE_WIN32_OWN_PROCESS, SERVICE_WIN32_SHARE_PROCESS
+Service State: SERVICE_RUNNING
+Binary Path: C:\Windows\System32\svchost.exe -k LocalSystemNetworkRestricted -p
+
+Offset: 0x2523fc1e340
+Order: 40
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: atapi
+Display Name: atapi
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc1b9c0
+Order: 39
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: AsyncMac
+Display Name: AsyncMac
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc10fc0
+Order: 38
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: AssignedAccessManagerSvc
+Display Name: Servicio AssignedAccessManager
+Service Type: SERVICE_WIN32_SHARE_PROCESS
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc1b760
+Order: 37
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: arcsas
+Display Name: arcsas
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc10de0
+Order: 36
+Start: SERVICE_DEMAND_START
+Process ID: 6452
+Service Name: AppXSvc
+Display Name: Servicio de implementaci?n de AppX (AppXSVC)
+Service Type: SERVICE_WIN32_OWN_PROCESS, SERVICE_WIN32_SHARE_PROCESS
+Service State: SERVICE_RUNNING
+Binary Path: C:\Windows\system32\svchost.exe -k wsappx -p
+
+Offset: 0x2523fc1b630
+Order: 35
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: AppvVfs
+Display Name: AppvVfs
+Service Type: SERVICE_FILE_SYSTEM_DRIVER
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc1be80
+Order: 34
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: AppvVemgr
+Display Name: AppvVemgr
+Service Type: SERVICE_FILE_SYSTEM_DRIVER
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc1b500
+Order: 33
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: AppvStrm
+Display Name: AppvStrm
+Service Type: SERVICE_FILE_SYSTEM_DRIVER
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc10c00
+Order: 32
+Start: SERVICE_DISABLED
+Process ID: -
+Service Name: AppVClient
+Display Name: Microsoft App-V Client
+Service Type: SERVICE_WIN32_OWN_PROCESS
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc10a20
+Order: 31
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: AppReadiness
+Display Name: Preparaci?n de aplicaciones
+Service Type: SERVICE_WIN32_SHARE_PROCESS
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc10840
+Order: 30
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: AppMgmt
+Display Name: Administraci?n de aplicaciones
+Service Type: SERVICE_WIN32_SHARE_PROCESS
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc1b890
+Order: 29
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: applockerfltr
+Display Name: applockerfltr
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc10570
+Order: 28
+Start: SERVICE_DEMAND_START
+Process ID: 5024
+Service Name: Appinfo
+Display Name: Informaci?n de la aplicaci?n
+Service Type: SERVICE_WIN32_OWN_PROCESS, SERVICE_WIN32_SHARE_PROCESS
+Service State: SERVICE_RUNNING
+Binary Path: C:\Windows\system32\svchost.exe -k netsvcs -p
+
+Offset: 0x2523fc10220
+Order: 27
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: AppIDSvc
+Display Name: Identidad de aplicaci?n
+Service Type: SERVICE_WIN32_SHARE_PROCESS
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc1b3d0
+Order: 26
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: AppID
+Display Name: AppID
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc10040
+Order: 25
+Start: SERVICE_AUTO_START
+Process ID: 3144
+Service Name: ApHidMonitorService
+Display Name: Alps HID Monitor Service
+Service Type: SERVICE_WIN32_OWN_PROCESS
+Service State: SERVICE_RUNNING
+Binary Path: "C:\Program Files\Apoint2K\HidMonitorSvc.exe"
+
+Offset: 0x2523fc1b2a0
+Order: 24
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: ApfiltrService
+Display Name: Alps Pointing-device Filter Driver
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_RUNNING
+Binary Path: \Driver\ApfiltrService
+
+Offset: 0x2523fc1baf0
+Order: 23
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: amdxata
+Display Name: amdxata
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc1bd50
+Order: 22
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: amdsbs
+Display Name: amdsbs
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc1b040
+Order: 21
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: amdsata
+Display Name: amdsata
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc1bc20
+Order: 20
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: AmdPPM
+Display Name: AmdPPM
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc1b170
+Order: 19
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: AmdK8
+Display Name: AmdK8
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc0ff00
+Order: 18
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: amdi2c
+Display Name: amdi2c
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc0fdc0
+Order: 17
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: amdgpio2
+Display Name: amdgpio2
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc0fbe0
+Order: 16
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: ALG
+Display Name: Servicio de puerta de enlace de nivel de aplicaci?n
+Service Type: SERVICE_WIN32_OWN_PROCESS
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc0f960
+Order: 15
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: AJRouter
+Display Name: Servicio de enrutador de AllJoyn
+Service Type: SERVICE_WIN32_SHARE_PROCESS
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc0f820
+Order: 14
+Start: SERVICE_SYSTEM_START
+Process ID: -
+Service Name: ahcache
+Display Name: Application Compatibility Cache
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_RUNNING
+Binary Path: \Driver\ahcache
+
+Offset: 0x2523fc0f5e0
+Order: 13
+Start: SERVICE_SYSTEM_START
+Process ID: -
+Service Name: afunix
+Display Name: afunix
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_RUNNING
+Binary Path: \Driver\afunix
+
+Offset: 0x2523fc0f3a0
+Order: 12
+Start: SERVICE_SYSTEM_START
+Process ID: -
+Service Name: AFD
+Display Name: Controlador de funci?n suplementaria de  Winsock
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_RUNNING
+Binary Path: \Driver\AFD
+
+Offset: 0x2523fc0f160
+Order: 11
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: ADP80XX
+Display Name: ADP80XX
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc0ef20
+Order: 10
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: Acx01000
+Display Name: Acx01000
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc0ece0
+Order: 9
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: acpitime
+Display Name: acpitime
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc0eaa0
+Order: 8
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: AcpiPmi
+Display Name: AcpiPmi
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc0e860
+Order: 7
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: acpipagr
+Display Name: acpipagr
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc0e540
+Order: 6
+Start: SERVICE_BOOT_START
+Process ID: -
+Service Name: acpiex
+Display Name: Microsoft ACPIEx Driver
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_RUNNING
+Binary Path: \Driver\acpiex
+
+Offset: 0x2523fc0d250
+Order: 5
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: AcpiDev
+Display Name: AcpiDev
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc0cfd0
+Order: 4
+Start: SERVICE_BOOT_START
+Process ID: -
+Service Name: ACPI
+Display Name: Controlador Microsoft ACPI
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_RUNNING
+Binary Path: \Driver\ACPI
+
+Offset: 0x2523fc0d9a0
+Order: 3
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: AarSvc
+Display Name: Agent Activation Runtime
+Service Type: SERVICE_WIN32_SHARE_PROCESS
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc0cb50
+Order: 2
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: 3ware
+Display Name: 3ware
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc0d860
+Order: 1
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: 1394ohci
+Display Name: 1394ohci
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc78f70
+Order: 443
+Start: SERVICE_AUTO_START
+Process ID: 2720
+Service Name: ShellHWDetection
+Display Name: Detecci?n de hardware shell
+Service Type: SERVICE_WIN32_OWN_PROCESS, SERVICE_WIN32_SHARE_PROCESS
+Service State: SERVICE_RUNNING
+Binary Path: C:\Windows\System32\svchost.exe -k netsvcs -p
+
+Offset: 0x2523fc76050
+Order: 442
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: SharedRealitySvc
+Display Name: Servicio de datos espacial
+Service Type: SERVICE_WIN32_SHARE_PROCESS
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc78490
+Order: 441
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: SharedAccess
+Display Name: Conexi?n compartida a Internet (ICS)
+Service Type: SERVICE_WIN32_SHARE_PROCESS
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc796b0
+Order: 440
+Start: SERVICE_AUTO_START
+Process ID: 3500
+Service Name: SgrmBroker
+Display Name: Agente de supervisi?n en tiempo de ejecuci?n de Protecci?n del sistema
+Service Type: SERVICE_WIN32_OWN_PROCESS
+Service State: SERVICE_RUNNING
+Binary Path: C:\Windows\system32\SgrmBroker.exe
+
+Offset: 0x2523fc70d60
+Order: 439
+Start: SERVICE_BOOT_START
+Process ID: -
+Service Name: SgrmAgent
+Display Name: System Guard Runtime Monitor Agent
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_RUNNING
+Binary Path: \Driver\SgrmAgent
+
+Offset: 0x2523fc709d0
+Order: 438
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: sfloppy
+Display Name: sfloppy
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc76960
+Order: 437
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: SessionEnv
+Display Name: Configuraci?n de Escritorio remoto
+Service Type: SERVICE_WIN32_SHARE_PROCESS
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc708a0
+Order: 436
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: sermouse
+Display Name: sermouse
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc70770
+Order: 435
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: Serial
+Display Name: Serial
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc702b0
+Order: 434
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: Serenum
+Display Name: Serenum
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc71220
+Order: 433
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: SerCx2
+Display Name: SerCx2
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc70180
+Order: 432
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: SerCx
+Display Name: SerCx
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc77b80
+Order: 431
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: SensrSvc
+Display Name: Servicio de supervisi?n de sensores
+Service Type: SERVICE_WIN32_SHARE_PROCESS
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc76ed0
+Order: 430
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: SensorService
+Display Name: Servicio de sensores
+Service Type: SERVICE_WIN32_SHARE_PROCESS
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc777e0
+Order: 429
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: SensorDataService
+Display Name: Servicio de datos del sensor
+Service Type: SERVICE_WIN32_OWN_PROCESS
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc78da0
+Order: 428
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: Sense
+Display Name: Servicio de Protecci?n contra amenazas avanzada de Windows Defender
+Service Type: SERVICE_WIN32_OWN_PROCESS
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc77270
+Order: 427
+Start: SERVICE_AUTO_START
+Process ID: 2020
+Service Name: SENS
+Display Name: Servicio de notificaci?n de eventos de sistema
+Service Type: SERVICE_WIN32_OWN_PROCESS, SERVICE_WIN32_SHARE_PROCESS
+Service State: SERVICE_RUNNING
+Binary Path: C:\Windows\system32\svchost.exe -k netsvcs -p
+
+Offset: 0x2523fc76220
+Order: 426
+Start: SERVICE_DEMAND_START
+Process ID: 1668
+Service Name: SEMgrSvc
+Display Name: Administrador de pagos y NFC/SE
+Service Type: SERVICE_WIN32_OWN_PROCESS
+Service State: SERVICE_RUNNING
+Binary Path: C:\Windows\system32\svchost.exe -k LocalService -p
+
+Offset: 0x2523fc794e0
+Order: 425
+Start: SERVICE_DEMAND_START
+Process ID: 6948
+Service Name: SecurityHealthService
+Display Name: Servicio Seguridad de Windows
+Service Type: SERVICE_WIN32_OWN_PROCESS
+Service State: SERVICE_RUNNING
+Binary Path: C:\Windows\system32\SecurityHealthService.exe
+
+Offset: 0x2523fc79310
+Order: 424
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: seclogon
+Display Name: Inicio de sesi?n secundario
+Service Type: SERVICE_WIN32_SHARE_PROCESS
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc72060
+Order: 423
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: sdstor
+Display Name: sdstor
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc77440
+Order: 422
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: SDRSVC
+Display Name: Copias de seguridad de Windows
+Service Type: SERVICE_WIN32_OWN_PROCESS
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc70050
+Order: 421
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: SDFRd
+Display Name: SDFRd
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc71810
+Order: 420
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: sdbus
+Display Name: sdbus
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc77d50
+Order: 419
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: SCPolicySvc
+Display Name: Directiva de extracci?n de tarjetas inteligentes
+Service Type: SERVICE_WIN32_SHARE_PROCESS
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc70640
+Order: 418
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: scmbus
+Display Name: scmbus
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc77610
+Order: 417
+Start: SERVICE_AUTO_START
+Process ID: 1240
+Service Name: Schedule
+Display Name: Programador de tareas
+Service Type: SERVICE_WIN32_OWN_PROCESS, SERVICE_WIN32_SHARE_PROCESS
+Service State: SERVICE_RUNNING
+Binary Path: C:\Windows\system32\svchost.exe -k netsvcs -p
+
+Offset: 0x2523fc710f0
+Order: 416
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: scfilter
+Display Name: scfilter
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc79880
+Order: 415
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: ScDeviceEnum
+Display Name: Servicio de enumeraci?n de dispositivos de tarjeta inteligente
+Service Type: SERVICE_WIN32_SHARE_PROCESS
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc779b0
+Order: 414
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: SCardSvr
+Display Name: Tarjeta inteligente
+Service Type: SERVICE_WIN32_SHARE_PROCESS
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc723f0
+Order: 413
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: sbp2port
+Display Name: sbp2port
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc6b260
+Order: 412
+Start: SERVICE_AUTO_START
+Process ID: 712
+Service Name: SamSs
+Display Name: Administrador de cuentas de seguridad
+Service Type: SERVICE_WIN32_SHARE_PROCESS
+Service State: SERVICE_RUNNING
+Binary Path: C:\Windows\system32\lsass.exe
+
+Offset: 0x2523fc71480
+Order: 411
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: s3cap
+Display Name: s3cap
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc722c0
+Order: 410
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: RTSUER
+Display Name: RTSUER
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc70fc0
+Order: 409
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: rt640x64
+Display Name: Controlador Realtek RT640 NT
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_RUNNING
+Binary Path: \Driver\rt640x64
+
+Offset: 0x2523fc703e0
+Order: 408
+Start: SERVICE_AUTO_START
+Process ID: -
+Service Name: rspndr
+Display Name: Respondedor de detecci?n de topolog?as de nivel de v?nculo
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_RUNNING
+Binary Path: \Driver\rspndr
+
+Offset: 0x2523fc6aec0
+Order: 407
+Start: SERVICE_AUTO_START
+Process ID: 896
+Service Name: RpcSs
+Display Name: Llamada a procedimiento remoto (RPC)
+Service Type: SERVICE_WIN32_SHARE_PROCESS
+Service State: SERVICE_RUNNING
+Binary Path: C:\Windows\system32\svchost.exe -k RPCSS -p
+
+Offset: 0x2523fc6b7d0
+Order: 406
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: RpcLocator
+Display Name: Ubicador de llamada a procedimiento remoto (RPC)
+Service Type: SERVICE_WIN32_OWN_PROCESS
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc6a950
+Order: 405
+Start: SERVICE_AUTO_START
+Process ID: 896
+Service Name: RpcEptMapper
+Display Name: Asignador de extremos de RPC
+Service Type: SERVICE_WIN32_SHARE_PROCESS
+Service State: SERVICE_RUNNING
+Binary Path: C:\Windows\system32\svchost.exe -k RPCSS -p
+
+Offset: 0x2523fc6a210
+Order: 404
+Start: SERVICE_DEMAND_START
+Process ID: 4360
+Service Name: RmSvc
+Display Name: Servicio de administraci?n de radio
+Service Type: SERVICE_WIN32_OWN_PROCESS, SERVICE_WIN32_SHARE_PROCESS
+Service State: SERVICE_RUNNING
+Binary Path: C:\Windows\System32\svchost.exe -k LocalServiceNetworkRestricted
+
+Offset: 0x2523fc71f30
+Order: 403
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: rhproxy
+Display Name: rhproxy
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc71e00
+Order: 402
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: RFCOMM
+Display Name: RFCOMM
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc6a040
+Order: 401
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: RetailDemo
+Display Name: Servicio de prueba comercial
+Service Type: SERVICE_WIN32_SHARE_PROCESS
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc6b090
+Order: 400
+Start: SERVICE_DISABLED
+Process ID: -
+Service Name: RemoteRegistry
+Display Name: Registro remoto
+Service Type: SERVICE_WIN32_SHARE_PROCESS
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc6bb70
+Order: 399
+Start: SERVICE_DISABLED
+Process ID: -
+Service Name: RemoteAccess
+Display Name: Enrutamiento y acceso remoto
+Service Type: SERVICE_WIN32_SHARE_PROCESS
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc71cd0
+Order: 398
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: ReFSv1
+Display Name: ReFSv1
+Service Type: SERVICE_FILE_SYSTEM_DRIVER
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc72520
+Order: 397
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: ReFS
+Display Name: ReFS
+Service Type: SERVICE_FILE_SYSTEM_DRIVER
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc71940
+Order: 396
+Start: SERVICE_BOOT_START
+Process ID: -
+Service Name: rdyboost
+Display Name: ReadyBoost
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_RUNNING
+Binary Path: \Driver\rdyboost
+
+Offset: 0x2523fc70e90
+Order: 395
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: RdpVideoMiniport
+Display Name: RdpVideoMiniport
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc715b0
+Order: 394
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: RDPDR
+Display Name: RDPDR
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc70510
+Order: 393
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: rdpbus
+Display Name: Controlador de bus del Redirector de dispositivos de Escritorio remoto
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_RUNNING
+Binary Path: \Driver\rdpbus
+
+Offset: 0x2523fc716e0
+Order: 392
+Start: SERVICE_SYSTEM_START
+Process ID: -
+Service Name: rdbss
+Display Name: Subsistema de almacenamiento en b?fer redirigido
+Service Type: SERVICE_FILE_SYSTEM_DRIVER
+Service State: SERVICE_RUNNING
+Binary Path: \FileSystem\rdbss
+
+Offset: 0x2523fc70b00
+Order: 391
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: RasSstp
+Display Name: Minipuerto WAN (SSTP)
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_RUNNING
+Binary Path: \Driver\RasSstp
+
+Offset: 0x2523fc70c30
+Order: 390
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: RasPppoe
+Display Name: Controlador PPPOE de acceso remoto
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_RUNNING
+Binary Path: \Driver\RasPppoe
+
+Offset: 0x2523fc6b9a0
+Order: 389
+Start: SERVICE_AUTO_START
+Process ID: 3732
+Service Name: RasMan
+Display Name: Administrador de conexiones de acceso remoto
+Service Type: SERVICE_WIN32_SHARE_PROCESS
+Service State: SERVICE_RUNNING
+Binary Path: C:\Windows\System32\svchost.exe -k netsvcs
+
+Offset: 0x2523fc71ba0
+Order: 388
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: Rasl2tp
+Display Name: Minipuerto WAN (L2TP)
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_RUNNING
+Binary Path: \Driver\Rasl2tp
+
+Offset: 0x2523fc6ab20
+Order: 387
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: RasAuto
+Display Name: Administrador de conexiones autom?ticas de acceso remoto
+Service Type: SERVICE_WIN32_SHARE_PROCESS
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc68800
+Order: 386
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: RasAgileVpn
+Display Name: Minipuerto WAN (IKEv2)
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_RUNNING
+Binary Path: \Driver\RasAgileVpn
+
+Offset: 0x2523fc685a0
+Order: 385
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: RasAcd
+Display Name: RasAcd
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc68470
+Order: 384
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: Ramdisk
+Display Name: Ramdisk
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc68210
+Order: 383
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: QWAVEdrv
+Display Name: QWAVEdrv
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc6bd40
+Order: 382
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: QWAVE
+Display Name: Experiencia de calidad de audio y v?deo de Windows (qWave)
+Service Type: SERVICE_WIN32_SHARE_PROCESS
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc6acf0
+Order: 381
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: PushToInstall
+Display Name: Servicio PushToInstall de Windows
+Service Type: SERVICE_WIN32_OWN_PROCESS, SERVICE_WIN32_SHARE_PROCESS
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc67fb0
+Order: 380
+Start: SERVICE_SYSTEM_START
+Process ID: -
+Service Name: Psched
+Display Name: Programador de paquetes QoS
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_RUNNING
+Binary Path: \Driver\Psched
+
+Offset: 0x2523fc6a3e0
+Order: 379
+Start: SERVICE_AUTO_START
+Process ID: 1360
+Service Name: ProfSvc
+Display Name: Servicio de perfil de usuario
+Service Type: SERVICE_WIN32_OWN_PROCESS, SERVICE_WIN32_SHARE_PROCESS
+Service State: SERVICE_RUNNING
+Binary Path: C:\Windows\system32\svchost.exe -k netsvcs -p
+
+Offset: 0x2523fc67040
+Order: 378
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: Processor
+Display Name: Processor
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc6b600
+Order: 377
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: PrintWorkflowUserSvc
+Display Name: PrintWorkflow
+Service Type: SERVICE_WIN32_SHARE_PROCESS
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc6a780
+Order: 376
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: PrintNotify
+Display Name: Extensiones y notificaciones de impresora
+Service Type: SERVICE_INTERACTIVE_PROCESS, SERVICE_WIN32_SHARE_PROCESS
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc679c0
+Order: 375
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: PptpMiniport
+Display Name: Minipuerto WAN (PPTP)
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_RUNNING
+Binary Path: \Driver\PptpMiniport
+
+Offset: 0x2523fc6b430
+Order: 374
+Start: SERVICE_AUTO_START
+Process ID: 800
+Service Name: Power
+Display Name: Energ?a
+Service Type: SERVICE_WIN32_SHARE_PROCESS
+Service State: SERVICE_RUNNING
+Binary Path: C:\Windows\system32\svchost.exe -k DcomLaunch -p
+
+Offset: 0x2523fc68340
+Order: 373
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: portcfg
+Display Name: portcfg
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc6a5b0
+Order: 372
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: PolicyAgent
+Display Name: Agente de directiva IPsec
+Service Type: SERVICE_WIN32_SHARE_PROCESS
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc667d0
+Order: 371
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: PNRPsvc
+Display Name: Protocolo de resoluci?n de nombres de mismo nivel
+Service Type: SERVICE_WIN32_SHARE_PROCESS
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc65ec0
+Order: 370
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: PNRPAutoReg
+Display Name: Servicio de publicaci?n de nombres de equipo PNRP
+Service Type: SERVICE_WIN32_SHARE_PROCESS
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc67170
+Order: 369
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: PNPMEM
+Display Name: PNPMEM
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc67890
+Order: 368
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: pmem
+Display Name: pmem
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc653e0
+Order: 367
+Start: SERVICE_DEMAND_START
+Process ID: 800
+Service Name: PlugPlay
+Display Name: Plug and Play
+Service Type: SERVICE_WIN32_SHARE_PROCESS
+Service State: SERVICE_RUNNING
+Binary Path: C:\Windows\system32\svchost.exe -k DcomLaunch -p
+
+Offset: 0x2523fc65cf0
+Order: 366
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: pla
+Display Name: Registros y alertas de rendimiento
+Service Type: SERVICE_WIN32_SHARE_PROCESS
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc67760
+Order: 365
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: PktMon
+Display Name: PktMon
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc65040
+Order: 364
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: PimIndexMaintenanceSvc
+Display Name: Datos de contactos
+Service Type: SERVICE_WIN32_SHARE_PROCESS
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc66430
+Order: 363
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: PhoneSvc
+Display Name: Servicio telef?nico
+Service Type: SERVICE_WIN32_SHARE_PROCESS
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc65950
+Order: 362
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: PerfHost
+Display Name: DLL de host del Contador de rendimiento
+Service Type: SERVICE_WIN32_OWN_PROCESS
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc68df0
+Order: 361
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: percsas3i
+Display Name: percsas3i
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc67d50
+Order: 360
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: percsas2i
+Display Name: percsas2i
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc669a0
+Order: 359
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: perceptionsimulation
+Display Name: Servicio de simulaci?n de percepci?n de Windows
+Service Type: SERVICE_WIN32_OWN_PROCESS
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc65780
+Order: 358
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: PeerDistSvc
+Display Name: BranchCache
+Service Type: SERVICE_WIN32_SHARE_PROCESS
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc68b90
+Order: 357
+Start: SERVICE_AUTO_START
+Process ID: -
+Service Name: PEAUTH
+Display Name: PEAUTH
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_RUNNING
+Binary Path: \Driver\PEAUTH
+
+Offset: 0x2523fc67c20
+Order: 356
+Start: SERVICE_BOOT_START
+Process ID: -
+Service Name: pdc
+Display Name: pdc
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_RUNNING
+Binary Path: \Driver\pdc
+
+Offset: 0x2523fc68cc0
+Order: 355
+Start: SERVICE_BOOT_START
+Process ID: -
+Service Name: pcw
+Display Name: Performance Counters for Windows Driver
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_RUNNING
+Binary Path: \Driver\pcw
+
+Offset: 0x2523fc67630
+Order: 354
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: pcmcia
+Display Name: pcmcia
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc67e80
+Order: 353
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: pciide
+Display Name: pciide
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc67500
+Order: 352
+Start: SERVICE_BOOT_START
+Process ID: -
+Service Name: pci
+Display Name: Controlador de bus PCI
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_RUNNING
+Binary Path: \Driver\pci
+
+Offset: 0x2523fc66600
+Order: 351
+Start: SERVICE_DEMAND_START
+Process ID: 3608
+Service Name: PcaSvc
+Display Name: Servicio Asistente para la compatibilidad de programas
+Service Type: SERVICE_WIN32_OWN_PROCESS, SERVICE_WIN32_SHARE_PROCESS
+Service State: SERVICE_RUNNING
+Binary Path: C:\Windows\system32\svchost.exe -k LocalSystemNetworkRestricted -p
+
+Offset: 0x2523fc68930
+Order: 350
+Start: SERVICE_BOOT_START
+Process ID: -
+Service Name: partmgr
+Display Name: Controlador de partici?n
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_RUNNING
+Binary Path: \Driver\partmgr
+
+Offset: 0x2523fc680e0
+Order: 349
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: Parport
+Display Name: Parport
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc66260
+Order: 348
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: p2psvc
+Display Name: Agrupaci?n de red del mismo nivel
+Service Type: SERVICE_WIN32_SHARE_PROCESS
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc66b70
+Order: 347
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: p2pimsvc
+Display Name: Administrador de identidad de redes de mismo nivel
+Service Type: SERVICE_WIN32_SHARE_PROCESS
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc65b20
+Order: 346
+Start: SERVICE_AUTO_START
+Process ID: -
+Service Name: OneSyncSvc
+Display Name: Sincronizar host
+Service Type: SERVICE_WIN32_SHARE_PROCESS
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc686d0
+Order: 345
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: nvstor
+Display Name: nvstor
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc673d0
+Order: 344
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: nvraid
+Display Name: nvraid
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc672a0
+Order: 343
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: nvdimm
+Display Name: nvdimm
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc67af0
+Order: 342
+Start: SERVICE_SYSTEM_START
+Process ID: -
+Service Name: Null
+Display Name: Null
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_RUNNING
+Binary Path: \Driver\Null
+
+Offset: 0x2523fc68a60
+Order: 341
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: Ntfs
+Display Name: Ntfs
+Service Type: SERVICE_FILE_SYSTEM_DRIVER
+Service State: SERVICE_RUNNING
+Binary Path: \FileSystem\Ntfs
+
+Offset: 0x2523fc5f340
+Order: 340
+Start: SERVICE_SYSTEM_START
+Process ID: -
+Service Name: nsiproxy
+Display Name: NSI Proxy Service Driver
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_RUNNING
+Binary Path: \Driver\nsiproxy
+
+Offset: 0x2523fc65210
+Order: 339
+Start: SERVICE_AUTO_START
+Process ID: 1380
+Service Name: nsi
+Display Name: Servicio Interfaz de almacenamiento en red
+Service Type: SERVICE_WIN32_OWN_PROCESS, SERVICE_WIN32_SHARE_PROCESS
+Service State: SERVICE_RUNNING
+Binary Path: C:\Windows\system32\svchost.exe -k LocalService -p
+
+Offset: 0x2523fc5ec20
+Order: 338
+Start: SERVICE_SYSTEM_START
+Process ID: -
+Service Name: npsvctrig
+Display Name: Named pipe service trigger provider
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_RUNNING
+Binary Path: \Driver\npsvctrig
+
+Offset: 0x2523fc5e890
+Order: 337
+Start: SERVICE_SYSTEM_START
+Process ID: -
+Service Name: Npfs
+Display Name: Npfs
+Service Type: SERVICE_FILE_SYSTEM_DRIVER
+Service State: SERVICE_RUNNING
+Binary Path: \FileSystem\Npfs
+
+Offset: 0x2523fc655b0
+Order: 336
+Start: SERVICE_AUTO_START
+Process ID: 1872
+Service Name: NlaSvc
+Display Name: Reconoc. ubicaci?n de red
+Service Type: SERVICE_WIN32_OWN_PROCESS, SERVICE_WIN32_SHARE_PROCESS
+Service State: SERVICE_RUNNING
+Binary Path: C:\Windows\System32\svchost.exe -k NetworkService -p
+
+Offset: 0x2523fc66090
+Order: 335
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: NgcSvc
+Display Name: Microsoft Passport
+Service Type: SERVICE_WIN32_OWN_PROCESS, SERVICE_WIN32_SHARE_PROCESS
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc66d40
+Order: 334
+Start: SERVICE_DEMAND_START
+Process ID: 7796
+Service Name: NgcCtnrSvc
+Display Name: Contenedor de Microsoft Passport
+Service Type: SERVICE_WIN32_OWN_PROCESS, SERVICE_WIN32_SHARE_PROCESS
+Service State: SERVICE_RUNNING
+Binary Path: C:\Windows\system32\svchost.exe -k LocalServiceNetworkRestricted -p
+
+Offset: 0x2523fc5e760
+Order: 333
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: NETwNb64
+Display Name: Controlador del adaptador Intel(R) Wireless para Windows 8.1 de 64 bits
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_RUNNING
+Binary Path: \Driver\NETwNb64
+
+Offset: 0x2523fc5f930
+Order: 332
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: netvsc
+Display Name: netvsc
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc57b20
+Order: 331
+Start: SERVICE_DISABLED
+Process ID: -
+Service Name: NetTcpPortSharing
+Display Name: Servicio de uso compartido de puertos Net.Tcp
+Service Type: SERVICE_WIN32_SHARE_PROCESS
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc57780
+Order: 330
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: NetSetupSvc
+Display Name: Servicio de configuraci?n de red
+Service Type: SERVICE_WIN32_OWN_PROCESS, SERVICE_WIN32_SHARE_PROCESS
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc575b0
+Order: 329
+Start: SERVICE_DEMAND_START
+Process ID: 1708
+Service Name: netprofm
+Display Name: Servicio de lista de redes
+Service Type: SERVICE_WIN32_OWN_PROCESS, SERVICE_WIN32_SHARE_PROCESS
+Service State: SERVICE_RUNNING
+Binary Path: C:\Windows\System32\svchost.exe -k LocalService -p
+
+Offset: 0x2523fc57040
+Order: 328
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: Netman
+Display Name: Conexiones de red
+Service Type: SERVICE_WIN32_SHARE_PROCESS
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc58600
+Order: 327
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: Netlogon
+Display Name: Net Logon
+Service Type: SERVICE_WIN32_SHARE_PROCESS
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc5f800
+Order: 326
+Start: SERVICE_SYSTEM_START
+Process ID: -
+Service Name: NetBT
+Display Name: NetBT
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_RUNNING
+Binary Path: \Driver\NetBT
+
+Offset: 0x2523fc5e2a0
+Order: 325
+Start: SERVICE_SYSTEM_START
+Process ID: -
+Service Name: NetBIOS
+Display Name: NetBIOS Interface
+Service Type: SERVICE_FILE_SYSTEM_DRIVER
+Service State: SERVICE_RUNNING
+Binary Path: \FileSystem\NetBIOS
+
+Offset: 0x2523fc5e500
+Order: 324
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: NetAdapterCx
+Display Name: NetAdapterCx
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc5f210
+Order: 323
+Start: SERVICE_AUTO_START
+Process ID: -
+Service Name: Ndu
+Display Name: Windows Network Data Usage Monitoring Driver
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_RUNNING
+Binary Path: \Driver\Ndu
+
+Offset: 0x2523fc5efb0
+Order: 322
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: ndproxy
+Display Name: NDIS Proxy Driver
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_RUNNING
+Binary Path: \Driver\ndproxy
+
+Offset: 0x2523fc5f6d0
+Order: 321
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: NDKPing
+Display Name: NDKPing
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc5e3d0
+Order: 320
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: ndiswanlegacy
+Display Name: ndiswanlegacy
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc5f5a0
+Order: 319
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: NdisWan
+Display Name: Controlador WAN NDIS de acceso remoto
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_RUNNING
+Binary Path: \Driver\NdisWan
+
+Offset: 0x2523fc5e170
+Order: 318
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: NdisVirtualBus
+Display Name: Enumerador de adaptador de red virtual de Microsoft
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_RUNNING
+Binary Path: \Driver\NdisVirtualBus
+
+Offset: 0x2523fc5e630
+Order: 317
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: Ndisuio
+Display Name: NDIS Usermode I/O Protocol
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_RUNNING
+Binary Path: \Driver\Ndisuio
+
+Offset: 0x2523fc5f0e0
+Order: 316
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: NdisTapi
+Display Name: Controlador TAPI NDIS de acceso remoto
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_RUNNING
+Binary Path: \Driver\NdisTapi
+
+Offset: 0x2523fc5ed50
+Order: 315
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: NdisImPlatform
+Display Name: NdisImPlatform
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc5ee80
+Order: 314
+Start: SERVICE_SYSTEM_START
+Process ID: -
+Service Name: NdisCap
+Display Name: Captura de NDIS de Microsoft
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_RUNNING
+Binary Path: \Driver\NdisCap
+
+Offset: 0x2523fc5e040
+Order: 313
+Start: SERVICE_BOOT_START
+Process ID: -
+Service Name: NDIS
+Display Name: Controlador de sistema NDIS
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_RUNNING
+Binary Path: \Driver\NDIS
+
+Offset: 0x2523fc5fdf0
+Order: 312
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: ndfltr
+Display Name: ndfltr
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc58430
+Order: 311
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: NcdAutoSetup
+Display Name: Configuraci?n autom?tica de dispositivos conectados a la red
+Service Type: SERVICE_WIN32_SHARE_PROCESS
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc573e0
+Order: 310
+Start: SERVICE_DEMAND_START
+Process ID: 1116
+Service Name: NcbService
+Display Name: Agente de conexi?n de red
+Service Type: SERVICE_WIN32_OWN_PROCESS, SERVICE_WIN32_SHARE_PROCESS
+Service State: SERVICE_RUNNING
+Binary Path: C:\Windows\System32\svchost.exe -k LocalSystemNetworkRestricted -p
+
+Offset: 0x2523fc58b70
+Order: 309
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: NcaSvc
+Display Name: Asistente para la conectividad de red
+Service Type: SERVICE_WIN32_SHARE_PROCESS
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc57950
+Order: 308
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: NaturalAuthentication
+Display Name: Autenticaci?n natural
+Service Type: SERVICE_WIN32_SHARE_PROCESS
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc5e9c0
+Order: 307
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: NativeWifiP
+Display Name: Filtro NativeWiFi
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_RUNNING
+Binary Path: \Driver\NativeWifiP
+
+Offset: 0x2523fc5fcc0
+Order: 306
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: mvumis
+Display Name: mvumis
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc5f470
+Order: 305
+Start: SERVICE_BOOT_START
+Process ID: -
+Service Name: Mup
+Display Name: Mup
+Service Type: SERVICE_FILE_SYSTEM_DRIVER
+Service State: SERVICE_RUNNING
+Binary Path: \FileSystem\Mup
+
+Offset: 0x2523fc5fa60
+Order: 304
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: MTConfig
+Display Name: MTConfig
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc5fb90
+Order: 303
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: MSTEE
+Display Name: MSTEE
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc5eaf0
+Order: 302
+Start: SERVICE_SYSTEM_START
+Process ID: -
+Service Name: mssmbios
+Display Name: Controlador BIOS de Microsoft System Management
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_RUNNING
+Binary Path: \Driver\mssmbios
+
+Offset: 0x2523fc5adf0
+Order: 301
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: MsSecWfp
+Display Name: MsSecWfp
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc5acc0
+Order: 300
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: MsSecFlt
+Display Name: MsSecFlt
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc5a340
+Order: 299
+Start: SERVICE_BOOT_START
+Process ID: -
+Service Name: MsSecCore
+Display Name: Controlador de arranque principal de seguridad de Microsoft
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_RUNNING
+Binary Path: \Driver\MsSecCore
+
+Offset: 0x2523fc5a210
+Order: 298
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: MsRPC
+Display Name: MsRPC
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc59040
+Order: 297
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: MsQuic
+Display Name: MsQuic
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_RUNNING
+Binary Path: \Driver\MsQuic
+
+Offset: 0x2523fc5ab90
+Order: 296
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: MSPQM
+Display Name: MSPQM
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc5a0e0
+Order: 295
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: MSPCLOCK
+Display Name: MSPCLOCK
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc593d0
+Order: 294
+Start: SERVICE_AUTO_START
+Process ID: -
+Service Name: MsLldp
+Display Name: Protocolo de detecci?n de nivel de v?nculo de Microsoft
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_RUNNING
+Binary Path: \Driver\MsLldp
+
+Offset: 0x2523fc59fb0
+Order: 293
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: MSKSSRV
+Display Name: MSKSSRV
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc589a0
+Order: 292
+Start: SERVICE_DISABLED
+Process ID: -
+Service Name: MsKeyboardFilter
+Display Name: Filtro de teclado de Microsoft
+Service Type: SERVICE_WIN32_SHARE_PROCESS
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc58260
+Order: 291
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: msiserver
+Display Name: Windows Installer
+Service Type: SERVICE_WIN32_OWN_PROCESS
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc57ec0
+Order: 290
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: MSiSCSI
+Display Name: Servicio del iniciador iSCSI de Microsoft
+Service Type: SERVICE_WIN32_SHARE_PROCESS
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc5aa60
+Order: 289
+Start: SERVICE_BOOT_START
+Process ID: -
+Service Name: msisadrv
+Display Name: msisadrv
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_RUNNING
+Binary Path: \Driver\msisadrv
+
+Offset: 0x2523fc5a930
+Order: 288
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: mshidumdf
+Display Name: mshidumdf
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc5a470
+Order: 287
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: mshidkmdf
+Display Name: Pass-through HID to KMDF Filter Driver
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_RUNNING
+Binary Path: \Driver\mshidkmdf
+
+Offset: 0x2523fc59760
+Order: 286
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: msgpiowin32
+Display Name: msgpiowin32
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc59e80
+Order: 285
+Start: SERVICE_SYSTEM_START
+Process ID: -
+Service Name: Msfs
+Display Name: Msfs
+Service Type: SERVICE_FILE_SYSTEM_DRIVER
+Service State: SERVICE_RUNNING
+Binary Path: \FileSystem\Msfs
+
+Offset: 0x2523fc57cf0
+Order: 284
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: MSDTC
+Display Name: Coordinador de transacciones distribuidas
+Service Type: SERVICE_WIN32_OWN_PROCESS
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc599c0
+Order: 283
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: MsBridge
+Display Name: MsBridge
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc59630
+Order: 282
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: mrxsmb20
+Display Name: Minirredirector SMB 2.0
+Service Type: SERVICE_FILE_SYSTEM_DRIVER
+Service State: SERVICE_RUNNING
+Binary Path: \FileSystem\mrxsmb20
+
+Offset: 0x2523fc5a6d0
+Order: 281
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: mrxsmb
+Display Name: Contenedor y motor de minirredirector SMB
+Service Type: SERVICE_FILE_SYSTEM_DRIVER
+Service State: SERVICE_RUNNING
+Binary Path: \FileSystem\mrxsmb
+
+Offset: 0x2523fc592a0
+Order: 280
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: MRxDAV
+Display Name: MRxDAV
+Service Type: SERVICE_FILE_SYSTEM_DRIVER
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc58090
+Order: 279
+Start: SERVICE_AUTO_START
+Process ID: 2880
+Service Name: mpssvc
+Display Name: Firewall de Windows Defender
+Service Type: SERVICE_WIN32_SHARE_PROCESS
+Service State: SERVICE_RUNNING
+Binary Path: C:\Windows\system32\svchost.exe -k LocalServiceNoNetworkFirewall -p
+
+Offset: 0x2523fc59890
+Order: 278
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: mpsdrv
+Display Name: Windows Defender Firewall Authorization Driver
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_RUNNING
+Binary Path: \Driver\mpsdrv
+
+Offset: 0x2523fc59500
+Order: 277
+Start: SERVICE_BOOT_START
+Process ID: -
+Service Name: mountmgr
+Display Name: Administrador de punto de montaje
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_RUNNING
+Binary Path: \Driver\mountmgr
+
+Offset: 0x2523fc59c20
+Order: 276
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: mouhid
+Display Name: mouhid
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc5a800
+Order: 275
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: mouclass
+Display Name: Controlador de clase de mouse
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_RUNNING
+Binary Path: \Driver\mouclass
+
+Offset: 0x2523fc59d50
+Order: 274
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: monitor
+Display Name: Servicio de controladores de funci?n de clase para monitores de Microsoft
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_RUNNING
+Binary Path: \Driver\monitor
+
+Offset: 0x2523fc59170
+Order: 273
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: Modem
+Display Name: Modem
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc5a5a0
+Order: 272
+Start: SERVICE_AUTO_START
+Process ID: -
+Service Name: MMCSS
+Display Name: Multimedia Class Scheduler
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_RUNNING
+Binary Path: \Driver\MMCSS
+
+Offset: 0x2523fc59af0
+Order: 271
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: mlx4_bus
+Display Name: mlx4_bus
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc587d0
+Order: 270
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: MixedRealityOpenXRSvc
+Display Name: Windows Mixed Reality OpenXR Service
+Service Type: SERVICE_WIN32_SHARE_PROCESS
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc54df0
+Order: 269
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: Microsoft_Bluetooth_AvrcpTransport
+Display Name: Microsoft_Bluetooth_AvrcpTransport
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc58d40
+Order: 268
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: MicrosoftEdgeElevationService
+Display Name: Microsoft Edge Elevation Service (MicrosoftEdgeElevationService)
+Service Type: SERVICE_WIN32_OWN_PROCESS
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc57210
+Order: 267
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: MessagingService
+Display Name: MessagingService
+Service Type: SERVICE_WIN32_SHARE_PROCESS
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc54cc0
+Order: 266
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: megasr
+Display Name: megasr
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc54a60
+Order: 265
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: megasas35i
+Display Name: megasas35i
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc54800
+Order: 264
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: megasas2i
+Display Name: megasas2i
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc546d0
+Order: 263
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: megasas
+Display Name: megasas
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc51780
+Order: 262
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: McpManagementService
+Display Name: McpManagementService
+Service Type: SERVICE_WIN32_OWN_PROCESS
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc54b90
+Order: 261
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: MbbCx
+Display Name: MbbCx
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc540e0
+Order: 260
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: mausbip
+Display Name: mausbip
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc53d50
+Order: 259
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: mausbhost
+Display Name: mausbhost
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc513e0
+Order: 258
+Start: SERVICE_AUTO_START
+Process ID: -
+Service Name: MapsBroker
+Display Name: Administrador de mapas descargados
+Service Type: SERVICE_WIN32_OWN_PROCESS
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc51210
+Order: 257
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: LxpSvc
+Display Name: Servicio de experiencia de idioma
+Service Type: SERVICE_WIN32_SHARE_PROCESS
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc53fb0
+Order: 256
+Start: SERVICE_AUTO_START
+Process ID: -
+Service Name: luafv
+Display Name: Virtualizaci?n de archivos UAC
+Service Type: SERVICE_FILE_SYSTEM_DRIVER
+Service State: SERVICE_RUNNING
+Binary Path: \FileSystem\luafv
+
+Offset: 0x2523fc51040
+Order: 255
+Start: SERVICE_AUTO_START
+Process ID: 948
+Service Name: LSM
+Display Name: Administrador de sesi?n local
+Service Type: SERVICE_WIN32_OWN_PROCESS, SERVICE_WIN32_SHARE_PROCESS
+Service State: SERVICE_RUNNING
+Binary Path: C:\Windows\system32\svchost.exe -k DcomLaunch -p
+
+Offset: 0x2523fc53c20
+Order: 254
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: LSI_SSS
+Display Name: LSI_SSS
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc53af0
+Order: 253
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: LSI_SAS3i
+Display Name: LSI_SAS3i
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc539c0
+Order: 252
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: LSI_SAS2i
+Display Name: LSI_SAS2i
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc545a0
+Order: 251
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: LSI_SAS
+Display Name: LSI_SAS
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc52430
+Order: 250
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: lmhosts
+Display Name: Aplicaci?n auxiliar de NetBIOS sobre TCP/IP
+Service Type: SERVICE_WIN32_OWN_PROCESS, SERVICE_WIN32_SHARE_PROCESS
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc51ec0
+Order: 249
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: lltdsvc
+Display Name: Asignador de detecci?n de topolog?as de nivel de v?nculo
+Service Type: SERVICE_WIN32_SHARE_PROCESS
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc54470
+Order: 248
+Start: SERVICE_AUTO_START
+Process ID: -
+Service Name: lltdio
+Display Name: Controlador de E/S del asignador de detecci?n de topolog?as de nivel de v?nculo
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_RUNNING
+Binary Path: \Driver\lltdio
+
+Offset: 0x2523fc52090
+Order: 247
+Start: SERVICE_DEMAND_START
+Process ID: 6488
+Service Name: LicenseManager
+Display Name: Servicio de administrador de licencias de Windows
+Service Type: SERVICE_WIN32_OWN_PROCESS, SERVICE_WIN32_SHARE_PROCESS
+Service State: SERVICE_RUNNING
+Binary Path: C:\Windows\System32\svchost.exe -k LocalService -p
+
+Offset: 0x2523fc51950
+Order: 246
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: lfsvc
+Display Name: Servicio de geolocalizaci?n
+Service Type: SERVICE_WIN32_SHARE_PROCESS
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc529a0
+Order: 245
+Start: SERVICE_AUTO_START
+Process ID: 2976
+Service Name: LanmanWorkstation
+Display Name: Estaci?n de trabajo
+Service Type: SERVICE_WIN32_OWN_PROCESS, SERVICE_WIN32_SHARE_PROCESS
+Service State: SERVICE_RUNNING
+Binary Path: C:\Windows\System32\svchost.exe -k NetworkService -p
+
+Offset: 0x2523fc52d40
+Order: 244
+Start: SERVICE_AUTO_START
+Process ID: 3620
+Service Name: LanmanServer
+Display Name: Servidor
+Service Type: SERVICE_WIN32_OWN_PROCESS, SERVICE_WIN32_SHARE_PROCESS
+Service State: SERVICE_RUNNING
+Binary Path: C:\Windows\system32\svchost.exe -k netsvcs -p
+
+Offset: 0x2523fc52b70
+Order: 243
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: KtmRm
+Display Name: KTMRM para DTC (Coordinador de transacciones distribuidas)
+Service Type: SERVICE_WIN32_SHARE_PROCESS
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc53890
+Order: 242
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: ksthunk
+Display Name: Kernel Streaming Thunks
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_RUNNING
+Binary Path: \Driver\ksthunk
+
+Offset: 0x2523fc53500
+Order: 241
+Start: SERVICE_BOOT_START
+Process ID: -
+Service Name: KSecPkg
+Display Name: KSecPkg
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_RUNNING
+Binary Path: \Driver\KSecPkg
+
+Offset: 0x2523fc533d0
+Order: 240
+Start: SERVICE_BOOT_START
+Process ID: -
+Service Name: KSecDD
+Display Name: KSecDD
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_RUNNING
+Binary Path: \Driver\KSecDD
+
+Offset: 0x2523fc51cf0
+Order: 239
+Start: SERVICE_DEMAND_START
+Process ID: 712
+Service Name: KeyIso
+Display Name: Aislamiento de claves CNG
+Service Type: SERVICE_WIN32_SHARE_PROCESS
+Service State: SERVICE_RUNNING
+Binary Path: C:\Windows\system32\lsass.exe
+
+Offset: 0x2523fc532a0
+Order: 238
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: kdnic
+Display Name: Minipuerto de red de depuraci?n de kernel de Microsoft (NDIS 6.20)
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_RUNNING
+Binary Path: \Driver\kdnic
+
+Offset: 0x2523fc53170
+Order: 237
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: kbldfltr
+Display Name: kbldfltr
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc54210
+Order: 236
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: kbdhid
+Display Name: kbdhid
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc53760
+Order: 235
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: kbdclass
+Display Name: Controlador de clase de teclado
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_RUNNING
+Binary Path: \Driver\kbdclass
+
+Offset: 0x2523fc53630
+Order: 234
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: ItSas35i
+Display Name: ItSas35i
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc54930
+Order: 233
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: iScsiPrt
+Display Name: iScsiPrt
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc53e80
+Order: 232
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: isapnp
+Display Name: isapnp
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc51b20
+Order: 231
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: IpxlatCfgSvc
+Display Name: Servicio de configuraci?n de traslaci?n de IP
+Service Type: SERVICE_WIN32_SHARE_PROCESS
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc54340
+Order: 230
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: IPT
+Display Name: IPT
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc53040
+Order: 229
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: IPNAT
+Display Name: IPNAT
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc4de80
+Order: 228
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: IPMIDRV
+Display Name: IPMIDRV
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc527d0
+Order: 227
+Start: SERVICE_AUTO_START
+Process ID: 3240
+Service Name: iphlpsvc
+Display Name: Aplicaci?n auxiliar IP
+Service Type: SERVICE_WIN32_OWN_PROCESS, SERVICE_WIN32_SHARE_PROCESS
+Service State: SERVICE_RUNNING
+Binary Path: C:\Windows\System32\svchost.exe -k NetSvcs -p
+
+Offset: 0x2523fc4daf0
+Order: 226
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: IpFilterDriver
+Display Name: IpFilterDriver
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc4d9c0
+Order: 225
+Start: SERVICE_BOOT_START
+Process ID: -
+Service Name: iorate
+Display Name: Controlador del filtro de velocidad de E/S de disco
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_RUNNING
+Binary Path: \Driver\iorate
+
+Offset: 0x2523fc4dfb0
+Order: 224
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: intelppm
+Display Name: Controlador de procesador Intel
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_RUNNING
+Binary Path: \Driver\intelppm
+
+Offset: 0x2523fc4d3d0
+Order: 223
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: intelpmax
+Display Name: intelpmax
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc4d2a0
+Order: 222
+Start: SERVICE_BOOT_START
+Process ID: -
+Service Name: intelpep
+Display Name: Controlador de complemento de motor de energ?a Intel(R)
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_RUNNING
+Binary Path: \Driver\intelpep
+
+Offset: 0x2523fc4e0e0
+Order: 221
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: intelide
+Display Name: intelide
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc4d170
+Order: 220
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: IntcDAud
+Display Name: IntcDAud
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc52260
+Order: 219
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: InstallService
+Display Name: Servicio de instalaci?n de Microsoft Store
+Service Type: SERVICE_WIN32_OWN_PROCESS
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc4d040
+Order: 218
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: IndirectKmd
+Display Name: IndirectKmd
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc515b0
+Order: 217
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: IKEEXT
+Display Name: M?dulos de creaci?n de claves de IPsec para IKE y AuthIP
+Service Type: SERVICE_WIN32_SHARE_PROCESS
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc52600
+Order: 216
+Start: SERVICE_AUTO_START
+Process ID: 2060
+Service Name: igfxCUIService2.0.0.0
+Display Name: Intel(R) HD Graphics Control Panel Service
+Service Type: SERVICE_WIN32_OWN_PROCESS
+Service State: SERVICE_RUNNING
+Binary Path: C:\Windows\system32\igfxCUIService.exe
+
+Offset: 0x2523fc4edf0
+Order: 215
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: igfx
+Display Name: igfx
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_RUNNING
+Binary Path: \Driver\igfx
+
+Offset: 0x2523fc47600
+Order: 214
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: icssvc
+Display Name: Servicio de zona con cobertura inal?mbrica m?vil de Windows
+Service Type: SERVICE_WIN32_SHARE_PROCESS
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc4ecc0
+Order: 213
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: ibbus
+Display Name: ibbus
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc4e6d0
+Order: 212
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: iaStorV
+Display Name: iaStorV
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc4d630
+Order: 211
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: iaStorAVC
+Display Name: iaStorAVC
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc4d500
+Order: 210
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: iaLPSSi_I2C
+Display Name: iaLPSSi_I2C
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc4eb90
+Order: 209
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: iaLPSSi_GPIO
+Display Name: iaLPSSi_GPIO
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc4d760
+Order: 208
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: iaLPSS2i_I2C_GLK
+Display Name: iaLPSS2i_I2C_GLK
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc4e930
+Order: 207
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: iaLPSS2i_I2C_CNL
+Display Name: iaLPSS2i_I2C_CNL
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc4dc20
+Order: 206
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: iaLPSS2i_I2C_BXT_P
+Display Name: iaLPSS2i_I2C_BXT_P
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc4e800
+Order: 205
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: iaLPSS2i_I2C
+Display Name: iaLPSS2i_I2C
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc4e5a0
+Order: 204
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: iaLPSS2i_GPIO2_GLK
+Display Name: iaLPSS2i_GPIO2_GLK
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc4ea60
+Order: 203
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: iaLPSS2i_GPIO2_CNL
+Display Name: iaLPSS2i_GPIO2_CNL
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc4d890
+Order: 202
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: iaLPSS2i_GPIO2_BXT_P
+Display Name: iaLPSS2i_GPIO2_BXT_P
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc4e470
+Order: 201
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: iaLPSS2i_GPIO2
+Display Name: iaLPSS2i_GPIO2
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc4e210
+Order: 200
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: iai2c
+Display Name: iai2c
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc4e340
+Order: 199
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: iagpio
+Display Name: iagpio
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc4dd50
+Order: 198
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: i8042prt
+Display Name: Controlador de puerto de teclado y mouse PS/2
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_RUNNING
+Binary Path: \Driver\i8042prt
+
+Offset: 0x2523fc4b210
+Order: 197
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: HyperVideo
+Display Name: HyperVideo
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc4afb0
+Order: 196
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: hyperkbd
+Display Name: hyperkbd
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc4ae80
+Order: 195
+Start: SERVICE_BOOT_START
+Process ID: -
+Service Name: hwpolicy
+Display Name: hwpolicy
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc4ac20
+Order: 194
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: HwNClx0101
+Display Name: HwNClx0101
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc4a9c0
+Order: 193
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: hvservice
+Display Name: hvservice
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc47430
+Order: 192
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: HvHost
+Display Name: Servicio de host HV
+Service Type: SERVICE_WIN32_SHARE_PROCESS
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc4a760
+Order: 191
+Start: SERVICE_DISABLED
+Process ID: -
+Service Name: hvcrash
+Display Name: hvcrash
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc4a630
+Order: 190
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: HTTP
+Display Name: Servicio HTTP
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_RUNNING
+Binary Path: \Driver\HTTP
+
+Offset: 0x2523fc4ad50
+Order: 189
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: HpSAMD
+Display Name: HpSAMD
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc4a3d0
+Order: 188
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: HidUsb
+Display Name: HidUsb
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc4a040
+Order: 187
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: HidSpiCx
+Display Name: HidSpiCx
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc4b6d0
+Order: 186
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: hidspi
+Display Name: hidspi
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc91f70
+Order: 635
+Start: SERVICE_AUTO_START
+Process ID: 7304
+Service Name: wscsvc
+Display Name: Centro de seguridad
+Service Type: SERVICE_WIN32_OWN_PROCESS, SERVICE_WIN32_SHARE_PROCESS
+Service State: SERVICE_RUNNING
+Binary Path: C:\Windows\System32\svchost.exe -k LocalServiceNetworkRestricted -p
+
+Offset: 0x2523fc8b050
+Order: 634
+Start: SERVICE_DISABLED
+Process ID: -
+Service Name: ws2ifsl
+Display Name: ws2ifsl
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc91da0
+Order: 633
+Start: SERVICE_AUTO_START
+Process ID: -
+Service Name: WpnUserService
+Display Name: Servicio de usuario de notificaciones de inserci?n de Windows
+Service Type: SERVICE_WIN32_SHARE_PROCESS
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc91bd0
+Order: 632
+Start: SERVICE_AUTO_START
+Process ID: 3316
+Service Name: WpnService
+Display Name: Servicio del sistema de notificaciones de inserci?n de Windows
+Service Type: SERVICE_WIN32_OWN_PROCESS, SERVICE_WIN32_SHARE_PROCESS
+Service State: SERVICE_RUNNING
+Binary Path: C:\Windows\system32\svchost.exe -k netsvcs -p
+
+Offset: 0x2523fc8d3f0
+Order: 631
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: WpdUpFltr
+Display Name: WpdUpFltr
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc907e0
+Order: 630
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: WPDBusEnum
+Display Name: Servicio enumerador de dispositivos port?tiles
+Service Type: SERVICE_WIN32_OWN_PROCESS, SERVICE_WIN32_SHARE_PROCESS
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc8f5c0
+Order: 629
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: WpcMonSvc
+Display Name: Control parental
+Service Type: SERVICE_WIN32_OWN_PROCESS
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc90440
+Order: 628
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: workfolderssvc
+Display Name: Carpetas de trabajo
+Service Type: SERVICE_WIN32_SHARE_PROCESS
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc8be90
+Order: 627
+Start: SERVICE_BOOT_START
+Process ID: -
+Service Name: Wof
+Display Name: Windows Overlay File System Filter Driver
+Service Type: SERVICE_FILE_SYSTEM_DRIVER
+Service State: SERVICE_RUNNING
+Binary Path: \FileSystem\Wof
+
+Offset: 0x2523fc91830
+Order: 626
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: WMPNetworkSvc
+Display Name: Servicio de uso compartido de red del Reproductor de Windows Media
+Service Type: SERVICE_WIN32_OWN_PROCESS
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc8f3f0
+Order: 625
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: wmiApSrv
+Display Name: Adaptador de rendimiento de WMI
+Service Type: SERVICE_WIN32_OWN_PROCESS
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc8d520
+Order: 624
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: WmiAcpi
+Display Name: Microsoft Windows Management Interface for ACPI
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_RUNNING
+Binary Path: \Driver\WmiAcpi
+
+Offset: 0x2523fc900a0
+Order: 623
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: WManSvc
+Display Name: Servicio de administraci?n de Windows
+Service Type: SERVICE_WIN32_SHARE_PROCESS
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc8f960
+Order: 622
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: wlpasvc
+Display Name: Servicio de asistente para perfil local
+Service Type: SERVICE_WIN32_SHARE_PROCESS
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc8fed0
+Order: 621
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: wlidsvc
+Display Name: Ayudante para el inicio de sesi?n de cuenta Microsoft
+Service Type: SERVICE_WIN32_OWN_PROCESS, SERVICE_WIN32_SHARE_PROCESS
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc8f790
+Order: 620
+Start: SERVICE_AUTO_START
+Process ID: 2656
+Service Name: WlanSvc
+Display Name: Configuraci?n autom?tica de WLAN
+Service Type: SERVICE_WIN32_OWN_PROCESS
+Service State: SERVICE_RUNNING
+Binary Path: C:\Windows\system32\svchost.exe -k LocalSystemNetworkRestricted -p
+
+Offset: 0x2523fc8fd00
+Order: 619
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: wisvc
+Display Name: Servicio de Windows Insider
+Service Type: SERVICE_WIN32_OWN_PROCESS, SERVICE_WIN32_SHARE_PROCESS
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc8bc30
+Order: 618
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: WinVerbs
+Display Name: WinVerbs
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc8d2c0
+Order: 617
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: WINUSB
+Display Name: WINUSB
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc90d50
+Order: 616
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: WinRM
+Display Name: Administraci?n remota de Windows (WS-Management)
+Service Type: SERVICE_WIN32_SHARE_PROCESS
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc8ce00
+Order: 615
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: WinNat
+Display Name: WinNat
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc8f050
+Order: 614
+Start: SERVICE_AUTO_START
+Process ID: 2216
+Service Name: Winmgmt
+Display Name: Instrumental de administraci?n de Windows
+Service Type: SERVICE_WIN32_OWN_PROCESS, SERVICE_WIN32_SHARE_PROCESS
+Service State: SERVICE_RUNNING
+Binary Path: C:\Windows\system32\svchost.exe -k netsvcs -p
+
+Offset: 0x2523fc8ccd0
+Order: 613
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: WinMad
+Display Name: WinMad
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc91660
+Order: 612
+Start: SERVICE_DEMAND_START
+Process ID: 2568
+Service Name: WinHttpAutoProxySvc
+Display Name: Servicio de detecci?n autom?tica de proxy web WinHTTP
+Service Type: SERVICE_WIN32_OWN_PROCESS, SERVICE_WIN32_SHARE_PROCESS
+Service State: SERVICE_RUNNING
+Binary Path: C:\Windows\system32\svchost.exe -k LocalServiceNetworkRestricted -p
+
+Offset: 0x2523fc8c940
+Order: 611
+Start: SERVICE_BOOT_START
+Process ID: -
+Service Name: WindowsTrustedRTProxy
+Display Name: Servicio seguro en tiempo de ejecuci?n de confianza de Microsoft Windows
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_RUNNING
+Binary Path: \Driver\WindowsTrustedRTProxy
+
+Offset: 0x2523fc8c0f0
+Order: 610
+Start: SERVICE_BOOT_START
+Process ID: -
+Service Name: WindowsTrustedRT
+Display Name: Windows Trusted Execution Environment Class Extension
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_RUNNING
+Binary Path: \Driver\WindowsTrustedRT
+
+Offset: 0x2523fc8f220
+Order: 609
+Start: SERVICE_AUTO_START
+Process ID: 3444
+Service Name: WinDefend
+Display Name: Servicio Antivirus de Microsoft Defender
+Service Type: SERVICE_WIN32_OWN_PROCESS
+Service State: SERVICE_RUNNING
+Binary Path: "C:\ProgramData\Microsoft\Windows Defender\platform\4.18.23110.3-0\MsMpEng.exe"
+
+Offset: 0x2523fc8b770
+Order: 608
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: WIMMount
+Display Name: WIMMount
+Service Type: SERVICE_FILE_SYSTEM_DRIVER
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc92140
+Order: 607
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: WiaRpc
+Display Name: Eventos de adquisici?n de im?genes est?ticas
+Service Type: SERVICE_WIN32_SHARE_PROCESS
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc8c480
+Order: 606
+Start: SERVICE_BOOT_START
+Process ID: -
+Service Name: WFPLWFS
+Display Name: Plataforma de filtrado de Microsoft Windows
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_RUNNING
+Binary Path: \Driver\WFPLWFS
+
+Offset: 0x2523fc92880
+Order: 605
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: WFDSConMgrSvc
+Display Name: Servicio de administrador de conexiones con servicios Wi-Fi Direct
+Service Type: SERVICE_WIN32_SHARE_PROCESS
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc90b80
+Order: 604
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: WerSvc
+Display Name: Servicio Informe de errores de Windows
+Service Type: SERVICE_WIN32_OWN_PROCESS
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc90270
+Order: 603
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: wercplsupport
+Display Name: Soporte t?cnico del panel de control Informes de problemas
+Service Type: SERVICE_WIN32_SHARE_PROCESS
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc90610
+Order: 602
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: WEPHOSTSVC
+Display Name: Servicio host de proveedor de cifrado de Windows
+Service Type: SERVICE_WIN32_SHARE_PROCESS
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc912c0
+Order: 601
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: Wecsvc
+Display Name: Recopilador de eventos de Windows
+Service Type: SERVICE_WIN32_SHARE_PROCESS
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc926b0
+Order: 600
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: WebClient
+Display Name: Cliente web
+Service Type: SERVICE_WIN32_SHARE_PROCESS
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc924e0
+Order: 599
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: WdNisSvc
+Display Name: Servicio de inspecci?n de red de Antivirus de Microsoft Defender
+Service Type: SERVICE_WIN32_OWN_PROCESS
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc8c810
+Order: 598
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: WdNisDrv
+Display Name: Controlador de Sistema de inspecci?n de red de Antivirus de Microsoft Defender
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc8cba0
+Order: 597
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: WdmCompanionFilter
+Display Name: WdmCompanionFilter
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc8b2b0
+Order: 596
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: wdiwifi
+Display Name: wdiwifi
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc910f0
+Order: 595
+Start: SERVICE_DEMAND_START
+Process ID: 2412
+Service Name: WdiSystemHost
+Display Name: Host de sistema de diagn?stico
+Service Type: SERVICE_WIN32_OWN_PROCESS, SERVICE_WIN32_SHARE_PROCESS
+Service State: SERVICE_RUNNING
+Binary Path: C:\Windows\System32\svchost.exe -k LocalSystemNetworkRestricted -p
+
+Offset: 0x2523fc92310
+Order: 594
+Start: SERVICE_DEMAND_START
+Process ID: 3432
+Service Name: WdiServiceHost
+Display Name: Host del servicio de diagn?stico
+Service Type: SERVICE_WIN32_OWN_PROCESS, SERVICE_WIN32_SHARE_PROCESS
+Service State: SERVICE_RUNNING
+Binary Path: C:\Windows\System32\svchost.exe -k LocalService -p
+
+Offset: 0x2523fc8c350
+Order: 593
+Start: SERVICE_BOOT_START
+Process ID: -
+Service Name: WdFilter
+Display Name: Controlador de minifiltro de Antivirus de Microsoft Defender
+Service Type: SERVICE_FILE_SYSTEM_DRIVER
+Service State: SERVICE_RUNNING
+Binary Path: \FileSystem\WdFilter
+
+Offset: 0x2523fc8b8a0
+Order: 592
+Start: SERVICE_BOOT_START
+Process ID: -
+Service Name: Wdf01000
+Display Name: Servicio de marcos de controlador en modo Kernel
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_RUNNING
+Binary Path: \Driver\Wdf01000
+
+Offset: 0x2523fc8d190
+Order: 591
+Start: SERVICE_BOOT_START
+Process ID: -
+Service Name: WdBoot
+Display Name: WdBoot
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc8c5b0
+Order: 590
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: wcnfs
+Display Name: wcnfs
+Service Type: SERVICE_FILE_SYSTEM_DRIVER
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc91a00
+Order: 589
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: wcncsvc
+Display Name: Registrador de configuraci?n de Windows Connect Now
+Service Type: SERVICE_WIN32_SHARE_PROCESS
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc8fb30
+Order: 588
+Start: SERVICE_AUTO_START
+Process ID: 2472
+Service Name: Wcmsvc
+Display Name: Administrador de conexiones de Windows
+Service Type: SERVICE_WIN32_OWN_PROCESS
+Service State: SERVICE_RUNNING
+Binary Path: C:\Windows\system32\svchost.exe -k LocalServiceNetworkRestricted -p
+
+Offset: 0x2523fc8cf30
+Order: 587
+Start: SERVICE_AUTO_START
+Process ID: -
+Service Name: wcifs
+Display Name: Windows Container Isolation
+Service Type: SERVICE_FILE_SYSTEM_DRIVER
+Service State: SERVICE_RUNNING
+Binary Path: \FileSystem\wcifs
+
+Offset: 0x2523fc91490
+Order: 586
+Start: SERVICE_DEMAND_START
+Process ID: 8372
+Service Name: WbioSrvc
+Display Name: Servicio biom?trico de Windows
+Service Type: SERVICE_WIN32_OWN_PROCESS, SERVICE_WIN32_SHARE_PROCESS
+Service State: SERVICE_RUNNING
+Binary Path: C:\Windows\system32\svchost.exe -k WbioSvcGroup
+
+Offset: 0x2523fc90f20
+Order: 585
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: wbengine
+Display Name: Servicio del m?dulo de copia de seguridad a nivel de bloque
+Service Type: SERVICE_WIN32_OWN_PROCESS
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc909b0
+Order: 584
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: WarpJITSvc
+Display Name: WarpJITSvc
+Service Type: SERVICE_WIN32_OWN_PROCESS
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc8b640
+Order: 583
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: wanarpv6
+Display Name: wanarpv6
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc8b510
+Order: 582
+Start: SERVICE_AUTO_START
+Process ID: -
+Service Name: wanarp
+Display Name: Controlador ARP IP de acceso remoto
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_RUNNING
+Binary Path: \Driver\wanarp
+
+Offset: 0x2523fc80df0
+Order: 581
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: WalletService
+Display Name: WalletService
+Service Type: SERVICE_WIN32_SHARE_PROCESS
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc8b180
+Order: 580
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: WacomPen
+Display Name: WacomPen
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc80a50
+Order: 579
+Start: SERVICE_DEMAND_START
+Process ID: 2084
+Service Name: WaaSMedicSvc
+Display Name: Servicio de Windows Update Medic
+Service Type: SERVICE_WIN32_OWN_PROCESS, SERVICE_WIN32_SHARE_PROCESS
+Service State: SERVICE_RUNNING
+Binary Path: C:\Windows\system32\svchost.exe -k wusvcs -p
+
+Offset: 0x2523fc80c20
+Order: 578
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: W32Time
+Display Name: Hora de Windows
+Service Type: SERVICE_WIN32_SHARE_PROCESS
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc8b3e0
+Order: 577
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: vwifimp
+Display Name: Virtual WiFi Miniport Service
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_RUNNING
+Binary Path: \Driver\vwifimp
+
+Offset: 0x2523fc8ca70
+Order: 576
+Start: SERVICE_SYSTEM_START
+Process ID: -
+Service Name: vwififlt
+Display Name: Virtual WiFi Filter Driver
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_RUNNING
+Binary Path: \Driver\vwififlt
+
+Offset: 0x2523fc8b9d0
+Order: 575
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: vwifibus
+Display Name: Virtual Wireless Bus Driver
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_RUNNING
+Binary Path: \Driver\vwifibus
+
+Offset: 0x2523fc8d060
+Order: 574
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: VSTXRAID
+Display Name: VSTXRAID
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc80880
+Order: 573
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: VSS
+Display Name: Instant?neas de volumen
+Service Type: SERVICE_WIN32_OWN_PROCESS
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc8c6e0
+Order: 572
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: vsmraid
+Display Name: vsmraid
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc8bb00
+Order: 571
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: vpci
+Display Name: vpci
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc8bd60
+Order: 570
+Start: SERVICE_BOOT_START
+Process ID: -
+Service Name: volume
+Display Name: Controlador de volumen
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_RUNNING
+Binary Path: \Driver\volume
+
+Offset: 0x2523fc8bfc0
+Order: 569
+Start: SERVICE_BOOT_START
+Process ID: -
+Service Name: volsnap
+Display Name: Controlador de instant?neas de volumen
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_RUNNING
+Binary Path: \Driver\volsnap
+
+Offset: 0x2523fc84bb0
+Order: 568
+Start: SERVICE_BOOT_START
+Process ID: -
+Service Name: volmgrx
+Display Name: Administrador de vol?menes din?micos
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_RUNNING
+Binary Path: \Driver\volmgrx
+
+Offset: 0x2523fc84950
+Order: 567
+Start: SERVICE_BOOT_START
+Process ID: -
+Service Name: volmgr
+Display Name: Controlador del administrador de volumen
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_RUNNING
+Binary Path: \Driver\volmgr
+
+Offset: 0x2523fc806b0
+Order: 566
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: vmicvss
+Display Name: Solicitante de instant?neas de volumen de Hyper-V
+Service Type: SERVICE_WIN32_SHARE_PROCESS
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc7fda0
+Order: 565
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: vmicvmsession
+Display Name: Servicio PowerShell Direct de Hyper-V
+Service Type: SERVICE_WIN32_SHARE_PROCESS
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc7fbd0
+Order: 564
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: vmictimesync
+Display Name: Servicio de sincronizaci?n de hora de Hyper-V
+Service Type: SERVICE_WIN32_SHARE_PROCESS
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc804e0
+Order: 563
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: vmicshutdown
+Display Name: Servicio de cierre de invitado de Hyper-V
+Service Type: SERVICE_WIN32_SHARE_PROCESS
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc7ff70
+Order: 562
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: vmicrdv
+Display Name: Servicio de virtualizaci?n de Escritorio remoto de Hyper-V
+Service Type: SERVICE_WIN32_SHARE_PROCESS
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc7fa00
+Order: 561
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: vmickvpexchange
+Display Name: Servicio de intercambio de datos de Hyper-V
+Service Type: SERVICE_WIN32_SHARE_PROCESS
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc7f830
+Order: 560
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: vmicheartbeat
+Display Name: Servicio de latido de Hyper-V
+Service Type: SERVICE_WIN32_SHARE_PROCESS
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc7f490
+Order: 559
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: vmicguestinterface
+Display Name: Interfaz de servicio invitado de Hyper-V
+Service Type: SERVICE_WIN32_SHARE_PROCESS
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc845c0
+Order: 558
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: vmgid
+Display Name: vmgid
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc84490
+Order: 557
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: VMBusHID
+Display Name: VMBusHID
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc84e10
+Order: 556
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: vmbus
+Display Name: vmbus
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc84230
+Order: 555
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: VirtualRender
+Display Name: VirtualRender
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc84100
+Order: 554
+Start: SERVICE_SYSTEM_START
+Process ID: -
+Service Name: Vid
+Display Name: Vid
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_RUNNING
+Binary Path: \Driver\Vid
+
+Offset: 0x2523fc83fd0
+Order: 553
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: vhf
+Display Name: vhf
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc84820
+Order: 552
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: vhdmp
+Display Name: vhdmp
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc83ea0
+Order: 551
+Start: SERVICE_DISABLED
+Process ID: -
+Service Name: VerifierExt
+Display Name: VerifierExt
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc7f2c0
+Order: 550
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: vds
+Display Name: Disco virtual
+Service Type: SERVICE_WIN32_OWN_PROCESS
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc846f0
+Order: 549
+Start: SERVICE_BOOT_START
+Process ID: -
+Service Name: vdrvroot
+Display Name: Enumerador de unidades virtuales de Microsoft
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_RUNNING
+Binary Path: \Driver\vdrvroot
+
+Offset: 0x2523fc7f0f0
+Order: 548
+Start: SERVICE_DEMAND_START
+Process ID: 712
+Service Name: VaultSvc
+Display Name: Administrador de credenciales
+Service Type: SERVICE_WIN32_SHARE_PROCESS
+Service State: SERVICE_RUNNING
+Binary Path: C:\Windows\system32\lsass.exe
+
+Offset: 0x2523fc7ed50
+Order: 547
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: VacSvc
+Display Name: Servicio Volumetric Audio Compositor
+Service Type: SERVICE_WIN32_OWN_PROCESS
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc80310
+Order: 546
+Start: SERVICE_AUTO_START
+Process ID: 3560
+Service Name: UsoSvc
+Display Name: Servicio orquestador de actualizaciones
+Service Type: SERVICE_WIN32_OWN_PROCESS, SERVICE_WIN32_SHARE_PROCESS
+Service State: SERVICE_RUNNING
+Binary Path: C:\Windows\system32\svchost.exe -k netsvcs -p
+
+Offset: 0x2523fc7d3f0
+Order: 545
+Start: SERVICE_AUTO_START
+Process ID: 1608
+Service Name: UserManager
+Display Name: Administrador de usuarios
+Service Type: SERVICE_WIN32_OWN_PROCESS, SERVICE_WIN32_SHARE_PROCESS
+Service State: SERVICE_RUNNING
+Binary Path: C:\Windows\system32\svchost.exe -k netsvcs -p
+
+Offset: 0x2523fc7ded0
+Order: 544
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: UserDataSvc
+Display Name: Acceso a datos de usuarios
+Service Type: SERVICE_WIN32_SHARE_PROCESS
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc83d70
+Order: 543
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: USBXHCI
+Display Name: Controladora de host USB gen?rico compatible con xHCI
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_RUNNING
+Binary Path: \Driver\USBXHCI
+
+Offset: 0x2523fc83c40
+Order: 542
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: usbvideo
+Display Name: Dispositivo de v?deo USB (WDM)
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_RUNNING
+Binary Path: \Driver\usbvideo
+
+Offset: 0x2523fc83650
+Order: 541
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: usbuhci
+Display Name: usbuhci
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc83b10
+Order: 540
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: USBSTOR
+Display Name: USBSTOR
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc839e0
+Order: 539
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: usbser
+Display Name: usbser
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc84a80
+Order: 538
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: usbprint
+Display Name: usbprint
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc84ce0
+Order: 537
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: usbohci
+Display Name: usbohci
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc84360
+Order: 536
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: USBHUB3
+Display Name: Concentrador de velocidad extra
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_RUNNING
+Binary Path: \Driver\USBHUB3
+
+Offset: 0x2523fc838b0
+Order: 535
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: usbhub
+Display Name: Controlador de concentrador est?ndar USB de Microsoft
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_RUNNING
+Binary Path: \Driver\usbhub
+
+Offset: 0x2523fc83780
+Order: 534
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: usbehci
+Display Name: Controlador de minipuerto de la controladora mejorada USB 2.0 de Microsoft
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_RUNNING
+Binary Path: \Driver\usbehci
+
+Offset: 0x2523fc81b00
+Order: 533
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: usbcir
+Display Name: usbcir
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc819d0
+Order: 532
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: usbccgp
+Display Name: Controlador primario gen?rico USB de Microsoft
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_RUNNING
+Binary Path: \Driver\usbccgp
+
+Offset: 0x2523fc81770
+Order: 531
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: usbaudio2
+Display Name: usbaudio2
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc826e0
+Order: 530
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: usbaudio
+Display Name: usbaudio
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc81180
+Order: 529
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: UrsSynopsys
+Display Name: UrsSynopsys
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc81c30
+Order: 528
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: UrsCx01000
+Display Name: UrsCx01000
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc83060
+Order: 527
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: UrsChipidea
+Display Name: UrsChipidea
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc80140
+Order: 526
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: upnphost
+Display Name: Dispositivo host de UPnP
+Service Type: SERVICE_WIN32_SHARE_PROCESS
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc7d790
+Order: 525
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: UnistoreSvc
+Display Name: Almacenamiento de datos de usuarios
+Service Type: SERVICE_WIN32_SHARE_PROCESS
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc7eb80
+Order: 524
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: UmRdpService
+Display Name: Redirector de puerto en modo usuario de Servicios de Escritorio remoto
+Service Type: SERVICE_WIN32_SHARE_PROCESS
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc82cd0
+Order: 523
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: UmPass
+Display Name: UmPass
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc825b0
+Order: 522
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: umbus
+Display Name: Controlador de enumerador de UMBus
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_RUNNING
+Binary Path: \Driver\umbus
+
+Offset: 0x2523fc7d220
+Order: 521
+Start: SERVICE_DISABLED
+Process ID: -
+Service Name: uhssvc
+Display Name: Microsoft Update Health Service
+Service Type: SERVICE_WIN32_OWN_PROCESS
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc818a0
+Order: 520
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: ufxsynopsys
+Display Name: ufxsynopsys
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc81050
+Order: 519
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: UfxChipidea
+Display Name: UfxChipidea
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc82480
+Order: 518
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: Ufx01000
+Display Name: Ufx01000
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc7dd00
+Order: 517
+Start: SERVICE_DISABLED
+Process ID: -
+Service Name: UevAgentService
+Display Name: Servicio de virtualizaci?n de la experiencia de usuario
+Service Type: SERVICE_WIN32_OWN_PROCESS
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc833f0
+Order: 516
+Start: SERVICE_DISABLED
+Process ID: -
+Service Name: UevAgentDriver
+Display Name: UevAgentDriver
+Service Type: SERVICE_FILE_SYSTEM_DRIVER
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc82e00
+Order: 515
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: UEFI
+Display Name: UEFI
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc7e7e0
+Order: 514
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: UdkUserSvc
+Display Name: Servicio de usuario de Udk
+Service Type: SERVICE_WIN32_SHARE_PROCESS
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc813e0
+Order: 513
+Start: SERVICE_DISABLED
+Process ID: -
+Service Name: udfs
+Display Name: udfs
+Service Type: SERVICE_FILE_SYSTEM_DRIVER
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc82220
+Order: 512
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: UdeCx
+Display Name: UdeCx
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc82f30
+Order: 511
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: Ucx01000
+Display Name: USB Host Support Library
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_RUNNING
+Binary Path: \Driver\Ucx01000
+
+Offset: 0x2523fc832c0
+Order: 510
+Start: SERVICE_SYSTEM_START
+Process ID: -
+Service Name: UCPD
+Display Name: UCPD
+Service Type: SERVICE_FILE_SYSTEM_DRIVER
+Service State: SERVICE_RUNNING
+Binary Path: \FileSystem\UCPD
+
+Offset: 0x2523fc820f0
+Order: 509
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: UcmUcsiCx0101
+Display Name: UcmUcsiCx0101
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc81640
+Order: 508
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: UcmUcsiAcpiClient
+Display Name: UcmUcsiAcpiClient
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc82ba0
+Order: 507
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: UcmTcpciCx0101
+Display Name: UcmTcpciCx0101
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc82350
+Order: 506
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: UcmCx0101
+Display Name: UcmCx0101
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc812b0
+Order: 505
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: UASPStor
+Display Name: UASPStor
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc7f660
+Order: 504
+Start: SERVICE_DISABLED
+Process ID: -
+Service Name: tzautoupdate
+Display Name: Actualizador de zona horaria autom?tica
+Service Type: SERVICE_WIN32_SHARE_PROCESS
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc81fc0
+Order: 503
+Start: SERVICE_BOOT_START
+Process ID: -
+Service Name: TVALZ
+Display Name: dynabook ACPI-Based Value Added Logical and General Purpose Device Driver
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_RUNNING
+Binary Path: \Driver\TVALZ
+
+Offset: 0x2523fc82940
+Order: 502
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: tunnel
+Display Name: tunnel
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc81510
+Order: 501
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: tsusbhub
+Display Name: tsusbhub
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc83190
+Order: 500
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: TsUsbGD
+Display Name: TsUsbGD
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc83520
+Order: 499
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: TsUsbFlt
+Display Name: TsUsbFlt
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc7db30
+Order: 498
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: TrustedInstaller
+Display Name: Instalador de m?dulos de Windows
+Service Type: SERVICE_WIN32_OWN_PROCESS
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc7ef20
+Order: 497
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: TroubleshootingSvc
+Display Name: Servicio de soluci?n de problemas recomendado
+Service Type: SERVICE_WIN32_SHARE_PROCESS
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc7e610
+Order: 496
+Start: SERVICE_AUTO_START
+Process ID: 3292
+Service Name: TrkWks
+Display Name: Cliente de seguimiento de v?nculos distribuidos
+Service Type: SERVICE_WIN32_OWN_PROCESS, SERVICE_WIN32_SHARE_PROCESS
+Service State: SERVICE_RUNNING
+Binary Path: C:\Windows\System32\svchost.exe -k LocalSystemNetworkRestricted -p
+
+Offset: 0x2523fc81e90
+Order: 495
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: TPM
+Display Name: TPM
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc81d60
+Order: 494
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: tosrfec
+Display Name: Bluetooth ACPI
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_RUNNING
+Binary Path: \Driver\tosrfec
+
+Offset: 0x2523fc7e0a0
+Order: 493
+Start: SERVICE_DEMAND_START
+Process ID: 5052
+Service Name: TokenBroker
+Display Name: Administrador de cuentas web
+Service Type: SERVICE_WIN32_OWN_PROCESS, SERVICE_WIN32_SHARE_PROCESS
+Service State: SERVICE_RUNNING
+Binary Path: C:\Windows\system32\svchost.exe -k netsvcs -p
+
+Offset: 0x2523fc7e440
+Order: 492
+Start: SERVICE_DEMAND_START
+Process ID: 1124
+Service Name: TimeBrokerSvc
+Display Name: Agente de eventos de tiempo
+Service Type: SERVICE_WIN32_OWN_PROCESS, SERVICE_WIN32_SHARE_PROCESS
+Service State: SERVICE_RUNNING
+Binary Path: C:\Windows\system32\svchost.exe -k LocalServiceNetworkRestricted -p
+
+Offset: 0x2523fc7e9b0
+Order: 491
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: TieringEngineService
+Display Name: Administraci?n de capas de almacenamiento
+Service Type: SERVICE_WIN32_OWN_PROCESS
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc82a70
+Order: 490
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: Thotkey
+Display Name: dynabook Hotkey Driver
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_RUNNING
+Binary Path: \Driver\Thotkey
+
+Offset: 0x2523fc7d050
+Order: 489
+Start: SERVICE_AUTO_START
+Process ID: 1908
+Service Name: Themes
+Display Name: Temas
+Service Type: SERVICE_WIN32_OWN_PROCESS, SERVICE_WIN32_SHARE_PROCESS
+Service State: SERVICE_RUNNING
+Binary Path: C:\Windows\System32\svchost.exe -k netsvcs -p
+
+Offset: 0x2523fc7d960
+Order: 488
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: TermService
+Display Name: Servicios de Escritorio remoto
+Service Type: SERVICE_WIN32_SHARE_PROCESS
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc82810
+Order: 487
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: terminpt
+Display Name: terminpt
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc73950
+Order: 486
+Start: SERVICE_BOOT_START
+Process ID: -
+Service Name: Telemetry
+Display Name: Servicio de telemetr?a de Intel(R)
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_RUNNING
+Binary Path: \Driver\Telemetry
+
+Offset: 0x2523fc73100
+Order: 485
+Start: SERVICE_SYSTEM_START
+Process ID: -
+Service Name: tdx
+Display Name: Controlador de soporte TDI heredado NetIO
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_RUNNING
+Binary Path: \Driver\tdx
+
+Offset: 0x2523fc72d70
+Order: 484
+Start: SERVICE_AUTO_START
+Process ID: -
+Service Name: tcpipreg
+Display Name: TCP/IP Registry Compatibility
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_RUNNING
+Binary Path: \Driver\tcpipreg
+
+Offset: 0x2523fc735c0
+Order: 483
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: Tcpip6
+Display Name: Tcpip6
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc736f0
+Order: 482
+Start: SERVICE_BOOT_START
+Process ID: -
+Service Name: Tcpip
+Display Name: Controlador de protocolo TCP/IP
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_RUNNING
+Binary Path: \Driver\Tcpip
+
+Offset: 0x2523fc7d5c0
+Order: 481
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: TapiSrv
+Display Name: Telefon?a
+Service Type: SERVICE_WIN32_SHARE_PROCESS
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc7e270
+Order: 480
+Start: SERVICE_DEMAND_START
+Process ID: 4952
+Service Name: TabletInputService
+Display Name: Servicio de Panel de escritura a mano y teclado t?ctil
+Service Type: SERVICE_WIN32_OWN_PROCESS, SERVICE_WIN32_SHARE_PROCESS
+Service State: SERVICE_RUNNING
+Binary Path: C:\Windows\System32\svchost.exe -k LocalSystemNetworkRestricted -p
+
+Offset: 0x2523fc79a50
+Order: 479
+Start: SERVICE_AUTO_START
+Process ID: 800
+Service Name: SystemEventsBroker
+Display Name: Agente de eventos del sistema
+Service Type: SERVICE_WIN32_SHARE_PROCESS
+Service State: SERVICE_RUNNING
+Binary Path: C:\Windows\system32\svchost.exe -k DcomLaunch -p
+
+Offset: 0x2523fc79c20
+Order: 478
+Start: SERVICE_AUTO_START
+Process ID: 1888
+Service Name: SysMain
+Display Name: SysMain
+Service Type: SERVICE_WIN32_OWN_PROCESS, SERVICE_WIN32_SHARE_PROCESS
+Service State: SERVICE_RUNNING
+Binary Path: C:\Windows\system32\svchost.exe -k LocalSystemNetworkRestricted -p
+
+Offset: 0x2523fc73490
+Order: 477
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: Synth3dVsc
+Display Name: Synth3dVsc
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc79df0
+Order: 476
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: swprv
+Display Name: Proveedor de instant?neas de software de Microsoft
+Service Type: SERVICE_WIN32_OWN_PROCESS
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc72c40
+Order: 475
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: swenum
+Display Name: Controlador del bus de software
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_RUNNING
+Binary Path: \Driver\swenum
+
+Offset: 0x2523fc770a0
+Order: 474
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: svsvc
+Display Name: Comprobador puntual
+Service Type: SERVICE_WIN32_SHARE_PROCESS
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc72ea0
+Order: 473
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: storvsc
+Display Name: storvsc
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc72b10
+Order: 472
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: storufs
+Display Name: storufs
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc76d00
+Order: 471
+Start: SERVICE_AUTO_START
+Process ID: 6932
+Service Name: StorSvc
+Display Name: Servicio de almacenamiento
+Service Type: SERVICE_WIN32_OWN_PROCESS, SERVICE_WIN32_SHARE_PROCESS
+Service State: SERVICE_RUNNING
+Binary Path: C:\Windows\System32\svchost.exe -k LocalSystemNetworkRestricted -p
+
+Offset: 0x2523fc73230
+Order: 470
+Start: SERVICE_AUTO_START
+Process ID: -
+Service Name: storqosflt
+Display Name: Controlador de filtro QoS de almacenamiento
+Service Type: SERVICE_FILE_SYSTEM_DRIVER
+Service State: SERVICE_RUNNING
+Binary Path: \FileSystem\storqosflt
+
+Offset: 0x2523fc73820
+Order: 469
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: stornvme
+Display Name: stornvme
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc72780
+Order: 468
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: storflt
+Display Name: storflt
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc73bb0
+Order: 467
+Start: SERVICE_BOOT_START
+Process ID: -
+Service Name: storahci
+Display Name: Controladora SATA AHCI est?ndar de Microsoft
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_RUNNING
+Binary Path: \Driver\storahci
+
+Offset: 0x2523fc76790
+Order: 466
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: stisvc
+Display Name: Adquisici?n de im?genes de Windows (WIA)
+Service Type: SERVICE_WIN32_OWN_PROCESS
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc73360
+Order: 465
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: stexstor
+Display Name: stexstor
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc765c0
+Order: 464
+Start: SERVICE_DEMAND_START
+Process ID: 1744
+Service Name: StateRepository
+Display Name: Servicio de repositorio de estado
+Service Type: SERVICE_WIN32_OWN_PROCESS, SERVICE_WIN32_SHARE_PROCESS
+Service State: SERVICE_RUNNING
+Binary Path: C:\Windows\system32\svchost.exe -k appmodel -p
+
+Offset: 0x2523fc79140
+Order: 463
+Start: SERVICE_DEMAND_START
+Process ID: 3280
+Service Name: SstpSvc
+Display Name: Servicio de protocolo de t?nel de sockets seguros
+Service Type: SERVICE_WIN32_OWN_PROCESS, SERVICE_WIN32_SHARE_PROCESS
+Service State: SERVICE_RUNNING
+Binary Path: C:\Windows\system32\svchost.exe -k LocalService -p
+
+Offset: 0x2523fc78a00
+Order: 462
+Start: SERVICE_DISABLED
+Process ID: -
+Service Name: ssh-agent
+Display Name: OpenSSH Authentication Agent
+Service Type: SERVICE_WIN32_OWN_PROCESS
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc763f0
+Order: 461
+Start: SERVICE_DEMAND_START
+Process ID: 8164
+Service Name: SSDPSRV
+Display Name: Detecci?n SSDP
+Service Type: SERVICE_WIN32_OWN_PROCESS, SERVICE_WIN32_SHARE_PROCESS
+Service State: SERVICE_RUNNING
+Binary Path: C:\Windows\system32\svchost.exe -k LocalServiceAndNoImpersonation -p
+
+Offset: 0x2523fc72650
+Order: 460
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: srvnet
+Display Name: srvnet
+Service Type: SERVICE_FILE_SYSTEM_DRIVER
+Service State: SERVICE_RUNNING
+Binary Path: \FileSystem\srvnet
+
+Offset: 0x2523fc73e10
+Order: 459
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: srv2
+Display Name: Controlador de servidor SMB 2.xxx
+Service Type: SERVICE_FILE_SYSTEM_DRIVER
+Service State: SERVICE_RUNNING
+Binary Path: \FileSystem\srv2
+
+Offset: 0x2523fc782c0
+Order: 458
+Start: SERVICE_AUTO_START
+Process ID: -
+Service Name: sppsvc
+Display Name: Protecci?n de software
+Service Type: SERVICE_WIN32_OWN_PROCESS
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc78830
+Order: 457
+Start: SERVICE_AUTO_START
+Process ID: 2832
+Service Name: Spooler
+Display Name: Cola de impresi?n
+Service Type: SERVICE_INTERACTIVE_PROCESS, SERVICE_WIN32_OWN_PROCESS
+Service State: SERVICE_RUNNING
+Binary Path: C:\Windows\System32\spoolsv.exe
+
+Offset: 0x2523fc76b30
+Order: 456
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: spectrum
+Display Name: Servicio de percepci?n de Windows
+Service Type: SERVICE_WIN32_OWN_PROCESS
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc729e0
+Order: 455
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: SpbCx
+Display Name: SpbCx
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc73a80
+Order: 454
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: SpatialGraphFilter
+Display Name: SpatialGraphFilter
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc73ce0
+Order: 453
+Start: SERVICE_BOOT_START
+Process ID: -
+Service Name: spaceport
+Display Name: Controlador de espacios de almacenamiento
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_RUNNING
+Binary Path: \Driver\spaceport
+
+Offset: 0x2523fc72fd0
+Order: 452
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: spaceparser
+Display Name: spaceparser
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc780f0
+Order: 451
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: SNMPTRAP
+Display Name: Captura de SNMP
+Service Type: SERVICE_WIN32_OWN_PROCESS
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc78bd0
+Order: 450
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: SmsRouter
+Display Name: Servicio enrutador de SMS de Microsoft Windows.
+Service Type: SERVICE_WIN32_SHARE_PROCESS
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc78660
+Order: 449
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: smphost
+Display Name: SMP de Espacios de almacenamiento de Microsoft
+Service Type: SERVICE_WIN32_OWN_PROCESS
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc728b0
+Order: 448
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: smbdirect
+Display Name: smbdirect
+Service Type: SERVICE_FILE_SYSTEM_DRIVER
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc72190
+Order: 447
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: SmartSAMD
+Display Name: SmartSAMD
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc71a70
+Order: 446
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: SiSRaid4
+Display Name: SiSRaid4
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc71350
+Order: 445
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: SiSRaid2
+Display Name: SiSRaid2
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc77f20
+Order: 444
+Start: SERVICE_DISABLED
+Process ID: -
+Service Name: shpamsvc
+Display Name: Shared PC Account Manager
+Service Type: SERVICE_WIN32_SHARE_PROCESS
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc92c20
+Order: 641
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: WwanSvc
+Display Name: Configuraci?n autom?tica de WWAN
+Service Type: SERVICE_WIN32_SHARE_PROCESS
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc8dfd0
+Order: 640
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: WUDFWpdFs
+Display Name: WUDFWpdFs
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc8dd70
+Order: 639
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: WUDFRd
+Display Name: WUDFRd
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc8dea0
+Order: 638
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: WudfPf
+Display Name: WudfPf
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc92a50
+Order: 637
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: wuauserv
+Display Name: Windows Update
+Service Type: SERVICE_WIN32_OWN_PROCESS, SERVICE_WIN32_SHARE_PROCESS
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc92df0
+Order: 636
+Start: SERVICE_AUTO_START
+Process ID: 3844
+Service Name: WSearch
+Display Name: Windows Search
+Service Type: SERVICE_WIN32_OWN_PROCESS
+Service State: SERVICE_RUNNING
+Binary Path: C:\Windows\system32\SearchIndexer.exe /Embedding
+
+Offset: 0x2523fcb8820
+Order: 653
+Start: SERVICE_AUTO_START
+Process ID: 4676
+Service Name: CDPUserSvc_4015f
+Display Name: Servicio de usuario de plataforma de dispositivos conectados_4015f
+Service Type: SERVICE_WIN32_OWN_PROCESS, SERVICE_WIN32_SHARE_PROCESS
+Service State: SERVICE_RUNNING
+Binary Path: C:\Windows\system32\svchost.exe -k UnistackSvcGroup
+
+Offset: 0x25240058890
+Order: 652
+Start: SERVICE_DEMAND_START
+Process ID: 5576
+Service Name: cbdhsvc_4015f
+Display Name: Servicio de usuario del portapapeles_4015f
+Service Type: SERVICE_WIN32_OWN_PROCESS, SERVICE_WIN32_SHARE_PROCESS
+Service State: SERVICE_RUNNING
+Binary Path: C:\Windows\system32\svchost.exe -k ClipboardSvcGroup -p
+
+Offset: 0x25240058690
+Order: 651
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: CaptureService_4015f
+Display Name: CaptureService_4015f
+Service Type: SERVICE_WIN32_SHARE_PROCESS
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc06880
+Order: 650
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: BluetoothUserService_4015f
+Display Name: Servicio de soporte t?cnico de usuario de Bluetooth_4015f
+Service Type: SERVICE_WIN32_SHARE_PROCESS
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc06680
+Order: 649
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: BcastDVRUserService_4015f
+Display Name: Servicio de usuario de difusi?n y GameDVR_4015f
+Service Type: SERVICE_WIN32_SHARE_PROCESS
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x25240051f70
+Order: 648
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: AarSvc_4015f
+Display Name: Agent Activation Runtime_4015f
+Service Type: SERVICE_WIN32_SHARE_PROCESS
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc8e100
+Order: 647
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: xinputhid
+Display Name: xinputhid
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc9bf70
+Order: 646
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: XboxNetApiSvc
+Display Name: Servicio de red de Xbox Live
+Service Type: SERVICE_WIN32_SHARE_PROCESS
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc9a7e0
+Order: 645
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: XboxGipSvc
+Display Name: Xbox Accessory Management Service
+Service Type: SERVICE_WIN32_SHARE_PROCESS
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc8e490
+Order: 644
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: xboxgip
+Display Name: xboxgip
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc9ad50
+Order: 643
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: XblGameSave
+Display Name: Partida guardada en Xbox Live
+Service Type: SERVICE_WIN32_SHARE_PROCESS
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fc9bbd0
+Order: 642
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: XblAuthManager
+Display Name: Administraci?n de autenticaci?n de Xbox Live
+Service Type: SERVICE_WIN32_SHARE_PROCESS
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x252400a2040
+Order: 666
+Start: SERVICE_AUTO_START
+Process ID: 4704
+Service Name: WpnUserService_4015f
+Display Name: Servicio de usuario de notificaciones de inserci?n de Windows_4015f
+Service Type: SERVICE_WIN32_OWN_PROCESS, SERVICE_WIN32_SHARE_PROCESS
+Service State: SERVICE_RUNNING
+Binary Path: C:\Windows\system32\svchost.exe -k UnistackSvcGroup
+
+Offset: 0x252400a2230
+Order: 665
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: UserDataSvc_4015f
+Display Name: Acceso a datos de usuarios_4015f
+Service Type: SERVICE_WIN32_SHARE_PROCESS
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x252400a2be0
+Order: 664
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: UnistoreSvc_4015f
+Display Name: Almacenamiento de datos de usuarios_4015f
+Service Type: SERVICE_WIN32_SHARE_PROCESS
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fcc9240
+Order: 663
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: UdkUserSvc_4015f
+Display Name: Servicio de usuario de Udk_4015f
+Service Type: SERVICE_WIN32_SHARE_PROCESS
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fcc9040
+Order: 662
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: PrintWorkflowUserSvc_4015f
+Display Name: PrintWorkflow_4015f
+Service Type: SERVICE_WIN32_SHARE_PROCESS
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2524004f420
+Order: 661
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: PimIndexMaintenanceSvc_4015f
+Display Name: Datos de contactos_4015f
+Service Type: SERVICE_WIN32_SHARE_PROCESS
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2524004f220
+Order: 660
+Start: SERVICE_AUTO_START
+Process ID: 7884
+Service Name: OneSyncSvc_4015f
+Display Name: Sincronizar host_4015f
+Service Type: SERVICE_WIN32_SHARE_PROCESS
+Service State: SERVICE_RUNNING
+Binary Path: C:\Windows\system32\svchost.exe -k UnistackSvcGroup
+
+Offset: 0x2524004f020
+Order: 659
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: MessagingService_4015f
+Display Name: MessagingService_4015f
+Service Type: SERVICE_WIN32_SHARE_PROCESS
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fcc4df0
+Order: 658
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: DevicesFlowUserSvc_4015f
+Display Name: DevicesFlow_4015f
+Service Type: SERVICE_WIN32_SHARE_PROCESS
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fcc4bf0
+Order: 657
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: DevicePickerUserSvc_4015f
+Display Name: DevicePicker_4015f
+Service Type: SERVICE_WIN32_SHARE_PROCESS
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fcd82b0
+Order: 656
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: DeviceAssociationBrokerSvc_4015f
+Display Name: DeviceAssociationBroker_4015f
+Service Type: SERVICE_WIN32_SHARE_PROCESS
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fcd80b0
+Order: 655
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: CredentialEnrollmentManagerUserSvc_4015f
+Display Name: CredentialEnrollmentManagerUserSvc_4015f
+Service Type: SERVICE_WIN32_OWN_PROCESS
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x2523fcb8a20
+Order: 654
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: ConsentUxUserSvc_4015f
+Display Name: ConsentUX_4015f
+Service Type: SERVICE_WIN32_SHARE_PROCESS
+Service State: SERVICE_STOPPED
+Binary Path: -
+
+Offset: 0x252400c8480
+Order: 667
+Start: SERVICE_DEMAND_START
+Process ID: -
+Service Name: ad_driver
+Display Name: AccessData Driver
+Service Type: SERVICE_KERNEL_DRIVER
+Service State: SERVICE_RUNNING
+Binary Path: \Driver\ad_driver
+

@@ -1,0 +1,40 @@
+Offset(P)          Proto    Local Address                  Foreign Address      State            Pid      Owner          Created
+0x9e8996cb5a70     TCPv4    0.0.0.0:49668                  0.0.0.0:0            LISTENING        2832     spoolsv.exe    2024-02-16 11:59:14 UTC+0000
+0x9e8996cb5a70     TCPv6    :::49668                       :::0                 LISTENING        2832     spoolsv.exe    2024-02-16 11:59:14 UTC+0000
+0x9e899b38cb50     TCPv4    0.0.0.0:49665                  0.0.0.0:0            LISTENING        628      wininit.exe    2024-02-16 11:59:11 UTC+0000
+0x9e899b38cb50     TCPv6    :::49665                       :::0                 LISTENING        628      wininit.exe    2024-02-16 11:59:11 UTC+0000
+0x9e899b38ccb0     TCPv4    0.0.0.0:49666                  0.0.0.0:0            LISTENING        1096     svchost.exe    2024-02-16 11:59:12 UTC+0000
+0x9e899b38de90     TCPv4    0.0.0.0:49666                  0.0.0.0:0            LISTENING        1096     svchost.exe    2024-02-16 11:59:12 UTC+0000
+0x9e899b38de90     TCPv6    :::49666                       :::0                 LISTENING        1096     svchost.exe    2024-02-16 11:59:12 UTC+0000
+0x9e899b5345d0     TCPv4    0.0.0.0:49669                  0.0.0.0:0            LISTENING        696      services.exe   2024-02-16 11:59:18 UTC+0000
+0x9e899b5345d0     TCPv6    :::49669                       :::0                 LISTENING        696      services.exe   2024-02-16 11:59:18 UTC+0000
+0x9e899b6f6890     TCPv4    0.0.0.0:49669                  0.0.0.0:0            LISTENING        696      services.exe   2024-02-16 11:59:18 UTC+0000
+0x9e899b6f77b0     TCPv4    0.0.0.0:7680                   0.0.0.0:0            LISTENING        8136     svchost.exe    2024-02-16 12:01:19 UTC+0000
+0x9e899b6f77b0     TCPv6    :::7680                        :::0                 LISTENING        8136     svchost.exe    2024-02-16 12:01:19 UTC+0000
+0x9e899d5e2120     UDPv4    0.0.0.0:0                      *:*                                   3240     svchost.exe    2024-02-16 11:59:16 UTC+0000
+0x9e899ef347b0     UDPv4    0.0.0.0:0                      *:*                                   8164     svchost.exe    2024-02-16 12:01:19 UTC+0000
+0x9e899ef352a0     UDPv4    0.0.0.0:0                      *:*                                   8164     svchost.exe    2024-02-16 12:01:19 UTC+0000
+0x9e899ef352a0     UDPv6    :::0                           *:*                                   8164     svchost.exe    2024-02-16 12:01:19 UTC+0000
+0x9e899ef358e0     UDPv4    0.0.0.0:0                      *:*                                   8164     svchost.exe    2024-02-16 12:01:19 UTC+0000
+0x9e899ef360b0     UDPv4    0.0.0.0:0                      *:*                                   8164     svchost.exe    2024-02-16 12:01:19 UTC+0000
+0x9e899ef36560     UDPv4    0.0.0.0:0                      *:*                                   8164     svchost.exe    2024-02-16 12:01:19 UTC+0000
+0x9e899ef36d30     UDPv4    0.0.0.0:0                      *:*                                   8164     svchost.exe    2024-02-16 12:01:19 UTC+0000
+0x9e899ef36d30     UDPv6    :::0                           *:*                                   8164     svchost.exe    2024-02-16 12:01:19 UTC+0000
+0x9e899ef371e0     UDPv4    0.0.0.0:0                      *:*                                   8164     svchost.exe    2024-02-16 12:01:19 UTC+0000
+0x9e899ef371e0     UDPv6    :::0                           *:*                                   8164     svchost.exe    2024-02-16 12:01:19 UTC+0000
+0x9e899f41e370     UDPv4    0.0.0.0:0                      *:*                                   2452     svchost.exe    2024-02-16 12:00:45 UTC+0000
+0x9e899f41e370     UDPv6    :::0                           *:*                                   2452     svchost.exe    2024-02-16 12:00:45 UTC+0000
+0x9e899f41f630     UDPv4    0.0.0.0:0                      *:*                                   2452     svchost.exe    2024-02-16 12:00:47 UTC+0000
+0x9e899f41f630     UDPv6    :::0                           *:*                                   2452     svchost.exe    2024-02-16 12:00:47 UTC+0000
+0x9e899f41fc70     UDPv4    0.0.0.0:0                      *:*                                   4        System         2024-02-16 12:00:44 UTC+0000
+0x9e899f41fe00     UDPv4    0.0.0.0:0                      *:*                                   4        System         2024-02-16 12:00:44 UTC+0000
+0x9e899f420760     UDPv4    0.0.0.0:0                      *:*                                   2452     svchost.exe    2024-02-16 12:00:45 UTC+0000
+0x9e899f420760     UDPv6    :::0                           *:*                                   2452     svchost.exe    2024-02-16 12:00:45 UTC+0000
+0x9e899f4208f0     UDPv4    0.0.0.0:0                      *:*                                   2452     svchost.exe    2024-02-16 12:00:45 UTC+0000
+0x9e899f420a80     UDPv4    0.0.0.0:0                      *:*                                   2452     svchost.exe    2024-02-16 12:00:47 UTC+0000
+0x9e899f7229c0     UDPv4    0.0.0.0:0                      *:*                                   8164     svchost.exe    2024-02-16 12:28:41 UTC+0000
+0x9e899f7229c0     UDPv6    :::0                           *:*                                   8164     svchost.exe    2024-02-16 12:28:41 UTC+0000
+0x9e899f723190     UDPv4    0.0.0.0:0                      *:*                                   8164     svchost.exe    2024-02-16 12:28:41 UTC+0000
+0x9e899f885a70     UDPv4    0.0.0.0:0                      *:*                                   2452     svchost.exe    2024-02-16 12:28:41 UTC+0000
+0x9e899f885a70     UDPv6    :::0                           *:*                                   2452     svchost.exe    2024-02-16 12:28:41 UTC+0000
+0x9e89a045d6a0     UDPv4    0.0.0.0:0                      *:*                                   574565835 ?G8YN?v???WZ?p? 2024-02-16 12:08:47 UTC+0000
