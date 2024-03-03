@@ -40,4 +40,4 @@ Comprobamos en Wireshark el ataque:
 ```
 
 Dentro de Wireshark --> Estadísticas --> Conversaciones --> Vemos en escasos segundos la cantidad de información que ha recibido:
-
+![](capturas/TCP-syn-flood-attack-conversations.png)
