@@ -1,3 +1,5 @@
+Flood: La palabra "flood" en inglés se traduce al español como "inundación". En el contexto de la tecnología y las redes informáticas, se utiliza para describir una sobreabundancia de datos o solicitudes enviadas a una red o sistema, con el objetivo de abrumarlo y causar una falla o denegación de servicio.
+
 Este laboratorio cuenta con dos máquina virtuales:
 - Windows 10 con configuración de la red: red interna. IP 10.10.10.5
 - Ubuntu 23.10 con configuración de la red: red interna. IP: 10.10.10.3
