@@ -46,3 +46,9 @@ En la máquina Windows vemos el tráfico con Wireshark:
 
 ```
 
+Filtro wireshark para detectar este ataque:
+```
+cp.flags.syn == 1 and tcp.flags.fin == 1
+```
+
+
