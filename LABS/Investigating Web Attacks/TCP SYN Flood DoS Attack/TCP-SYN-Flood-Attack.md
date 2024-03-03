@@ -47,3 +47,11 @@ Dentro de Wireshark --> Estadísticas --> Conversaciones --> Vemos en escasos se
 
 Dentro de Wireshark --> Estadísitcas --> Jerarqía de Protocolo --> Examinamos el valor estadístico de cada protocolo. La captura de pantalla a continuación muestra un volumen inusualmente alto de paquetes TCP, lo que indica fuertemente un ataque de inundación TCP SYN.
 ![](capturas/jerarquia-protocolo.png)
+
+Filtro de wireshark para detectar este ataque:
+```
+cp.flags.syn == 1 and tcp.flags.ack == 0
+```
+Ataque SYN Flood: Durante un ataque de inundación SYN, un atacante envía una gran cantidad de paquetes SYN al servidor, pero no completa el proceso de conexión (es decir, no envía el paquete ACK final después de recibir el SYN-ACK del servidor). Esto puede sobrecargar los recursos del servidor, ya que intenta mantener abiertas estas "semi-conexiones", lo que puede llevar a una denegación de servicio para los usuarios legítimos.
+
+Filtro tcp.flags.syn == 1 and tcp.flags.ack == 0: Este filtro está diseñado para capturar paquetes que tienen el flag SYN activado (indicando un intento de iniciar una conexión) pero el flag ACK desactivado (lo que significa que no es una respuesta en el proceso de handshake). En una situación normal, después del primer paquete SYN del cliente, todos los demás paquetes implicados en la apertura de una conexión tendrían el flag ACK activado. Por lo tanto, una gran cantidad de paquetes que cumplen con el criterio del filtro pueden indicar un ataque SYN Flood en curso.
