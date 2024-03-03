@@ -13,3 +13,36 @@ Funcionamiento de este ataque:
 
 Este tipo de ataque es un ejemplo de cómo los actores maliciosos pueden usar el conocimiento técnico del funcionamiento de los protocolos de red para interrumpir servicios en línea. Las medidas de protección contra ataques de este tipo incluyen la configuración de cortafuegos, la detección de anomalías en el tráfico de red y la mitigación de ataques en los proveedores de servicios de Internet (ISP) y en los propios servidores.
 
+Este laboratorio cuenta con dos máquina virtuales:
+- Windows 10 con configuración de la red: red interna. IP 10.10.10.5
+- Ubuntu 23.10 con configuración de la red: red interna. IP: 10.10.10.3
+
+Comprobamos que las máquina virtuales se vean haciendo un ping:
+![](capturas/ping.png)
+![](capturas/ping.win.png)
+
+
+En la máquina Windows:
+- No hace falta desactivar el antivirus de Windows. Funciona igualmente.
+- Abrimor Wireshark  para snifar el tráfico.
+
+
+El la máquina Linux usamos la herramienta hping3 para enviar paquetes con las flags SYN y FIN activadas:
+```
+sudo apt install hping3
+sudo hping3 -S -F -p 80 10.10.10.5
+```
+![](capturas/SYN-FIN-Attack.png)
+
+
+En la máquina Windows vemos el tráfico con Wireshark:
+![](capturas/SYN-FIN-Attack-2.png)
+```
+14	7.560799	PCSSystemtec_ab:bd:f3	Broadcast	ARP	60	Who has 10.10.10.1? Tell 10.10.10.3
+15	8.272117	10.10.10.3	10.10.10.5	TCP	60	2967 → 80 [FIN, SYN] Seq=0 Win=512 Len=0
+16	8.580082	PCSSystemtec_ab:bd:f3	Broadcast	ARP	60	Who has 10.10.10.1? Tell 10.10.10.3
+19	10.279783	10.10.10.3	10.10.10.5	TCP	60	2969 → 80 [FIN, SYN] Seq=0 Win=512 Len=0
+21	11.282479	10.10.10.3	10.10.10.5	TCP	60	2970 → 80 [FIN, SYN] Seq=0 Win=512 Len=0
+
+```
+
