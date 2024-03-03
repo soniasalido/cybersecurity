@@ -16,6 +16,15 @@ En la máquina Linux instalamos hping3 y lanzamos el ataque:
 sudo apt-get install hping3
 sudo hping3 -c 15000 -d 120 -S -w 64 -p 80 --flood --rand-source 10.10.10.5
 ```
+Este comando está diseñado para enviar una gran cantidad de solicitudes SYN TCP al puerto 80 de la dirección IP 10.10.10.5, utilizando direcciones IP de origen aleatorias. Este tipo de ataque se conoce como un ataque de inundación SYN y puede utilizarse para sobrecargar un servidor objetivo, potencialmente causando una denegación de servicio para los usuarios legítimos.
+-c 15000: Envía 15000 paquetes.
+-d 120: Tamaño de cada paquete de 120 bytes.
+-S: Establece el bit de SYN en los paquetes TCP, lo que es común en el establecimiento de una conexión TCP.
+-w 64: Tamaño de ventana TCP de 64.
+-p 80: Número de puerto de destino, 80 es el puerto HTTP estándar.
+--flood: Envía paquetes lo más rápido posible sin esperar respuestas.
+--rand-source: Utiliza direcciones IP de origen aleatorias.
+10.10.10.5: La dirección IP del objetivo del ataque.
 ![](capturas/Dos-1.png)
 
 
