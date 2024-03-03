@@ -44,4 +44,4 @@ Dentro de Wireshark --> Estadísticas --> Conversaciones --> Vemos en escasos se
 
 
 Dentro de Wireshark --> Estadísitcas --> Jerarqía de Protocolo --> Examinamos el valor estadístico de cada protocolo. La captura de pantalla a continuación muestra un volumen inusualmente alto de paquetes TCP, lo que indica fuertemente un ataque de inundación TCP SYN.
-1[](capturas/jerarquia-protocolo.png)
+![](capturas/jerarquia-protocolo.png)
