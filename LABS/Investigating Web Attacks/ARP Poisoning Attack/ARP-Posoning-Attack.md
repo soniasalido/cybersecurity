@@ -142,3 +142,4 @@ En el tŕafico que se ha capturado durante el ataque, realizamos un filtro para 
 ```
 arp.duplicate-address-detected
 ```
+![](capturas/arp-spoof-2.png)
