@@ -143,3 +143,17 @@ En el tŕafico que se ha capturado durante el ataque, realizamos un filtro para 
 arp.duplicate-address-detected
 ```
 ![](capturas/arp-spoof-2.png)
+
+
+
+Mientras la máquina linux esté ejecutando el ataque, la máquina windows al tener alterada la tabla ARP, no tiene internet:
+![](capturas/arp-spoof-3.png)
+
+
+### Convertir la máquina atacante en router
+Para poder interceptar la comunicación y que la víctima tenga conexión a Internet, es necesario convertir al equipo atacante en router, para que pueda recibir paquetes y los pueda transmitir al siguiente equipo, lo cual se realiza con el siguiente comando en el atacante, que lo que hace es colocar el número 1 en ese archivo, el símbolo > redirecciona la salida y sobrescribe el valor que tenga.
+
+En la máquina atante ejecutamos:
+```
+sudo bash -c 'echo 1 > /proc/sys/net/ipv4/ip_forward'
+```
