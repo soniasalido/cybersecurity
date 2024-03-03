@@ -18,13 +18,32 @@ Objetivos y Consecuencias
 ### El Protocolo ARP
 El Protocolo ARP (Address Resolution Protocol) es un protocolo de red que se utiliza para traducir direcciones de nivel de red (como direcciones IP) en direcciones físicas de nivel de enlace (como direcciones MAC). Cuando un dispositivo necesita enviar datos a otro dispositivo en una red, utiliza la dirección IP del dispositivo de destino para localizarlo. Sin embargo, la dirección IP no es suficiente para enviar los datos directamente al dispositivo de destino, ya que se necesita la dirección física de nivel de enlace para poder enviar los datos a través de la red. Es aquí donde entra en juego el Protocolo ARP. Cuando un dispositivo necesita la dirección física de nivel de enlace de otro dispositivo en la misma red, utiliza el Protocolo ARP para enviar una solicitud de "Quién es" ("Who is") que contiene la dirección IP del dispositivo de destino. El dispositivo que tiene la dirección IP solicitada responde con un mensaje que contiene su dirección física de nivel de enlace. De esta manera, el dispositivo que inició la solicitud ARP puede obtener la dirección física de nivel de enlace del dispositivo de destino y enviar los datos a través de la red.
 
+-------------------------------------------
+### ¿ARP Spoofing es igual que ARP poisoning?
+Sí, "ARP Spoofing" y "ARP Poisoning" se refieren básicamente al mismo tipo de ataque en el contexto de la seguridad de redes informáticas. Ambos términos describen un proceso en el que un atacante envía mensajes ARP (Address Resolution Protocol) falsificados en una red local (LAN). El objetivo de este ataque es asociar la dirección MAC (Media Access Control) del atacante con la dirección IP de otro host, como la puerta de enlace predeterminada (router) o un servidor específico, lo que permite al atacante interceptar o modificar el tráfico de red destinado a ese host.
+
+A pesar de que los términos se usan indistintamente, pueden enfocarse ligeramente en diferentes aspectos del ataque:
+- ARP Spoofing tiende a enfocarse en el acto de enviar mensajes ARP falsificados para engañar a los dispositivos en la red. Es decir, "spoofing" (suplantación) se refiere a la falsificación de la identidad de un dispositivo.
+- ARP Poisoning se centra más en el resultado del ataque: "envenenar" las tablas ARP de otros dispositivos en la red con direcciones MAC incorrectas.
+
+----------------------------------------
+### El ARP Spoofing (Suplantación ARP)
+El ARP Spoofing (Suplantación ARP) es una técnica de ataque informático en la que un atacante envía mensajes ARP falsos en una red local para asociar su propia dirección MAC con la dirección IP de otro dispositivo legítimo en la misma red. En una red local, cada dispositivo tiene una dirección IP única y una dirección MAC única. La dirección IP se utiliza para enrutar el tráfico de red a través de la red, mientras que la dirección MAC se utiliza para enrutar el tráfico dentro de la red local. El Protocolo ARP se utiliza para asociar las direcciones IP con las direcciones MAC en la red. En un ataque ARP Spoofing, un atacante envía mensajes ARP falsos a otros dispositivos en la red, informando de que la dirección IP del dispositivo legítimo apunta a la dirección MAC del atacante en lugar de su propia dirección MAC. Esto puede hacer que otros dispositivos de la red envíen tráfico al atacante en lugar del dispositivo legítimo, lo que permite al atacante interceptar, modificar o redirigir el tráfico de red.
+
+Se trata de la construcción de tramas de solicitud y respuesta ARP modificadas con el objetivo de envenenar la tabla ARP (relación de las direcciones IP-MAC) de una víctima y forzarla a que envíe los paquetes a un equipo atacante, en lugar de hacerlo a su destino legítimo.
+
+El protocolo Ethernet trabaja mediante direcciones MAC, no mediante direcciones IP. Cuando un host quiere comunicarse con una IP emite una trama ARP-Request a la dirección de Broadcast, pidiendo la MAC del host poseedor la IP con la que quiere comunicarse. El ordenador con la IP solicitada responde con un ARP-Reply indicando su MAC. Los Switches y los ordenadores guardan una tabla local con la relación direcciones IP-MAC llamada "tabla ARP". Dicha tabla ARP puede ser falseada por un computador atacante que emita tramas ARP-REPLY indicando su MAC como destino válido para una IP específica, como por ejemplo la de un router, de esta manera la información dirigida al router pasaría por el computador atacante quien podrá escuchar dicha información y redirigirla, si así lo desea.
+
+El protocolo ARP trabaja a nivel de la capa de enlace de datos del modelo OSI, por lo que esta técnica sólo puede ser utilizada en el segmento de red o vlan.
+
+
 ----------------------------------------
 Este laboratorio necesita una red nat que compartirán las máquinas virtuales.
 
 
 Este laboratorio cuenta con dos máquina virtuales:
-- Windows 10 con configuración de la red: red nat. IP 10.0.2.15
-- Ubuntu 23.10 con configuración de la red: red nat. IP: 10.0.2.4
+- Windows 10 con configuración de la red: red nat. IP 10.0.2.15 - MAC: 08-00-27-8A-47-EB
+- Ubuntu 23.10 con configuración de la red: red nat. IP: 10.0.2.4 - MAC: 08:00:27:ab:bd:f3
 
 Comprobamos que la máquina virtual linux vea a la windows:
 ```
@@ -62,6 +81,15 @@ En la máquina Windows:
 - Comprobamos en la máquina windows la tabla de arp que tiene:
   ```
   arp -a
+  Interfaz: 10.0.2.15 --- 0x4
+  Dirección de Internet          Dirección física      Tipo
+  10.0.2.1              52-54-00-12-35-00     dinámico
+  10.0.2.255            ff-ff-ff-ff-ff-ff     estático
+  224.0.0.22            01-00-5e-00-00-16     estático
+  224.0.0.251           01-00-5e-00-00-fb     estático
+  224.0.0.252           01-00-5e-00-00-fc     estático
+  239.255.255.250       01-00-5e-7f-ff-fa     estático
+  255.255.255.255       ff-ff-ff-ff-ff-ff     estático
   ```
 
 
