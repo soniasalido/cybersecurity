@@ -14,6 +14,10 @@ Objetivos y Consecuencias
 - Denegación de Servicio (DoS): Si el atacante no reenvía los paquetes interceptados, puede interrumpir la comunicación, resultando en un ataque de DoS.
 - Suplantación de Identidad y Ataques a la Privacidad: El atacante puede obtener acceso no autorizado a datos confidenciales, como credenciales de inicio de sesión y otra información personal.
 
+-----------------------------------------
+### El Protocolo ARP
+El Protocolo ARP (Address Resolution Protocol) es un protocolo de red que se utiliza para traducir direcciones de nivel de red (como direcciones IP) en direcciones físicas de nivel de enlace (como direcciones MAC). Cuando un dispositivo necesita enviar datos a otro dispositivo en una red, utiliza la dirección IP del dispositivo de destino para localizarlo. Sin embargo, la dirección IP no es suficiente para enviar los datos directamente al dispositivo de destino, ya que se necesita la dirección física de nivel de enlace para poder enviar los datos a través de la red. Es aquí donde entra en juego el Protocolo ARP. Cuando un dispositivo necesita la dirección física de nivel de enlace de otro dispositivo en la misma red, utiliza el Protocolo ARP para enviar una solicitud de "Quién es" ("Who is") que contiene la dirección IP del dispositivo de destino. El dispositivo que tiene la dirección IP solicitada responde con un mensaje que contiene su dirección física de nivel de enlace. De esta manera, el dispositivo que inició la solicitud ARP puede obtener la dirección física de nivel de enlace del dispositivo de destino y enviar los datos a través de la red.
+
 ----------------------------------------
 Este laboratorio necesita una red nat que compartirán las máquinas virtuales.
 
@@ -55,6 +59,10 @@ Tiempos aproximados de ida y vuelta en milisegundos:
 En la máquina Windows:
 - No hace falta desactivar el antivirus de Windows. Funciona igualmente.
 - Abrimor Wireshark  para snifar el tráfico.
+- Comprobamos en la máquina windows la tabla de arp que tiene:
+  ```
+  arp -a
+  ```
 
 
 
