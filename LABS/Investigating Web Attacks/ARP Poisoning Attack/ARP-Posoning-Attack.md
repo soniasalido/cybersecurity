@@ -1,3 +1,20 @@
+El ARP Poisoning, también conocido como ARP Spoofing, es un tipo de ataque en redes de computadoras que se lleva a cabo en la capa de enlace de datos (capa 2 del modelo OSI). Este ataque explota el protocolo ARP (Address Resolution Protocol), que es utilizado en redes IPv4 para mapear direcciones IP a direcciones MAC de hardware. A continuación, te explico en detalle cómo funciona este ataque y sus implicaciones:
+
+Funcionamiento del Protocolo ARP
+- ARP en Redes Normales: Cuando un dispositivo en una red local quiere comunicarse con otro dispositivo, necesita conocer su dirección MAC. Si solo conoce la dirección IP, utiliza ARP para resolver la dirección MAC. Envía una solicitud ARP a todos los dispositivos en la red (broadcast) preguntando "¿Quién tiene esta dirección IP? Envíame tu dirección MAC".
+- Respuesta ARP: El dispositivo con la dirección IP solicitada responde con su dirección MAC, y la comunicación puede comenzar.
+
+Mecánica del ARP Poisoning
+- Envío de Respuestas ARP Falsificadas: En un ataque de ARP Poisoning, el atacante envía respuestas ARP no solicitadas a la víctima, a la puerta de enlace de la red, o a ambos. Estas respuestas contienen la dirección MAC del atacante en lugar de la dirección MAC real correspondiente a la dirección IP solicitada.
+- Modificación de la Tabla ARP: Como resultado, la víctima y/o la puerta de enlace actualizan sus tablas ARP con la información falsa, asociando la dirección IP del dispositivo objetivo (por ejemplo, la puerta de enlace) con la dirección MAC del atacante.
+- Intercepción del Tráfico: Con las tablas ARP modificadas, el tráfico que se supone debe ir al dispositivo objetivo es enviado al atacante. Esto permite al atacante interceptar, leer o modificar los datos antes de reenviarlos al destinatario original, si así lo decide.
+
+Objetivos y Consecuencias
+- Man-In-The-Middle (MITM): El atacante se coloca entre dos partes que creen estar comunicándose directamente entre sí. Puede espiar o alterar la comunicación.
+- Denegación de Servicio (DoS): Si el atacante no reenvía los paquetes interceptados, puede interrumpir la comunicación, resultando en un ataque de DoS.
+- Suplantación de Identidad y Ataques a la Privacidad: El atacante puede obtener acceso no autorizado a datos confidenciales, como credenciales de inicio de sesión y otra información personal.
+
+----------------------------------------
 Este laboratorio necesita una red nat que compartirán las máquinas virtuales.
 
 
@@ -63,6 +80,7 @@ DST/MASK       DEV     METRIC GATEWAY
 0.0.0.0/0      enp0s3  100    10.0.2.1
 ::1/128        lo      0
 ::1/128        lo      256
-sudo arpspoof -i [interfaz] -t [víctima] [puerta de enlace]
+sudo arpspoof -i [interfazAtancante] -t [víctima] [puerta de enlace]
 sudo arpspoof -i enp0s3 -t 10.10.10.5 10.10.10.1
 ```
+![](capturas/arp-spoof-attack.png)
