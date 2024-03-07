@@ -135,3 +135,4 @@ Introduce Nombre
 ```
 
 Ahora si intentamos inyectar javascript para hacer una redirección, vemos que ya no se produce el ataque XSS:
+![](capturas/xss-reflejado-3.png)
