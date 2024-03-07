@@ -137,4 +137,4 @@ Introduce Nombre
 Ahora si intentamos inyectar javascript para hacer una redirección:
 ![](capturas/xss-reflejado-3.png)
 
-.
+Hemos convertido a entidades nuestro HTML.
