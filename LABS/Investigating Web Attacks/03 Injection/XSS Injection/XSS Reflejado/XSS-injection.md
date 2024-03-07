@@ -81,4 +81,4 @@ Introducimos el código javascript para realizar el ataque XSS:
 ```
 <script>alert(document.cookie)</script>
 ```
-
+![](capturas/xss-reflejado-2.png)
