@@ -53,7 +53,7 @@ Si habilitamos las herramientas de desarrollador de Chrome, vemos que el código
 
 
 # Ejemplo de injección xss para mostrar una cookie de un usuario
-Usaremos un formulario sin sanear para injectar código javascript haciendo que se muestre la cookie de un usuario:
+Usaremos un formulario sin sanear para injectar código javascript haciendo que se muestre una cookie de un usuario que hemos establecido con un valor para este sencillo ejemplo:
 ```
 <html>
 <head></head>
@@ -81,3 +81,4 @@ Introducimos el código javascript para realizar el ataque XSS:
 ```
 <script>alert(document.cookie)</script>
 ```
+
