@@ -82,3 +82,56 @@ Introducimos el código javascript para realizar el ataque XSS:
 <script>alert(document.cookie)</script>
 ```
 ![](capturas/xss-reflejado-2.png)
+
+
+# Prevenir ataques XSS
+NUNCA debemos confiar en los datos que vienen de usuarios o de cualquier otra fuente externa. Cualquier dato debe ser validado o escapado para su output.
+
+Algunas medidas a tomar para prevenir ataques XSS:
+- Data validation.
+- Data sanitization.
+- Output escaping.
+
+## Data Validation
+La validación de datos es el proceso de asegurarse que la aplicación analiza el tipo de datos correctos. Cada dato debe ser validado cuando se recibe para asegurarse que es del tipo correcto, y rechazado si no pasa ese proceso de validación.
+
+Por ejemplo, si nuestro script PHP espera un integer de un input, cualquier otro tipo de dato debe de rechazarse.
+
+## Data Sanitization
+La sanitización de datos se centra en manipular los datos para asegurarse que son seguros, eliminando cualquier parte indeseable y normalizándolos en la forma correcta.
+Por ejemplo, si se espera un texto string de los usuarios, debemos evitar cualquier tipo de markup HTML:``
+```
+// Sanitizar comentario de usuario
+$comentario = strip_tags($_POST["comentario"]);
+```
+
+## Output escaping
+Para proteger la integridad de los datos que se devuelven, el output data, se debe escapar cualquier dato que se devuelve al usuario. Esto evita que el navegador malinterprete alguna secuencia especial de caracteres. Podemos usar htmlentities o htmlspecialchars.
+
+Si usamos HTML ENTITIES → Una entidad HTML es un conjunto de caracteres ("string") que comienza con un ampersand ( & ) y termina con un punto y coma ( ; ). Las entidades son utilizadas frecuentemente para imprimir en pantalla caracteres reservados (aquellos que serían interpretados como HTML por el navegador) o invisibles (cómo tabulaciones). También pueden usarse para representar caracteres que no existan en algunos teclados, por ejemplo caracteres con tilde o diéresis.
+
+Sanitizamos el código → Pasar el HTML a sus entidades
+```
+<html>
+<head></head>
+<body>
+
+<form action="" method="get">
+Introduce Nombre
+<input type="text" name="nombre">
+<input type="submit">
+</form>
+
+<?php 
+ if (isset($_GET["nombre"])) {
+   $nombre= htmlentities($_GET['nombre'],ENT_QUOTES);
+   echo "Hola ".$_GET["nombre"];
+ }
+?>
+
+</body>
+
+</html>
+```
+
+Ahora si intentamos inyectar javascript para hacer una redirección, vemos que ya no se produce el ataque XSS:
