@@ -23,15 +23,17 @@ Tenemos un formulario sin sanea:
 ```
 <html>
 <head></head>
-
 <body>
-<form action="https://educacionadistancia.juntadeandalucia.es/centros/granada/pluginfile.php/178728/mod_assign/introattachment/0/xss.php" method="get">
-Introduce Nombre<input type="text" name="nombre">
+
+<form action="" method="get">
+Introduce Nombre
+<input type="text" name="nombre">
 <input type="submit">
 
 <?php 
 if (isset($_GET["nombre"]))
- echo "Hola ".$_GET["nombre"]; ?>
+ echo "Hola ".$_GET["nombre"];
+?>
 
 </form>
 </body>
@@ -44,6 +46,8 @@ Introducimos el código javascript para realizar el ataque XSS:
 ```
 Veremos que como resultado se muestra una ventana emergente con el mensaje Hola Mundo. Esto implica que este mini web puede ser afectada por un ataque XSS.
 ![](capturas/xss-reflejado-0.png)
+
 Si habilitamos las herramientas de desarrollador de Chrome, vemos que el código está insertado en la página web, **el código está reflejado en el servidor**, **es por ello que se llama XSS Reflejado**. Ocurre cuando **la entrada del usuario se muestra en la página después de ser procesada por el servidor (back-end), pero sin ser almacenada.**
+
 ![](capturas/xss-reflejado.png)
 
