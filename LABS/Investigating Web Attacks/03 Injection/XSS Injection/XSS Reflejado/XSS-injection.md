@@ -134,7 +134,7 @@ Introduce Nombre
 </html>
 ```
 
-Ahora si intentamos inyectar javascript para hacer una redirección, vemos que ya no se produce el ataque XSS:
+Ahora si intentamos inyectar javascript para hacer una redirección:
 ![](capturas/xss-reflejado-3.png)
 
 .
