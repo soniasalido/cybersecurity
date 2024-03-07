@@ -19,7 +19,7 @@ mediante email o un sitio de terceros.
 - Persistent XSS: El código malicioso ya ha superado la barrera del proceso de validación y está almacenado en un almacén de datos. Puede ser un comentario, un archivo log, un mensaje de notificación, o cualquier otro tipo de sección del sitio web que solicita algún input al usuario. Cuando esta información en particular se presenta en el sitio web, el código malicioso se ejecuta.
 
 # Código Javascript para mostrar el mensaje Hola
-Tenemos un formulario sin sanea:
+Tenemos un formulario sin sanear:
 ```
 <html>
 <head></head>
