@@ -18,8 +18,8 @@ mediante email o un sitio de terceros.
 
 - Persistent XSS: El código malicioso ya ha superado la barrera del proceso de validación y está almacenado en un almacén de datos. Puede ser un comentario, un archivo log, un mensaje de notificación, o cualquier otro tipo de sección del sitio web que solicita algún input al usuario. Cuando esta información en particular se presenta en el sitio web, el código malicioso se ejecuta.
 
-# Código Javascript para mostrar el mensaje Hola
-Tenemos un formulario sin sanear:
+# Ejemplo de injección xss para mostrar el mensaje Hola mundo
+Usaremos un formulario sin sanear para injectar código javascript haciendo que muestre un mensaje:
 ```
 <html>
 <head></head>
@@ -29,13 +29,13 @@ Tenemos un formulario sin sanear:
 Introduce Nombre
 <input type="text" name="nombre">
 <input type="submit">
+</form>
 
 <?php 
 if (isset($_GET["nombre"]))
  echo "Hola ".$_GET["nombre"];
 ?>
 
-</form>
 </body>
 
 </html>
@@ -51,3 +51,33 @@ Si habilitamos las herramientas de desarrollador de Chrome, vemos que el código
 
 ![](capturas/xss-reflejado.png)
 
+
+# Ejemplo de injección xss para mostrar una cookie de un usuario
+Usaremos un formulario sin sanear para injectar código javascript haciendo que se muestre la cookie de un usuario:
+```
+<html>
+<head></head>
+<body>
+
+<form action="" method="get">
+Introduce Nombre
+<input type="text" name="nombre">
+<input type="submit">
+</form>
+
+<?php 
+if (isset($_GET["nombre"]))
+ echo "Hola ".$_GET["nombre"];
+?>
+
+</body>
+
+<script>
+   document.cookie = "user=Sonia"
+</script>
+</html>
+```
+Introducimos el código javascript para realizar el ataque XSS:
+```
+<script>alert(document.cookie)</script>
+```
