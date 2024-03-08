@@ -44,5 +44,6 @@ Inyecciones que muestran todos los productos:
 999' or '1'='1' UNION SELECT * from articulos #
 ```
 
+![](capturas/sql-injection-lab1-4.png)
 
 
