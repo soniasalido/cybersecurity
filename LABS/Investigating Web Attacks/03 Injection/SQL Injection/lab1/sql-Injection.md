@@ -135,3 +135,12 @@ Inyección:
 999' UNION SELECT null, TABLE_NAME, COLUMN_NAME FROM information_schema.columns WHERE TABLE_NAME = 'articulos' #
 ```
 ![](capturas/sql-injection-lab1-14.png)
+
+
+# Análisis del tráfico con Wireshark
+Aplicamos un filtro en wireshark para descubir el ataque de sql injection:
+```
+http.request.uri contains "SELECT" || http.request.uri contains "UNION" || http.request.uri contains "DROP" || http.request.uri contains "OR '1'='1'"
+```
+![](capturas/sql-injection-lab1-15.png)
+
