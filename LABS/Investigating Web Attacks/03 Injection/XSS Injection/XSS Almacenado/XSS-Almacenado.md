@@ -58,5 +58,16 @@ Inyectamos el código javascript para ver las cookies que están definidas:
 
 Cuando accedemos a esta entrada el código javascript se ejecuta en el navegador del
 cliente:
+
 ![](capturas/xss-almacenado-4.png)
 
+
+# Cómo queda almacenado el código javascript en la BD
+Accedemos a phpmyadmin y mostramos la tabla de topics →
+
+![](capturas/xss-almacenado-5.png)
+
+
+Accedemos la primera entrada que contiene la inyección XSS para mostrar un mensaje
+de Hola Mundo→
+![](capturas/xss-almacenado-6.png)
