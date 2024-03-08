@@ -55,3 +55,8 @@ Inyectamos el código javascript para ver las cookies que están definidas:
 ```
 <script>alert(document.cookie)</script>
 ```
+
+Cuando accedemos a esta entrada el código javascript se ejecuta en el navegador del
+cliente:
+![](capturas/xss-almacenado-4.png)
+
