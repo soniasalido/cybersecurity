@@ -51,7 +51,7 @@ del cliente:
 
 
 # Creamos una entrada en el foro que muestre la cookie del usuario
-Inyectamos el código javascript para ver las cookies que están definidas:
+Repitemos el ataque, ahora inyectamos un código javascript para ver las cookies que están definidas:
 ```
 <script>alert(document.cookie)</script>
 ```
