@@ -71,3 +71,13 @@ Accedemos a phpmyadmin y mostramos la tabla de topics →
 Accedemos la primera entrada que contiene la inyección XSS para mostrar un mensaje
 de Hola Mundo→
 ![](capturas/xss-almacenado-6.png)
+
+
+# Análisis del ataque con Wireshark
+
+Filtros de wireshark para buscar el ataque.
+```
+http contains "<script>" || http contains "javascript:" || http contains "onerror=" || http contains "alert("
+http || tcp.port == 80 || tcp.port == 443
+```
+
