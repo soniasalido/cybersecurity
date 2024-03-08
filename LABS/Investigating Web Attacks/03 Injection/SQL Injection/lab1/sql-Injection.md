@@ -79,3 +79,6 @@ Inyección SQL →
 ```
 Obtenemos resultados del nombre de la base de datos con la información de sus columnas→
 ![](capturas/sql-injection-lab1-7.png)
+
+Vemos otra base de datos con la información de sus columnas dentro de mysql→
+![](capturas/sql-injection-lab1-8.png)
