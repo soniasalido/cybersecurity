@@ -81,3 +81,11 @@ http contains "<script>" || http contains "javascript:" || http contains "onerro
 http || tcp.port == 80 || tcp.port == 443
 ```
 
+![](capturas/xss-almacenado-7.png)
+
+![](capturas/xss-almacenado-8.png)
+
+
+![](capturas/xss-almacenado-9.png)
+
+
