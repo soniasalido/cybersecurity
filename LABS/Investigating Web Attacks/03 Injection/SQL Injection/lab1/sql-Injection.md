@@ -26,7 +26,11 @@ Cómo determinar del número de columnas requeridas en un ataque UNION de inyecc
 
 
 # Consulta que muestra todos los productos
+![](capturas/sql-injection-lab1.png)
 
+![](capturas/sql-injection-lab1-2.png)
+
+![](capturas/sql-injection-lab1-3.png)
 
 
 Consulta SQL:
