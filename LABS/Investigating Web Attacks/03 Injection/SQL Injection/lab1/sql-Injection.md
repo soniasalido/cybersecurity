@@ -56,3 +56,4 @@ Inyección:
 ```
 999' UNION SELECT null, null, 'Hola mundo' from dual #
 ```
+![](capturas/sql-injection-lab1-5.png)
