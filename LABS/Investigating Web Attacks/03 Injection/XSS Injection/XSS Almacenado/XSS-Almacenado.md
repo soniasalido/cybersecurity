@@ -39,10 +39,12 @@ Introducimos el código javascript para realizar el ataque XSS:
 
 
 Resultado del ataque:
+
 ![](capturas/xss-almacenado-2.png)
 
 
 Al entrar en la entrada que contiene el código XSS que está almacenado en la Base de
 datos, se ejecuta el código javascript y aparece un mensaje de alerta con el navegador
 del cliente:
+
 ![](capturas/xss-almacenado-3.png)
