@@ -78,14 +78,16 @@ de Hola Mundo→
 Filtros de wireshark para buscar el ataque.
 ```
 http contains "<script>" || http contains "javascript:" || http contains "onerror=" || http contains "alert("
+
 http || tcp.port == 80 || tcp.port == 443
 ```
 
 ![](capturas/xss-almacenado-7.png)
 
+Detalle de las conversaciones:
 ![](capturas/xss-almacenado-8.png)
 
-
+Detalle de un request de mysql:
 ![](capturas/xss-almacenado-9.png)
 
 
