@@ -32,6 +32,7 @@ Cómo determinar del número de columnas requeridas en un ataque UNION de inyecc
 
 ![](capturas/sql-injection-lab1-3.png)
 
+Así descubrimos con la tabla que surte al formulario tiene 3 columnas.
 
 Consulta SQL:
 ```
