@@ -24,6 +24,8 @@ Creamos una carpeta llamada upload que contendrá los ficheros que se suban a tr
 </body>
 </html>
 ```
+![](capturas/unrestricted-file-upload-lab1-0.png)
+
 
 ## Fichero upload_file.php
 ```
