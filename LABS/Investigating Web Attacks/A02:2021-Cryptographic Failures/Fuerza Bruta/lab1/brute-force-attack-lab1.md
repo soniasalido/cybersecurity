@@ -1,0 +1,1 @@
+El ataque de fuerza bruta, en términos de la enumeración común de debilidades (CWE por sus siglas en inglés), se clasifica generalmente bajo CWE-307: Improper Restriction of Excessive Authentication Attempts (Restricción inadecuada de intentos excesivos de autenticación).
