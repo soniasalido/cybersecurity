@@ -26,7 +26,7 @@ Cómo determinar del número de columnas requeridas en un ataque UNION de inyecc
 ## Mostrar los usuarios y contraseñas
 
 ### Datos de todas las bases de datos, tablas y columnas de MySQL
-Partimos de la consulta del sql-injection-lab1 → ![xx](../lab1/sql-Injection.md) que nos da la información de todas las bases de datos, tablas y columnas de MySQL. **El objetivo es que tenemos que conseguir introducir esta consulta para que nos de la información completa.**
+Partimos de la consulta del [sql-injection-lab1 →](../lab1/sql-Injection.md) que nos da la información de todas las bases de datos, tablas y columnas de MySQL. **El objetivo es que tenemos que conseguir introducir esta consulta para que nos de la información completa.**
 
 Consulta SQL →
 ```
