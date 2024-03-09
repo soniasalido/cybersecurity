@@ -52,7 +52,7 @@ Creamos una carpeta llamada upload que contendrá los ficheros que se suban a tr
 ```
 
 ## Fichero shell.php
-Para que funcione el laboratorio y no irnos a un phpmyadmin muy muy antiguo, (estoy usando phpmayadmin 7) debemos desartivar: magic quotes:
+Para que funcione el laboratorio y no irnos a un phpmyadmin muy muy antiguo, (estoy usando phpmayadmin 7) debemos desactivar: magic quotes:
 ```
 set_magic_quotes_runtime(0);
 ini_set('magic_quotes_gpc', 0);
