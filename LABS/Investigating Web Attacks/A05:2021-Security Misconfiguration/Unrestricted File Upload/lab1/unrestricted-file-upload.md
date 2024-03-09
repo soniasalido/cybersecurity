@@ -63,6 +63,7 @@ Estas líneas de código intentan desactivar las "magic quotes" en tiempo de eje
 
 set_magic_quotes_runtime(0);: Esta función está obsoleta y ha sido eliminada de PHP desde la versión 5.4.0. Su propósito era controlar la directiva magic_quotes_runtime en PHP, que automáticamente escapaba los datos provenientes de fuentes externas como archivos y bases de datos.
 
+![](capturas/unrestricted-file-upload-lab1-7.png)
 
 
 ## Ataque Unrestricted File Upload
@@ -97,4 +98,4 @@ Vamos comprobando y mostrando avisos, en caso de que no se cumplan las condicion
 
 Si redirigimos el formulario de subida a este fichero, ahora se puede comprobar que ya sólo permite subir ficheros .pdf y .jpg, no permite un tamaño superior a 2Mb y tampoco permite nombres de fichero con caracteres extraños.
 
-![](capturas/unrestricted-file-upload-lab1-7.png)
+
