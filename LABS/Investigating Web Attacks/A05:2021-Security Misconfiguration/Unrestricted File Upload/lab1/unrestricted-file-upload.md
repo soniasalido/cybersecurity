@@ -147,3 +147,8 @@ Para guardar Como Archivo: Abrimos un editor de texto en bruto (como Notepad++ o
 
 ![](capturas/unrestricted-file-upload-lab1-13.png)
 
+
+## Ver uno de los comandos que se pasaron en el ataque
+Repetimos el proceso anterior para ver uno de los comandos que se pasaron en la shell.php. Seguimos la secuencia http de un paquete --> "Follow" --> "HTTP Stream":
+![](capturas/unrestricted-file-upload-lab1-14.png)
+
