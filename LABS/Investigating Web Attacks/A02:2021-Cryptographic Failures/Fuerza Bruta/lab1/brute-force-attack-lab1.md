@@ -35,3 +35,4 @@ Pulsamos el botón Lanzar (Arrancar) -->
 Tras unos pocos intentos fallidos, vemos que obtiene un resultado que sí logra registrarse en el login. Accedemos a View Results Tree para ver los resultados de las pruebas de la contraseña:
 
 ![](capturas/brute-force-attack-lab1-4.png)
+![](capturas/brute-force-attack-lab1-5.png)
