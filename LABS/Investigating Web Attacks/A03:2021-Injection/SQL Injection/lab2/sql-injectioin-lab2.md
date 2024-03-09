@@ -159,6 +159,13 @@ http.request.uri contains "SELECT" || http.request.uri contains "UNION" || http.
 Sin embargo, este filtro no da ningun resultado ya que .....
 
 
+## Filtra por peticiones HTTP que usan el método POST:
+Dado que el ataque involucra enviar información a través de un formulario web, lo más probable es que estos datos sean transmitidos mediante una petición HTTP POST con el contenido codificado en application/x-www-form-urlencoded.
+```
+http.request.method == "POST"
+```
+![](capturas/sql-injection-lab2-13.png)
+
 
 ## Filtrar por Códigos de Estado HTTP Específicos
 A menudo, una inyección SQL fallida resultará en códigos de estado de error HTTP, como 500 (Error Interno del Servidor). Puedes filtrar estos códigos de estado:
