@@ -141,10 +141,7 @@ Inyección →
 ```
 ![](capturas/sql-injection-lab2-9.png)
 
-Usando una web que muestra hashes en md5 (https://hashes.com/) obtenemos la password:
-
-
-Probamos a entrar con el usuario test2 y la contraseña que nos devolvió la web 12121980:
+Usando una web que muestra hashes en md5 (https://hashes.com/) obtenemos la password. Ahora probamos a entrar con el usuario test2 y la contraseña que nos devolvió la web 12121980:
 ![](capturas/sql-injection-lab2-11.png)
 
 
