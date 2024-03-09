@@ -145,4 +145,4 @@ Usando una web que muestra hashes en md5 (https://hashes.com/) obtenemos la pass
 
 
 Probamos a entrar con el usuario test2 y la contraseña que nos devolvió la web 12121980:
-![](capturas/sql-injection-lab2-10.png)
+![](capturas/sql-injection-lab2-11.png)
