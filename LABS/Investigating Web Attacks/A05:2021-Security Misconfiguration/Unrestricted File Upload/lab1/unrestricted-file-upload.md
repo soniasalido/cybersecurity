@@ -78,7 +78,7 @@ servidor:
 ![](capturas/unrestricted-file-upload-lab1-3.png)
 
 
-Hacemos click en el fichero shell.php para realizar el ataque. Vamos escribiendo comandos para llegar a la carpeta que contiene el fichero httpd.conf:
+Hacemos click en el fichero shell.php para realizar el ataque. Vamos escribiendo comandos para llegar a la carpeta que contiene el fichero httpd.conf. Cuando estamos en la carpeta apropiada, mostramos el fichero de configuración haciendo click sobre él. Entonces se abre y vemos su contenido en el navegador::
 
 ![](capturas/unrestricted-file-upload-lab1-4.png)
 
@@ -86,8 +86,7 @@ Hacemos click en el fichero shell.php para realizar el ataque. Vamos escribiendo
 
 ![](capturas/unrestricted-file-upload-lab1-5.png)
 
-Cuando estamos en la carpeta apropiada, mostramos el fichero de configuración
-haciendo click sobre él. Entonces se abre y vemos su contenido en el navegador:
+
 
 ![](capturas/unrestricted-file-upload-lab1-6.png)
 
