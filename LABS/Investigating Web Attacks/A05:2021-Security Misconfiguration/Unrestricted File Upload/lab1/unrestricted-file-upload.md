@@ -68,6 +68,7 @@ set_magic_quotes_runtime(0);: Esta función está obsoleta y ha sido eliminada d
 
 ## Ataque Unrestricted File Upload
 Aprovechamos la mala configuración de seguridad para subir una shell:
+![](capturas/unrestricted-file-upload-lab1-6.png)
 ![](capturas/unrestricted-file-upload-lab1.png)
 
 ![](capturas/unrestricted-file-upload-lab1-2.png)
@@ -85,10 +86,6 @@ Hacemos click en el fichero shell.php para realizar el ataque. Vamos escribiendo
 
 
 ![](capturas/unrestricted-file-upload-lab1-5.png)
-
-
-
-![](capturas/unrestricted-file-upload-lab1-6.png)
 
 
 ## Sanear el fichero upload_file.php
