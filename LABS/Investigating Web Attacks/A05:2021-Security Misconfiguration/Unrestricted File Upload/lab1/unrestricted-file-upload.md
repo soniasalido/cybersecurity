@@ -71,11 +71,9 @@ Aprovechamos la mala configuración de seguridad para subir una shell:
 ![](capturas/unrestricted-file-upload-lab1-6.png)
 ![](capturas/unrestricted-file-upload-lab1.png)
 
-![](capturas/unrestricted-file-upload-lab1-2.png)
-
 Como no está securizado apache, podemos ver el contenido de la carpeta de upload del
 servidor:
-
+![](capturas/unrestricted-file-upload-lab1-2.png)
 ![](capturas/unrestricted-file-upload-lab1-3.png)
 
 
