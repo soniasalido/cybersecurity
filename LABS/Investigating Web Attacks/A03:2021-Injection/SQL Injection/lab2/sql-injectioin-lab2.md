@@ -156,6 +156,8 @@ Aplicamos un filtro en wireshark para descubir el ataque de sql injection:
 http.request.uri contains "SELECT" || http.request.uri contains "UNION" || http.request.uri contains "DROP" || http.request.uri contains "OR '1'='1'"
 ```
 
+Sin embargo, este filtro no da ningun resultado ya que .....
+
 
 
 ## Filtrar por Códigos de Estado HTTP Específicos
