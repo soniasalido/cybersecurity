@@ -156,9 +156,11 @@ Aplicamos un filtro en wireshark para descubir el ataque de sql injection:
 http.request.uri contains "SELECT" || http.request.uri contains "UNION" || http.request.uri contains "DROP" || http.request.uri contains "OR '1'='1'"
 ```
 
-Sin embargo, este filtro no da ningun resultado ya que .....
+Sin embargo, este filtro no da ningun resultado ya que la consulta viaja dentro del file data del request.
 
-## Filtrar por xxx
+
+
+## Filtrar por paquetes de datos HTTP que contienen la palabra "select"
 El filtro de Wireshark http.file_data contains "select" se utiliza para capturar paquetes de datos HTTP que contienen la palabra "select" en el cuerpo del archivo (file data) de la petición HTTP. Este filtro puede ser útil para varias situaciones, incluyendo la detección de potenciales inyecciones SQL o el análisis de consultas de bases de datos enviadas a través de HTTP.
 ```
 http.file_data contains "select" || http.file_data contains "UNION" || http.file_data contains "union" 
