@@ -25,8 +25,8 @@ Ajustar los valores de los parámetros user y password:
 - PASSWORD: 05121980 (Fecha 05/12/1980)
   ![](capturas/brute-force-attack-lab1-2.png)
 
-Ajustamos la IP: Comprobamos que la IP apunte a localhost que es donde está xampp funcionando:
-![](capturas/brute-force-attack-lab1-3.png)
+  - Ajustamos la IP: Comprobamos que la IP apunte a localhost que es donde está xampp funcionando:
+  ![](capturas/brute-force-attack-lab1-3.png)
 
 
 ## Lanzamos el script
