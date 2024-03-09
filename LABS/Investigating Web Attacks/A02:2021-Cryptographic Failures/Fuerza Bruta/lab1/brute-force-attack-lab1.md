@@ -36,3 +36,4 @@ Tras unos pocos intentos fallidos, vemos que obtiene un resultado que sí logra 
 
 ![](capturas/brute-force-attack-lab1-4.png)
 ![](capturas/brute-force-attack-lab1-5.png)
+![](capturas/brute-force-attack-lab1-6.png)
