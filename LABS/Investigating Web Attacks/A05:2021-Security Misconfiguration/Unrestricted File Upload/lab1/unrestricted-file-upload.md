@@ -95,3 +95,4 @@ Vamos comprobando y mostrando avisos, en caso de que no se cumplan las condicion
 
 Si redirigimos el formulario de subida a este fichero, ahora se puede comprobar que ya sólo permite subir ficheros .pdf y .jpg, no permite un tamaño superior a 2Mb y tampoco permite nombres de fichero con caracteres extraños.
 
+![](capturas/unrestricted-file-upload-lab1-7.png)
