@@ -13,3 +13,21 @@ JMeter es un proyecto de Apache que puede ser utilizado como una herramienta de 
 Descargamos Apache Jmeter: https://jmeter.apache.org/download_jmeter.cgi
 
 
+## Abrimos el programa Apache Jmeter haciendo doble click en ApacheJMeter.jar:
+![](capturas/brute-force-attack-lab1.png)
+
+
+## Ataque de Fuerza Bruta
+Ejecutamos el script:  scriptFuerzabruta.jmx: Abrimos el  scriptFuerzabruta.jmx con Jmeter. Este es el algoritmo que buscará por fuerza bruta la password:
+
+Ajustar los valores de los parámetros user y password:
+- Ajustamos los valores: USER: test2
+- PASSWORD: 05121980 (Fecha 05/12/1980)
+  ![](capturas/brute-force-attack-lab1-2.png)
+
+Ajustamos la IP: Comprobamos que la IP apunte a localhost que es donde está xampp funcionando:
+![](capturas/brute-force-attack-lab1-3.png)
+
+
+## Lanzamos el script
+Pulsamos el botón Lanzar:
