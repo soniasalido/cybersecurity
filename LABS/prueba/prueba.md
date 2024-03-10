@@ -84,3 +84,15 @@ tls || ssl
 (tls || ssl) && (ip.src == 10.10.100.43)
 
 (tls || ssl) && (http contains "==")
+
+ip.src == 10.10.100.0/24
+
+http contains "<script>" 
+
+http.request.method == "POST"
+
+(tls || ssl) &&  http.request.method == "POST"
+
+http.file_data contains "select" 
+http.file_data matches "select" <-- Case insensitive
+
