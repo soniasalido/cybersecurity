@@ -96,3 +96,6 @@ http.request.method == "POST"
 http.file_data contains "select" 
 http.file_data matches "select" <-- Case insensitive
 
+
+0x48, 0x54, 0x42
+0x68, 0x74, 0x62
