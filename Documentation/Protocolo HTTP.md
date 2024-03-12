@@ -1,0 +1,1 @@
+El Protocolo de Transferencia de Hipertexto (HTTP) es el protocolo de comunicación que se utiliza para transferir información en la World Wide Web. Es la base de cualquier intercambio de datos en la web, y funciona como un protocolo de solicitud-respuesta entre un cliente y un servidor.
