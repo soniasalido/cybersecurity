@@ -120,18 +120,14 @@ El algoritmo de intercambio de claves RSA, aunque ahora se considera que no es s
 https://www.cloudflare.com/es-es/learning/ssl/what-happens-in-a-tls-handshake/#:~:text=Durante%20un%20protocolo%20de%20enlace%20TLS%2C%20las%20dos%20partes%20que,acordar%20las%20claves%20de%20sesi%C3%B3n
 
 
-## 1. Cabeceras de Seguridad
+## 1. Cabeceras de Seguridad en HTTP
 Las cabeceras de seguridad en HTTP son una serie de ajustes en las cabeceras HTTP que proporcionan capas adicionales de seguridad a las aplicaciones web. Estas cabeceras, enviadas en las respuestas del servidor web al navegador del cliente, ayudan a mitigar una variedad de vulnerabilidades y ataques comunes.
 
 Hay herramientas de análisis automático de vulnerabilidades que comprueban estas cabeceras de seguridad. Pero se recomienda que se realice un pentester manual:
 - https://www.youtube.com/watch?v=064yDG7Rz80
 - https://www.youtube.com/watch?v=x_FxJxKIXl8
 
-```
-Set-Cookie: SessionID=abc123; Expires=Wed, 09 Jun 2024 10:18:14 GMT; Path=/; Secure; HttpOnly
-```
-- Cabeceras de seguridad:
-  - La primera línea de seguridad son los **atributos Path y Domain** ya que permiten restringir dónde se enviará la cookie.
+- **Cabeceras de seguridad:**
   - **Content Security Policy (CSP):** Esta cabecera ayuda a prevenir ataques de Cross-Site Scripting (XSS) y otros ataques basados en inyección. Permite a los administradores de sitios web especificar desde qué fuentes puede el navegador cargar recursos (como scripts, hojas de estilo, imágenes, etc.). De este modo, se evita la carga de recursos maliciosos.
 
   - **HTTP Strict Transport Security (HSTS):** Esta cabecera asegura que el navegador solo se comunique con el servidor mediante una conexión segura HTTPS. Si un sitio web ha sido visitado previamente, HSTS obliga a las conexiones futuras a realizarse a través de HTTPS, incluso si el usuario intenta acceder mediante HTTP.
@@ -147,7 +143,11 @@ Set-Cookie: SessionID=abc123; Expires=Wed, 09 Jun 2024 10:18:14 GMT; Path=/; Sec
 
 
 ## 2. Uso seguro de HTTP Cookies
-
+```
+Set-Cookie: SessionID=abc123; Expires=Wed, 09 Jun 2024 10:18:14 GMT; Path=/; Secure; HttpOnly
+```
+- La primera línea de seguridad son los **atributos Path y Domain** ya que permiten restringir dónde se enviará la cookie.
+- Atributo SameSite:
 
 ## 3. HTTP Access Control (CORS)
 
