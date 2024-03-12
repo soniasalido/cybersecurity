@@ -62,7 +62,7 @@ Set-Cookie: SessionID=abc123; Expires=Wed, 09 Jun 2024 10:18:14 GMT; Path=/; Sec
 - Secure: Este atributo indica que la cookie solo debe enviarse a través de una conexión segura (HTTPS). Esto ayuda a proteger los datos de la cookie durante el tránsito entre el navegador y el servidor.
 - HttpOnly: El atributo HttpOnly incrementa la seguridad al restringir el acceso a la cookie por parte de scripts del lado del cliente, como JavaScript. Esto ayuda a prevenir ataques de tipo Cross-Site Scripting (XSS).
 
-## Seguridad en HTTP.
+# Seguridad en HTTP.
 Principal iniciativa para la seguridad en HTTP es HTTPS (HTTP Secure). HTTPS es el mismo protocolo HTTP en el que se utiliza un túnel cifrado de extremo aextremo entre el cliente y el servidor web.
 
 - HTTPS proporciona tres serivicios básicos:
@@ -118,3 +118,12 @@ HTTPS es una implementación de la encriptación TLS en el protocolo HTTP, usado
 ## ¿Qué ocurre durante un protocolo de enlace TLS? | Protocolo de enlace SSL
 El algoritmo de intercambio de claves RSA, aunque ahora se considera que no es seguro, se utilizaba en las versiones de TLS anteriores a la 1.3. A grandes rasgos es como sigue -->
 https://www.cloudflare.com/es-es/learning/ssl/what-happens-in-a-tls-handshake/#:~:text=Durante%20un%20protocolo%20de%20enlace%20TLS%2C%20las%20dos%20partes%20que,acordar%20las%20claves%20de%20sesi%C3%B3n
+
+
+## 1. Cabeceras de Seguridad
+Las cabeceras de seguridad en HTTP son una serie de ajustes en las cabeceras HTTP que proporcionan capas adicionales de seguridad a las aplicaciones web. Estas cabeceras, enviadas en las respuestas del servidor web al navegador del cliente, ayudan a mitigar una variedad de vulnerabilidades y ataques comunes.
+
+Hay herramientas de análisis automático de vulnerabilidades que comprueban estas cabeceras de seguridad. Pero se recomienda que se realice un pentester manual:
+- https://www.youtube.com/watch?v=064yDG7Rz80
+- https://www.youtube.com/watch?v=x_FxJxKIXl8
+- 
