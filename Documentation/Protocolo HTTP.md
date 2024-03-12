@@ -116,4 +116,5 @@ TLS, que significa "Transport Layer Security" (Seguridad de la Capa de Transport
 HTTPS es una implementación de la encriptación TLS en el protocolo HTTP, usado por todos los sitios web así como otros servicios web. Todos los sitios web que usan HTTPS emplean por tanto la encriptación TLS.
 
 ## ¿Qué ocurre durante un protocolo de enlace TLS? | Protocolo de enlace SSL
+El algoritmo de intercambio de claves RSA, aunque ahora se considera que no es seguro, se utilizaba en las versiones de TLS anteriores a la 1.3. A grandes rasgos es como sigue -->
 https://www.cloudflare.com/es-es/learning/ssl/what-happens-in-a-tls-handshake/#:~:text=Durante%20un%20protocolo%20de%20enlace%20TLS%2C%20las%20dos%20partes%20que,acordar%20las%20claves%20de%20sesi%C3%B3n
