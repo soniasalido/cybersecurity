@@ -110,7 +110,7 @@ TLS, que significa "Transport Layer Security" (Seguridad de la Capa de Transport
 - Finalización de la Sesión TLS:
   - Después de que la comunicación segura haya terminado, la sesión TLS se cierra de forma segura, y la conexión TCP subyacente también se puede cerrar si ya no es necesaria.
 
-![https://www.cloudflare.com/es-es/learning/ssl/transport-layer-security-tls/](https://cf-assets.www.cloudflare.com/slt3lc6tev37/5aYOr5erfyNBq20X5djTco/3c859532c91f25d961b2884bf521c1eb/tls-ssl-handshake.png)
+![ttps://www.cloudflare.com/es-es/learning/ssl/transport-layer-security-tls/](https://cf-assets.www.cloudflare.com/slt3lc6tev37/5aYOr5erfyNBq20X5djTco/3c859532c91f25d961b2884bf521c1eb/tls-ssl-handshake.png)
 
 ## ¿En qué se diferencian TLS y HTTPS?
 HTTPS es una implementación de la encriptación TLS en el protocolo HTTP, usado por todos los sitios web así como otros servicios web. Todos los sitios web que usan HTTPS emplean por tanto la encriptación TLS.
