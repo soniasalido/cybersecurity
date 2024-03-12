@@ -103,10 +103,9 @@ TLS, que significa "Transport Layer Security" (Seguridad de la Capa de Transport
 
 - Intercambio de Claves: Parte del proceso de "handshake" implica el intercambio de claves de cifrado. Esto generalmente se hace utilizando un método de cifrado asimétrico para intercambiar una clave de sesión, que luego se utiliza para el cifrado simétrico de la comunicación durante esa sesión.
 
-- fvvvvvvvvvvvvvv01¡omunicjuicdfxxxxxxxxación Segura HTTP sobre TLS:
+- Comunicación  Segura HTTP sobre TLS:
+  - Una vez completado el "handshake", toda la comunicación entre el cliente y el servidor se cifra utilizando la clave de sesión acordada. Esto significa que cualquier dato enviado (como parte de una solicitud HTTP) está cifrado y solo puede ser descifrado por el receptor, que posee la clave correcta.
+  - Esto convierte la conexión HTTP inicial, que es no segura por defecto, en una conexión HTTPS segura, donde "S" representa la capa de seguridad añadida por SSL/TLS.
 
-Una vez completado el "handshake", toda la comunicación entre el cliente y el servidor se cifra utilizando la clave de sesión acordada. Esto significa que cualquier dato enviado (como parte de una solicitud HTTP) está cifrado y solo puede ser descifrado por el receptor, que posee la clave correcta.
-Esto convierte la conexión HTTP inicial, que es no segura por defecto, en una conexión HTTPS segura, donde "S" representa la capa de seguridad añadida por SSL/TLS.
-Finalización de la Sesión TLS:
-
-Después de que la comunicación segura haya terminado, la sesión TLS se cierra de forma segura, y la conexión TCP subyacente también se puede cerrar si ya no es necesaria.
+- Finalización de la Sesión TLS:
+  - Después de que la comunicación segura haya terminado, la sesión TLS se cierra de forma segura, y la conexión TCP subyacente también se puede cerrar si ya no es necesaria.
