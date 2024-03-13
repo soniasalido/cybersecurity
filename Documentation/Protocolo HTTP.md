@@ -75,40 +75,40 @@ Para que el túnel cifrado sea posible se usa el protocolo TLS (Transport Layer 
 ## TLS
 TLS, que significa "Transport Layer Security" (Seguridad de la Capa de Transporte), es un protocolo de seguridad diseñado para proporcionar comunicaciones seguras en una red informática. Facilita la privacidad y la seguridad de los datos en las comunicaciones por Internet. 
 
-- Usos:
+- **Uso de TLS:**
   - Encripta las comunicaciones entre aplicaciones web y servidores.
   - Encriptar otras comunicaciones como:
     - El correo electrónico.
     - Los mensajes.
     - La voz sobre IP (VoIP).
 
-- Encriptación de Datos: TLS es ampliamente utilizado para encriptar la transferencia de datos entre un usuario y un servidor, lo que asegura que la información intercambiada permanezca privada y segura. Esto es especialmente importante para actividades sensibles como transacciones bancarias en línea, compras, y el intercambio de información personal.
+- **Encriptación de Datos:** TLS es ampliamente utilizado para encriptar la transferencia de datos entre un usuario y un servidor, lo que asegura que la información intercambiada permanezca privada y segura. Esto es especialmente importante para actividades sensibles como transacciones bancarias en línea, compras, y el intercambio de información personal.
 
-- Sucesor de SSL: TLS es el sucesor del protocolo Secure Sockets Layer (SSL), aunque a menudo los términos SSL y TLS se utilizan indistintamente. TLS proporciona mejoras y fortalece la seguridad comparado con SSL, que ya está en desuso debido a varias vulnerabilidades de seguridad descubiertas.
+- **Sucesor de SSL:** TLS es el sucesor del protocolo Secure Sockets Layer (SSL), aunque a menudo los términos SSL y TLS se utilizan indistintamente. TLS proporciona mejoras y fortalece la seguridad comparado con SSL, que ya está en desuso debido a varias vulnerabilidades de seguridad descubiertas.
 
-- TLS y SSL usan una PKI (Public Key Infraestructure), en la que el servidor posee un certificado TSL, firmado por una autoridad de certificaciñon, que contiene dos claves: una pública y una privada. Se trata de un esquema de cifrado híbrido en el que la clave pública se usa para compartir una clave de sesión entre el cliente y el servidor con la que se cifra la comunicación.
+- **TLS y SSL usan una PKI** (Public Key Infraestructure), en la que el servidor posee un certificado TSL, firmado por una autoridad de certificaciñon, que contiene dos claves: una pública y una privada. Se trata de un esquema de cifrado híbrido en el que la clave pública se usa para compartir una clave de sesión entre el cliente y el servidor con la que se cifra la comunicación.
 
-- Cómo Funciona TLS:
+- **Cómo Funciona TLS:**
   - Negociación de Conexión: Cuando un cliente (como un navegador web) se conecta a un servidor que utiliza TLS (como un sitio web HTTPS), primero realizan un "apretón de manos" (handshake). Durante este proceso, acuerdan los detalles de cómo se cifrará la comunicación, incluyendo la selección de un protocolo de encriptación y el intercambio de claves de encriptación.
   - Autenticación y Certificados: TLS utiliza certificados digitales, emitidos por Autoridades de Certificación (CA), para autenticar la identidad del servidor. Esto asegura al cliente que está conectándose al servidor correcto y no a un impostor.
   - Encriptación: Una vez que se establece la conexión segura, los datos transmitidos están encriptados, lo que significa que aunque sean interceptados, no podrán ser leídos o alterados sin la clave de descifrado adecuada.
  
 
-## Cómo actúa TLS tras la apertura de una conexión TCP para iniciar una conversación HTTP desde el cliente:
-- Inicio de la Conexión TCP: Antes de que pueda comenzar cualquier intercambio de datos seguro utilizando TLS, primero se debe establecer una conexión básica entre el cliente (por ejemplo, tu navegador) y el servidor. Esta conexión se realiza a través del Protocolo de Control de Transmisión (TCP), que es un protocolo estándar para enviar datos por Internet. El TCP asegura que los paquetes de datos lleguen de manera íntegra y en orden.
+## Detalle de cómo actúa TLS tras la apertura de una conexión TCP para iniciar una conversación HTTP desde el cliente:
+- **Inicio de la Conexión TCP:** Antes de que pueda comenzar cualquier intercambio de datos seguro utilizando TLS, primero se debe establecer una conexión básica entre el cliente (por ejemplo, tu navegador) y el servidor. Esta conexión se realiza a través del Protocolo de Control de Transmisión (TCP), que es un protocolo estándar para enviar datos por Internet. El TCP asegura que los paquetes de datos lleguen de manera íntegra y en orden.
 
-- Negociación de TLS (El "Handshake"):
+- **Negociación de TLS (El "Handshake"):**
   - Una vez que la conexión TCP está establecida, el cliente y el servidor comienzan el proceso de "apretón de manos" de TLS. Este es el momento en que TLS realmente entra en juego.
-  - Durante el "handshake", el cliente y el servidor acuerdan los detalles de cómo se cifrarán y verificarán las comunicaciones. Esto incluye seleccionar una versión de TLS, elegir algoritmos de cifrado, y autenticar al servidor (y en algunos casos al cliente) mediante certificados digitales.
+    
+  - **Durante el "handshake", el cliente y el servidor acuerdan** los detalles de cómo se cifrarán y verificarán las comunicaciones. Esto incluye seleccionar una versión de TLS, elegir algoritmos de cifrado, y autenticar al servidor (y en algunos casos al cliente) mediante certificados digitales.
 
-- Intercambio de Claves: Parte del proceso de "handshake" implica el intercambio de claves de cifrado. Esto generalmente se hace utilizando un método de cifrado asimétrico para intercambiar una clave de sesión, que luego se utiliza para el cifrado simétrico de la comunicación durante esa sesión.
+- **Intercambio de Claves:** Parte del proceso de "handshake" implica el intercambio de claves de cifrado. Esto generalmente se hace utilizando un método de cifrado asimétrico para intercambiar una clave de sesión, que luego se utiliza para el cifrado simétrico de la comunicación durante esa sesión.
 
-- Comunicación  Segura HTTP sobre TLS:
+- **Comunicación  Segura HTTP sobre TLS:**
   - Una vez completado el "handshake", toda la comunicación entre el cliente y el servidor se cifra utilizando la clave de sesión acordada. Esto significa que cualquier dato enviado (como parte de una solicitud HTTP) está cifrado y solo puede ser descifrado por el receptor, que posee la clave correcta.
   - Esto convierte la conexión HTTP inicial, que es no segura por defecto, en una conexión HTTPS segura, donde "S" representa la capa de seguridad añadida por SSL/TLS.
 
-- Finalización de la Sesión TLS:
-  - Después de que la comunicación segura haya terminado, la sesión TLS se cierra de forma segura, y la conexión TCP subyacente también se puede cerrar si ya no es necesaria.
+- **Finalización de la Sesión TLS:** Después de que la comunicación segura haya terminado, la sesión TLS se cierra de forma segura, y la conexión TCP subyacente también se puede cerrar si ya no es necesaria.
 
 ![ttps://www.cloudflare.com/es-es/learning/ssl/transport-layer-security-tls/](https://cf-assets.www.cloudflare.com/slt3lc6tev37/5aYOr5erfyNBq20X5djTco/3c859532c91f25d961b2884bf521c1eb/tls-ssl-handshake.png)
 
