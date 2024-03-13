@@ -142,6 +142,7 @@ Hay herramientas de análisis automático de vulnerabilidades que comprueban est
 - **Feature-Policy:** Permite a los desarrolladores web especificar qué características y APIs pueden ser utilizadas por el navegador mientras se carga el contenido de la página, limitando así el riesgo de ciertos tipos de ataques.
 
 
+
 ## 2. Uso seguro de HTTP Cookies
 ```
 Set-Cookie: SessionID=abc123; Expires=Wed, 09 Jun 2024 10:18:14 GMT; Path=/; Secure; HttpOnly; SameSite=Strict
