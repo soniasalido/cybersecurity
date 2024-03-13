@@ -170,6 +170,51 @@ Set-Cookie: SessionID=abc123; Expires=Wed, 09 Jun 2024 10:18:14 GMT; Path=/; Sec
 - Atributo HttpOnly: Evita que el cliente pueda acceder a la cookie desde Javascript ( por ejemplo, con document.cookie). No tiene valor asociado, simplemente se incluye en la cabecera Set-Cookie.
 
 ## 3. HTTP Access Control (CORS)
+HTTP Access Control, CORS (Cross-Origin Resource Sharing, o Compartición de Recursos de Origen Cruzado), es un mecanismo que permite a los navegadores web solicitar recursos restringidos de un servidor en un dominio diferente al dominio desde el que se sirvió la primera página. Este mecanismo es crucial para la seguridad web, ya que los navegadores implementan por defecto, una política de seguridad del mismo origen (Same-Origin Policy - SOP) que restringe cómo los scripts cargados en una página web pueden hacer solicitudes a otros dominios. La política de mismo origen tiene como objetivo prevenir vulnerabilidades de seguridad, como los ataques de tipo Cross-Site Scripting (XSS) y de solicitud de falsificación entre sitios (CSRF).
+
+Una petición CORS la pueden realizar diferentes elementos del HTML:
+- Invocaciones a través de scritps XMLHttpRequest (Ajax) o mediante la API Fetch.
+- Fuentes para la web cargadas desde sitios externos.
+- Texturas WebGL.
+- Imágenes y vídeos dibujados en un canvas mediante drawimage().
+- Formas CSS (CSS Shapes) desde imágenes.
+
+**Cabeceras Importantes en CORS:**
+- Access-Control-Allow-Origin: Especifica los dominios que pueden acceder a los recursos.
+- Access-Control-Allow-Methods: Indica los métodos HTTP permitidos cuando se accede al recurso.
+- Access-Control-Allow-Headers: Se utiliza en las respuestas a solicitudes preflight para indicar qué cabeceras HTTP pueden ser utilizadas durante la solicitud real.
+- Access-Control-Max-Age: Indica cuánto tiempo puede ser cacheada la respuesta a una solicitud preflight.
+
+
+**Existen varios tipos de solicitudes CORS**, pero las más comunes son las "solicitudes simples" y las "solicitudes preflight":
+- Solicitudes Simples: Se consideran simples aquellas solicitudes que cumplen ciertos criterios (como usar solo ciertos métodos HTTP y cabeceras). Estas solicitudes se envían directamente al servidor objetivo, el cual incluye las cabeceras CORS en su respuesta para indicar si la solicitud es permitida. Requisitos:
+  -  El método HTTP es: GET, POST o HEAD.
+  -  La petición HTTP sólo puede tener añadidas manualmente algunas de las siguientes cabeceras, consideradas seguras:
+    -  Accept.
+    -  Accept-Language.
+    -  Content-Language.
+    -  Content-Type.
+    -  Range.
+  -  La cabecera Content-Type, de esar presente, sólo debe tomar alguno de los valores siguientes:
+    -  application/w-www-form-irl-encoded.
+    -  multipart/form-data.
+    -  text/plain.
+  En este caso, el navegador simplemente envía la cabecera HTTP Origin en la solicitud indicando el origen del recurso principal (normalmente, el HTML) y luego mira la cabecera de respuesta Access-Control-Allow-Origin y, dependiendo de su valor, bloquea o permite el acceso al recurso.
+
+- Solicitudes Preflight: Para solicitudes que no son simples (por ejemplo, aquellas que usan métodos HTTP como PUT o DELETE, o que incluyen cabeceras personalizadas), el navegador envía primero una solicitud "preflight" usando el método OPTIONS. Esta solicitud preflight pregunta al servidor si está bien enviar la solicitud real. El servidor responde con cabeceras que indican si las operaciones solicitadas están permitidas. Si el servidor responde afirmativamente, el navegador envía la solicitud real.
+
+
+
+**Funcionamiento de CORS:**
+- Solicitud Cross-Origin: El navegador del cliente detecta una solicitud a un recurso que está en un dominio diferente al de la página web actual. Esta es una petición cross-origin.
+
+- Envío de la Solicitud: El navegador envía la solicitud al servidor del dominio al que se está intentando acceder. Dependiendo del tipo de solicitud (simple o preflight), el navegador puede enviar una solicitud preflight primero, usando el método HTTP OPTIONS, para verificar si el servidor acepta solicitudes cross-origin desde el dominio de la página web.
+
+- Respuesta del Servidor: El servidor al que se está accediendo responde incluyendo cabeceras CORS específicas en su respuesta. Estas cabeceras indican si las solicitudes cross-origin están permitidas y, de ser así, bajo qué condiciones. Por ejemplo, la cabecera Access-Control-Allow-Origin puede indicar qué dominios están autorizados para acceder al recurso.
+
+- Evaluación por el Navegador: Cuando el navegador del cliente recibe la respuesta del servidor, evalúa las cabeceras CORS incluidas en dicha respuesta para determinar si la solicitud cross-origin debe ser autorizada. Si las cabeceras indican que el origen de la solicitud (es decir, el dominio de la página web que hace la solicitud) está permitido, el navegador procede a procesar la respuesta. Si no, el navegador bloqueará el acceso al recurso y mostrará un error en la consola de desarrollo, indicando que la solicitud ha sido bloqueada debido a la política de mismo origen.
+
+
 
 ## 4. Ataque a HTTP
 
