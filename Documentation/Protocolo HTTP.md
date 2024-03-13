@@ -128,20 +128,20 @@ Hay herramientas de análisis automático de vulnerabilidades que comprueban est
 - https://www.youtube.com/watch?v=x_FxJxKIXl8
 
 **Cabeceras de seguridad:**
-**Content Security Policy (CSP):** Esta cabecera ayuda a prevenir ataques de Cross-Site Scripting (XSS) y otros ataques basados en inyección. Permite a los administradores de sitios web especificar desde qué fuentes puede el navegador cargar recursos (como scripts, hojas de estilo, imágenes, etc.). De este modo, se evita la carga de recursos maliciosos.
+- **Content Security Policy (CSP):** Esta cabecera ayuda a prevenir ataques de Cross-Site Scripting (XSS) y otros ataques basados en inyección. Permite a los administradores de sitios web especificar desde qué fuentes puede el navegador cargar recursos (como scripts, hojas de estilo, imágenes, etc.). De este modo, se evita la carga de recursos maliciosos.
 
-**HTTP Strict Transport Security (HSTS):** Esta cabecera asegura que el navegador solo se comunique con el servidor mediante una conexión segura HTTPS. Si un sitio web ha sido visitado previamente, HSTS obliga a las conexiones futuras a realizarse a través de HTTPS, incluso si el usuario intenta acceder mediante HTTP.
+- **HTTP Strict Transport Security (HSTS):** Esta cabecera asegura que el navegador solo se comunique con el servidor mediante una conexión segura HTTPS. Si un sitio web ha sido visitado previamente, HSTS obliga a las conexiones futuras a realizarse a través de HTTPS, incluso si el usuario intenta acceder mediante HTTP.
 
-**X-Content-Type-Options:** nosniff: Esta cabecera evita que el navegador intente "adivinar" un tipo de contenido diferente al declarado en la cabecera Content-Type. Ayuda a prevenir ataques que se basan en la carga de archivos no seguros o maliciosos.
+- **X-Content-Type-Options:** nosniff: Esta cabecera evita que el navegador intente "adivinar" un tipo de contenido diferente al declarado en la cabecera Content-Type. Ayuda a prevenir ataques que se basan en la carga de archivos no seguros o maliciosos.
 
-**X-Frame-Options:** Esta cabecera puede ser usada para controlar si un navegador debe permitir que una página sea renderizada en un <frame>, <iframe>, <embed> o <object>. Ayuda a proteger contra ataques de clickjacking, en los cuales un atacante engaña a un usuario para que haga clic en algo diferente a lo que el usuario cree que está haciendo.
-**X-XSS-Protection:** Aunque en gran parte obsoleto y sustituido por CSP, esta cabecera estaba diseñada para habilitar el filtro de XSS incorporado en algunos navegadores web.
+- **X-Frame-Options:** Esta cabecera puede ser usada para controlar si un navegador debe permitir que una página sea renderizada en un <frame>, <iframe>, <embed> o <object>. Ayuda a proteger contra ataques de clickjacking, en los cuales un atacante engaña a un usuario para que haga clic en algo diferente a lo que el usuario cree que está haciendo.
+- **X-XSS-Protection:** Aunque en gran parte obsoleto y sustituido por CSP, esta cabecera estaba diseñada para habilitar el filtro de XSS incorporado en algunos navegadores web.
 
-**Referrer-Policy:** Esta cabecera controla la cantidad de información de referencia que se incluye con los enlaces. Ayuda a proteger la privacidad cuando se enlaza a otros sitios, controlando la información que se envía en los encabezados del Referer.
+- **Referrer-Policy:** Esta cabecera controla la cantidad de información de referencia que se incluye con los enlaces. Ayuda a proteger la privacidad cuando se enlaza a otros sitios, controlando la información que se envía en los encabezados del Referer.
 
-**Feature-Policy:** Permite a los desarrolladores web especificar qué características y APIs pueden ser utilizadas por el navegador mientras se carga el contenido de la página, limitando así el riesgo de ciertos tipos de ataques.
+- **Feature-Policy:** Permite a los desarrolladores web especificar qué características y APIs pueden ser utilizadas por el navegador mientras se carga el contenido de la página, limitando así el riesgo de ciertos tipos de ataques.
 
-
+xxxxx
 
 ## 2. Uso seguro de HTTP Cookies
 ```
@@ -168,7 +168,7 @@ Set-Cookie: SessionID=abc123; Expires=Wed, 09 Jun 2024 10:18:14 GMT; Path=/; Sec
 
 ## 3. HTTP Access Control (CORS)
 
-### 4. Ataque a HTTP
+## 4. Ataque a HTTP
 
 
 ## Inspecionando un Request HTTP
