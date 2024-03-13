@@ -189,16 +189,8 @@ Una petición CORS la pueden realizar diferentes elementos del HTML:
 **Existen varios tipos de solicitudes CORS**, pero las más comunes son las "solicitudes simples" y las "solicitudes preflight":
 - Solicitudes Simples: Se consideran simples aquellas solicitudes que cumplen ciertos criterios (como usar solo ciertos métodos HTTP y cabeceras). Estas solicitudes se envían directamente al servidor objetivo, el cual incluye las cabeceras CORS en su respuesta para indicar si la solicitud es permitida. Requisitos:
   -  El método HTTP es: GET, POST o HEAD.
-  -  La petición HTTP sólo puede tener añadidas manualmente algunas de las siguientes cabeceras, consideradas seguras:
-    - Accept.
-    - Accept-Language.
-    - Content-Language.
-    - Content-Type.
-    - Range.
-  -  La cabecera Content-Type, de esar presente, sólo debe tomar alguno de los valores siguientes:
-    -  application/w-www-form-irl-encoded.
-    -  multipart/form-data.
-    -  text/plain.
+  -  La petición HTTP sólo puede tener añadidas manualmente algunas de las siguientes cabeceras, consideradas seguras: Accept. Accept-Language. Content-Language. Content-Type. Range.
+  -  La cabecera Content-Type, de esar presente, sólo debe tomar alguno de los valores siguientes: application/w-www-form-irl-encoded. multipart/form-data. text/plain.
   En este caso, el navegador simplemente envía la cabecera HTTP Origin en la solicitud indicando el origen del recurso principal (normalmente, el HTML) y luego mira la cabecera de respuesta Access-Control-Allow-Origin y, dependiendo de su valor, bloquea o permite el acceso al recurso.
 
 - Solicitudes Preflight: Para solicitudes que no son simples (por ejemplo, aquellas que usan métodos HTTP como PUT o DELETE, o que incluyen cabeceras personalizadas), el navegador envía primero una solicitud "preflight" usando el método OPTIONS. Esta solicitud preflight pregunta al servidor si está bien enviar la solicitud real. El servidor responde con cabeceras que indican si las operaciones solicitadas están permitidas. Si el servidor responde afirmativamente, el navegador envía la solicitud real.
