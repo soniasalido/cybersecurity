@@ -121,6 +121,7 @@ https://www.cloudflare.com/es-es/learning/ssl/what-happens-in-a-tls-handshake/#:
 
 
 ## 1. Cabeceras de Seguridad en HTTP
+## 2. Uso seguro de HTTP Cookies
 Las cabeceras de seguridad en HTTP son una serie de ajustes en las cabeceras HTTP que proporcionan capas adicionales de seguridad a las aplicaciones web. Estas cabeceras, enviadas en las respuestas del servidor web al navegador del cliente, ayudan a mitigar una variedad de vulnerabilidades y ataques comunes.
 
 Hay herramientas de análisis automático de vulnerabilidades que comprueban estas cabeceras de seguridad. Pero se recomienda que se realice un pentester manual:
