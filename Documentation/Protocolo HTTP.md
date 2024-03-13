@@ -180,18 +180,19 @@ Una petición CORS la pueden realizar diferentes elementos del HTML:
 - Formas CSS (CSS Shapes) desde imágenes.
 
 **Cabeceras Importantes en CORS:**
-- Access-Control-Allow-Origin: Especifica los dominios que pueden acceder a los recursos.
+- Access-Control-Allow-Origin: Especifica los dominios que pueden acceder a los recursos. Tiene dos posibles valores:
+  - *: El recurso puede ser accedido desde cualquier origen.
+  - Un origen específico: Se restringe desde qué orígenes se puede consumir el recurso.
 - Access-Control-Allow-Methods: Indica los métodos HTTP permitidos cuando se accede al recurso.
 - Access-Control-Allow-Headers: Se utiliza en las respuestas a solicitudes preflight para indicar qué cabeceras HTTP pueden ser utilizadas durante la solicitud real.
 - Access-Control-Max-Age: Indica cuánto tiempo puede ser cacheada la respuesta a una solicitud preflight.
 
 
 **Existen varios tipos de solicitudes CORS**, pero las más comunes son las "solicitudes simples" y las "solicitudes preflight":
-- Solicitudes Simples: Se consideran simples aquellas solicitudes que cumplen ciertos criterios (como usar solo ciertos métodos HTTP y cabeceras). Estas solicitudes se envían directamente al servidor objetivo, el cual incluye las cabeceras CORS en su respuesta para indicar si la solicitud es permitida. Requisitos:
+- Solicitudes Simples: Se consideran simples aquellas solicitudes que cumplen ciertos criterios (como usar solo ciertos métodos HTTP y cabeceras). Estas solicitudes se envían directamente al servidor objetivo, el cual incluye las cabeceras CORS en su respuesta para indicar si la solicitud es permitida. En este caso, el navegador simplemente envía la cabecera HTTP Origin en la solicitud indicando el origen del recurso principal (normalmente, el HTML) y luego mira la cabecera de respuesta Access-Control-Allow-Origin y, dependiendo de su valor, bloquea o permite el acceso al recurso. Requisitos:
   -  El método HTTP es: GET, POST o HEAD.
   -  La petición HTTP sólo puede tener añadidas manualmente algunas de las siguientes cabeceras, consideradas seguras: Accept. Accept-Language. Content-Language. Content-Type. Range.
   -  La cabecera Content-Type, de esar presente, sólo debe tomar alguno de los valores siguientes: application/w-www-form-irl-encoded. multipart/form-data. text/plain.
-  En este caso, el navegador simplemente envía la cabecera HTTP Origin en la solicitud indicando el origen del recurso principal (normalmente, el HTML) y luego mira la cabecera de respuesta Access-Control-Allow-Origin y, dependiendo de su valor, bloquea o permite el acceso al recurso.
 
 - Solicitudes Preflight: Para solicitudes que no son simples (por ejemplo, aquellas que usan métodos HTTP como PUT o DELETE, o que incluyen cabeceras personalizadas), el navegador envía primero una solicitud "preflight" usando el método OPTIONS. Esta solicitud preflight pregunta al servidor si está bien enviar la solicitud real. El servidor responde con cabeceras que indican si las operaciones solicitadas están permitidas. Si el servidor responde afirmativamente, el navegador envía la solicitud real.
 
