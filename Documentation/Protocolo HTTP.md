@@ -194,7 +194,7 @@ Una petición CORS la pueden realizar diferentes elementos del HTML:
   -  La petición HTTP sólo puede tener añadidas manualmente algunas de las siguientes cabeceras, consideradas seguras: Accept. Accept-Language. Content-Language. Content-Type. Range.
   -  La cabecera Content-Type, de esar presente, sólo debe tomar alguno de los valores siguientes: application/w-www-form-irl-encoded. multipart/form-data. text/plain.
 
-- Solicitudes Preflight: Para solicitudes que no son simples (por ejemplo, aquellas que usan métodos HTTP como PUT o DELETE, o que incluyen cabeceras personalizadas), el navegador envía primero una solicitud "preflight" usando el método OPTIONS. Esta solicitud preflight pregunta al servidor si está bien enviar la solicitud real. El servidor responde con cabeceras que indican si las operaciones solicitadas están permitidas. Si el servidor responde afirmativamente, el navegador envía la solicitud real.
+- Solicitudes Preflight: Para solicitudes que no son simples (por ejemplo, aquellas que usan métodos HTTP como PUT o DELETE, o que incluyen cabeceras personalizadas), el navegador envía primero una solicitud "preflight" usando el método OPTIONS. Esta solicitud preflight pregunta al servidor si está bien enviar la solicitud real. El servidor responde con cabeceras que indican si las operaciones solicitadas están permitidas. Si el servidor responde afirmativamente, el navegador envía la solicitud real. Pag 236 - Hacking Etico. Jose L. Berenguel.
 
 
 
@@ -209,7 +209,23 @@ Una petición CORS la pueden realizar diferentes elementos del HTML:
 
 
 
-## 4. Ataque a HTTP
+## 4. Ataques a HTTP
+Un mal uso o control de las cabeceras permite que se abran vías de ataque abusando de las características del protocolo.
+
+Existen varios tipos de ataque que aprovechan las características de HTTP:
+- HTTP Host Header Injection: El ataque de inyección de cabecera Host se produce cuando un atacante manipula la cabecera Host de una petición HTTP. Dado que la cabecera Host se utiliza para determinar a qué dominio está dirigida la solicitud dentro del servidor, alterarla puede conducir a varios ataques, como:
+  - Redirecciones y enlaces maliciosos: El servidor podría usar el valor de la cabecera Host manipulada para generar redirecciones o enlaces dentro de las respuestas HTTP, llevando a los usuarios a sitios maliciosos.
+  - Vulnerabilidades en la lógica de la aplicación: Algunas aplicaciones web utilizan la cabecera Host para tomar decisiones de control de acceso o para generar contenido. Un valor manipulado podría causar comportamientos no previstos.
+  - Envenenamiento de caché: Si el servidor web o un proxy intermedio cachea contenido basándose en la cabecera Host manipulada, podría servir contenido incorrecto a usuarios legítimos.
+
+- HTTP Request / Response Splitting: Este ataque se basa en insertar caracteres de control de HTTP (como retornos de carro y nuevas líneas) en inputs que serán incluidos en una respuesta HTTP. Al hacerlo, un atacante puede dividir la respuesta HTTP en varias respuestas, permitiéndole inyectar contenido malicioso en las cabeceras o incluso en el cuerpo de la respuesta. Esto puede llevar a ataques como:
+  - Scripting entre sitios (XSS): Si el contenido malicioso inyectado se ejecuta en el contexto de un navegador, podría conducir a XSS.
+  - Secuestro de sesiones: Modificando las cabeceras de respuesta, un atacante podría manipular cookies y potencialmente secuestrar sesiones de usuario.
+
+- HTTP REquest Smuggling:El contrabando de solicitudes HTTP (HTTP Request Smuggling) explota discrepancias en el procesamiento de solicitudes entre diferentes servidores web o entre servidores web y proxies. El objetivo es "contrabandear" una solicitud HTTP dentro de otra, de manera que el servidor frontal (por ejemplo, un proxy) y el servidor de backend la traten de manera diferente. Esto puede resultar en varias explotaciones, como:
+  - Bypass de controles de seguridad: La solicitud contrabandeada podría evadir los controles de seguridad impuestos por el servidor frontal.
+  - Secuestro de sesiones: Similar al splitting, podría manipularse para inyectar o modificar cookies.
+  - Confusión y ataques de caché: Generar respuestas inesperadas que podrían ser cacheadas incorrectamente, afectando a usuarios legítimos.
 
 
 ## Inspecionando un Request HTTP
