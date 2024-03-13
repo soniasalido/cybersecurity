@@ -159,9 +159,11 @@ Set-Cookie: SessionID=abc123; Expires=Wed, 09 Jun 2024 10:18:14 GMT; Path=/; Sec
   - **Valores que puede tomar SameSite:**
     - Strict: Es la configuración que ofrece el nivel más alto de restricción para el envío de dicha cookie en solicitudes entre sitios. Cuando una cookie está configurada con SameSite=Strict, el navegador solo enviará la cookie en solicitudes que se originen directamente en el mismo dominio que la cookie, es decir, el navegador no enviará la cookie en solicitudes cross-site. Nota: subdominios sí es same-site. Puertos dentro de un mismo dominio o un dominio unsando un protocolo http frente a https --> Es cross-site.
 
-    - Lax: 
-    - 
-    - None:
+    - Lax: Proporciona un equilibrio entre seguridad y usabilidad, permitiendo cierto grado de integración entre sitios. El navegador enviará las cookies en peticiones cross-site sólo si se verfica:
+      - La petición es de tipo GET.
+      - Que se inicie por una acción del usuario, como hacer click en un enlace.
+
+    - None: La cookie se enviará en todas las solicitudes, tanto de sitios propios como de terceros. Para usar None, la cookie también debe marcarse como Secure, lo que significa que solo se enviará a través de conexiones seguras (HTTPS). 
 
 - Atributo Secure:
 
