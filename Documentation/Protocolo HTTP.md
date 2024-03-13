@@ -148,8 +148,9 @@ Hay herramientas de análisis automático de vulnerabilidades que comprueban est
 Set-Cookie: SessionID=abc123; Expires=Wed, 09 Jun 2024 10:18:14 GMT; Path=/; Secure; HttpOnly; SameSite=Strict
 ```
 
-- La primera línea de seguridad son los **atributos Path y Domain** ya que permiten restringir dónde se enviará la cookie.
-- Atributo SameSite:
+I. La primera línea de seguridad son los **atributos Path y Domain** ya que permiten restringir dónde se enviará la cookie.
+
+II. Atributo SameSite:
   - Antes de la introducción del atributo SameSite en las cookies, los navegadores web tenían un comportamiento predeterminado en cuanto al manejo de cookies que podía presentar riesgos de seguridad. Cuando un usuario visitaba un sitio web, el navegador almacenaba las cookies emitidas por ese sitio. Luego, cada vez que el usuario realizaba una solicitud a ese mismo sitio, independientemente de dónde se originara la solicitud (es decir, desde el mismo sitio o desde un dominio externo), el navegador enviaba automáticamente todas las cookies relevantes para ese dominio con la solicitud. Con este comportamiento se podían producir ataques
     - CSRF --> Si un usuario había iniciado sesión en su banco en línea y luego visitaba un sitio malicioso, ese sitio podría forzar al navegador del usuario a enviar una solicitud al sitio del banco con las cookies de sesión del usuario, efectuando potencialmente una transacción no deseada sin el conocimiento del usuario.
     - Problemas de privacidad, ya que se podía hacer un track del comportamiento de navegación del usuario.
