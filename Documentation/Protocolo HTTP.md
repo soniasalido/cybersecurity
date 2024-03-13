@@ -165,9 +165,9 @@ Set-Cookie: SessionID=abc123; Expires=Wed, 09 Jun 2024 10:18:14 GMT; Path=/; Sec
 
     - None: La cookie se enviará en todas las solicitudes, tanto de sitios propios como de terceros. Para usar None, la cookie también debe marcarse como Secure, lo que significa que solo se enviará a través de conexiones seguras (HTTPS). 
 
-- Atributo Secure:
+- Atributo Secure: Indica al cliente que la cookie sólo debe ser enviada a través de una comunicación segura como HTTPS. No tiene valor asociado, simplemente se incluye en la cabecera Set-Cookie.
 
-- Atributo HttpOnly:
+- Atributo HttpOnly: Evita que el cliente pueda acceder a la cookie desde Javascript ( por ejemplo, con document.cookie). No tiene valor asociado, simplemente se incluye en la cabecera Set-Cookie.
 
 ## 3. HTTP Access Control (CORS)
 
