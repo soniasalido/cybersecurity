@@ -190,11 +190,11 @@ Una petición CORS la pueden realizar diferentes elementos del HTML:
 - Solicitudes Simples: Se consideran simples aquellas solicitudes que cumplen ciertos criterios (como usar solo ciertos métodos HTTP y cabeceras). Estas solicitudes se envían directamente al servidor objetivo, el cual incluye las cabeceras CORS en su respuesta para indicar si la solicitud es permitida. Requisitos:
   -  El método HTTP es: GET, POST o HEAD.
   -  La petición HTTP sólo puede tener añadidas manualmente algunas de las siguientes cabeceras, consideradas seguras:
-    -  Accept.
-    -  Accept-Language.
-    -  Content-Language.
-    -  Content-Type.
-    -  Range.
+    - Accept.
+    - Accept-Language.
+    - Content-Language.
+    - Content-Type.
+    - Range.
   -  La cabecera Content-Type, de esar presente, sólo debe tomar alguno de los valores siguientes:
     -  application/w-www-form-irl-encoded.
     -  multipart/form-data.
