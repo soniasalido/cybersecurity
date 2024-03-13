@@ -43,8 +43,8 @@ Para superar esta limitación, se utilizan tecnologías como las cookies y el ma
   - Se sesión: No incluyen Expires o Max-age. Se eliminan tan pronto como el cliente se cierra.
   - Permanentes: No se eliminan al cerrar el cliente, sino cuando expira en la fecha indicada por el atributo Expires, o tras un peiodo de tiempo indicado en el atributo Max-Age.
 
-- Formato de la cabecera:
-  - nombre:valor.
+- **Formato de la cabecera:**
+  - Nombre:valor.
   - Expires | Max-Age.
   - Domain: Especifica a qué dominios y subdominios debe el cliente enviar la cookie. Si no se especifica, el cliente la enviará sólo al dominio del que la recibirá. Si se especifica un dominio, se enviará a este y a sus subdominios.
   - Path: Si se incluye, es una ruta que debe existir en la URL de la petición para enviar la cookie.
@@ -56,16 +56,16 @@ Para superar esta limitación, se utilizan tecnologías como las cookies y el ma
 ```
 Set-Cookie: SessionID=abc123; Expires=Wed, 09 Jun 2024 10:18:14 GMT; Path=/; Secure; HttpOnly
 ```
-- Nombre y Valor: SessionID=abc123. Aquí, "SessionID" es el nombre de la cookie y "abc123" es su valor, que es un identificador único de la sesión del usuario.
-- Expires: Expires=Wed, 09 Jun 2024 10:18:14 GMT. Este atributo especifica una fecha y hora en la que la cookie expirará y será eliminada automáticamente. En este ejemplo, la cookie está configurada para expirar el 9 de junio de 2024 a las 10:18:14 GMT.
-- Path: Path=/. Esto limita la cookie al directorio raíz ("/") del servidor, lo que significa que la cookie se enviará en todas las solicitudes a cualquier ruta del mismo dominio.
-- Secure: Este atributo indica que la cookie solo debe enviarse a través de una conexión segura (HTTPS). Esto ayuda a proteger los datos de la cookie durante el tránsito entre el navegador y el servidor.
-- HttpOnly: El atributo HttpOnly incrementa la seguridad al restringir el acceso a la cookie por parte de scripts del lado del cliente, como JavaScript. Esto ayuda a prevenir ataques de tipo Cross-Site Scripting (XSS).
+- **Nombre y Valor**: SessionID=abc123. Aquí, "SessionID" es el nombre de la cookie y "abc123" es su valor, que es un identificador único de la sesión del usuario.
+- **Expires**: Expires=Wed, 09 Jun 2024 10:18:14 GMT. Este atributo especifica una fecha y hora en la que la cookie expirará y será eliminada automáticamente. En este ejemplo, la cookie está configurada para expirar el 9 de junio de 2024 a las 10:18:14 GMT.
+- **Path: Path=/**. Esto limita la cookie al directorio raíz ("/") del servidor, lo que significa que la cookie se enviará en todas las solicitudes a cualquier ruta del mismo dominio.
+- **Secure**: Este atributo indica que la cookie solo debe enviarse a través de una conexión segura (HTTPS). Esto ayuda a proteger los datos de la cookie durante el tránsito entre el navegador y el servidor.
+- **HttpOnly**: El atributo HttpOnly incrementa la seguridad al restringir el acceso a la cookie por parte de scripts del lado del cliente, como JavaScript. Esto ayuda a prevenir ataques de tipo Cross-Site Scripting (XSS).
 
 # Seguridad en HTTP.
 Principal iniciativa para la seguridad en HTTP es HTTPS (HTTP Secure). HTTPS es el mismo protocolo HTTP en el que se utiliza un túnel cifrado de extremo aextremo entre el cliente y el servidor web.
 
-- HTTPS proporciona tres serivicios básicos:
+- **HTTPS proporciona tres serivicios básicos:**
   - Encripta la Información Enviada y Recibida: En lugar de enviar datos como texto que cualquiera puede leer, HTTPS los transforma en un código secreto. Esto es como si tus mensajes se convirtieran en un rompecabezas que solo tú y el sitio web al que estás accediendo pueden resolver. De esta manera, incluso si alguien logra interceptar lo que estás enviando o recibiendo, no podrá entenderlo.
   - Verifica Quién Está en el Otro Extremo de la Conexión: HTTPS actúa como un verificador de identidad para los sitios web. Utiliza algo llamado certificado digital para confirmar que el sitio web es realmente quien dice ser. Es como si el sitio web tuviera una identificación oficial que tú puedes verificar para asegurarte de que no estás hablando con un impostor.
   - Asegura que los Datos No se Han Modificado Durante la Transmisión: Garantiza que lo que envías y recibes llegue exactamente como se envió originalmente, sin cambios ni alteraciones por parte de terceros.
