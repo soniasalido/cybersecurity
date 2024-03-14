@@ -103,7 +103,15 @@ Leer las cinco citas famosas de '../hackable/flags/fi.php' usando solo la inclus
 ## Laboratorio LFI de DVWA - Nivel Bajo
 Usamo LFI para buscar el fichero que nos pide el reto:
 ![](capturas/local-file-inclusion-lab1-11.png)
+Vemos la ruta que tiene la página web, está alojada en: /var/ww/html/DVWA
 
+Probamos ahora en la dirección del reto:
+![](capturas/local-file-inclusion-lab1-12.png)
+Observamos que hemos llegado a resolver el reto:
+```
+1.) Bond. James Bond
+2.) My name is Sherlock Holmes. It is my business to know what other people don't know.
+```
 
 ### Análisis del tráfico durante el ataque LFI- LOW
 - Filtro para mostrar solicitudes GET | POST:
