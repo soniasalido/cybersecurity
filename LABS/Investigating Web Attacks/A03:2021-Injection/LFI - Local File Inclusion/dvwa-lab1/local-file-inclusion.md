@@ -18,6 +18,7 @@ Antes de intentar cualquier prueba de LFI, debes realizar una fase de reconocimi
 
 2. Análisis
 Identificar patrones de inclusión de archivos: Busca patrones en la aplicación donde se cargan archivos o se incluyen basados en la entrada del usuario. Por ejemplo, parámetros que cambian el contenido de la página basándose en un valor específico pueden ser un indicio.
+![](capturas/local-file-inclusion-lab1-2.png)
 
 3. Pruebas Focalizadas
 En lugar de probar a ciegas, utiliza tu análisis para probar de manera focalizada:
@@ -26,6 +27,9 @@ En lugar de probar a ciegas, utiliza tu análisis para probar de manera focaliza
 
 4. Automatización Inteligente
 Utiliza herramientas de automatización de manera inteligente. En lugar de simplemente alimentarlas con grandes listas y esperar resultados, ajusta sus configuraciones basándote en tu análisis para realizar pruebas más precisas y efectivas.
+
+6. Pruebas manuales:
+![](capturas/local-file-inclusion-lab1-3.png)
 
 
 ## Laboratorio LFI
