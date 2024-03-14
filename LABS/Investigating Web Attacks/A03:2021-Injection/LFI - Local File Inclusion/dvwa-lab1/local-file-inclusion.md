@@ -162,13 +162,13 @@ This allows for direct input into one of many PHP functions that will include th
 Depending on the web service configuration will depend if RFI is a possibility.
 ```
 
-Usamo LFI para buscar el fichero que nos pide el reto:
+Usamo LFI para buscar el fichero que nos pide el reto. A través de burpsuite solicitamos una carpeta cualquiera para ver el error que nos genera:
 ![](capturas/local-file-inclusion-lab1-11.png)
-Vemos la ruta que tiene la página web, está alojada en: /var/ww/html/DVWA
+A través del error que genera, vemos la ruta que tiene la página web, está alojada en: /var/ww/html/DVWA
 
-Probamos ahora en la dirección del reto:
+Ahora probamos con la direccion donde está alojada la web + la dirección del reto:
 ![](capturas/local-file-inclusion-lab1-12.png)
-Observamos que hemos llegado a resolver el reto: ?????????????
+Observamos que hemos llegado a resolver el reto de una manera:
 ![](capturas/local-file-inclusion-lab1-14.png)
 ```
 1.) Bond. James Bond
@@ -181,6 +181,12 @@ Observamos que hemos llegado a resolver el reto: ?????????????
 <!DOCTYPE html>
 ```
 
+-------------------------------------------
+Probamos a resulver el reto incluyendo: ../ para llegar a la dirección del reto.
+```
+../../hackable/flags/fi.php
+```
+![](capturas/local-file-inclusion-lab1-15.png)
 
 ### Análisis del tráfico durante el ataque LFI- LOW
 - Filtro para mostrar solicitudes GET | POST:
