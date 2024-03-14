@@ -85,6 +85,7 @@ Para mitigar el riesgo de LFI y asegurar que la inclusión dinámica se use de m
 ## Laboratorio LFI - Nivel Bajo
 Usamos DVWA, sección File Inclusión:
 Enlace para instalar DVWA: xxxxxxxxxxxxxx
+[](../../../dvwm-install-ubuntu.pdf)
 ![](capturas/local-file-inclusion-lab1-5.png)
 
 
