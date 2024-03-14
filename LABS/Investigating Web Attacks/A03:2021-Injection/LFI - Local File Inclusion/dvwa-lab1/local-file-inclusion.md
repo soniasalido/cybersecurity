@@ -90,23 +90,23 @@ Usamos DVWA, sección File Inclusión:
 
 ### Análisis del tráfico durante el ataque LFI- LOW
 - Filtro para mostrar solicitudes GET | POST:
-Un enfoque básico sería filtrar todo el tráfico HTTP para revisar manualmente las solicitudes que parezcan sospechosas. Aquí hay un ejemplo de filtro que puedes comenzar a usar, pero recuerda que la eficacia de este filtro depende de estar atento a patrones o cadenas específicas que podrían indicar un intento de LFI:
-```
-http.request.method == "GET" || http.request.method == "POST"
-```
-![](capturas/local-file-inclusion-lab1-8.png)
+  Un enfoque básico sería filtrar todo el tráfico HTTP para revisar manualmente las solicitudes que parezcan sospechosas. Aquí hay un ejemplo de filtro que puedes comenzar a usar, pero recuerda que la eficacia de este filtro depende de estar atento a patrones o cadenas específicas que podrían indicar un intento de LFI:
+  ```
+  http.request.method == "GET" || http.request.method == "POST"
+  ```
+  ![](capturas/local-file-inclusion-lab1-8.png)
 
 
 - Filtering for Web Traffic:
-```
-(http.request or tls.handshake.type eq 1) and !(ssdp)
-```
-![](capturas/local-file-inclusion-lab1-7.png)
-Wireshark debe mostrar los paquetes que sean solicitudes HTTP (http.request) o que sean de tipo handshake TLS/SSL donde el tipo de handshake es igual a 1 (tls.handshake.type eq 1). En el protocolo TLS (Transport Layer Security), el tipo de handshake igual a 1 corresponde a un mensaje de ClientHello, que es el primer paso en el proceso de establecimiento de una conexión TLS segura, donde el cliente indica al servidor los protocolos y las cifras que soporta.
-
-and !(ssdp): Esta parte del filtro excluye todos los paquetes que pertenecen al protocolo SSDP (Simple Service Discovery Protocol). El operador ! significa "no", por lo tanto, !(ssdp) se traduce como "no SSDP". SSDP es un protocolo utilizado para la descubierta de servicios UPnP (Universal Plug and Play) en una red local.
-
-Al combinar estos elementos, el filtro instruye a Wireshark para mostrar **todos los paquetes que son solicitudes HTTP o paquetes ClientHello de TLS, pero excluyendo aquellos que son parte del tráfico SSDP**. Este tipo de filtro puede ser útil para analizar y depurar el tráfico web y de establecimiento de conexiones seguras, mientras se ignora el tráfico relacionado con la detección de dispositivos y servicios UPnP en la red, el cual puede no ser relevante para el análisis en cuestión.
+  ```
+  (http.request or tls.handshake.type eq 1) and !(ssdp)
+  ```
+  ![](capturas/local-file-inclusion-lab1-7.png)
+  Wireshark debe mostrar los paquetes que sean solicitudes HTTP (http.request) o que sean de tipo handshake TLS/SSL donde el tipo de handshake es igual a 1 (tls.handshake.type eq 1). En el protocolo TLS (Transport Layer Security), el tipo de handshake igual a 1 corresponde a un mensaje de ClientHello, que es el primer paso en el proceso de establecimiento de una conexión TLS segura, donde el cliente indica al servidor los protocolos y las cifras que soporta.
+  
+  and !(ssdp): Esta parte del filtro excluye todos los paquetes que pertenecen al protocolo SSDP (Simple Service Discovery Protocol). El operador ! significa "no", por lo tanto, !(ssdp) se traduce como "no SSDP". SSDP es un protocolo utilizado para la descubierta de servicios UPnP (Universal Plug and Play) en una red local.
+  
+  Al combinar estos elementos, el filtro instruye a Wireshark para mostrar **todos los paquetes que son solicitudes HTTP o paquetes ClientHello de TLS, pero excluyendo aquellos que son parte del tráfico SSDP**. Este tipo de filtro puede ser útil para analizar y depurar el tráfico web y de establecimiento de conexiones seguras, mientras se ignora el tráfico relacionado con la detección de dispositivos y servicios UPnP en la red, el cual puede no ser relevante para el análisis en cuestión.
 
 
 
