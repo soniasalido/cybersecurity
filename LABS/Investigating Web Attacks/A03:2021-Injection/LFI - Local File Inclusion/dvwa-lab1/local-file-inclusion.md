@@ -245,3 +245,13 @@ Basic LFI and bypasses:
 ```
 ![](capturas/local-file-inclusion-lab1-16.png)
 
+
+## Laboratorio LFI - Nivel Alto
+En este nivel, se realiza una validación de entrada: Se realiza una comprobación para asegurar que el valor de $file cumple con ciertos criterios antes de que se permita su uso. La función fnmatch() se utiliza para comprobar si $file coincide con el patrón "file*", lo que significa que el nombre del archivo debe comenzar con "file". También se permite explícitamente el acceso a "include.php" al compararlo directamente con $file. Si $file no cumple con estas condiciones, se muestra un mensaje de error y se termina la ejecución del script con exit.
+
+```
+file:///etc/passwd
+```
+Acceso Directo al Sistema de Archivos: El esquema file:// seguido por la ruta absoluta /etc/passwd es una forma de especificar una URL que apunta a un archivo local en el sistema de archivos. Esto se utiliza para acceder a archivos locales directamente, y en contextos vulnerables, podría permitir el acceso a archivos críticos del sistema como /etc/passwd, que almacena información sobre las cuentas de usuario.
+![](capturas/local-file-inclusion-lab1-17.png)
+
