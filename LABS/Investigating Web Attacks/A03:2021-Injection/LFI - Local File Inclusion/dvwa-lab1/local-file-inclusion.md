@@ -92,6 +92,59 @@ Nota, el término "inclusión de archivos" no es lo mismo que "acceso arbitrario
 **Objetivo del laboratorio Local File Inclusion de DVWA:**
 Leer las cinco citas famosas de '../hackable/flags/fi.php' usando solo la inclusión de archivos.
 
+**View Source**
+```
+<?php
+
+// The page we wish to display
+$file = $_GET[ 'page' ];
+
+// Only allow include.php or file{1..3}.php
+if( $file != "include.php" && $file != "file1.php" && $file != "file2.php" && $file != "file3.php" ) {
+    // This isn't the page we want!
+    echo "ERROR: File not found!";
+    exit;
+}
+
+?>
+
+High File Inclusion Source
+<?php
+
+// The page we wish to display
+$file = $_GET[ 'page' ];
+
+// Input validation
+if( !fnmatch( "file*", $file ) && $file != "include.php" ) {
+    // This isn't the page we want!
+    echo "ERROR: File not found!";
+    exit;
+}
+
+?>
+
+Medium File Inclusion Source
+<?php
+
+// The page we wish to display
+$file = $_GET[ 'page' ];
+
+// Input validation
+$file = str_replace( array( "http://", "https://" ), "", $file );
+$file = str_replace( array( "../", "..\\" ), "", $file );
+
+?>
+
+Low File Inclusion Source
+<?php
+
+// The page we wish to display
+$file = $_GET[ 'page' ];
+
+?>
+```
+
+
 **Usamos DVWA, sección File Inclusión:**
 [Enlace para instalar DVWA](../../../dvwm-install-ubuntu.pdf)
 
@@ -101,6 +154,14 @@ Leer las cinco citas famosas de '../hackable/flags/fi.php' usando solo la inclus
 
 
 ## Laboratorio LFI de DVWA - Nivel Bajo
+**View Help**
+```
+Low Level
+This allows for direct input into one of many PHP functions that will include the content when executing.
+
+Depending on the web service configuration will depend if RFI is a possibility.
+```
+
 Usamo LFI para buscar el fichero que nos pide el reto:
 ![](capturas/local-file-inclusion-lab1-11.png)
 Vemos la ruta que tiene la página web, está alojada en: /var/ww/html/DVWA
