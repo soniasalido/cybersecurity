@@ -43,6 +43,7 @@ Lista de rutas de archivos comunes: Utilizaremos listas de rutas de archivos com
   ?config=../config/db.php
   ```
 ![](capturas/local-file-inclusion-lab1-3.png)
+![](capturas/local-file-inclusion-lab1-4.png)
 
 Uso de técnicas de encoding: Algunas aplicaciones usan técnicas para prevenir ataques LFI, como la validación de la ruta del archivo. En este caso, intentaremos evadir estas protecciones usando encoding URL o técnicas de codificación doble.
 
