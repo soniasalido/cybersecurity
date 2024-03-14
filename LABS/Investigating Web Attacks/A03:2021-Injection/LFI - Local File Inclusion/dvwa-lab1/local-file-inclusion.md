@@ -114,3 +114,6 @@ Si seguimos la secuencia HTML de uno de los paquetes en los que observamos el at
 
 **Importante:** Los filtros anteriores son puntos de partida generales. Un ataque LFI puede no ser evidente sin un análisis detallado y conocimiento del comportamiento normal de la aplicación. Además, muchos ataques modernos se realizan a través de HTTPS, lo que cifra la URL y el cuerpo de la solicitud, haciendo que la detección a través de Wireshark sea más desafiante sin configurar la descifrado de TLS (lo que requiere tener acceso a las claves de cifrado).
 
+## Laboratorio LFI - Nivel High
+Si ahora intentamos el ataque vemos que ya no se puede realizar un LFI tan sencillo:
+![](capturas/local-file-inclusion-lab1-10.png)
