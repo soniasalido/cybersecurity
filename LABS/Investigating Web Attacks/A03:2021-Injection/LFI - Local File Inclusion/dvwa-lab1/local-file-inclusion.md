@@ -88,3 +88,7 @@ Usamos DVWA, sección File Inclusión:
 ![](capturas/local-file-inclusion-lab1-5.png)
 
 
+### Análisis del tráfico durante el ataque LFI- Low
+
+
+
