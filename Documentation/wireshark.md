@@ -143,3 +143,18 @@ https://tools.netsa.cert.org/silk/download.html
 # DynamiteLab
 https://lab.dynamite.ai/
 
+
+## Filtros
+```
+http contains "<script>" || http contains "javascript:" || http contains "onerror=" || http contains "alert("
+
+http || tcp.port == 80 || tcp.port == 443
+
+(http.request or tls.handshake.type eq 1) and !(ssdp)
+
+http.response.code == 500
+
+http.request.uri contains "SELECT" || http.request.uri contains "UNION" || http.request.uri contains "DROP" || http.request.uri contains "OR '1'='1'"
+
+http.request.method == "POST"
+```
