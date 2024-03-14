@@ -86,7 +86,7 @@ Para mitigar el riesgo de LFI y asegurar que la inclusión dinámica se use de m
 Usamos DVWA, sección File Inclusión:
 [Enlace para instalar DVWA](../../../dvwm-install-ubuntu.pdf)
 ![](capturas/local-file-inclusion-lab1-5.png)
-
+![](capturas/local-file-inclusion-lab1-6.png)
 
 ### Análisis del tráfico durante el ataque LFI- Low
 
