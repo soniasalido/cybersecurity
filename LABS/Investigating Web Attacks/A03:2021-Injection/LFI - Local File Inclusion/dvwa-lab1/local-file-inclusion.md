@@ -98,7 +98,7 @@ Wireshark debe mostrar los paquetes que sean solicitudes HTTP (http.request) o q
 and !(ssdp): Esta parte del filtro excluye todos los paquetes que pertenecen al protocolo SSDP (Simple Service Discovery Protocol). El operador ! significa "no", por lo tanto, !(ssdp) se traduce como "no SSDP". SSDP es un protocolo utilizado para la descubierta de servicios UPnP (Universal Plug and Play) en una red local.
 
 Al combinar estos elementos, el filtro instruye a Wireshark para mostrar **todos los paquetes que son solicitudes HTTP o paquetes ClientHello de TLS, pero excluyendo aquellos que son parte del tráfico SSDP**. Este tipo de filtro puede ser útil para analizar y depurar el tráfico web y de establecimiento de conexiones seguras, mientras se ignora el tráfico relacionado con la detección de dispositivos y servicios UPnP en la red, el cual puede no ser relevante para el análisis en cuestión.
-
+![](capturas/local-file-inclusion-lab1-6.png)
 
 
 
