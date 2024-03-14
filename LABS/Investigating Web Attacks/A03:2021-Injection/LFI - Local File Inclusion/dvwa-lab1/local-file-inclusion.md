@@ -108,7 +108,7 @@ Vemos la ruta que tiene la página web, está alojada en: /var/ww/html/DVWA
 Probamos ahora en la dirección del reto:
 ![](capturas/local-file-inclusion-lab1-12.png)
 Observamos que hemos llegado a resolver el reto: ?????????????
-![](capturas/local-file-inclusion-lab1-13.png)
+![](capturas/local-file-inclusion-lab1-15.png)
 ```
 1.) Bond. James Bond
 2.) My name is Sherlock Holmes. It is my business to know what other people don't know.
