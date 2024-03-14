@@ -114,6 +114,28 @@ Si seguimos la secuencia HTML de uno de los paquetes en los que observamos el at
 
 **Importante:** Los filtros anteriores son puntos de partida generales. Un ataque LFI puede no ser evidente sin un análisis detallado y conocimiento del comportamiento normal de la aplicación. Además, muchos ataques modernos se realizan a través de HTTPS, lo que cifra la URL y el cuerpo de la solicitud, haciendo que la detección a través de Wireshark sea más desafiante sin configurar la descifrado de TLS (lo que requiere tener acceso a las claves de cifrado).
 
+## Encoding URL
+El uso de técnicas de encoding para evadir protecciones contra ataques de Inclusión de Archivos Locales (LFI) se refiere a alterar la manera en que se envían las rutas de archivos o comandos maliciosos en una solicitud, con el objetivo de sortear los mecanismos de seguridad que una aplicación web pueda tener para validar las entradas. La idea es que, aunque la aplicación esté diseñada para detectar y bloquear ciertos patrones de entrada que sugieran un intento de ataque LFI, al modificar la forma en que se codifican estos datos, es posible que no sean reconocidos como maliciosos por los filtros de seguridad.
+
+El encoding URL consiste en reemplazar caracteres no alfanuméricos con su representación en porcentaje seguido de dos dígitos hexadecimales, basado en su código ASCII. Por ejemplo, el carácter .. (dos puntos), que se usa en ataques LFI para navegar a directorios superiores, se codificaría como %2E%2E. Si una aplicación web solo bloquea la cadena ".." pero no su versión codificada, el ataque podría pasar inadvertido.
+
+## Codificación Doble
+La codificación doble lleva el concepto de encoding URL un paso más allá, aplicando el proceso de encoding dos veces. Esto puede ser útil si el sistema de seguridad decodifica la entrada una vez para la validación. Por ejemplo, el carácter /, que se utiliza para separar directorios en una ruta de archivo, se codifica como %2F en encoding URL. En codificación doble, %2F se convertiría en %252F (donde %25 representa el carácter % codificado). Si el sistema de seguridad solo decodifica una vez, vería %2F como la entrada, la cual podría no estar bloqueada, permitiendo que la solicitud maliciosa sea procesada por la aplicación.
+
+**Ejemplo Práctico:**
+Supongamos que queremos acceder al archivo /etc/passwd utilizando una vulnerabilidad LFI en una aplicación que valida la entrada para evitar la inclusión de rutas de archivo. Una solicitud normal podría ser:
+```
+http://example.com/index.php?page=../../etc/passwd
+```
+Si la aplicación bloquea esta solicitud debido a la presencia de ../, podrías intentar codificar la URL:
+```
+http://example.com/index.php?page=%2E%2E%2F%2E%2E%2Fetc%2Fpasswd
+```
+Y si esto está también bloqueado debido a los mecanismos de seguridad que decodifican una vez, podrías intentar la codificación doble:
+```
+http://example.com/index.php?page=%252E%252E%252F%252E%252E%252Fetc%252Fpasswd
+```
+
 ## Laboratorio LFI - Nivel High
 Si ahora intentamos el ataque vemos que ya no se puede realizar un LFI tan sencillo:
 ![](capturas/local-file-inclusion-lab1-10.png)
