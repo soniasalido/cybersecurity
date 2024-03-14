@@ -242,6 +242,6 @@ Basic LFI and bypasses:
 ```
 ....//....//hackable/flags/fi.php
 ....\/....\/hackable/flags/fi.php
-``
+```
 ![](capturas/local-file-inclusion-lab1-16.png)
 
