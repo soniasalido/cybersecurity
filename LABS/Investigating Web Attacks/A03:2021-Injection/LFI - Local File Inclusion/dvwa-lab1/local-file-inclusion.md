@@ -109,7 +109,7 @@ Usamos DVWA, sección File Inclusión:
   Al combinar estos elementos, el filtro instruye a Wireshark para mostrar **todos los paquetes que son solicitudes HTTP o paquetes ClientHello de TLS, pero excluyendo aquellos que son parte del tráfico SSDP**. Este tipo de filtro puede ser útil para analizar y depurar el tráfico web y de establecimiento de conexiones seguras, mientras se ignora el tráfico relacionado con la detección de dispositivos y servicios UPnP en la red, el cual puede no ser relevante para el análisis en cuestión.
 
 
-Si seguimos la secuencia HTML de uno de los paquetes en los que observamos el ataque (page=/etc/shadow), veremos que en la respuesta se exfiltran datos del servidor donde está alojada la página:
+Si seguimos la secuencia HTML de uno de los paquetes en los que observamos el ataque (page=/etc/passwd), veremos que en la respuesta se exfiltran datos del servidor donde está alojada la página:
 ![](capturas/local-file-inclusion-lab1-9.png)
 
 **Importante:** Los filtros anteriores son puntos de partida generales. Un ataque LFI puede no ser evidente sin un análisis detallado y conocimiento del comportamiento normal de la aplicación. Además, muchos ataques modernos se realizan a través de HTTPS, lo que cifra la URL y el cuerpo de la solicitud, haciendo que la detección a través de Wireshark sea más desafiante sin configurar la descifrado de TLS (lo que requiere tener acceso a las claves de cifrado).
