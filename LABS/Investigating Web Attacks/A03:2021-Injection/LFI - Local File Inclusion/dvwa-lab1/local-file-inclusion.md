@@ -88,8 +88,16 @@ Usamos DVWA, sección File Inclusión:
 ![](capturas/local-file-inclusion-lab1-5.png)
 ![](capturas/local-file-inclusion-lab1-6.png)
 
-### Análisis del tráfico durante el ataque LFI- Low
-Filtro Wireshark:
+### Análisis del tráfico durante el ataque LFI- LOW
+- Filtro para mostrar solicitudes GET | POST:
+Un enfoque básico sería filtrar todo el tráfico HTTP para revisar manualmente las solicitudes que parezcan sospechosas. Aquí hay un ejemplo de filtro que puedes comenzar a usar, pero recuerda que la eficacia de este filtro depende de estar atento a patrones o cadenas específicas que podrían indicar un intento de LFI:
+```
+http.request.method == "GET" || http.request.method == "POST"
+```
+![](capturas/local-file-inclusion-lab1-8.png)
+
+
+- Filtering for Web Traffic:
 ```
 (http.request or tls.handshake.type eq 1) and !(ssdp)
 ```
