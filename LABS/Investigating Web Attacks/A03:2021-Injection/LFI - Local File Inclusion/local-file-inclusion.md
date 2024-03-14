@@ -9,5 +9,24 @@ En esencia, estos problemas de seguridad ocurren cuando una aplicación web no v
 
 En las versiones más recientes del OWASP Top 10, LFI pertenece a la categoría "A03:2021-Injection". La categoría de Inyección incluye una variedad de ataques donde los atacantes envían datos maliciosos a un intérprete como parte de un comando o consulta, con la intención de hacer ejecutar o interpretar estos datos de manera no intencionada. 
 
+## Análisis de la web víctima
+1. Reconocimiento y Mapeo
+Antes de intentar cualquier prueba de LFI, debes realizar una fase de reconocimiento para entender la estructura de la aplicación web, identificar los puntos de entrada (como parámetros de URL, campos de formulario, etc.) y comprender cómo procesa la entrada la aplicación. Esto puede incluir:
+- Revisar el código fuente: Si tienes acceso, revisar el código puede revelar directamente dónde se podrían incluir archivos basados en la entrada del usuario.
+- Mapear la aplicación: Utilizar herramientas como Burp Suite para automatizar la navegación y mapear todas las funcionalidades y parámetros de la aplicación.
+![](capturas/local-file-inclusion-lab1.png)
+
+2. Análisis
+Identificar patrones de inclusión de archivos: Busca patrones en la aplicación donde se cargan archivos o se incluyen basados en la entrada del usuario. Por ejemplo, parámetros que cambian el contenido de la página basándose en un valor específico pueden ser un indicio.
+
+3. Pruebas Focalizadas
+En lugar de probar a ciegas, utiliza tu análisis para probar de manera focalizada:
+- Pruebas dirigidas con listas de archivos sensibles: Basado en el tipo de servidor y la configuración conocida, crea o utiliza listas de rutas de archivos que son comúnmente accesibles y sensibles en esos entornos.
+- Encodings y técnicas de evasión: Si sospechas de la presencia de filtros o validaciones, aplica técnicas de encoding de manera dirigida basándote en cómo crees que la aplicación está manejando la entrada.
+
+4. Automatización Inteligente
+Utiliza herramientas de automatización de manera inteligente. En lugar de simplemente alimentarlas con grandes listas y esperar resultados, ajusta sus configuraciones basándote en tu análisis para realizar pruebas más precisas y efectivas.
+
+
 ## Laboratorio LFI
 Usamos DVWA, sección File Inclusión:
