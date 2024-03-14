@@ -92,12 +92,17 @@ Nota, el término "inclusión de archivos" no es lo mismo que "acceso arbitrario
 **Objetivo del laboratorio Local File Inclusion de DVWA:**
 Leer las cinco citas famosas de '../hackable/flags/fi.php' usando solo la inclusión de archivos.
 
+**Usamos DVWA, sección File Inclusión:**
+[Enlace para instalar DVWA](../../../dvwm-install-ubuntu.pdf)
+
+![](capturas/local-file-inclusion-lab1-5.png)
+
+![](capturas/local-file-inclusion-lab1-6.png)
+
 
 ## Laboratorio LFI de DVWA - Nivel Bajo
-Usamos DVWA, sección File Inclusión:
-[Enlace para instalar DVWA](../../../dvwm-install-ubuntu.pdf)
-![](capturas/local-file-inclusion-lab1-5.png)
-![](capturas/local-file-inclusion-lab1-6.png)
+Usamo LFI para buscar el fichero que nos pide el reto:
+![](capturas/local-file-inclusion-lab1-11.png)
 
 
 ### Análisis del tráfico durante el ataque LFI- LOW
