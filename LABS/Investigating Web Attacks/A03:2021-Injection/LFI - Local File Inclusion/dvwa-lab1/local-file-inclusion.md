@@ -108,10 +108,16 @@ Vemos la ruta que tiene la página web, está alojada en: /var/ww/html/DVWA
 Probamos ahora en la dirección del reto:
 ![](capturas/local-file-inclusion-lab1-12.png)
 Observamos que hemos llegado a resolver el reto:
+![](capturas/local-file-inclusion-lab1-13.png)
 ```
 1.) Bond. James Bond
 2.) My name is Sherlock Holmes. It is my business to know what other people don't know.
+<br /><br />
+--LINE HIDDEN ;)--
+<br /><br />
+4.) The pool on the roof must have a leak.
 ```
+![](capturas/local-file-inclusion-lab1-14.png)
 
 ### Análisis del tráfico durante el ataque LFI- LOW
 - Filtro para mostrar solicitudes GET | POST:
