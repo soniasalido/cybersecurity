@@ -64,7 +64,7 @@ La vulnerabilidad de Inclusión de Archivos Locales (LFI) no surge simplemente p
 
 **Inclusión Dinámica:** La "inclusión dinámica" se refiere a la capacidad de una aplicación web de incluir archivos en tiempo de ejecución basándose en la entrada del usuario o en condiciones específicas. Este es un comportamiento común y necesario en muchas aplicaciones web, utilizado para cargar bibliotecas, módulos, plantillas, o incluso contenido específico basado en la navegación del usuario. Los mecanismos de inclusión dinámica, como include, require en PHP, permiten a los desarrolladores construir aplicaciones flexibles y modulares.
 
-***Ejemplo de Falta de Control:**
+**Ejemplo de Falta de Control:**
 Considera un script PHP que incluye un archivo basado en un parámetro de la URL:
 ```
 include($_GET['file'] . '.php');
@@ -82,9 +82,9 @@ Para mitigar el riesgo de LFI y asegurar que la inclusión dinámica se use de m
 - Desactivar la Ejecución de Código en Directorios Subidos: Configura el servidor web para desactivar la ejecución de scripts en directorios donde los usuarios pueden subir archivos, reduciendo el riesgo de ejecución de código malicioso.
 
 
-## Laboratorio LFI
+## Laboratorio LFI - Nivel Bajo
 Usamos DVWA, sección File Inclusión:
 Enlace para instalar DVWA: xxxxxxxxxxxxxx
-
+![](capturas/local-file-inclusion-lab1-5.png)
 
 
