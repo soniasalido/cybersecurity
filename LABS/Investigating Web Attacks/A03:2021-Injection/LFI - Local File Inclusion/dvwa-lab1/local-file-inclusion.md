@@ -82,11 +82,23 @@ Para mitigar el riesgo de LFI y asegurar que la inclusión dinámica se use de m
 - Desactivar la Ejecución de Código en Directorios Subidos: Configura el servidor web para desactivar la ejecución de scripts en directorios donde los usuarios pueden subir archivos, reduciendo el riesgo de ejecución de código malicioso.
 
 
-## Laboratorio LFI - Nivel Bajo
+# Laboratorio LFI de DVWA
+**Acerca del laboratorio:** Algunas aplicaciones web permiten al usuario especificar entradas que se utilizan directamente en flujos de archivos o permiten al usuario subir archivos al servidor. En un momento posterior, la aplicación web accede a la entrada proporcionada por el usuario en el contexto de la aplicación web. Al hacer esto, la aplicación web está permitiendo la posibilidad de ejecución de archivos maliciosos. Si el archivo elegido para incluirse es local en la máquina objetivo, se denomina "Inclusión de Archivos Locales (LFI)". Pero los archivos también pueden incluirse en otras máquinas, en cuyo caso el ataque es una "Inclusión de Archivos Remotos (RFI)".
+
+Cuando RFI no es una opción, usar otra vulnerabilidad con LFI (como la subida de archivos y la transversalidad de directorios) a menudo puede lograr el mismo efecto.
+
+Nota, el término "inclusión de archivos" no es lo mismo que "acceso arbitrario a archivos" o "divulgación de archivos".
+
+**Objetivo del laboratorio Local File Inclusion de DVWA:**
+Leer las cinco citas famosas de '../hackable/flags/fi.php' usando solo la inclusión de archivos.
+
+
+## Laboratorio LFI de DVWA - Nivel Bajo
 Usamos DVWA, sección File Inclusión:
 [Enlace para instalar DVWA](../../../dvwm-install-ubuntu.pdf)
 ![](capturas/local-file-inclusion-lab1-5.png)
 ![](capturas/local-file-inclusion-lab1-6.png)
+
 
 ### Análisis del tráfico durante el ataque LFI- LOW
 - Filtro para mostrar solicitudes GET | POST:
