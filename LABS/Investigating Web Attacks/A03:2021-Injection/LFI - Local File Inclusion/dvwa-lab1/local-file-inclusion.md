@@ -107,7 +107,7 @@ Vemos la ruta que tiene la página web, está alojada en: /var/ww/html/DVWA
 
 Probamos ahora en la dirección del reto:
 ![](capturas/local-file-inclusion-lab1-12.png)
-Observamos que hemos llegado a resolver el reto:
+Observamos que hemos llegado a resolver el reto: ?????????????
 ![](capturas/local-file-inclusion-lab1-13.png)
 ```
 1.) Bond. James Bond
