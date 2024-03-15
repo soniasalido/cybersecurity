@@ -55,5 +55,8 @@ Para usar php://input se necesita:
 - Que el método sea POST. Si es GET hay que cambiarlo.
 - Cambiar el valor del parámetro de la URL donde se indica el documento a mostrar por php://input.
 - Incluir en el payload a enviar el código deseado.
+
+La página se carga mostrando el resultado de ejecutar el comando que se indicó en la request →
 ![](capturas/envolturas-3.png)
 
+![](capturas/envolturas-4.png)
