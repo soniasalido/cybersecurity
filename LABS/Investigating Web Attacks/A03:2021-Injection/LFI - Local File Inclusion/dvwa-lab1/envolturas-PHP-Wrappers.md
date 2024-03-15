@@ -40,7 +40,7 @@ Esta URL hace lo siguiente:
 Cuando accedemos a esta URL, el servidor debería devolver la versión codificada en Base64 del contenido de include.php. Luego, podemos decodificar el contenido de Base64 para obtener el código fuente PHP original.
 ![](capturas/envolturas.png)
 ![](capturas/envolturas-1.png)
-![](capturas/envolturas.2.png)
+![](capturas/envolturas-2.png)
 
 Wrappers y protocolos soportados en PHP: https://www.php.net/manual/en/wrappers.php
 
@@ -55,5 +55,5 @@ Para usar php://input se necesita:
 - Que el método sea POST. Si es GET hay que cambiarlo.
 - Cambiar el valor del parámetro de la URL donde se indica el documento a mostrar por php://input.
 - Incluir en el payload a enviar el código deseado.
-![](capturas/envolturas.3.png)
+![](capturas/envolturas-3.png)
 
