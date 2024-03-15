@@ -1,4 +1,4 @@
-# Ejecución remota de código (RCE) mediante log poisoning
+# Ejecución remota de código (RCE) mediante Log Poisoning
 Para realizar un ataque de ejecución remota de código aprovechando una vulnerabilidad de inclusión de archivos locales (LFI), es necesario encontrar una manera de introducir código malicioso en un archivo del sistema, de tal forma que este código pueda ejecutarse en un momento posterior cuando se acceda al archivo mediante LFI. Una estrategia para conseguir esto es mediante el "envenenamiento de registros" o "log poisoning".
 
 Este enfoque se basa en dos requisitos principales:
