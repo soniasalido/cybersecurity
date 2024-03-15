@@ -314,9 +314,16 @@ file:///etc/passwd
 Acceso Directo al Sistema de Archivos: El esquema file:// seguido por la ruta absoluta /etc/passwd es una forma de especificar una URL que apunta a un archivo local en el sistema de archivos. Esto se utiliza para acceder a archivos locales directamente, y en contextos vulnerables, podría permitir el acceso a archivos críticos del sistema como /etc/passwd, que almacena información sobre las cuentas de usuario.
 ![](capturas/local-file-inclusion-lab1-17.png)
 
+```
+url para hacer el LFI: http://localhost/DVWA/vulnerabilities/fi/?page=file1.php
+url a la que quiero llegar: http://localhost/DVWA/hackable/flags/fi.php
+```
 
 Intentamos llegar al fichero que nos propone el reto: Como sabemos la ruta de dónde se almacena la web, podemos llegar a través de un enlace absoluto:
 ```
 file:///var/www/html/DVWA/hackable/flags/fi.php
 ```
 ![](capturas/local-file-inclusion-lab1-18.png)
+
+
+¿Cómo puedo llegar a esa carpeta a través de una ruta relativa, realizando: ../../hackable/flags/fi.php?
