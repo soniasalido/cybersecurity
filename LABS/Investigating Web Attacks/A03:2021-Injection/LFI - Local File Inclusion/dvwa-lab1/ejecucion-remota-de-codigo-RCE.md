@@ -27,8 +27,14 @@ User-Agent: <?php system('uname -a'); ?>
 ![](capturas/ejecucion-remota-de-codigo.png)
 
 
+Una vez que se ha conseguido la capacidad de lograr la ejecución de código remoto (RCE), es posible obtener una shell reversa en la víctima. [IR → xxx]
 
-
-
-
+**Otros ficheros interensantes para hacer log poisoing:**
+- /var/log/auth.log → Es posible envenenarlo tratando de autenticarse con un usuario como:
+  ```
+  ssh <?  php system($_GET['cmd']);?>@ip_victima
+- /var/log/vsftp.log → Si el servidor vsftp está instalado, se puede acceder al servidor FTP poniendo como nombre de usuario un código FTP.
+- /var/log/apache2/error.log
+- /proc/self/environ → Se puede escribir en el haciendo solicitudes HTTP y modificando la cabecera User-Agent para escribir código PHP.
+- /proc/self/fd → Se puede intentar escribir en él modificando la cabecera Referer.
 
