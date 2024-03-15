@@ -207,7 +207,7 @@ This allows for direct input into one of many PHP functions that will include th
 Depending on the web service configuration will depend if RFI is a possibility.
 ```
 
-Usamo LFI para buscar el fichero que nos pide el reto. A través de burpsuite solicitamos una carpeta cualquiera para ver el error que nos genera:
+Usamos LFI para buscar el fichero que nos pide el reto. A través de burpsuite solicitamos una carpeta cualquiera para ver el error que nos genera:
 ![](capturas/local-file-inclusion-lab1-11.png)
 A través del error que genera, vemos la ruta que tiene la página web, está alojada en: /var/ww/html/DVWA
 
@@ -282,6 +282,14 @@ http://example.com/index.php?page=%252E%252E%252F%252E%252E%252Fetc%252Fpasswd
 ```
 
 ## Laboratorio LFI - Nivel Medio
+```
+Medium Level:
+The developer has read up on some of the issues with LFI/RFI, and decided to filter the input. However, the patterns that are used, isn't enough.
+
+Spoiler: LFI: Possible, due to it only cycling through the pattern matching once.
+			Spoiler: RFI: PHP Streams.
+```
+
 Si aumentamos el nivel a medio y ahora intentamos el ataque vemos que ya no se puede realizar un LFI tan sencillo.
 Basic LFI and bypasses:
 ```
@@ -292,6 +300,12 @@ Basic LFI and bypasses:
 
 
 ## Laboratorio LFI - Nivel Alto
+```
+Low Level
+This allows for direct input into one of many PHP functions that will include the content when executing.
+
+Depending on the web service configuration will depend if RFI is a possibility.
+```
 En este nivel, se realiza una validación de entrada: Se realiza una comprobación para asegurar que el valor de $file cumple con ciertos criterios antes de que se permita su uso. La función fnmatch() se utiliza para comprobar si $file coincide con el patrón "file*", lo que significa que el nombre del archivo debe comenzar con "file". También se permite explícitamente el acceso a "include.php" al compararlo directamente con $file. Si $file no cumple con estas condiciones, se muestra un mensaje de error y se termina la ejecución del script con exit.
 
 ```
