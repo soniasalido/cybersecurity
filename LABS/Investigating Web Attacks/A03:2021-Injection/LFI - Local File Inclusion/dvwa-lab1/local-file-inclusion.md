@@ -327,3 +327,23 @@ file:///var/www/html/DVWA/hackable/flags/fi.php
 
 
 ¿Cómo puedo llegar a esa carpeta a través de una ruta relativa, realizando: ../../hackable/flags/fi.php?
+
+
+## Cómo evitar la vulnerabilidad LFI
+- Evitar usar datos que pueda manipular el usuario como argumentos para funciones de inlcusión dinámica.
+- Usar algún sistema de codificación o correspondencia con los archivos que se inluyen dinámicamente.
+- Usar un array o lista cerrada de archivos permitidos, lista blanca o white list, y no permitir nada más que esos archivos.
+- Validación rigurosa de la entrada del usuario:
+	- Valida todas las entradas del usuario en el servidor, utilizando listas blancas (no listas negras) para asegurarte de que solo se permitan valores esperados y seguros.
+	- Evita utilizar la entrada directa del usuario para referenciar archivos o comandos.
+- Uso de rutas absolutas: Utiliza rutas absolutas en lugar de rutas relativas para incluir archivos y verifica la existencia del archivo antes de incluirlo.
+- Limitar los archivos incluibles: Restringe los archivos que pueden ser incluidos a un conjunto seguro predefinido. Considera el uso de una capa de abstracción para el acceso a archivos que mapee solicitudes a archivos específicos, evitando el uso directo de las rutas o nombres de archivo suministrados por el usuario.
+- Desactivar allow_url_include: En el archivo de configuración php.ini, asegúrate de que la directiva allow_url_include esté establecida en Off. Esto previene que se incluyan archivos remotos, una práctica que puede ser explotada en combinación con vulnerabilidades LFI para ejecutar código arbitrario.
+- Aplicar la política de menor privilegio: Ejecuta tu servidor web y los scripts PHP con el menor nivel de privilegios necesario. Esto limita las posibilidades de que un ataque LFI pueda leer o ejecutar archivos sensibles.
+- Realizar auditorías y pruebas de seguridad regularmente: Utiliza herramientas de escaneo de vulnerabilidades y realiza pruebas de penetración para identificar y remediar posibles vulnerabilidades LFI y otras debilidades de seguridad.
+- Actualizar y parchear regularmente: Mantén actualizado el software del servidor, el sistema operativo, y las aplicaciones para asegurar que las vulnerabilidades conocidas estén corregidas.
+- Uso de funciones y APIs seguras: Prefiere el uso de funciones y APIs que ofrezcan maneras seguras de manejar archivos e incluir contenido, como las que previenen automáticamente la inclusión de archivos no deseados o peligrosos.
+
+**No funciona:** controla la extensión del fichero a cargar. Obligar a que la extensión sea .php puede saltarse con mecanismos como la inyección de null byte (caracter &00).
+/etc/passwd
+/etc/passwd%00.php
