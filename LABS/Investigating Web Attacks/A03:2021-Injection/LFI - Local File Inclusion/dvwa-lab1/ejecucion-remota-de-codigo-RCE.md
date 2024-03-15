@@ -21,7 +21,7 @@ User-Agent: <?php system('uname -a'); ?>
 
 **Proceso para el RCE:**
 
-1º Es neceario insertar código malicioso en algún fichero del servidor; para ello, el mecanismo mñas sencillo y habitual es envenenando algún fichero de log (log poisoning): Se envía una petición modificada por el proxy al servidor cambiando el User-Agent.
+1º Es neceario insertar código malicioso en algún fichero del servidor; para ello, el mecanismo más sencillo y habitual es envenenando algún fichero de log (log poisoning): Se envía una petición modificada por el proxy al servidor cambiando el User-Agent.
 
 2º Es necesario poder acceder al fichero invenenado y cargarlo en la web para que el código sea ejecutado por el servidor. Esto se condigue mediante LFI: Accedemos vía LFI al archivo /var/log/apache2/access.log. AL cargar este fichero, el servidor Apache ejecutará el contenido como código, interpretará el código PHP inyectado en la cabecera User-Agent.
 
