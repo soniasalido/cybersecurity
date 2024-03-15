@@ -290,8 +290,7 @@ Spoiler: LFI: Possible, due to it only cycling through the pattern matching once
 			Spoiler: RFI: PHP Streams.
 ```
 
-Si aumentamos el nivel a medio y ahora intentamos el ataque vemos que ya no se puede realizar un LFI tan sencillo.
-Basic LFI and bypasses:
+Si aumentamos el nivel a medio y ahora intentamos el ataque vemos que ya no se puede realizar un LFI tan sencillo. Ahora para conseguir el reto necesitamos hacer: **Basic LFI and bypasses:**
 ```
 ....//....//hackable/flags/fi.php
 ....\/....\/hackable/flags/fi.php
@@ -301,10 +300,11 @@ Basic LFI and bypasses:
 
 ## Laboratorio LFI - Nivel Alto
 ```
-Low Level
-This allows for direct input into one of many PHP functions that will include the content when executing.
+High Leve
+The developer has had enough. They decided to only allow certain files to be used. However as there are multiple files with the same basename, they use a wildcard to include them all.
 
-Depending on the web service configuration will depend if RFI is a possibility.
+Spoiler: LFI: The filename only has start with a certain value..
+			Spoiler: RFI: Need to link in another vulnerability, such as file upload.
 ```
 En este nivel, se realiza una validación de entrada: Se realiza una comprobación para asegurar que el valor de $file cumple con ciertos criterios antes de que se permita su uso. La función fnmatch() se utiliza para comprobar si $file coincide con el patrón "file*", lo que significa que el nombre del archivo debe comenzar con "file". También se permite explícitamente el acceso a "include.php" al compararlo directamente con $file. Si $file no cumple con estas condiciones, se muestra un mensaje de error y se termina la ejecución del script con exit.
 
