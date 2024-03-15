@@ -41,3 +41,19 @@ Cuando accedemos a esta URL, el servidor debería devolver la versión codificad
 ![](capturas/envolturas.png)
 ![](capturas/envolturas-1.png)
 ![](capturas/envolturas.2.png)
+
+Wrappers y protocolos soportados en PHP: https://www.php.net/manual/en/wrappers.php
+
+
+## php://input
+El wrapper php://input en PHP es una forma de acceder a los datos crudos de una solicitud POST. Lo interesante de este envoltorio es que nos permite leer los datos enviados a través de una solicitud POST sin procesar, es decir, tal como se reciben antes de que cualquier manipulación o codificación específica de PHP se aplique a estos datos. Esto puede ser útil para varias cosas, incluido el manejo personalizado de los datos de entrada.
+
+Este envoltorio permite mandar un payload vía POST. 
+
+Para usar php://input se necesita:
+- Requiere que la opción allow_url_include en php.ini esté activada.
+- Que el método sea POST. Si es GET hay que cambiarlo.
+- Cambiar el valor del parámetro de la URL donde se indica el documento a mostrar por php://input.
+- Incluir en el payload a enviar el código deseado.
+![](capturas/envolturas.3.png)
+
