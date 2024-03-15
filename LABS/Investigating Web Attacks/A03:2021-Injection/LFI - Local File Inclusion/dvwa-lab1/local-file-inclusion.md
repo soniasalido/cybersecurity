@@ -146,8 +146,8 @@ Some web applications allow the user to specify input that is used directly into
 When RFI is not an option. using another vulnerability with LFI (such as file upload and directory traversal) can often achieve the same effect.
 Note, the term "file inclusion" is not the same as "arbitrary file access" or "file disclosure".
 
-Objective
-Read all five famous quotes from '../hackable/flags/fi.php' using only the file inclusion.
+** Objective:** Read all five famous quotes from '../hackable/flags/fi.php' using only the file inclusion.
+
 ----------------------------------------------------------------------
 **Acerca del laboratorio:**
 Algunas aplicaciones web permiten al usuario especificar entradas que se utilizan directamente en flujos de archivos o permiten al usuario subir archivos al servidor. En un momento posterior, la aplicación web accede a la entrada proporcionada por el usuario en el contexto de la aplicación web. Al hacer esto, la aplicación web está permitiendo la posibilidad de ejecución de archivos maliciosos. Si el archivo elegido para incluirse es local en la máquina objetivo, se denomina "Inclusión de Archivos Locales (LFI)". Pero los archivos también pueden incluirse en otras máquinas, en cuyo caso el ataque es una "Inclusión de Archivos Remotos (RFI)".
