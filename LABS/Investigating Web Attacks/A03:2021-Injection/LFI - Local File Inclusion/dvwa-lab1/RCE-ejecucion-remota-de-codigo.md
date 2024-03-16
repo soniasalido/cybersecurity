@@ -27,7 +27,7 @@ User-Agent: <?php system('uname -a'); ?>
 ![](capturas/ejecucion-remota-de-codigo.png)
 
 
-Una vez que se ha conseguido la capacidad de lograr la ejecución de código remoto (RCE), es posible obtener una shell reversa en la víctima. [IR → xxx]
+Una vez que se ha conseguido la capacidad de lograr la ejecución de código remoto (RCE), es posible obtener una shell reversa en la víctima. [Shell Reversas](https://github.com/soniasalido/cybersecurity/blob/main/Documentation/Acciones%20en%20una%20m%C3%A1quina%20explotada/acciones-en-una-maquina-explotada.md)
 
 **Otros ficheros interensantes para hacer log poisoing:**
 - /var/log/auth.log → Es posible envenenarlo tratando de autenticarse con un usuario como:
