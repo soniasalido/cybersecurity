@@ -263,3 +263,5 @@ https://www.youtube.com/watch?v=DqE6DxqJg8Q
 
 ---------------------------
 
+
+# 2. Shell Reversas en Windows con PowerShell
