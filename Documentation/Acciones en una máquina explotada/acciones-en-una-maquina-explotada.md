@@ -100,7 +100,7 @@ El comando ncat es una versión mejorada y más segura de Netcat, incluida en la
   ```
   Explicación de los parámetros:
   -e /bin/bash le dice a ncat que ejecute /bin/bash y envíe su entrada/salida a través de la conexión de red, estableciendo así una shell reversa.
-  -l xxxxx
+  -l para que actúe en modo de escucha (listen).
   ![](capturas/shell-reversa-ncat-mv-victima.png)
 
 - Establecido los dos puntos anteriores ya podemos desde la máquina atacante usar la shell reversa:
