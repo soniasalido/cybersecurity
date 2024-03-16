@@ -63,6 +63,9 @@ Vemos que se ha conseguido finalizar la shell reversa:
 ![](capturas/remote-file-inclusion-6.png)
 ![](capturas/remote-file-inclusion-7.png)
 ![](capturas/remote-file-inclusion-8.png)
+
+Otro detalle de otra secuencia:
+
 ![](capturas/remote-file-inclusion-9.png)
 
 
