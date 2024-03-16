@@ -218,7 +218,7 @@ Métodos para la Estabilización de Shells Reversas
     ```
 3. Python para una TTY completa: Si Python está disponible en el sistema objetivo, puedes intentar obtener una TTY completa con:
 ```
-python2 -c 'import pty; pty.spawn("/bin/bash")'
+python3 -c 'import pty; pty.spawn("/bin/bash")'
 ```
 Este comando intenta iniciar una nueva instancia de bash dentro de una pseudo-terminal (PTY), lo que mejora significativamente la interactividad. tras esto se pasa el proceso a segundo plano con CTRL+Z y se ejecuta los siguientes comandos en nuestra terminal:
 ```
