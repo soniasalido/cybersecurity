@@ -200,3 +200,27 @@ En resumen, este comando inicia una nueva instancia de Bash que redirige su entr
 
 
 ### 1.6 Estabilización de la shell
+La estabilización de una shell reversa es un paso crucial después de haber obtenido acceso a una shell en un sistema objetivo. Las shells reversas iniciales pueden ser inestables, limitadas, y carecer de funcionalidades completas, como la capacidad de usar teclas especiales (Tab para completar comandos, flechas para navegar por el historial de comandos, etc.), no tener un prompt propiamente configurado, o incluso desconectarse inesperadamente. La estabilización mejora la interacción con la shell, haciéndola más parecida a una sesión de terminal local.
+
+Métodos para la Estabilización de Shells Reversas
+1. Usar un shell interactivo adecuado: Si hemos obtenido una shell mediante /bin/sh, intentaremos cambiar a un shell más interactiva como por ejemplo, /bin/bash con el comando:
+```
+/bin/bash -i
+```
+2. Utilizar herramientas como script, rlwrap, o stty:
+  - script: Ejecutar script /dev/null puede hacer que la shell sea interactiva permitiendo el uso de teclas especiales.
+    ```
+    script /dev/null
+    ```
+  - rlwrap: Al envolver la shell reversa con rlwrap, se obtiene un historial de comandos y la capacidad de edición de línea.
+    ```
+    rlwrap nc -lvnp 4444
+    ```
+3. Python para una TTY completa: Si Python está disponible en el sistema objetivo, puedes intentar obtener una TTY completa con:
+```
+python2 -c 'import pty; pty.spawn("/bin/bash")'
+```
+Este comando intenta iniciar una nueva instancia de bash dentro de una pseudo-terminal (PTY), lo que mejora significativamente la interactividad. tras esto se pasa el proceso a segundo plano con CTRL+Z y se ejecuta los siguientes comandos en nuestra terminal:
+```
+$ stty raw -echo; fg
+```
