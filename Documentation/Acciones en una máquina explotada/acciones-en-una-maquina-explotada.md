@@ -1,3 +1,25 @@
-# cybersecurity
+# Acciones en la máquina explotada
+Cuando un atacante logra vulnerar una máquina, su siguiente objetivo es, normalmente, obtener un acceso más profundo al sistema. Esto se logra comúnmente obteniendo una consola de comandos o shell, que permite al atacante ejecutar comandos directamente en el sistema afectado. La obtención de una shell es una etapa crucial en la cadena de ataque porque facilita una amplia gama de actividades maliciosas durante la intrusión y el proceso de post-explotación:
+- Escalada de privilegios: Una vez dentro del sistema, el atacante buscará formas de obtener privilegios más elevados (root o administrador), lo que le permitiría tener control total sobre el sistema. Esto se puede lograr explotando vulnerabilidades del sistema, configuraciones inseguras, o abusando de políticas de permisos incorrectamente configuradas.
+- Evasión de la detección: Los atacantes emplean técnicas para evitar ser detectados por el software de seguridad. Esto puede incluir la desactivación de antivirus y firewalls, o el uso de técnicas de living off the land, que aprovechan las herramientas y procesos legítimos del sistema para realizar acciones maliciosas sin ser detectados.
+- Movimiento lateral: Una vez que se tiene control sobre un sistema, el atacante puede buscar acceder a otros sistemas en la misma red para expandir su control. Esto puede involucrar el robo de credenciales, el uso de vulnerabilidades en el software de otros sistemas, o el aprovechamiento de configuraciones de red inseguras.
+- Exfiltración de datos: Los atacantes a menudo buscan robar datos sensibles del sistema comprometido. Esto puede incluir información personal, datos financieros, propiedad intelectual, o cualquier otro tipo de información que pueda ser de valor. Los datos pueden ser transferidos a servidores controlados por el atacante a través de la red.
+- Implantación de malware: Con acceso al sistema, los atacantes pueden instalar diversos tipos de malware, incluyendo ransomware, troyanos, o keyloggers. Esto puede tener múltiples propósitos, desde el espionaje continuo hasta la monetización directa a través de ransomware o el robo de credenciales.
+- Establecimiento de persistencia: Para mantener el acceso al sistema comprometido incluso después de reinicios o cambios de contraseña, los atacantes suelen establecer mecanismos de persistencia. Esto puede involucrar la creación de cuentas de usuario falsas, la modificación de archivos de inicio, o la explotación de servicios del sistema para ejecutar automáticamente malware.
 
-Poco a poco iré subiendo material que es una pena que se quede en local.
+## Obteniendo una shell reversa.
+Una shell reversa es un tipo de shell o interfaz de línea de comandos que se utiliza para controlar sistemas remotos de forma encubierta. A diferencia de una shell tradicional, donde el atacante debe iniciar la conexión al sistema objetivo para enviar comandos, en una shell reversa es el sistema comprometido el que establece la conexión de vuelta hacia la máquina del atacante. Esto permite al atacante ejecutar comandos en el sistema comprometido como si estuviera sentado directamente frente a él, pero a través de una conexión de red.
+
+El término "reversa" viene del hecho de que se invierte la dirección habitual de la conexión de red: en lugar de que el atacante se conecte al objetivo, es el objetivo el que se conecta al atacante. Esto tiene una ventaja táctica significativa, ya que muchas redes están configuradas para permitir salidas de conexiones hacia internet, pero bloquean conexiones entrantes no solicitadas como medida de seguridad. La shell reversa, por lo tanto, puede sortear estos controles al iniciar la conexión desde el interior de la red comprometida.
+
+![Reverse Shell Attack with Netcat](https://miro.medium.com/v2/resize:fit:839/1*k5kQuDcgISOgpDNuD36MEQ.jpeg)
+
+El proceso para establecer una shell reversa generalmente involucra los siguientes pasos:
+- Preparación: El atacante prepara un servidor o escucha en su sistema que pueda aceptar conexiones entrantes. Esto se hace usando herramientas específicas o escribiendo código que abra un puerto y espere conexiones.
+- Ejecución de la carga útil: El sistema objetivo ejecuta una carga útil maliciosa (a menudo a través de un exploit o engaño) que está diseñada para abrir una shell reversa. Esta carga útil está configurada para conectarse a la dirección IP y puerto que el atacante ha preparado.
+- Establecimiento de la conexión: Una vez ejecutada la carga útil, el sistema comprometido inicia una conexión de red hacia el atacante y establece una shell. A través de esta shell, el atacante puede enviar comandos al sistema comprometido.
+- Control y comando: El atacante ahora tiene control sobre el sistema objetivo y puede ejecutar comandos de manera remota, realizar acciones maliciosas como las descritas anteriormente (escalada de privilegios, movimiento lateral, etc.).
+
+
+
+El web https://www.revshells.com/ es una herramienta en línea que genera shell reversas. Permite a los usuarios configurar y obtener comandos para establecer shells reversas. Ofrece opciones para diferentes sistemas operativos y shells, incluyendo ajustes avanzados como el tipo de codificación.
