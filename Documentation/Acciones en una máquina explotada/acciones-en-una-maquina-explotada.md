@@ -90,7 +90,7 @@ El comando ncat es una versión mejorada y más segura de Netcat, incluida en la
 
 - En la máquina atacante: Configurar ncat para que escuche en un puerto específico. Esto se hace para esperar una conexión entrante desde la máquina objetivo.
   ```
-  ncat 192.168.0.200 8000
+  ncat 192.168.1.73 8000
   ```
   ![](capturas/shell-reversa-ncat-mv-atacante.png)
 
