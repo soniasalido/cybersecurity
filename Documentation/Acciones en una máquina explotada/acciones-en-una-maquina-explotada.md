@@ -256,5 +256,10 @@ Después de ajustar la configuración de tu terminal, usas fg para traer la shel
 Cómo Volver a la Normalidad Después
 Trabajar en modo raw y sin eco puede hacer que tu terminal local actúe de manera extraña una vez que termines con la shell reversa. Por eso, después de cerrar la conexión reversa, a menudo necesitas ejecutar reset en tu terminal local para restaurar su comportamiento normal. Si no ves lo que escribes después de salir, es porque -echo aún está activo, y reset solucionará esto.
 
+???????????????????????
+
+What Happens In a "Shell Upgrade"?:
+https://www.youtube.com/watch?v=DqE6DxqJg8Q
+
 ---------------------------
 
