@@ -64,3 +64,12 @@ Vemos que se ha conseguido finalizar la shell reversa:
 ![](capturas/remote-file-inclusion-7.png)
 ![](capturas/remote-file-inclusion-8.png)
 ![](capturas/remote-file-inclusion-9.png)
+
+
+**Filtros wireshark para descubrir RFI:**
+```
+http || tcp.port == 80 || tcp.port == 443
+(http.request or tls.handshake.type eq 1) and !(ssdp)
+http.request.method == "POST"
+http.request.method == "GET"
+```
