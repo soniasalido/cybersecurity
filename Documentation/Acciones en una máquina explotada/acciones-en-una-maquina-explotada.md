@@ -13,13 +13,13 @@ Una shell reversa es un tipo de shell o interfaz de línea de comandos que se ut
 El término "reversa" viene del hecho de que se invierte la dirección habitual de la conexión de red: en lugar de que el atacante se conecte al objetivo, es el objetivo el que se conecta al atacante. Esto tiene una ventaja táctica significativa, ya que muchas redes están configuradas para permitir salidas de conexiones hacia internet, pero bloquean conexiones entrantes no solicitadas como medida de seguridad. La shell reversa, por lo tanto, puede sortear estos controles al iniciar la conexión desde el interior de la red comprometida.
 
 ![Reverse Shell Attack with Netcat](https://miro.medium.com/v2/resize:fit:839/1*k5kQuDcgISOgpDNuD36MEQ.jpeg)
+Fuente de la foto: https://blog.bugzero.io/reverse-shell-attack-with-netcat-c21f520deff9
 
 El proceso para establecer una shell reversa generalmente involucra los siguientes pasos:
 - Preparación: El atacante prepara un servidor o escucha en su sistema que pueda aceptar conexiones entrantes. Esto se hace usando herramientas específicas o escribiendo código que abra un puerto y espere conexiones.
 - Ejecución de la carga útil: El sistema objetivo ejecuta una carga útil maliciosa (a menudo a través de un exploit o engaño) que está diseñada para abrir una shell reversa. Esta carga útil está configurada para conectarse a la dirección IP y puerto que el atacante ha preparado.
 - Establecimiento de la conexión: Una vez ejecutada la carga útil, el sistema comprometido inicia una conexión de red hacia el atacante y establece una shell. A través de esta shell, el atacante puede enviar comandos al sistema comprometido.
 - Control y comando: El atacante ahora tiene control sobre el sistema objetivo y puede ejecutar comandos de manera remota, realizar acciones maliciosas como las descritas anteriormente (escalada de privilegios, movimiento lateral, etc.).
-
 
 
 El web https://www.revshells.com/ es una herramienta en línea que genera shell reversas. Permite a los usuarios configurar y obtener comandos para establecer shells reversas. Ofrece opciones para diferentes sistemas operativos y shells, incluyendo ajustes avanzados como el tipo de codificación.
