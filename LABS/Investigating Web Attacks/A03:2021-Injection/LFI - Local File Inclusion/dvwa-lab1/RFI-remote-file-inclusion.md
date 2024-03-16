@@ -57,3 +57,10 @@ Utilizamos la URL en la que conseguimos hacer LFI:
 ### En la máquina atacante
 Vemos que se ha conseguido finalizar la shell reversa:
 ![](capturas/remote-file-inclusion-5.png)
+
+
+## Viendo el ataque con Wireshark
+![](capturas/remote-file-inclusion-6.png)
+![](capturas/remote-file-inclusion-7.png)
+![](capturas/remote-file-inclusion-8.png)
+![](capturas/remote-file-inclusion-9.png)
