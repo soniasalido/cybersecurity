@@ -24,14 +24,14 @@ El proceso para establecer una shell reversa generalmente involucra los siguient
 
 El web https://www.revshells.com/ es una herramienta en línea que genera shell reversas. Permite a los usuarios configurar y obtener comandos para establecer shells reversas. Ofrece opciones para diferentes sistemas operativos y shells, incluyendo ajustes avanzados como el tipo de codificación.
 
-### 1. Shell Reversas en Linux con netcat y bash
+## 1. Shell Reversas en Linux
 nc, abreviatura de Netcat, es una herramienta de red versátil conocida como el "navaja suiza" de la administración de redes. Permite leer y escribir datos a través de conexiones de red usando los protocolos TCP o UDP. Es ampliamente utilizada para la creación de conexiones de red entre hosts, ya sea para fines de diagnóstico, administración de redes, o como parte de técnicas de explotación o pruebas de seguridad. Netcat es capaz de abrir conexiones, escuchar puertos TCP o UDP, conectarlos, enviar datos sin procesar a través de las redes, y crear túneles. Es altamente valorado por su simplicidad y efectividad en tareas como la transferencia de archivos, la creación de backdoors, o como cliente y servidor para pruebas de red. 
 
 **Otras herramientas más modernas como:**
 - ncat: Ncat es una herramienta de red mejorada y más segura que es parte del proyecto Nmap. Ofrece funcionalidades similares a Netcat, pero con características adicionales como el cifrado SSL para conexiones seguras, autenticación fácil, y la capacidad de manejar simultáneamente múltiples conexiones. Ncat es versátil para la depuración de redes, exploración, y como un componente en scripts de pruebas de seguridad. Su diseño moderno y las mejoras de seguridad lo hacen una elección preferente para profesionales de la seguridad informática.
 - Socat: Es una herramienta de línea de comandos que permite el establecimiento de dos flujos de datos bidireccionales. Es similar a Netcat pero más complejo y potente, ofreciendo características como la creación de túneles seguros, la transferencia de datos entre diferentes protocolos (por ejemplo, TCP, UDP, UNIX sockets), y la posibilidad de ejecutar scripts o comandos a través de su conexión. Socat es ampliamente utilizado por administradores de sistemas y profesionales de seguridad para diagnósticos de red, pruebas, y como un potente instrumento para diversas tareas de red.
 
-#### 1.1 Ejemplo con netcat y ficheros FIFO
+### 1.1 Ejemplo con netcat y ficheros FIFO
 Para obtner la shell reversa, usaremos netcat tanto en el atacante (kali) como en la víctima (ubuntu):
 - En la máquina atacante (Kali), iniciamos Netcat en modo escucha especificando un puerto:
   ```
@@ -62,7 +62,7 @@ Para obtner la shell reversa, usaremos netcat tanto en el atacante (kali) como e
 Recomendación: Ver Exploring mkfifo / nc Reverse Shell ➡ https://www.youtube.com/watch?v=_q_ZCy-hEqg
 
 
-#### 1.2 Ejemplo con netcat y bash
+### 1.2 Ejemplo con netcat y bash
 Usaremos bash en la máquina víctima para obtener la shell reversa:
 - En la máquina atacante se utilizará necat en modo escucha, igual que en el punto anterior:
   ```
@@ -85,7 +85,7 @@ Recomendación: Ver Exploring bash Reverse Shell ➡ https://www.youtube.com/wat
 
 **Nota:** Es interesante apreciar los diferentes promopts de las dos shells reversas.
 
-#### 1.3 Ejemplo con ncat
+### 1.3 Ejemplo con ncat
 El comando ncat es una versión mejorada y más segura de Netcat, incluida en la suite de herramientas Nmap. El comando ncat o nc, también se pueden utilizar para crear puertas traseras en nuestros sistemas. La puerta se crearía de la siguiente manera:
 
 - En la máquina atacante: Configurar ncat para que escuche en un puerto específico. Esto se hace para esperar una conexión entrante desde la máquina objetivo.
@@ -124,8 +124,37 @@ El comando ncat es una versión mejorada y más segura de Netcat, incluida en la
 Aunque ncat y netcat pueden utilizarse para propósitos similares y a menudo son mencionados de manera intercambiable, 
 
 
+### 1.4 Ejemplo con socat
+socat es una herramienta de línea de comandos para UNIX y UNIX-like systems que se utiliza para el reenvío bidireccional de flujos de datos. Su nombre proviene de "SOcket CAT", y, similar a netcat (nc) y ncat, puede establecer conexiones de red entre dos puntos, pero socat es mucho más poderoso y versátil.
+
+A diferencia de netcat, que principalmente maneja conexiones TCP y UDP, socat puede manejar una amplia variedad de interfaces de comunicación, incluyendo:
+- TCP y UDP sobre redes IPv4 e IPv6.
+- TTYs (terminales), permitiendo la interacción con programas que requieren una terminal.
+- Archivos y pipes.
+- Interfaces Sockets UNIX.
+- Sockets de datagramas UNIX.
+- Sockets de secuencias UNIX.
+- SSL/TLS para conexiones cifradas.
+- Proxy SOCKS4 y SOCKS5.
+- y muchos más....
+
+Esta herramienta puede ser utilizada para una amplia gama de propósitos, desde tareas simples como transferir datos entre puertos hasta operaciones complejas como el establecimiento de túneles cifrados, la ejecución de comandos a través de sockets UNIX, o incluso la manipulación de tráfico a través de proxies. socat es excepcionalmente poderoso en situaciones que requieren la conversión entre diferentes tipos de interfaces o la manipulación detallada de opciones de socket.
 
 
 
 
+### Estabilización de la shell
+En la máquina atancante:
+- Primero necesitamos configurar socat para que escuche en un puerto específico y espere conexiones entrantes. Debemos asegurarte de que el puerto esté abierto y accesible desde la red en la que se encuentra el cliente objetivo.
+  ```
+  socat file:`tty`,raw,echo=0 TCP-LISTEN:4444
+  ```
+  Este comando configura socat para escuchar en el puerto 4444. file:tty,raw,echo=0 configura socat para usar la terminal actual, desactivando el eco para que no veas duplicados los comandos que escribimos.
+  ![](capturas/shell-reversa-socat-mv-atacante.png)
+
+- En la máquina víctima: Ejecutaremos otro comando socat para conectar con tu servidor y establecer la shell reversa. Necesitaremos la dirección IP de la máquina atacante.
+  ![](capturas/shell-reversa-socat-mv-victima.png)
+
+- Comenzamos la explotación:
+  ![](capturas/shell-reversa-socat-mv-atacante-2.png)
 
