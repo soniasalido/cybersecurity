@@ -204,9 +204,9 @@ La estabilización de una shell reversa es un paso crucial después de haber obt
 
 Métodos para la Estabilización de Shells Reversas
 1. Usar un shell interactivo adecuado: Si hemos obtenido una shell mediante /bin/sh, intentaremos cambiar a un shell más interactiva como por ejemplo, /bin/bash con el comando:
-```
-/bin/bash -i
-```
+  ```
+  /bin/bash -i
+  ```
 2. Utilizar herramientas como script, rlwrap, o stty:
   - script: Ejecutar script /dev/null puede hacer que la shell sea interactiva permitiendo el uso de teclas especiales.
     ```
