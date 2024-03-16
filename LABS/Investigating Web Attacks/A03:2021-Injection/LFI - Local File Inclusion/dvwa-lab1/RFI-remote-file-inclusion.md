@@ -1,5 +1,8 @@
 La Inclusión de Archivos Remotos (RFI) es una versión de la Inclusión de Archivos Locales (LFI) que extiende su alcance. En RFI, un atacante logra hacer que la aplicación web, que se está ejecutando en el servidor, establezca una conexión con un servidor externo para cargar e incluir un archivo de este, en lugar de usar un archivo que ya esté en el propio servidor como sucede con LFI.
 
+![](capturas/lfi-vs-rfi.png)
+
+
 En cuanto a las dificultades asociadas con el envenenamiento de registros (log poisoning) al explotar LFI:
 - La cuenta bajo la cual se ejecuta la aplicación web en el servidor necesita tener los derechos suficientes para leer los archivos de registro (logs) que el atacante desea manipular.
 - Es necesario descubrir una forma de insertar código dañino en esos archivos de registro locales, lo cual podría lograrse mediante acciones como enviar ciertas cabeceras HTTP o generar errores intencionadamente.
