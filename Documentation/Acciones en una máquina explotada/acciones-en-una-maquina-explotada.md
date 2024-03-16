@@ -31,7 +31,7 @@ nc, abreviatura de Netcat, es una herramienta de red versátil conocida como el 
 - ncat: Ncat es una herramienta de red mejorada y más segura que es parte del proyecto Nmap. Ofrece funcionalidades similares a Netcat, pero con características adicionales como el cifrado SSL para conexiones seguras, autenticación fácil, y la capacidad de manejar simultáneamente múltiples conexiones. Ncat es versátil para la depuración de redes, exploración, y como un componente en scripts de pruebas de seguridad. Su diseño moderno y las mejoras de seguridad lo hacen una elección preferente para profesionales de la seguridad informática.
 - Socat: Es una herramienta de línea de comandos que permite el establecimiento de dos flujos de datos bidireccionales. Es similar a Netcat pero más complejo y potente, ofreciendo características como la creación de túneles seguros, la transferencia de datos entre diferentes protocolos (por ejemplo, TCP, UDP, UNIX sockets), y la posibilidad de ejecutar scripts o comandos a través de su conexión. Socat es ampliamente utilizado por administradores de sistemas y profesionales de seguridad para diagnósticos de red, pruebas, y como un potente instrumento para diversas tareas de red.
 
-#### 1.1 Ejemplo con netcat
+#### 1.1 Ejemplo con netcat y ficheros FIFO
 Para obtner la shell reversa, usaremos netcat tanto en el atacante (kali) como en la víctima (ubuntu):
 - En la máquina atacante (Kali), iniciamos Netcat en modo escucha especificando un puerto:
   ```
@@ -62,7 +62,7 @@ Para obtner la shell reversa, usaremos netcat tanto en el atacante (kali) como e
 Recomendación: Ver Exploring mkfifo / nc Reverse Shell ➡ https://www.youtube.com/watch?v=_q_ZCy-hEqg
 
 
-#### 1.2 Ejemplo con bash
+#### 1.2 Ejemplo con netcat y bash
 Usaremos bash en la máquina víctima para obtener la shell reversa:
 - En la máquina atacante se utilizará necat en modo escucha, igual que en el punto anterior:
   ```
@@ -107,11 +107,21 @@ El comando ncat es una versión mejorada y más segura de Netcat, incluida en la
   ![](capturas/shell-reversa-ncat-mv-atacante-2.png)
 
 
-Debemos de tener en cuenta:
+**Debemos de tener en cuenta:**
 - Transmitir una shell sin cifrar a través de la red puede ser peligroso y exponer información sensible. La herramienta ncat ofrece la opción de establecer conexiones cifradas utilizando el parámetro --ssl para mejorar la seguridad.
 - La herramienta ncap debe estar instalada tanto en la máquina víctima como en la atacante.
 
 
+**Diferencias ncat y netcat:**
+- ncat y netcat son relacionados, pero no son exactamente lo mismo.
+- netcat es la herramienta original, conocida también como "la navaja suiza de redes" debido a su versatilidad para manejar todo tipo de tareas relacionadas con redes, como la transferencia de datos, escaneo de puertos, y la creación de conexiones cliente-servidor tanto en TCP como en UDP.
+- ncat es una reescritura y mejora de netcat, desarrollada como parte del proyecto Nmap, una conocida suite de herramientas de seguridad y análisis de redes. ncat conserva la funcionalidad básica de netcat pero añade características adicionales destinadas a mejorar la seguridad y la flexibilidad:
+    - Soporte para cifrado SSL, lo que permite establecer conexiones seguras.
+    - Mejoras en la facilidad de uso y la sintaxis de los comandos.
+    - Soporte nativo para IPv6, además de IPv4.
+    - Capacidades avanzadas de reenvío de puertos y ejecución de scripts.
+      
+Aunque ncat y netcat pueden utilizarse para propósitos similares y a menudo son mencionados de manera intercambiable, 
 
 
 
