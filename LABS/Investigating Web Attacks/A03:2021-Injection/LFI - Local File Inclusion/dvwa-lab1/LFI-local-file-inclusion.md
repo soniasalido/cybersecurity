@@ -346,4 +346,7 @@ file:///var/www/html/DVWA/hackable/flags/fi.php
 
 **No funciona:** controla la extensión del fichero a cargar. Obligar a que la extensión sea .php puede saltarse con mecanismos como la inyección de null byte (caracter &00).
 /etc/passwd
+
 /etc/passwd%00.php
+
+** Nota2:** the %00 trick is fixed and not working with PHP 5.3.4 and above
