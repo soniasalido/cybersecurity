@@ -350,3 +350,21 @@ file:///var/www/html/DVWA/hackable/flags/fi.php
 /etc/passwd%00.php
 
 ** Nota2:** the %00 trick is fixed and not working with PHP 5.3.4 and above
+
+
+
+----------------------------------------
+## Obfuscation
+Obfuscation techniques are often used to bypass basic security filters that web applications might have in place. These filters typically look for obvious directory traversal sequences like ../. However, attackers can often evade detection by obfuscating these sequences and still navigate through the server's filesystem.
+
+Encoding transforms characters into a different format. In LFI, attackers commonly use URL encoding (percent-encoding), where characters are represented using percentage symbols followed by hexadecimal values. For instance, ../ can be encoded or obfuscated in several ways to bypass simple filters.
+- Standard URL Encoding: ../ becomes %2e%2e%2f
+- Double Encoding: Useful if the application decodes inputs twice. ../ becomes %252e%252e%252f
+- Obfuscation: Attackers can use payloads like ....//, which help in avoiding detection by simple string matching or filtering mechanisms. This obfuscation technique is intended to conceal directory traversal attempts, making them less apparent to basic security filters.
+
+An attacker can potentially bypass this filter using the following methods:
+- URL Encoded Bypass: The attacker can use the URL-encoded version of the payload like ?file=%2e%2e%2fconfig.php. The server decodes this input to ../config.php, bypassing the filter.
+
+- Double Encoded Bypass: The attacker can use double encoding if the application decodes inputs twice. The payload would then be ?file=%252e%252e%252fconfig.php, where a dot is %252e, and a slash is %252f. The first decoding step changes %252e%252e%252f to %2e%2e%2f. The second decoding step then translates it to ../config.php.
+
+- Obfuscation: An attacker could use the payload ....//config.php, which, after the application strips out the apparent traversal string, would effectively become ../config.php.
