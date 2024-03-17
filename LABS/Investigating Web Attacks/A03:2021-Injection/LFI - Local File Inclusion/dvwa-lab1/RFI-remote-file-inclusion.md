@@ -21,6 +21,7 @@ Con un ataque RFI se puede conseguir:
 - Ejecución Remota de Comandos: Aún más peligroso es la capacidad de ejecutar comandos de forma remota en el servidor web a través de un ataque RFI. Esto puede lograrse si el atacante logra incluir un script PHP (o cualquier otro lenguaje de servidor que se esté ejecutando) desde un servidor remoto que el servidor web víctima ejecutará como suyo. Este script puede contener código que ejecute comandos en el servidor, lo que podría permitir al atacante tomar el control total del servidor web, acceder a bases de datos sensibles, modificar archivos del sistema, instalar malware, crear backdoors para acceso futuro, entre otras acciones maliciosas. La ejecución remota de comandos abre la puerta a una amplia gama de actividades perjudiciales que pueden comprometer la seguridad y la funcionalidad del servidor y de los datos alojados en él.
 
 
+# RFI en DVWA - Nivel Low
 ### En la máquina atacante
 Para obtner la shell reversa, usaremos netcat tanto en el atacante (kali) como en la víctima (ubuntu):
 - En la máquina atacante (Kali), iniciamos Netcat en modo escucha especificando un puerto:
@@ -83,7 +84,7 @@ http.request.method == "GET"
 
 ---------------------------------------------
 
-# RFI en DVWA Nivel Medio
+# RFI en DVWA - Nivel Medio
 En el nivel medio vemos por el código que hace una validación de las entradas, impidiendo que se escriba http: ó https:
 ```
 Medium File Inclusion Source
