@@ -40,6 +40,19 @@ Aquí, envoltorio1, envoltorio2, etc., representan diferentes capas de envoltori
 - php://input: Este wrapper permite leer datos crudos de la petición POST. En escenarios de LFI, podría ser utilizado para pasar datos dinámicos al script incluido, aunque su aplicabilidad dependerá de cómo el script maneje los datos de entrada.
 
 - data://: Este wrapper permite la ejecución de datos binarios o de texto como si fueran archivos. En teoría, podría usarse para ejecutar código arbitrario si se puede incluir de manera efectiva mediante una vulnerabilidad LFI, pero en la práctica, esto suele ser bloqueado o limitado por la configuración de seguridad del servidor.
+  ```
+  data:text/plain,<?php phpinfo(); ?>
+  ```
+  - La descomposición del payload data:text/plain,<?php phpinfo(); ?> es la siguiente:
+    - data: Es el esquema utilizado para indicar que lo que sigue es un conjunto de datos en línea. En contextos donde se esperan URLs, este esquema permite incluir datos pequeños directamente en la URL en lugar de referenciar externamente a los datos almacenados en otro lugar.
+
+    - text/plain: Este es el tipo MIME del contenido. En este caso, text/plain indica que el contenido es texto plano. El tipo MIME especifica la naturaleza y el formato del contenido, lo que ayuda al receptor (por ejemplo, un navegador web) a entender cómo manejar los datos proporcionados.
+
+    - El segmento de datos <?php phpinfo(); ?>: Aquí es donde se incluye el contenido real o los datos. En este caso, el segmento de datos contiene un pequeño script PHP que es <?php phpinfo(); ?>. Este script, cuando es ejecutado por un procesador PHP, genera una página web que muestra información detallada sobre la configuración actual de PHP en el servidor. Es una llamada a la función phpinfo(), la cual es una función incorporada en PHP utilizada frecuentemente para diagnosticar configuraciones o problemas del entorno de PHP.
+
+    En resumen, este payload es una forma de encapsular datos (en este caso, un script PHP) directamente en una URL utilizando el esquema de datos data:, con un tipo MIME especificado como text/plain. Sin embargo, es importante notar que, aunque este método puede ser útil para incluir pequeños fragmentos de datos directamente en documentos o aplicaciones web, el ejemplo dado (<?php phpinfo(); ?>) solo sería ejecutable y relevante en un contexto donde se espera y se procesa el código PHP, lo cual no ocurriría simplemente visitando una URL formada de esta manera en un navegador, ya que el navegador trataría los datos como texto plano y no como código PHP a ejecutar.
+
+
 
 ## Ejemplo de uso del wrapper php://filter
 Para utilizar el wrapper php://filter en un escenario de prueba de penetración (pentesting) con el objetivo de obtener el contenido PHP de include.php a través de una vulnerabilidad de Inclusión de Archivos Locales (LFI), debemos construir la URL de manera que el filtro de PHP se aplique correctamente para leer y, posiblemente, codificar el contenido del archivo objetivo. Esto permite acceder al código fuente PHP en un formato que pueda ser visualizado directamente en el navegador, a menudo utilizando codificación Base64 para evitar la ejecución del código PHP por el servidor.
