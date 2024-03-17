@@ -146,3 +146,22 @@ data://text/plain;base64,PD9waHAgcGFzc3RocnUoInJtIC90bXAvZjtta2ZpZm8gL3RtcC9mO2N
 Intentamos de nuevo RFI y ya comprobamos que funciona:
 ![](capturas/remote-file-inclusion-11.png)
 
+
+---------------------------------------------
+
+# RFI en DVWA - Nivel Alto
+En el nivel alto vemos por el código que hace una validación de las entradas, el nombre del archivo que se suba debe contener "file":
+```
+High File Inclusion Source
+<?php
+
+// The page we wish to display
+$file = $_GET[ 'page' ];
+
+// Input validation
+if( !fnmatch( "file*", $file ) && $file != "include.php" ) {
+    // This isn't the page we want!
+    echo "ERROR: File not found!";
+    exit;
+}
+```
