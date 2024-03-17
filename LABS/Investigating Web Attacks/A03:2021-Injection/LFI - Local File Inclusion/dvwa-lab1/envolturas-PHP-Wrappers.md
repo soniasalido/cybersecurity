@@ -103,7 +103,7 @@ We will use the PHP code <?php system($_GET['cmd']); echo 'Shell done!'; ?> as o
 
 In the table above, PD9waHAgc3lzdGVtKCRfR0VUWydjbWQnXSk7ZWNobyAnU2hlbGwgZG9uZSAhJzsgPz4+ is the base64-encoded version of the PHP code. When the server processes this request, it first decodes the base64 string and then executes the PHP code, allowing the attacker to run commands on the server via the "cmd" GET parameter.
 
-Note: It is important to not include the &cmd=whoami in the input field since it will be encoded when the form is submitted. Once encoded, the backend will treat it as part of the base64 code, giving you an invalid byte sequence error.
+Note: It is important to not include the **&cmd=**whoami in the input field since it will be encoded when the form is submitted. Once encoded, the backend will treat it as part of the base64 code, giving you an invalid byte sequence error.
 
 ![](capturas/php-wrappers.png)
 
