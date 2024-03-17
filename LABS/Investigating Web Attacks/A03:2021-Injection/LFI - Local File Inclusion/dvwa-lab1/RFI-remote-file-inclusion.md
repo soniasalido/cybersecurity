@@ -127,4 +127,4 @@ Para usar este código en un ataque de RFI mediante el wrapper data://, insertar
 ```
 
 Sin embargo, al probarlo en DVWA no funciona, devuelve un error:
-![]()
+![](capturas/remote-file-inclusion-10.png)
