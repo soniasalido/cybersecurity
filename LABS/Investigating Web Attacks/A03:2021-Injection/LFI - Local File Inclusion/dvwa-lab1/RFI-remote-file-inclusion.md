@@ -165,3 +165,17 @@ if( !fnmatch( "file*", $file ) && $file != "include.php" ) {
     exit;
 }
 ```
+
+http://192.168.1.103/reverse.txt
+
+
+--------------------------------------
+
+## Notas interesantes:
+https://book.hacktricks.xyz/pentesting-web/ssrf-server-side-request-forgery/url-format-bypass
+
+https://book.hacktricks.xyz/pentesting-web/file-inclusion
+
+https://notes.defendergb.org/web-sec/vuln/lfi-rfi
+
+https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/File%20Inclusion/README.md
