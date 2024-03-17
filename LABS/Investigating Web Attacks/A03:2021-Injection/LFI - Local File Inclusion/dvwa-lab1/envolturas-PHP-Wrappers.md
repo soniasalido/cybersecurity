@@ -1,7 +1,22 @@
 
-
 # Envolturas en PHP - Wrappers 
+Los "wrappers" en PHP son herramientas que **permiten acceder a diferentes tipos de datos o protocolos utilizando los mismos mecanismos estándar que se aplicarían a archivos**. Por ejemplo, se pueden utilizar para leer de un archivo, de una URL, de un flujo de datos en memoria, entre otros, a través de funciones de manejo de archivos como fopen(), file_get_contents(), fwrite(), entre otras. PHP incluye varios wrappers integrados y también permite registrar wrappers personalizados.
+
+## Wrappers Integrados:
+Algunos de los wrappers integrados más comunes en PHP incluyen:
+- file://: Accede a archivos locales a través del sistema de archivos.
+- http:// y https://: Permite acceder a recursos a través de HTTP o HTTPS. Útil para leer contenido de la web.
+- ftp:// y ftps://: Accede a archivos a través de los protocolos FTP o FTPS.
+- php://: Ofrece acceso a varios flujos especiales, como php://input para leer datos crudos de la solicitud o php://stdout para escribir directamente a la salida estándar.
+- zlib://: Permite la compresión y descompresión de streams en tiempo real.
+- data://: Permite leer datos codificados en base64 o URL-encoded directamente como si fueran archivos.
+
+## Wrappers y LFI
 Si el servidor usa PHP, es posible utilizar wrappers para complementar la LFI detectada. Un wrapper (envoltorio) es un comando interpretado por php que realiza una determinada acción sobre el fujo de datos recuperados por LFI, por ejemplo, un fichero.
+
+Los wrappers de PHP son parte de la funcionalidad de PHP que permite a los usuarios acceder a varios flujos de datos. Los wrappers también pueden acceder o ejecutar código a través de protocolos incorporados en PHP, lo que puede llevar a riesgos de seguridad significativos si no se manejan adecuadamente.
+
+Por ejemplo, una aplicación vulnerable a LFI (Inclusión de Archivos Locales) podría incluir archivos basados en una entrada proporcionada por el usuario sin suficiente validación. En tales casos, los atacantes pueden usar el filtro php://filter. Este filtro permite a un usuario realizar operaciones de modificación básicas en los datos antes de que sean leídos o escritos. Por ejemplo, si un atacante quiere codificar en base64 el contenido de un archivo incluido como /etc/passwd. Esto se puede lograr utilizando el filtro de conversión convert.base64-encode del wrapper. El payload final será entonces php://filter/convert.base64-encode/resource=/etc/passwd
 
 ## Condiciones para poder usar una wrapper:**
 - Debe existir una vulnerabilidad Locla File Inclusión.
