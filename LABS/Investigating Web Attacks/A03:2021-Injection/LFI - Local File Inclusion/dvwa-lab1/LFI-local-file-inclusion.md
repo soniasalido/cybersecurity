@@ -368,3 +368,12 @@ An attacker can potentially bypass this filter using the following methods:
 - Double Encoded Bypass: The attacker can use double encoding if the application decodes inputs twice. The payload would then be ?file=%252e%252e%252fconfig.php, where a dot is %252e, and a slash is %252f. The first decoding step changes %252e%252e%252f to %2e%2e%2f. The second decoding step then translates it to ../config.php.
 
 - Obfuscation: An attacker could use the payload ....//config.php, which, after the application strips out the apparent traversal string, would effectively become ../config.php.
+
+## PHP Session Files
+PHP session files can also be used in an LFI attack, leading to Remote Code Execution, particularly if an attacker can manipulate the session data. In a typical web application, session data is stored in files on the server. If an attacker can inject malicious code into these session files, and if the application includes these files through an LFI vulnerability, this can lead to code execution.
+
+An attacker could exploit this vulnerability by injecting a PHP code into their session variable by using <?php echo phpinfo(); ?> in the page parameter.
+
+This code is then saved in the session file on the server. Subsequently, the attacker can use the LFI vulnerability to include this session file. Since session IDs are hashed, the ID can be found in the cookies section of your browser.
+
+Accessing the URL sessions.php?page=/var/lib/php/sessions/sess_[sessionID] will execute the injected PHP code in the session file. Note that you have to replace [sessionID] with the value from your PHPSESSID cookie.
