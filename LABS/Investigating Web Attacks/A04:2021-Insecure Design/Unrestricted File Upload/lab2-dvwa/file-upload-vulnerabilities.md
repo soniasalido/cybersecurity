@@ -88,6 +88,13 @@ if( isset( $_POST[ 'Upload' ] ) ) {
 ?>
 ```
 
+Subiremos un fichero llamado shell.php con el código:
+```
+<?php system($_GET['cmd']);?>
+```
+system(): Es una función de PHP que se utiliza para ejecutar comandos del sistema operativo externo y mostrar la salida directamente. Esta función es muy poderosa y puede ejecutar prácticamente cualquier comando disponible en el sistema operativo del servidor donde se aloja la aplicación web.
+
+$_GET['cmd']: Esto recoge un valor enviado a través del método GET en la URL. Por ejemplo, si la URL es http://example.com/script.php?cmd=whoami, el valor de $_GET['cmd'] sería whoami, y ese comando se ejecutaría en el servidor a través de la función system().
 
 
 
