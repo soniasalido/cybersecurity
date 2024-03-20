@@ -37,3 +37,59 @@ La funcionalidad de carga de archivos en un sitio web puede ser aprovechada para
 
 ## Categorización de File Upload Vulnerabilities
 La CWE asociada a esta vulnerabilidad es CWE-434: Unrestricted Upload of File with Dangerous Type, recogida en OWASP Top 10 en la categoría A04: Insecure Design.
+
+El CWE-434 abarca situaciones en las que una aplicación acepta archivos cargados sin validar o restringir adecuadamente los tipos de archivos permitidos. Esto puede resultar en la carga y potencial ejecución de archivos maliciosos, poniendo en riesgo la seguridad del sistema. Las medidas de mitigación para esta clase de vulnerabilidad incluyen la validación estricta del tipo de archivo, la verificación del contenido del archivo, y la implementación de políticas de seguridad adecuadas para el manejo de archivos cargados.
+
+
+## DVWA File Upload - View Help
+- About:
+  - Uploaded files represent a significant risk to web applications. The first step in many attacks is to get some code to the system to be attacked. Then the attacker only needs to find a way to get the code executed. Using a file upload helps the attacker accomplish the first step.
+
+  - The consequences of unrestricted file upload can vary, including complete system takeover, an overloaded file system, forwarding attacks to backend systems, and simple defacement. It depends on what the application does with the uploaded file, including where it is stored.
+
+- Objective: Execute any PHP function of your choosing on the target system (such as phpinfo() or system()) thanks to this file upload vulnerability.
+
+- Low Level:
+  - Low level will not check the contents of the file being uploaded in any way. It relies only on trust.
+  - Spoiler: Upload any valid PHP file with command in it.
+
+- Medium Level:
+  - When using the medium level, it will check the reported file type from the client when its being uploaded.
+  - Spoiler: Worth looking for any restrictions within any "hidden" form fields.
+
+- High Level:
+  - Once the file has been received from the client, the server will try to resize any image that was included in the request.
+  - Spoiler: need to link in another vulnerability, such as file inclusion.
+
+- Impossible Level: This will check everything from all the levels so far, as well then to re-encode the image. This will make a new image, therefor stripping any "non-image" code (including metadata).
+
+
+## DVWA File Upload - Level Low - View Source
+
+```
+<?php
+
+if( isset( $_POST[ 'Upload' ] ) ) {
+    // Where are we going to be writing to?
+    $target_path  = DVWA_WEB_PAGE_TO_ROOT . "hackable/uploads/";
+    $target_path .= basename( $_FILES[ 'uploaded' ][ 'name' ] );
+
+    // Can we move the file to the upload folder?
+    if( !move_uploaded_file( $_FILES[ 'uploaded' ][ 'tmp_name' ], $target_path ) ) {
+        // No
+        echo '<pre>Your image was not uploaded.</pre>';
+    }
+    else {
+        // Yes!
+        echo "<pre>{$target_path} succesfully uploaded!</pre>";
+    }
+}
+
+?>
+```
+
+
+
+
+
+
