@@ -96,7 +96,10 @@ system(): Es una función de PHP que se utiliza para ejecutar comandos del siste
 
 $_GET['cmd']: Esto recoge un valor enviado a través del método GET en la URL. Por ejemplo, si la URL es http://example.com/script.php?cmd=whoami, el valor de $_GET['cmd'] sería whoami, y ese comando se ejecutaría en el servidor a través de la función system().
 
-
+![](capturas/file-upload-lab-dvwa-level-low.png)
+![](capturas/file-upload-lab-dvwa-level-low-2.png)
+![](capturas/file-upload-lab-dvwa-level-low-3.png)
+![](capturas/file-upload-lab-dvwa-level-low-4.png)
 
 
 
