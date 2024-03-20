@@ -35,3 +35,5 @@ La funcionalidad de carga de archivos en un sitio web puede ser aprovechada para
 
 - Carga de contenido inapropiado o malicioso: Además de los ataques directos a la infraestructura o a los usuarios, la carga de archivos puede ser utilizada para subir y distribuir contenido ilegal o dañino, como malware, contenido para adultos sin autorización o software pirata, lo cual podría tener implicaciones legales y de reputación para el propietario del sitio web.
 
+## Categorización de File Upload Vulnerabilities
+La CWE asociada a esta vulnerabilidad es CWE-434: Unrestricted Upload of File with Dangerous Type, recogida en OWASP Top 10 en la categoría A04: Insecure Design.
