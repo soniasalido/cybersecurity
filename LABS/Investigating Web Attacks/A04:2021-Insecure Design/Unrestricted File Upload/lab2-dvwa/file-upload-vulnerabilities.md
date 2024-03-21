@@ -104,9 +104,7 @@ $_GET['cmd']: Esto recoge un valor enviado a través del método GET en la URL. 
 
 
 ## DVWA File Upload - Level Medium - View Source
-
 ```
-
 <?php
 
 if( isset( $_POST[ 'Upload' ] ) ) {
@@ -141,3 +139,34 @@ if( isset( $_POST[ 'Upload' ] ) ) {
 
 ?>
 ```
+Para saltar esa validación vamos a manipular el Tipo MIME. El código verifica el tipo de archivo usando la variable $_FILES['uploaded']['type'], la cual depende del tipo MIME reportado por el navegador. Sin embargo, este valor puede ser fácilmente manipulado en el lado del cliente o mediante herramientas como Burp Suite, lo que podría permitirte subir un archivo con un tipo MIME inadecuado fingiendo ser un tipo aceptado.
+
+### Tipo MIME:
+El "Tipo MIME" (Multipurpose Internet Mail Extensions) es un estándar que indica la naturaleza y el formato de un documento, archivo o conjunto de datos. Fue originalmente diseñado para extender las capacidades del correo electrónico para permitir el envío de archivos en formatos distintos al texto ASCII (como archivos binarios, imágenes, video, y audio), pero su uso se ha expandido a muchas otras aplicaciones en Internet, incluyendo navegadores web y servidores web.
+- Estructura: Un tipo MIME se compone de dos partes principales, separadas por una barra diagonal (/):
+  - Tipo: Indica la categoría general del archivo. Algunos ejemplos comunes incluyen text, image, application, y audio.
+  - Subtipo: Especifica el formato específico del archivo dentro de su categoría general. Por ejemplo, para el tipo image, los subtipos pueden incluir jpeg, png, y gif.
+
+- Usos y Aplicaciones: Los tipos MIME tienen múltiples aplicaciones en la web y la tecnología de información:
+  - Correo Electrónico: Permiten a los clientes de correo electrónico identificar y manejar diferentes formatos de archivos adjuntos.
+  - Navegadores Web: Utilizan tipos MIME para determinar cómo procesar o mostrar diferentes archivos o contenidos descargados. Por ejemplo, al recibir un documento con el tipo MIME text/html, el navegador sabe que debe renderizarlo como una página web.
+  - Servidores Web: Envían el tipo MIME de un archivo en las cabeceras HTTP para informar al navegador sobre cómo manejar el archivo. Esto es crucial para archivos que pueden ser interpretados de diferentes maneras (como con JavaScript, CSS, o HTML).
+  - APIs y Desarrollo Web: En el desarrollo web y APIs, los tipos MIME se utilizan para especificar el formato de los datos enviados y recibidos, como application/json para JSON o application/xml para XML.
+
+- Importancia en la Seguridad Web: En el contexto de la seguridad web, comprender y manejar correctamente los tipos MIME es esencial para prevenir ciertos tipos de ataques, como los ataques de carga de archivos maliciosos. Al validar los tipos MIME de los archivos subidos, los desarrolladores pueden restringir los tipos de archivos que se pueden cargar a una aplicación, reduciendo el riesgo de ejecución de código malicioso.
+
+
+En la interfaz de Burp Suite, buscaremos la solicitud de carga de archivos interceptada. Veremos algo similar a lo siguiente en el cuerpo de la solicitud:
+```
+------WebKitFormBoundary72AeOYpNW12rCOb9
+Content-Disposition: form-data; name="uploaded"; filename="shell.php"
+Content-Type: application/x-php
+```
+Cambiamos esta línea por el tipo MIME que deseamos simular:
+```
+Content-Type: image/jpeg
+```
+![](capturas/file-upload-vulnerabilities.png)
+![](capturas/file-upload-vulnerabilities-2.png)
+![](capturas/file-upload-vulnerabilities-3.png)
+
