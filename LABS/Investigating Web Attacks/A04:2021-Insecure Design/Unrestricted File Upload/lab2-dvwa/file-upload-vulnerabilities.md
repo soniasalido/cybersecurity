@@ -97,9 +97,20 @@ system(): Es una función de PHP que se utiliza para ejecutar comandos del siste
 $_GET['cmd']: Esto recoge un valor enviado a través del método GET en la URL. Por ejemplo, si la URL es http://example.com/script.php?cmd=whoami, el valor de $_GET['cmd'] sería whoami, y ese comando se ejecutaría en el servidor a través de la función system().
 
 ![](capturas/file-upload-lab-dvwa-level-low.png)
+
+--------------------------------------------------------------
+
 ![](capturas/file-upload-lab-dvwa-level-low-2.png)
+
+--------------------------------------------------------------
+
 ![](capturas/file-upload-lab-dvwa-level-low-3.png)
+
+--------------------------------------------------------------
+
 ![](capturas/file-upload-lab-dvwa-level-low-4.png)
+
+--------------------------------------------------------------
 
 
 
@@ -167,8 +178,16 @@ Cambiamos esta línea por el tipo MIME que deseamos simular:
 Content-Type: image/jpeg
 ```
 ![](capturas/file-upload-lab-dvwa-level-medium.png)
+
+--------------------------------------------------------------
+
 ![](capturas/file-upload-lab-dvwa-level-medium-2.png)
+
+--------------------------------------------------------------
+
 ![](capturas/file-upload-lab-dvwa-level-medium-3.png)
+
+--------------------------------------------------------------
 
 
 ### Una shell para probar:
@@ -193,12 +212,35 @@ http contains "image"
 (http.request or tls.handshake.type eq 1) and !(ssdp)
 ```
 ![](capturas/file-upload-lab-dvwa-level-medium-11.png)
+
+--------------------------------------------------------------
+
 ![](capturas/file-upload-lab-dvwa-level-medium-4.png)
+
+--------------------------------------------------------------
+
 ![](capturas/file-upload-lab-dvwa-level-medium-5.png)
+
+--------------------------------------------------------------
+
 ![](capturas/file-upload-lab-dvwa-level-medium-6.png)
+
+--------------------------------------------------------------
+
 ![](capturas/file-upload-lab-dvwa-level-medium-7.png)
+
+--------------------------------------------------------------
+
 ![](capturas/file-upload-lab-dvwa-level-medium-8.png)
+
+--------------------------------------------------------------
 
 Subimos una shell reversa php:
 ![](capturas/file-upload-lab-dvwa-level-medium-9.png)
+
+--------------------------------------------------------------
+
 ![](capturas/file-upload-lab-dvwa-level-medium-10.png)
+
+
+--------------------------------------------------------------
