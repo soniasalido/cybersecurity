@@ -192,6 +192,7 @@ http.content_type contains "image/jpeg"
 ![](capturas/file-upload-lab-dvwa-level-medium-5.png)
 ![](capturas/file-upload-lab-dvwa-level-medium-6.png)
 ![](capturas/file-upload-lab-dvwa-level-medium-7.png)
+
 Subimos una shell reversa php:
 ![](capturas/file-upload-lab-dvwa-level-medium-8.png)
 ![](capturas/file-upload-lab-dvwa-level-medium-9.png)
