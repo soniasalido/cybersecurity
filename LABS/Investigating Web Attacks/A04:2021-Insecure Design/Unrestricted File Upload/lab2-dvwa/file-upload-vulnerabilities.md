@@ -166,7 +166,7 @@ Cambiamos esta línea por el tipo MIME que deseamos simular:
 ```
 Content-Type: image/jpeg
 ```
-![](capturas/file-upload-vulnerabilities.png)
-![](capturas/file-upload-vulnerabilities-2.png)
-![](capturas/file-upload-vulnerabilities-3.png)
+![](capturas/file-upload-lab-dvwa-level-medium.png)
+![](capturas/file-upload-lab-dvwa-level-medium-2.png)
+![](capturas/file-upload-lab-dvwa-level-medium-3.png)
 
