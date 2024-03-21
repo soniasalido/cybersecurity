@@ -186,8 +186,13 @@ nc -lnvp puertoEscucha
 
 ### Escuchando con Wireshark un ataque File Upload Vulnerabilities
 Filtros Wireshark:
+```
 http.request.method == "POST"
 http.content_type contains "image/jpeg"
+http contains "image"
+(http.request or tls.handshake.type eq 1) and !(ssdp)
+```
+![](capturas/file-upload-lab-dvwa-level-medium-11.png)
 ![](capturas/file-upload-lab-dvwa-level-medium-4.png)
 ![](capturas/file-upload-lab-dvwa-level-medium-5.png)
 ![](capturas/file-upload-lab-dvwa-level-medium-6.png)
