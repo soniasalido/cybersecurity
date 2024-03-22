@@ -83,6 +83,16 @@ Cuando se realiza una inyección SQL utilizando el operador UNION, uno de los re
 
 El uso de NULL como valor en las consultas inyectadas es una técnica común para sortear el problema de los tipos de datos incompatibles. NULL es un valor especial que representa la "ausencia de un valor" y es compatible con todos los tipos de datos en SQL. Esto significa que podemos usar NULL en lugar de otros literales (como números o cadenas de texto) sin preocuparnos por causar errores de tipo de datos.
 
+#### Recurrir a operadores de concatenación de cadenas:
+Hay veces  que el número de columnas o el tipo de estas, en las clausulas SELECT original, no permitan exfiltrar los datos deseados. Para solventar estos problemas se puede recurrir a operadores de concatenación de cadenas. Esto depende del SGBD:
+```
+2' UNION SELECT CONCAT(user,'-',password), NULL from users -- -
+```
+
 
 ### 3. Descubrir las estructura de la Base de Datos:
-
+```
+2' UNION SELECT version(),NULL-- - '
+```
+Cheat Sheet Portswigger:
+https://portswigger.net/web-security/sql-injection/cheat-sheet
