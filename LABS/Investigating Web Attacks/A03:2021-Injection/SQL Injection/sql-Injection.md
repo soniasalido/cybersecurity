@@ -71,13 +71,18 @@ Para saber el número de columnas devuelto por la consulta original para poder c
 
 - Usando columnas con el valor NULL: El segundo método consiste en enviar una serie de cargas útiles de UNION SELECT que especifican un número diferente de valores nulos. Vamos probando:
   ```
-  ' UNION SELECT NULL -- -
-  ' UNION SELECT NULL,NULL-- - 
-  ' UNION SELECT NULL,NULL,NULL-- -
+  ' UNION SELECT NULL -- -'
+  ' UNION SELECT NULL,NULL-- - '
+  ' UNION SELECT NULL,NULL,NULL-- -'
   Fatal error: Uncaught mysqli_sql_exception: The used SELECT statements have a different number of columns in ......
   ```
+  La Técnica consiste en añadir columnas con el valor null hasta que el fallo desaparezca. La aplicación podría devolver este mensaje de error, o simplemente podría devolver un error genérico o ningún resultado. Cuando el número de valores nulos coincide con el número de columnas, la base de datos devuelve una fila adicional en el conjunto de resultados, que contiene valores nulos en cada columna.
 
-  La aplicación podría devolver este mensaje de error, o simplemente podría devolver un error genérico o ningún resultado. Cuando el número de valores nulos coincide con el número de columnas, la base de datos devuelve una fila adicional en el conjunto de resultados, que contiene valores nulos en cada columna.
+#### Porqué se usa NULL:
+Cuando se realiza una inyección SQL utilizando el operador UNION, uno de los retos es asegurarse de que la consulta inyectada sea compatible con la consulta original en términos de número y tipo de datos de las columnas. Esto es crucial porque UNION se utiliza para combinar los resultados de dos o más consultas SELECT en un solo conjunto de resultados, y esto solo es posible si las consultas involucradas tienen el mismo número de columnas y tipos de datos compatibles en sus correspondientes columnas.
+
+El uso de NULL como valor en las consultas inyectadas es una técnica común para sortear el problema de los tipos de datos incompatibles. NULL es un valor especial que representa la "ausencia de un valor" y es compatible con todos los tipos de datos en SQL. Esto significa que podemos usar NULL en lugar de otros literales (como números o cadenas de texto) sin preocuparnos por causar errores de tipo de datos.
+
 
 ### 3. Descubrir las estructura de la Base de Datos:
 
