@@ -29,6 +29,7 @@ La clasificación de las inyecciones SQL, en función de cómo se reciben los re
   b. Basada en el Comportamiento (Boolean-based Blind SQL Injection): El atacante modifica el contenido de la aplicación web a través de consultas que resultan en cambios visibles o en el comportamiento de la aplicación, dependiendo de si la consulta devuelve verdadero o falso, sin revelar datos directamente.
 
 2. Inyección SQL Clásica (In-band SQL Injection): En este tipo de inyección SQL, el atacante es capaz de utilizar el mismo canal de comunicación para lanzar el ataque y recoger los resultados. Este tipo es más directo y puede ser muy peligroso, ya que permite al atacante obtener información detallada de la base de datos rápidamente.
+   
   a. Basada en Errores (Error-based SQL Injection): El atacante provoca errores intencionales en las consultas SQL para extraer información de los mensajes de error devueltos por la base de datos, lo que puede revelar datos sensibles.
 
   b. Union-based SQL Injection: El atacante utiliza el operador UNION de SQL para combinar una consulta maliciosa con la consulta original de la aplicación. Esto permite al atacante extraer datos de la base de datos directamente en la respuesta de la página web.
