@@ -150,5 +150,23 @@ Para guardar Como Archivo: Abrimos un editor de texto en bruto (como Notepad++ o
 
 ## Ver uno de los comandos que se pasaron en el ataque
 Repetimos el proceso anterior para ver uno de los comandos que se pasaron en la shell.php. Seguimos la secuencia http del paquete --> "Follow" --> "HTTP Stream":
+
 ![](capturas/unrestricted-file-upload-lab1-14.png)
 
+## Cómo evitar la subida de ficheros maliciosos:
+- Usa una white list de extensiones de ficheros permitidas.
+- Validar el tiempo de fichero. No confiar en la cabecera Content-Type. Validar mirando el magic number + realizar alguna operación (como redimensionar en caso de fotos).
+- Cambiar el nombre del fichero a uno aleatorio, para impedir invocarlo por el atacante.
+- Establecer un tamaño máximo para el nombre del fichero.
+- Establecer un conjunto de caracteres permitido para el nombre del fichero.
+- Tener cuidado con el null byte (%00).
+- Tener cuidado con el dobles extensiones (.php.jpg).
+- Establecer tamaño maximo para el fichero.
+- Permitir la subida sólo a ciertos usuarios autorizados.
+- Almacenar los fichero subidos en un servidor diferente. Si no es posible, al menos, almacenarlos fuera de la extructura de directorios de la aplicación web.
+- Si los fichero pueden ser accedidos públicamente, mapear un identificador al fichero, para no dar pistas a atancantes.
+- Analizar con ativirus o sandbox, los fichero subidos.
+- Si el fichero es tratado con elguna librería o módulo externo, debemos asegurarnos que está actulizado y configurado de manera segura.
+
+
+Sugerencias de OWASP: https://cheatsheetseries.owasp.org/cheatsheets/File_Upload_Cheat_Sheet.html
