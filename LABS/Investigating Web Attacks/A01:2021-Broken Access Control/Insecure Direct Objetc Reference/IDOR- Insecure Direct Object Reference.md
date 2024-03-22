@@ -1,0 +1,1 @@
+Pertenece a la categoría A01:2021 - Broken Access Control. La vulnerabilidad IDOR (Insecure Direct Object Reference), también conocida como BOLA (Broken Object Level Autorization), está catalogada con la categoría CWE-639 (Autprization Bypass Throuh User-Cpntrolled Key).
