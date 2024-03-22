@@ -60,7 +60,7 @@ Condiciones para que funcione una inyección usando el operador UNION:
 - Los tipos de datos de cada columnas entre la consulta original y la consulta añadida en UNION deben ser compatibles entre las consultas individuales.
 - Es necesario conocer la estructura de la BD objetivo. Para poder hacer consultas sobre tablas, es necesario conocer su nombre y el de sus columnas.
 
-###  Cómo determinar del número de columnas requeridas en un ataque UNION de inyección SQL:
+####  Cómo determinar del número de columnas requeridas en un ataque UNION de inyección SQL:
 Para saber el número de columnas devuelto por la consulta original para poder construir consultas con el operador UNION:
 - Usando la cláusula ORDER BY: El primer método consiste en inyectar una serie de cláusulas ORDER BY e incrementar el índice de columna especificado hasta que se produzca un error. Por ejemplo, vamos probando hasta que obtengamos un error, en nuestro caso:
 ```
