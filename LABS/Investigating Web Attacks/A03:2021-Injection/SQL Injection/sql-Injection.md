@@ -63,19 +63,21 @@ Condiciones para que funcione una inyección usando el operador UNION:
 ####  Cómo determinar del número de columnas requeridas en un ataque UNION de inyección SQL:
 Para saber el número de columnas devuelto por la consulta original para poder construir consultas con el operador UNION:
 - Usando la cláusula ORDER BY: El primer método consiste en inyectar una serie de cláusulas ORDER BY e incrementar el índice de columna especificado hasta que se produzca un error. Por ejemplo, vamos probando hasta que obtengamos un error, en nuestro caso:
-```
-999' or '1'='1' UNION SELECT * from articulos order by 4 #
-2' ORDER BY 1
-```
+  ```
+  2' ORDER BY 2 #
+  Fatal error: Uncaught mysqli_sql_exception: Unknown column '3' in 'order clause' in....
+  ```
+  La técnica consiste en incrementar el número por que se requiere ordenar la cláusula ORDER BY hasta provocar el fallo, que ocurrirá al tratar de ordenar por un número de columna superior al número de columnas devueltas por la sentencia SELECT original.
 
 - Usando columnas con el valor NULL: El segundo método consiste en enviar una serie de cargas útiles de UNION SELECT que especifican un número diferente de valores nulos. Vamos probando:
-```
-' UNION SELECT NULL--
-' UNION SELECT NULL,NULL--
-' UNION SELECT NULL,NULL,NULL–
-```
+  ```
+  ' UNION SELECT NULL -- -
+  ' UNION SELECT NULL,NULL-- - 
+  ' UNION SELECT NULL,NULL,NULL-- -
+  Fatal error: Uncaught mysqli_sql_exception: The used SELECT statements have a different number of columns in ......
+  ```
 
-La aplicación podría devolver este mensaje de error, o simplemente podría devolver un error genérico o ningún resultado. Cuando el número de valores nulos coincide con el número de columnas, la base de datos devuelve una fila adicional en el conjunto de resultados, que contiene valores nulos en cada columna.
+  La aplicación podría devolver este mensaje de error, o simplemente podría devolver un error genérico o ningún resultado. Cuando el número de valores nulos coincide con el número de columnas, la base de datos devuelve una fila adicional en el conjunto de resultados, que contiene valores nulos en cada columna.
 
 ### 3. Descubrir las estructura de la Base de Datos:
 
