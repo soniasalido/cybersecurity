@@ -70,4 +70,78 @@ grep -l 'export' busca dentro de los archivos pasados por xargs por la cadena "e
 El uso de -l con grep hace que solo se impriman los nombres de los archivos que contienen al menos una coincidencia, sin mostrar las líneas específicas. Si lo que deseas es ver las líneas que contienen "export" dentro de esos archivos, simplemente elimina el argumento -l:
 
 
+### Sticky Bit
+El "sticky bit" es un permiso especial que se puede establecer en directorios en sistemas de archivos UNIX y Linux. Cuando el sticky bit está configurado en un directorio, **solo el propietario de un archivo puede eliminar o renombrar los archivos dentro de ese directorio**. Esto es particularmente útil en directorios donde varios usuarios tienen permiso de escritura, como /tmp, para evitar que los usuarios borren o renombren archivos que no les pertenecen.
+
+En los sistemas de archivos tradicionales UNIX, el sticky bit también tenía un propósito diferente para los archivos ejecutables, indicando al sistema que mantuviera el texto del programa en la memoria incluso después de terminar su ejecución, para acelerar reinicios subsiguientes del mismo programa. Sin embargo, esta funcionalidad ha quedado obsoleta en la mayoría de los sistemas modernos.
+
+Para ver si un directorio tiene el sticky bit establecido, puedes usar el comando
+```
+ls -ld nombreDirectorio
+drwxrwxrwt .......
+```
+Si el sticky bit está establecido, verás una "t" al final de los permisos del directorio, como en **drwxrwxrwt**.
+
+Para establecer el sticky bit en un directorio, puedes usar el comando:
+```
+chmod +t nombreDirectorio
+```
+Para removerlo:
+```
+chmod -t nombreDirectorio
+```
+
+### Importancia del sticky bit en un ataque a un sistema linux:
+El sticky bit juega un papel importante en la seguridad de un sistema Linux, especialmente como medida preventiva contra ciertos tipos de ataques. Su relevancia en la seguridad de un sistema puede entenderse desde varias perspectivas:
+- Prevención contra la manipulación de archivos: En directorios compartidos donde múltiples usuarios tienen permisos de escritura, como /tmp, un usuario malicioso podría eliminar o renombrar archivos que pertenecen a otros usuarios o al sistema. El sticky bit previene este tipo de comportamiento al restringir la eliminación y el renombramiento de archivos solo a los propietarios de los archivos y al root del sistema. Esto ayuda a proteger contra ataques que buscan desestabilizar aplicaciones o servicios mediante la manipulación de archivos temporales o compartidos.
+
+- Limitación del espacio para ataques de escritura: Los directorios con permisos de escritura amplios, si no están protegidos por el sticky bit, podrían ser explotados por atacantes para colocar archivos maliciosos, scripts, o ejecutables que podrían ser ejecutados por otros usuarios o procesos, elevando potencialmente los privilegios del atacante o comprometiendo la integridad del sistema. El sticky bit minimiza este riesgo al limitar quién puede eliminar o mover archivos dentro de estos directorios compartidos.
+
+- Mejora de la gestión de archivos temporales: Muchos programas y servicios en sistemas Linux crean y utilizan archivos temporales en directorios como /tmp. El sticky bit es crucial para asegurar que estos archivos temporales solo puedan ser gestionados por sus respectivos propietarios, lo que previene posibles ataques de interceptación o suplantación mediante la manipulación de estos archivos temporales.
+
+- Defensa contra ataques de denegación de servicio (DoS): Sin el sticky bit, un atacante podría fácilmente llenar un directorio compartido con archivos innecesarios, impidiendo a otros usuarios o servicios crear los archivos temporales necesarios. Esto podría utilizarse para realizar un ataque de denegación de servicio (DoS) al agotar el espacio disponible en el disco. Con el sticky bit, esta táctica es mucho más difícil de ejecutar, ya que solo el propietario de un archivo (o el administrador del sistema) puede eliminar archivos en el directorio protegido.
+
+
+### Comprimir
+- gzip: Comprime archivo.txt a archivo.txt.gz y elimina el original.
+  ```
+  gzip archivo.txt
+  ```
+
+- Comprimir varios archivos: Primero, debemo empaquetarlos con tar y luego comprimir. Este comando empaqueta y comprime los archivos especificados en paquete.tar.gz:
+  ```
+  tar cvf - archivos | gzip > paquete.tar.gz
+  ```
+
+- bzip2: Comprime archivo.txt a archivo.txt.bz2 y elimina el original.
+  ```
+  bzip2 archivo.txt
+  ```
+- xz: Esto comprime archivo.txt a archivo.txt.xz y elimina el original.
+  ```
+  xz archivo.txt
+  ```
+- zip: Comprimir varios archivos en un archivo .zip. Esto crea un archivo paquete.zip que contiene archivo1.txt y archivo2.txt:
+  ```
+  zip paquete.zip archivo1.txt archivo2.txt
+  ```
+- zip: Comprimir un directorio. Esto comprime el directorio y todos sus contenidos en paquete.zip:
+  ```
+  zip -r paquete.zip directorio/
+  ```
+
+- tar con compresión: Comprimir un directorio con gzip. Esto crea un archivo paquete.tar.gz que contiene todos los archivos y directorios dentro de directorio, usando compresión gzip:
+  ```
+  tar czvf paquete.tar.gz directorio/
+  ```
+
+- Comprimir un directorio con bzip2. Usa compresión bzip2:
+  ```
+  tar cjvf paquete.tar.bz2 directorio/
+  ```
+
+- Comprimir un directorio con xz. Usa compresión xz:
+  ```
+  tar cJvf paquete.tar.xz directorio/
+  ```
 
