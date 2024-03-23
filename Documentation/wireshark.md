@@ -1,3 +1,30 @@
+## Formas de capturar tráfico:
+- Network Taps: Los Network Taps (puntos de acceso de red) son dispositivos de hardware que se utilizan para acceder y monitorear el tráfico de datos en una red de comunicaciones. El término "Tap" se refiere a "Test Access Point" (Punto de Acceso de Prueba). Estos dispositivos se colocan entre dos puntos de una red, como entre un switch y un router, para capturar una copia exacta del tráfico que pasa entre estos puntos sin interferir con la transmisión de datos.
+- MAC Floods: Las inundaciones de MAC son una táctica comúnmente utilizada por equipos rojos como una forma de capturar paquetes activamente. La inundación de MAC tiene como objetivo sobrecargar el switch y llenar la tabla CAM. Una vez que la tabla CAM está llena, el switch ya no aceptará nuevas direcciones MAC y, por lo tanto, para mantener la red activa, el switch enviará paquetes a todos los puertos del switch. Nota: Esta técnica debe usarse con extrema precaución y con consentimiento explícito previo.
+- ARP Poisoning: El envenenamiento ARP es otra técnica utilizada por equipos rojos para capturar paquetes activamente. Mediante el envenenamiento ARP, puedes redirigir el tráfico desde el(los) host(s) hacia la máquina desde la que estás monitoreando. Esta técnica no sobrecargará el equipo de red como lo hace la inundación MAC; sin embargo, aún debe usarse con precaución y solo si otras técnicas como los Network Taps no están disponibles.
+
+
+## Filtrado de paquetes:
+- Filtros de visualización: Podemos aplicar filtros de visualización de dos maneras:
+  - A través de la pestaña analizar.
+  - En la barra de filtro en la parte superior de la captura de paquetes.
+- Operadores de Filtrado:
+  - and - operator: and / &&
+  - or - operator: or / ||
+  - equals - operator: eq / ==
+  - not equal - operator: ne / !=
+  - greater than - operator: gt /  >
+  - less than - operator: lt / <
+  - contains
+  - matches
+  - bitwise_and
+  - operators
+- Documentación: Filtros Wiresharl: https://wiki.wireshark.org/DisplayFilters
+
+## Packet Dissection
+![](https://assets.tryhackme.com/additional/wireshark101/12.png)
+
+
 https://www.wolf.university/learnwireshark/ebook/learnwireshark.pdf
 
 https://www.wolf.university/networkanalysisusingwireshark2cookbook/ebook/networkanalysisusingwireshark2cookbook_ebook.pdf
@@ -157,4 +184,10 @@ http.response.code == 500
 http.request.uri contains "SELECT" || http.request.uri contains "UNION" || http.request.uri contains "DROP" || http.request.uri contains "OR '1'='1'"
 
 http.request.method == "POST"
+
+ip.src == <SRC IP Address> and ip.dst == <DST IP Address>
+
+tcp.port eq <Port #> or <Protocol Name>
+
+udp.port eq <Port #> or <Protocol Name>
 ```
