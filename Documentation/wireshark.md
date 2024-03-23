@@ -60,6 +60,40 @@ Puedes hacer doble clic en un paquete en la captura para abrir sus detalles. Los
 
   ![](https://assets.tryhackme.com/additional/wireshark101/20.png)
 
+
+## ARP Traffic
+ARP o Protocolo de Resolución de Direcciones es un protocolo de Capa 2 que se utiliza para conectar direcciones IP con direcciones MAC. Contendrán mensajes de SOLICITUD y mensajes de RESPUESTA. Para identificar paquetes, el encabezado del mensaje contendrá uno de dos códigos de operación:
+- Request
+- Reply
+
+Multiple ARP requests and replies:
+
+![](https://assets.tryhackme.com/additional/wireshark101/21.png)
+
+Es útil notar que la mayoría de los dispositivos se identificarán a sí mismos o Wireshark los identificará, como por ejemplo Intel_78; un ejemplo de tráfico sospechoso serían muchas solicitudes de una fuente no reconocida. Sin embargo, necesitas habilitar una configuración dentro de Wireshark para resolver direcciones físicas. Para habilitar esta característica, navega a Ver > Resolución de Nombres > Asegúrate de que la opción Resolver Direcciones Físicas esté marcada.
+
+Mirando la captura de pantalla a continuación, podemos ver que un dispositivo Cisco está enviando Solicitudes ARP, lo que significa que deberíamos poder confiar en este dispositivo, sin embargo, siempre debes mantener precaución al analizar paquetes.
+
+![](https://assets.tryhackme.com/additional/wireshark101/22.png)
+
+## Visión General del Tráfico ARP
+
+- Paquetes de Solicitud ARP: Podemos comenzar a analizar paquetes observando el primer paquete de Solicitud ARP y examinando los detalles del paquete:
+
+  ![](https://assets.tryhackme.com/additional/wireshark101/23.png)
+
+- Observando los detalles del paquete mencionados anteriormente, los detalles más importantes del paquete están resaltados en rojo. El Opcode es una abreviatura de código de operación y te indicará si es una Solicitud ARP o una Respuesta. El segundo detalle resaltado es hacia dónde está dirigido el paquete, que en este caso, es una solicitud de difusión a todos. Paquetes de Respuesta ARP:
+
+  ![](https://assets.tryhackme.com/additional/wireshark101/24.png)
+
+  Observando los detalles del paquete anterior, podemos ver por el Opcode que es un paquete de Respuesta ARP. También podemos obtener otra información útil como la dirección MAC y la dirección IP que se enviaron junto con la respuesta, ya que este es un paquete de respuesta, sabemos que esta fue la información enviada junto con el mensaje.
+
+  ARP es uno de los protocolos más simples de analizar, todo lo que necesitas recordar es identificar si es un paquete de solicitud o de respuesta y quién lo está enviando.
+
+
+
+
+
 -----------------------------------------------
 
 https://www.wolf.university/learnwireshark/ebook/learnwireshark.pdf
