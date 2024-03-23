@@ -23,32 +23,41 @@
 
 ## Packet Dissection
 Esta sección cubre cómo Wireshark utiliza las capas OSI para desglosar los paquetes y cómo usar estas capas para el análisis. 
+
 ![](https://assets.tryhackme.com/additional/wireshark101/12.png)
 
 
 ### Packet Details
 Puedes hacer doble clic en un paquete en la captura para abrir sus detalles. Los paquetes consisten de 5 a 7 capas basadas en el modelo OSI. Podemos ver las 7 capas distintas en el paquete: marco/paquete (Frame), fuente (source) [MAC], fuente (Source) [IP], protocolo (Protocol), errores de protocolo (Protocol Errors), protocolo de aplicación (Application Protocol) y datos de aplicación (Application Data):
+
 ![](https://assets.tryhackme.com/additional/wireshark101/13.png)
 
 - Frame (Layer 1) --> Esto te mostrará qué marco/paquete estás observando, así como detalles específicos de la Capa Física del modelo OSI.
+
   ![](https://assets.tryhackme.com/additional/wireshark101/14.png)
 
 - Source [MAC] (Layer 2) --> Esto te mostrará las direcciones MAC de origen y destino; de la Capa de Enlace de Datos del modelo OSI.
+
   ![](https://assets.tryhackme.com/additional/wireshark101/15.png)
 
 - Source [IP] (Layer 3) --> Esto te mostrará las direcciones IPv4 de origen y destino; de la Capa de Red del modelo OSI.
+
   ![](https://assets.tryhackme.com/additional/wireshark101/16.png)
 
 - Protocol (Layer 4) --> Esto te mostrará detalles del protocolo utilizado (UDP/TCP) junto con los puertos de origen y destino; de la Capa de Transporte del modelo OSI.
+
   ![](https://assets.tryhackme.com/additional/wireshark101/17.png)
 
 - Protocol Errors --> Esta es una continuación de la 4ª capa que muestra segmentos específicos de TCP que necesitaban ser reensamblados.
+
   ![](https://assets.tryhackme.com/additional/wireshark101/18.png)
 
 - Application Protocol (Layer 5) --> Esto mostrará detalles específicos del protocolo que se está utilizando, como HTTP, FTP, SMB, etc. De la Capa de Aplicación del modelo OSI.
+
   ![](https://assets.tryhackme.com/additional/wireshark101/19.png)
 
 - Application Data --> Esta es una extensión de la capa 5 que puede mostrar los datos específicos de la aplicación.
+
   ![](https://assets.tryhackme.com/additional/wireshark101/20.png)
 
 -----------------------------------------------
