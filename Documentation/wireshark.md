@@ -91,7 +91,19 @@ Mirando la captura de pantalla a continuación, podemos ver que un dispositivo C
   ARP es uno de los protocolos más simples de analizar, todo lo que necesitas recordar es identificar si es un paquete de solicitud o de respuesta y quién lo está enviando.
 
 
+## Opcode
+En el contexto de los protocolos de red, como el Protocolo de Resolución de Direcciones (ARP), el opcode es un campo dentro del paquete ARP que indica si el paquete es una solicitud (ARP Request) o una respuesta (ARP Reply).
 
+En ARP, específicamente, los opcodes tienen asignados valores numéricos para distinguir entre diferentes tipos de mensajes:
+- Solicitud ARP (ARP Request): Generalmente tiene el valor de opcode 1. Este tipo de paquete se envía para solicitar la dirección MAC (Media Access Control) que corresponde a una dirección IP conocida en la red.
+- Respuesta ARP (ARP Reply): Tiene el valor de opcode 2. Este paquete se envía en respuesta a una solicitud ARP, proporcionando la dirección MAC solicitada.
+
+Para filtrar y ver solamente las respuestas ARP en Wireshark, puedes utilizar el siguiente filtro de visualización:
+```
+arp.opcode == 2
+```
+
+eth.addr == 80:fb:06:f0:45:d7
 
 
 -----------------------------------------------
