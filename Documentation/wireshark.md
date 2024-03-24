@@ -355,6 +355,15 @@ Conversación representa el tráfico entre dos endpoints específicos. Esta opci
 ![](https://tryhackme-images.s3.amazonaws.com/user-uploads/6131132af49360005df01ae3/room-content/c54cc40b174b5ee7540b063ae3b075ed.png)
 
 ## Endpoints
+La opción de endpoints es similar a la opción de conversaciones. La única diferencia es que esta opción proporciona información única para un solo campo de información (Ethernet, IPv4, IPv6, TCP y UDP). De esta manera, los analistas pueden identificar los endpoints únicos en el archivo de captura y usarlo para el evento de interés. Puedes usar el menú "Estadísticas --> Endpoints" para ver esta información.
+
+Wireshark también admite la resolución de direcciones MAC a un formato legible por humanos usando el nombre del fabricante asignado por IEEE. Ten en cuenta que esta conversión se realiza a través de los primeros tres bytes de la dirección MAC y solo funciona para los fabricantes conocidos. Cuando revisas los endpoints ethernet, puedes activar esta opción con el botón de "Resolución de nombres" en la esquina inferior izquierda de la ventana de endpoints.
+
+![](https://tryhackme-images.s3.amazonaws.com/user-uploads/6131132af49360005df01ae3/room-content/8971957ac8c031276167d110ce187d4e.png)
+
+La resolución de nombres no se limita solo a las direcciones MAC. Wireshark también proporciona opciones de resolución de nombres para IP y puertos. Sin embargo, estas opciones no están habilitadas por defecto. Si deseas utilizar estas funcionalidades, necesitas activarlas a través del menú "Editar --> Preferencias --> Resolución de Nombres". Una vez que habilites la resolución de nombres para IP y puertos, verás las direcciones IP y nombres de puertos resueltos en el panel de lista de paquetes y también podrás ver los nombres resueltos en los menús de "Conversaciones" y "Endpoints".
+
+![](https://tryhackme-images.s3.amazonaws.com/user-uploads/6131132af49360005df01ae3/room-content/f19928be2591fd6aa59550e0a96f7563.png)
 
 
 
