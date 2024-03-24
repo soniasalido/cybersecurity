@@ -163,6 +163,42 @@ Dentro de Wireshark, también podemos ver el número de secuencia original naveg
 
 Típicamente, los paquetes TCP necesitan ser observados en su conjunto para contar una historia, en lugar de examinar uno por uno en detalle.
 
+
+## Resumen de DNS
+
+DNS o protocolo de Servicio de Nombres de Dominio se utiliza para resolver nombres con direcciones IP. Documentación de DNS de la IETF: https://www.ietf.org/rfc/rfc1035.txt
+
+Hay un par de cosas que se detallan a continuación que debes tener en mente al analizar paquetes DNS.
+- Consulta-Respuesta
+- Solo Servidores DNS
+- UDP
+
+Si alguno de estos está fuera de lugar, entonces los paquetes deben ser examinados más a fondo y deberían considerarse sospechosos. A continuación, podemos ver una captura de paquete con múltiples consultas y respuestas DNS.
+![](https://assets.tryhackme.com/additional/wireshark101/30.png)
+
+Al observar instantáneamente los paquetes, podemos ver qué están consultando; esto puede ser útil cuando tienes muchos paquetes y necesitas identificar tráfico sospechoso o inusual rápidamente:
+
+
+### Resumen del Tráfico DNS
+
+- Consulta DNS: Al observar la consulta a continuación, realmente tenemos dos bits de información que podemos usar para analizar el paquete. El primer dato en el que podemos fijarnos es de dónde proviene la consulta; en este caso, es UDP 53, lo que significa que este paquete pasa esa verificación. Si fuera TCP 53, entonces debería considerarse tráfico sospechoso y necesitaría ser analizado más a fondo. También podemos observar qué está consultando; esto puede ser útil, junto con otra información, para construir la historia de lo que ocurrió.
+![](https://assets.tryhackme.com/additional/wireshark101/31.png)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 -----------------------------------------------
 
 https://www.wolf.university/learnwireshark/ebook/learnwireshark.pdf
