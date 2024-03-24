@@ -365,7 +365,19 @@ La resolución de nombres no se limita solo a las direcciones MAC. Wireshark tam
 
 ![](capturas/f19928be2591fd6aa59550e0a96f7563.png)
 
+Vista del menú de endpoints con resolución de nombres:
 
+![](capturas/fb672714d13bf9a40502134193102907.png)
+
+
+Además de la resolución de nombres, Wireshark también ofrece un mapeo de geolocalización IP que ayuda a los analistas a identificar las direcciones de origen y destino en el mapa. Pero esta característica no está activada por defecto y necesita datos suplementarios como la base de datos GeoIP. Actualmente, Wireshark admite las bases de datos de MaxMind, y las últimas versiones de Wireshark vienen configuradas con el resolvedor de DB de MaxMind. Sin embargo, todavía necesitas los archivos DB de MaxMind y proporcionar la ruta de la base de datos a Wireshark usando el menú "Editar --> Preferencias --> Resolución de Nombres --> Directorios de base de datos de MaxMind". Una vez que descargues e indiques la ruta, Wireshark proporcionará automáticamente información GeoIP bajo los detalles del protocolo IP para las direcciones IP coincidentes.
+
+![](capturas/5bac23950841825eef688ca87dcd63d6.png)
+
+
+Endpoints and GeoIP view.
+
+![](captuas/4056095d90ec25260a5538f23649e057.png)
 
 -----------------------------------------------
 
