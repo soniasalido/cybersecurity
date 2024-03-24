@@ -377,7 +377,7 @@ Además de la resolución de nombres, Wireshark también ofrece un mapeo de geol
 
 Endpoints and GeoIP view.
 
-![](captuas/4056095d90ec25260a5538f23649e057.png)
+![](capturas/4056095d90ec25260a5538f23649e057.png)
 
 -----------------------------------------------
 
