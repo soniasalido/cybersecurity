@@ -258,6 +258,37 @@ El tráfico entre el Cliente y el Servidor ahora está cifrado y necesitará la 
 ![](https://assets.tryhackme.com/additional/wireshark101/42.png)
 
 
+### Análisis Práctico de Paquetes HTTPS
+Tryhackme Wireshar 101 --> Para practicar y obtener experiencia práctica con paquetes HTTPS, podemos analizar el PCAP snakeoil2_070531 y la clave de descifrado. Ve a la carpeta /root/Rooms/Wireshark101 en el AttackBox y extrae la carpeta task12.zip; también puedes descargar esto en esta tarea.
+
+![](https://assets.tryhackme.com/additional/wireshark101/43.png)
+
+Al observar la captura de paquetes anterior, podemos ver que todas las solicitudes están cifradas. Al observar más de cerca los paquetes, podemos ver el protocolo de enlace HTTPS, así como las solicitudes cifradas. Echemos un vistazo más de cerca a una de las solicitudes cifradas: el paquete 36.
+
+![](https://assets.tryhackme.com/additional/wireshark101/44.png)
+
+Podemos confirmar por los detalles del paquete que los Datos de Aplicación están encriptados. Puedes usar una clave RSA en Wireshark para ver los datos sin encriptar. Para cargar una clave RSA navega a Editar > Preferencias > Protocolos > TLS > [+]. Si estás utilizando una versión antigua de Wireshark, será SSL en lugar de TLS. Necesitarás completar las diversas secciones en el menú con las siguientes preferencias:
+- Dirección IP: 127.0.0.1
+- Puerto: start_tls
+- Protocolo: http
+- Archivo de clave: ubicación de la clave RSA
+
+![](https://assets.tryhackme.com/additional/wireshark101/45.png)
+
+Ahora que tenemos una clave RSA importada a Wireshark, si volvemos a la captura de paquetes podemos ver que el flujo de datos ahora no está cifrado.
+
+![](https://assets.tryhackme.com/additional/wireshark101/46.png)
+
+
+Ahora podemos ver las solicitudes HTTP en flujos de datos no cifrados. Si observamos más de cerca uno de los detalles del paquete, podemos ver más de cerca el flujo de datos no cifrados.
+
+![](https://assets.tryhackme.com/additional/wireshark101/47.png)
+
+Al observar los detalles del paquete, podemos ver información muy importante, como el URI de solicitud y el agente de usuario, que pueden ser muy útiles en aplicaciones prácticas de Wireshark, como la búsqueda de amenazas y la administración de redes.
+
+Ahora podemos usar otras funciones para organizar el flujo de datos, como usar la función de exportación de objetos HTTP. Para acceder a esta función, vaya a Archivo > Exportar objetos > HTTP.
+
+![](https://assets.tryhackme.com/additional/wireshark101/48.png)
 
 -----------------------------------------------
 
