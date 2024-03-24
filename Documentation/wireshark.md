@@ -106,6 +106,26 @@ arp.opcode == 2
 eth.addr == 80:fb:06:f0:45:d7
 
 
+## ICMP o Protocolo de Mensajes de Control de Internet
+Se utiliza para analizar varios nodos en una red. Esto se usa más comúnmente con utilidades como ping y traceroute. 
+
+### Resumen del Tráfico ICMP
+- Solicitud ICMP:
+  - Vemos los detalles de un paquete de solicitud de ping. Hay algunas cosas importantes dentro de los detalles del paquete que podemos notar primero siendo el tipo y código del paquete. Un tipo que es igual a 8 significa que es un paquete de solicitud, si es igual a 0 es un paquete de respuesta. Cuando estos códigos son alterados o no parecen correctos, eso es típicamente una señal de actividad sospechosa.
+  - Hay otros dos detalles dentro del paquete que son útiles para analizar: la marca de tiempo y los datos. La marca de tiempo puede ser útil para identificar el momento en que se solicitó el ping; también puede ser útil para identificar actividades sospechosas en algunos casos. También podemos mirar la cadena de datos, que típicamente será solo una cadena de datos aleatoria.
+    ![](capturas/https://assets.tryhackme.com/additional/wireshark101/icmp/2.png)
+
+
+- Respuesta ICMP:
+  - Vemos que el paquete de respuesta es muy similar al paquete de solicitud. Una de las principales diferencias que distingue a un paquete de respuesta es el código, en este caso, puedes ver que es 0, confirmando que es un paquete de respuesta.
+  - Las mismas técnicas de análisis para los paquetes de solicitud se aplican aquí también, nuevamente la principal diferencia será el tipo de paquete.
+  - ![](https://assets.tryhackme.com/additional/wireshark101/icmp/3.png)
+
+
+
+
+
+
 -----------------------------------------------
 
 https://www.wolf.university/learnwireshark/ebook/learnwireshark.pdf
