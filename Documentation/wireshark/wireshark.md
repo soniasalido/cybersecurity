@@ -341,29 +341,29 @@ Este menú ofrece múltiples opciones de estadísticas listas para investigar, q
 ## Direcciones Resueltas
 Esta opción ayuda a los analistas a identificar direcciones IP y nombres DNS disponibles en el archivo de captura, proporcionando la lista de las direcciones resueltas y sus hostnames. Ten en cuenta que la información del hostname se toma de las respuestas DNS en el archivo de captura. Los analistas pueden identificar rápidamente los recursos accedidos usando este menú. Así pueden detectar recursos accedidos y evaluarlos de acuerdo al evento de interés. Puedes usar el menú "Estadísticas --> Direcciones Resueltas" para ver todas las direcciones resueltas por Wireshark.
 
-![](https://tryhackme-images.s3.amazonaws.com/user-uploads/6131132af49360005df01ae3/room-content/38baec5d1f2fcdf85c0e1e2a78fe3bfe.png)
+![](capturas/38baec5d1f2fcdf85c0e1e2a78fe3bfe.png)
 
 
 ## Jerarquía de Protocolos
 Esta opción desglosa todos los protocolos disponibles del archivo de captura y ayuda a los analistas a ver los protocolos en una vista de árbol basada en contadores de paquetes y porcentajes. De esta manera, los analistas pueden ver el uso general de los puertos y servicios y centrarse en el evento de interés. La regla de oro mencionada en la sala anterior es válida en esta sección; puedes hacer clic derecho y filtrar el evento de interés. Puedes usar el menú "Estadísticas --> Jerarquía de Protocolos" para ver esta información.
 
-![](https://tryhackme-images.s3.amazonaws.com/user-uploads/6131132af49360005df01ae3/room-content/725ea0a97383aeee70ddfae49743cce1.png)
+![](capturas/725ea0a97383aeee70ddfae49743cce1.png)
 
 
 ## Conversaciones
 Conversación representa el tráfico entre dos endpoints específicos. Esta opción proporciona la lista de las conversaciones en cinco formatos base; ethernet, IPv4, IPv6, TCP y UDP. De esta manera, los analistas pueden identificar todas las conversaciones y contactar endpoints para el evento de interés. Puedes usar el menú "Estadísticas --> Conversaciones" para ver esta información.
-![](https://tryhackme-images.s3.amazonaws.com/user-uploads/6131132af49360005df01ae3/room-content/c54cc40b174b5ee7540b063ae3b075ed.png)
+![](capturas/c54cc40b174b5ee7540b063ae3b075ed.png)
 
 ## Endpoints
 La opción de endpoints es similar a la opción de conversaciones. La única diferencia es que esta opción proporciona información única para un solo campo de información (Ethernet, IPv4, IPv6, TCP y UDP). De esta manera, los analistas pueden identificar los endpoints únicos en el archivo de captura y usarlo para el evento de interés. Puedes usar el menú "Estadísticas --> Endpoints" para ver esta información.
 
 Wireshark también admite la resolución de direcciones MAC a un formato legible por humanos usando el nombre del fabricante asignado por IEEE. Ten en cuenta que esta conversión se realiza a través de los primeros tres bytes de la dirección MAC y solo funciona para los fabricantes conocidos. Cuando revisas los endpoints ethernet, puedes activar esta opción con el botón de "Resolución de nombres" en la esquina inferior izquierda de la ventana de endpoints.
 
-![](https://tryhackme-images.s3.amazonaws.com/user-uploads/6131132af49360005df01ae3/room-content/8971957ac8c031276167d110ce187d4e.png)
+![](capturas/8971957ac8c031276167d110ce187d4e.png)
 
 La resolución de nombres no se limita solo a las direcciones MAC. Wireshark también proporciona opciones de resolución de nombres para IP y puertos. Sin embargo, estas opciones no están habilitadas por defecto. Si deseas utilizar estas funcionalidades, necesitas activarlas a través del menú "Editar --> Preferencias --> Resolución de Nombres". Una vez que habilites la resolución de nombres para IP y puertos, verás las direcciones IP y nombres de puertos resueltos en el panel de lista de paquetes y también podrás ver los nombres resueltos en los menús de "Conversaciones" y "Endpoints".
 
-![](https://tryhackme-images.s3.amazonaws.com/user-uploads/6131132af49360005df01ae3/room-content/f19928be2591fd6aa59550e0a96f7563.png)
+![](capturas/f19928be2591fd6aa59550e0a96f7563.png)
 
 
 
