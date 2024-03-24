@@ -184,19 +184,47 @@ Al observar instantáneamente los paquetes, podemos ver qué están consultando;
 - Consulta DNS: Al observar la consulta a continuación, realmente tenemos dos bits de información que podemos usar para analizar el paquete. El primer dato en el que podemos fijarnos es de dónde proviene la consulta; en este caso, es UDP 53, lo que significa que este paquete pasa esa verificación. Si fuera TCP 53, entonces debería considerarse tráfico sospechoso y necesitaría ser analizado más a fondo. También podemos observar qué está consultando; esto puede ser útil, junto con otra información, para construir la historia de lo que ocurrió.
 ![](https://assets.tryhackme.com/additional/wireshark101/31.png)
 
+Al analizar paquetes DNS, realmente necesitamos entender el entorno y si el tráfico sería considerado normal dentro de tu entorno.
+
+Respuesta DNS: A continuación, vemos un paquete de respuesta, es similar al paquete de consulta, pero también incluye una respuesta, la cual puede ser utilizada para verificar la consulta:
+![](https://assets.tryhackme.com/additional/wireshark101/32.png)
 
 
 
 
+### Tráfico HTTP
+HTTP es uno de los protocolos más directos para el análisis de paquetes; el protocolo va directo al grano y no incluye ningún tipo de saludo inicial ni requisitos previos antes de la comunicación.
+
+Standart HTTP/1.1: https://www.ietf.org/rfc/rfc2616.txt
+
+![](https://assets.tryhackme.com/additional/wireshark101/33.png)
+
+Arriba podemos ver un ejemplo de paquete HTTP. Al observar un paquete HTTP, podemos recopilar fácilmente información, ya que el flujo de datos no está encriptado como su contraparte HTTPS. Algunos de los datos importantes que podemos recopilar del paquete incluyen el URI de solicitud, datos de archivo, servidor.
+
+![](https://assets.tryhackme.com/additional/wireshark101/34.png)
+
+Profundizamos en la captura de paquetes: Podemos ver los detalles de una de las solicitudes HTTP:
+
+![](https://assets.tryhackme.com/additional/wireshark101/35.png)
 
 
+A partir de este paquete podemos identificar información muy importante como el host, el agente de usuario, el URI solicitado y la respuesta.
+
+Podemos utilizar algunas de las funciones integradas de Wireshark para ayudar a digerir todos estos datos y organizarlos para análisis futuros. Podemos comenzar viendo una característica muy útil en Wireshark para organizar los protocolos presentes en una captura, la Jerarquía de protocolos. Vaya a Estadísticas > Jerarquía de protocolos:
+
+![](https://assets.tryhackme.com/additional/wireshark101/36.png)
 
 
+Esta información puede resultar muy útil en aplicaciones prácticas como la búsqueda de amenazas para identificar discrepancias en las capturas de paquetes.
+
+La siguiente característica de Wireshark que veremos es Exportar objeto HTTP. Esta característica nos permitirá organizar todos los URI solicitados en la captura. Para utilizar Exportar objeto HTTP, navegue hasta archivo > Exportar objetos > HTTP.
+
+![](https://assets.tryhackme.com/additional/wireshark101/37.png)
 
 
+La última característica que cubriremos en esta sección de esta sala son los Endpoints. Esta función permite al usuario organizar todos los Endpoints e IPs que se encuentran dentro de una captura específica. Al igual que las otras funciones, esto puede resultar útil para identificar de dónde se origina una discrepancia. Para utilizar la función Puntos finales, vaya a Estadísticas > Endpoints:
 
-
-
+![](https://assets.tryhackme.com/additional/wireshark101/38.png)
 
 
 -----------------------------------------------
