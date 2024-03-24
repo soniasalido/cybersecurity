@@ -227,6 +227,38 @@ La última característica que cubriremos en esta sección de esta sala son los 
 ![](https://assets.tryhackme.com/additional/wireshark101/38.png)
 
 
+## Tráfico HTTPS
+HTTPS o Protocolo Seguro de Transferencia de Hipertexto puede ser uno de los protocolos más molestos de entender desde la perspectiva del análisis de paquetes y puede ser confuso comprender los pasos necesarios para analizar paquetes HTTPS.
+
+### Visión General del Tráfico HTTPS
+Antes de enviar información encriptada, el cliente y el servidor necesitan acordar varios pasos para crear un túnel seguro:
+- El cliente y el servidor acuerdan una versión del protocolo.
+- El cliente y el servidor seleccionan un algoritmo criptográfico.
+- El cliente y el servidor pueden autenticarse entre sí; este paso es opcional.
+- Se crea un túnel seguro con una clave pública.
+
+Podemos comenzar a analizar el tráfico HTTPS mirando los paquetes del saludo inicial (handshake) entre el cliente y el servidor. A continuación, se muestra un paquete de Saludo de Cliente que muestra la Capa de Registro SSLv2, el Tipo de Handshake y la Versión SSL.
+
+![](https://assets.tryhackme.com/additional/wireshark101/39.png)
+
+A continuación se muestra el paquete de Saludo del Servidor que envía información similar al paquete de Saludo del Cliente; sin embargo, esta vez incluye detalles de la sesión e información del certificado SSL.
+
+![](https://assets.tryhackme.com/additional/wireshark101/40.png)
+
+A continuación se muestra el paquete de intercambio de claves del cliente; esta parte del protocolo de enlace determinará la clave pública que se utilizará para cifrar más mensajes entre el cliente y el servidor.
+
+![](https://assets.tryhackme.com/additional/wireshark101/41.png)
+
+En el siguiente paquete, el servidor confirmará la clave pública y creará el túnel seguro; todo el tráfico posterior a este punto se cifrará según las especificaciones acordadas enumeradas anteriormente.
+
+![](https://assets.tryhackme.com/additional/wireshark101/41.png)
+
+El tráfico entre el Cliente y el Servidor ahora está cifrado y necesitará la clave secreta para descifrar el flujo de datos que se envía entre los dos hosts.
+
+![](https://assets.tryhackme.com/additional/wireshark101/42.png)
+
+
+
 -----------------------------------------------
 
 https://www.wolf.university/learnwireshark/ebook/learnwireshark.pdf
