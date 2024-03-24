@@ -123,8 +123,45 @@ Se utiliza para analizar varios nodos en una red. Esto se usa más comúnmente c
 
 
 
+##  Tráfico TCP
+TCP o Protocolo de Control de Transmisión maneja la entrega de paquetes, incluyendo la secuenciación y los errores. Documentación TCP de la IETF: https://datatracker.ietf.org/doc/html/rfc793
+
+A continuación, vemos un ejemplo de un escaneo con Nmap, escaneando los puertos 80 y 443. Podemos decir que el puerto está cerrado debido al paquete RST, ACK en rojo.
+![](https://assets.tryhackme.com/additional/wireshark101/25.png)
+
+Al analizar paquetes TCP, Wireshark puede ser muy útil y codificar los paquetes en colores según el nivel de peligro.
+
+TCP puede proporcionar una visión útil de una red al analizarla; sin embargo, también puede ser difícil de analizar debido al número de paquetes que envía. Aquí es donde podrías necesitar utilizar otras herramientas como RSA NetWitness y NetworkMiner para filtrar y analizar más a fondo las capturas.
 
 
+### Resumen del Tráfico TCP
+Algo común que verás al analizar paquetes TCP es lo que se conoce como el handshake (saludo) TCP. Incluye una serie de paquetes: syn, syn-ack, ack; que permiten a los dispositivos establecer una conexión.
+
+![](https://assets.tryhackme.com/additional/wireshark101/26.png)
+
+Típicamente, cuando este saludo está fuera de orden o cuando incluye otros paquetes, como un **paquete RST**, algo sospechoso o incorrecto está sucediendo en la red. El escaneo con Nmap en la sección anterior es un ejemplo perfecto de esto. Un paquete RST, o paquete de reinicio, es un tipo de mensaje utilizado en el Protocolo de Control de Transmisión (TCP) para indicar que una conexión debe ser terminada inmediatamente. En el contexto de TCP, que es un protocolo orientado a conexión y diseñado para proporcionar una comunicación fiable entre dispositivos en una red, un paquete RST se utiliza en varias situaciones, como:
+
+Cerrar una conexión de manera anormal: Si un dispositivo recibe paquetes inesperados para una conexión que no reconoce o para una sesión que ha sido cerrada, puede enviar un paquete RST para informar al emisor que no hay una conexión establecida y que debe cesar el envío de más paquetes.
+
+Rechazar intentos de conexión: Si un servidor recibe una solicitud de conexión (un paquete SYN) a un puerto que no está escuchando o que está filtrado, puede responder con un paquete RST para indicar que la conexión no puede establecerse.
+
+Interceptar comunicaciones: En algunas técnicas de seguridad de red y análisis, los paquetes RST se utilizan para interrumpir conexiones existentes o bloquear el establecimiento de nuevas conexiones, como parte de una acción de firewall o de un sistema de prevención de intrusiones.
+
+### Análisis de Paquetes TCP
+Para analizar paquetes TCP, no entraremos en los detalles de cada aspecto individual de los paquetes; sin embargo, observaremos algunos de los comportamientos y estructuras que tienen los paquetes. A continuación, vemos los detalles de un paquete SYN. Lo principal que queremos buscar al observar un paquete TCP es el número de secuencia y el número de acuse de recibo.
+![](https://assets.tryhackme.com/additional/wireshark101/27.png)
+
+
+En este caso, vemos que el puerto no estaba abierto porque el número de acuse de recibo es 0.
+
+Dentro de Wireshark, también podemos ver el número de secuencia original navegando a editar > preferencias > protocolos > TCP > números de secuencia relativos (desmarcar casillas).
+
+![](https://assets.tryhackme.com/additional/wireshark101/28.png)
+
+
+![](https://assets.tryhackme.com/additional/wireshark101/29.png)
+
+Típicamente, los paquetes TCP necesitan ser observados en su conjunto para contar una historia, en lugar de examinar uno por uno en detalle.
 
 -----------------------------------------------
 
