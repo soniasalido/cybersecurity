@@ -300,19 +300,19 @@ Los filtros son consultas específicas diseñadas para protocolos disponibles en
 
 ## Aplicar como Filtro
 Esta es la manera más básica de filtrar tráfico. Mientras investigas un archivo de captura, puedes hacer clic en el campo que quieres filtrar y usar el "menú de clic derecho" o el menú "Analizar --> Aplicar como Filtro" para filtrar el valor específico. Una vez que aplicas el filtro, Wireshark generará la consulta de filtro requerida, la aplicará, mostrará los paquetes según tu elección y ocultará los paquetes no seleccionados del panel de lista de paquetes. Ten en cuenta que el número de paquetes totales y mostrados siempre se muestra en la barra de estado.
-![](https://tryhackme-images.s3.amazonaws.com/user-uploads/6131132af49360005df01ae3/room-content/463abd0a5cad55831b54a37c17092505.png)
+![](capturas/6131132af49360005df01ae3/room-content/463abd0a5cad55831b54a37c17092505.png)
 
 
 ## Filtro de Conversación
 Cuando usas la opción "Aplicar como Filtro", filtrarás solo una única entidad del paquete. Esta opción es una buena manera de investigar un valor particular en los paquetes. Sin embargo, supongamos que quieres investigar un número de paquete específico y todos los paquetes vinculados, enfocándote en direcciones IP y números de puerto. En ese caso, la opción "Filtro de Conversación" te ayuda a ver solo los paquetes relacionados y ocultar el resto de los paquetes fácilmente. Puedes usar el "menú de clic derecho" o el menú "Analizar --> Filtro de Conversación" para filtrar conversaciones.
 
-![](https://tryhackme-images.s3.amazonaws.com/user-uploads/6131132af49360005df01ae3/room-content/6b31a8581e560286aee74fb9a608dfc9.png)
+![](capturas/6b31a8581e560286aee74fb9a608dfc9.png)
 
 
 ## Colorear Conversación
 Esta opción es similar al "Filtro de Conversación" con una diferencia. Resalta los paquetes vinculados sin aplicar un filtro de visualización y disminuir el número de paquetes vistos. Esta opción funciona con la opción de "Reglas de Coloración" y cambia los colores de los paquetes sin considerar la regla de color aplicada previamente. Puedes usar el "menú de clic derecho" o el menú "Ver --> Colorear Conversación" para colorear un paquete vinculado con un solo clic. Ten en cuenta que puedes usar el menú "Ver --> Colorear Conversación --> Restablecer Coloración" para deshacer esta operación.
 
-![](https://tryhackme-images.s3.amazonaws.com/user-uploads/6131132af49360005df01ae3/room-content/b7a7ce6afa9c421e6bfaebac719d348c.png)
+![](capturas/b7a7ce6afa9c421e6bfaebac719d348c.png)
 
 ## Preparar como Filtro
 Similar a "Aplicar como Filtro", esta opción ayuda a los analistas a crear filtros de visualización usando el menú de "clic derecho". Sin embargo, a diferencia de la anterior, este modelo no aplica los filtros después de la elección. Añade la consulta requerida al panel y espera el comando de ejecución (enter) o otra opción de filtrado elegida usando ".. y/o .." del menú de "clic derecho".
@@ -322,7 +322,7 @@ Similar a "Aplicar como Filtro", esta opción ayuda a los analistas a crear filt
 
 ## Aplicar como Columna
 Por defecto, el panel de lista de paquetes proporciona información básica sobre cada paquete. Puedes usar el "menú de clic derecho" o "Analizar --> Aplicar como Columna" para añadir columnas al panel de lista de paquetes. Una vez que hagas clic en un valor y lo apliques como columna, será visible en el panel de lista de paquetes. Esta función ayuda a los analistas a examinar la aparición de un valor/campo específico en los paquetes disponibles en el archivo de captura. Puedes habilitar/deshabilitar las columnas mostradas en el panel de lista de paquetes haciendo clic en la parte superior del panel de lista de paquetes.
-![](https://tryhackme-images.s3.amazonaws.com/user-uploads/6131132af49360005df01ae3/room-content/8eac68abb9c10fccce114f6ad803a5dd.png)
+![](capturas/8eac68abb9c10fccce114f6ad803a5dd.png)
 
 
 ## Seguir Flujo
@@ -330,7 +330,7 @@ Wireshark muestra todo en tamaño de porción de paquete. Sin embargo, es posibl
 
 Puedes usar el "menú de clic derecho" o "Analizar --> Seguir Flujo de TCP/UDP/HTTP" para seguir los flujos de tráfico. Los flujos se muestran en un cuadro de diálogo separado; los paquetes que provienen del servidor se resaltan con azul, y aquellos que provienen del cliente se resaltan con rojo.
 
-![](https://tryhackme-images.s3.amazonaws.com/user-uploads/6131132af49360005df01ae3/room-content/d578e89a1f4a526fb8ede6fdf1a5f1b5.png)
+![](capturas/d578e89a1f4a526fb8ede6fdf1a5f1b5.png)
 
 Una vez que sigues un flujo, Wireshark crea y aplica automáticamente el filtro requerido para ver el flujo específico. Recuerda, una vez que se aplica un filtro, el número de paquetes vistos cambiará. Necesitarás usar el "botón X" ubicado en el lado derecho superior de la barra de filtro de visualización para remover el filtro de visualización y ver todos los paquetes disponibles en el archivo de captura.
 
