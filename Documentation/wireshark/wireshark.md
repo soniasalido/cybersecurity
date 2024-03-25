@@ -300,7 +300,7 @@ Los filtros son consultas específicas diseñadas para protocolos disponibles en
 
 ## Aplicar como Filtro
 Esta es la manera más básica de filtrar tráfico. Mientras investigas un archivo de captura, puedes hacer clic en el campo que quieres filtrar y usar el "menú de clic derecho" o el menú "Analizar --> Aplicar como Filtro" para filtrar el valor específico. Una vez que aplicas el filtro, Wireshark generará la consulta de filtro requerida, la aplicará, mostrará los paquetes según tu elección y ocultará los paquetes no seleccionados del panel de lista de paquetes. Ten en cuenta que el número de paquetes totales y mostrados siempre se muestra en la barra de estado.
-![](capturas/6131132af49360005df01ae3/room-content/463abd0a5cad55831b54a37c17092505.png)
+![](capturas/463abd0a5cad55831b54a37c17092505.png)
 
 
 ## Filtro de Conversación
