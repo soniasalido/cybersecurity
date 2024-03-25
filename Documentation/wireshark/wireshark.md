@@ -484,7 +484,7 @@ tcp.port in {80 443 8080}
 upper(http.server) contains "APACHE"
 ```
 
-![](capturas/room-content/289b8e6c53ab1adfd894874b7053de75.png)
+![](capturas/289b8e6c53ab1adfd894874b7053de75.png)
 
 
 ### Filter: "lower"
