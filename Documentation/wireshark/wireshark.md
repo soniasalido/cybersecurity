@@ -547,3 +547,5 @@ tcp.port eq <Port #> or <Protocol Name>
 
 udp.port eq <Port #> or <Protocol Name>
 ```
+
+What is the IP address of the hostname starts with "bbc"? --> dns.qry.name contains "bbc"
