@@ -600,6 +600,11 @@ ip.src == <SRC IP Address> and ip.dst == <DST IP Address>
 tcp.port eq <Port #> or <Protocol Name>
 
 udp.port eq <Port #> or <Protocol Name>
+
+dns.qry.type == 1 && dns.flags.response == 1”
+
+tcp.port == 80 && http.request.method == “GET
+
 ```
 
 What is the IP address of the hostname starts with "bbc"? --> dns.qry.name contains "bbc"
