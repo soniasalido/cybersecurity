@@ -417,7 +417,7 @@ Wireshark tiene una opción integrada (Expresión de Filtro de Visualización) q
 ## Operadores de Comparación
 Puedes crear filtros de visualización utilizando diferentes operadores de comparación para encontrar el evento de interés. Los operadores primarios se muestran en la tabla a continuación.
 
-![](capturas/wireshark.png)
+![](capturas/wireshark-oper.png)
 
 ## Barra de Herramientas de Filtro de Paquetes
 La barra de herramientas de filtro es donde creas y aplicas tus filtros de visualización. Es una barra de herramientas inteligente que te ayuda a crear filtros de visualización válidos con facilidad. Antes de comenzar a filtrar paquetes, aquí tienes algunos consejos:
