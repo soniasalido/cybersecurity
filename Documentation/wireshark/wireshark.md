@@ -445,7 +445,7 @@ Las características de la barra de herramientas de filtro se muestran a continu
 ```
 http.server contains "Apache"
 ```
-![](https://tryhackme-images.s3.amazonaws.com/user-uploads/6131132af49360005df01ae3/room-content/fb733f3af660c22a26d44e4087dc38a3.png(
+![](capturas/fb733f3af660c22a26d44e4087dc38a3.png)
 
 
 ### Filter: "matches"
@@ -458,7 +458,7 @@ http.server contains "Apache"
 http.host matches "\.(php|html)"
 ```
 
-![](https://tryhackme-images.s3.amazonaws.com/user-uploads/6131132af49360005df01ae3/room-content/c7c03c7306f9965b97423f8431a944cb.png)
+![](capturas/c7c03c7306f9965b97423f8431a944cb.png)
 
 
 ### Filter: "in"
@@ -471,7 +471,7 @@ http.host matches "\.(php|html)"
 tcp.port in {80 443 8080}
 ```
 
-![](https://tryhackme-images.s3.amazonaws.com/user-uploads/6131132af49360005df01ae3/room-content/db1cac52cf9ff629c21d104834cb689e.png)
+![](capturas/db1cac52cf9ff629c21d104834cb689e.png)
 
 
 ### Filter: "upper"
@@ -484,7 +484,7 @@ tcp.port in {80 443 8080}
 upper(http.server) contains "APACHE"
 ```
 
-![](https://tryhackme-images.s3.amazonaws.com/user-uploads/6131132af49360005df01ae3/room-content/289b8e6c53ab1adfd894874b7053de75.png)
+![](capturas/room-content/289b8e6c53ab1adfd894874b7053de75.png)
 
 
 ### Filter: "lower"
@@ -497,7 +497,7 @@ upper(http.server) contains "APACHE"
 lower(http.server) contains "apache"
 ```
 
-![](https://tryhackme-images.s3.amazonaws.com/user-uploads/6131132af49360005df01ae3/room-content/6cb5da0c3d4b10a3f29f15a193b9ab92.png)
+![](capturas/6cb5da0c3d4b10a3f29f15a193b9ab92.png)
 
 
 
@@ -511,24 +511,24 @@ lower(http.server) contains "apache"
 string(frame.number) matches "[13579]$"
 ```
 
-![](https://tryhackme-images.s3.amazonaws.com/user-uploads/6131132af49360005df01ae3/room-content/2f67a74f70e2f1a9acdbeee9bddd31d4.png)
+![](capturas/2f67a74f70e2f1a9acdbeee9bddd31d4.png)
 
 
 ### Marcadores y Botones de Filtrado
 Crear filtros y guardarlos como marcadores y botones para su uso posterior. En la barra de herramientas de filtro tiene una sección de marcadores de filtro para guardar los filtros creados por el usuario, lo que ayuda a los analistas a reutilizar filtros favoritos/complejos con un par de clics. Similar a los marcadores, puedes crear botones de filtro listos para aplicar con un solo clic.
 
-![](https://tryhackme-images.s3.amazonaws.com/user-uploads/6131132af49360005df01ae3/room-content/197e4e319adb4b8a70d7a4ca419bd52f.png)
+![](capturas/197e4e319adb4b8a70d7a4ca419bd52f.png)
 
 
 Creating and using display filter buttons.
 
-![](https://tryhackme-images.s3.amazonaws.com/user-uploads/6131132af49360005df01ae3/room-content/95212f1e231477a046950011715208ab.png)
+![](capturas/95212f1e231477a046950011715208ab.png)
 
 
 ## Profiles
 Wireshark is a multifunctional tool that helps analysts to accomplish in-depth packet analysis. As we covered during the room, multiple preferences need to be configured to analyse a specific event of interest. It is cumbersome to re-change the configuration for each investigation case, which requires a different set of colouring rules and filtering buttons. This is where Wireshark profiles come into play. You can create multiple profiles for different investigation cases and use them accordingly. You can use the "Edit --> Configuration Profiles" menu or the "lower right bottom of the status bar --> Profile" section to create, modify and change the profile configuration.
 
-![](https://tryhackme-images.s3.amazonaws.com/user-uploads/6131132af49360005df01ae3/room-content/9254b0bb582c55723327550a68c9a11e.png)
+![](capturas/9254b0bb582c55723327550a68c9a11e.png)
 
 
 -----------------------------------------------
