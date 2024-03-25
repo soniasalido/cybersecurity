@@ -705,6 +705,10 @@ tcp.port == 80 && http.request.method == “GET
 
 http.server matches "Microsoft" && http.server contains "IIS/7.5"
 
+string(ip.ttl) matches "[02468]$"
+
+tcp.checksum_bad.expert
+
 ```
 
 What is the IP address of the hostname starts with "bbc"? --> dns.qry.name contains "bbc"
