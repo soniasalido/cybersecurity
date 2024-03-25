@@ -402,7 +402,7 @@ Puedes leer más sobre la sintaxis de filtro de captura:
 - https://www.wireshark.org/docs/man-pages/pcap-filter.html
 - https://gitlab.com/wireshark/wireshark/-/wikis/CaptureFilters#useful-filters
 
-![](https://tryhackme-images.s3.amazonaws.com/user-uploads/6131132af49360005df01ae3/room-content/50a3e8a1cce46524f6de3ea14efd99e2.png)
+![](capturas/50a3e8a1cce46524f6de3ea14efd99e2.png)
 
 
 ## Sintaxis del Filtro de Visualización
@@ -411,13 +411,13 @@ Esta es la característica más poderosa de Wireshark. Soporta 3000 protocolos y
 Filtro de muestra para capturar tráfico del puerto 80: tcp.port == 80
 Wireshark tiene una opción integrada (Expresión de Filtro de Visualización) que almacena todas las estructuras de protocolo soportadas para ayudar a los analistas a crear filtros de visualización. 
 
-![](https://tryhackme-images.s3.amazonaws.com/user-uploads/6131132af49360005df01ae3/room-content/aa2ca30ccfff2d7eba16d031f0ab1f38.png)
+![](capturas/aa2ca30ccfff2d7eba16d031f0ab1f38.png)
 
 
 ## Operadores de Comparación
 Puedes crear filtros de visualización utilizando diferentes operadores de comparación para encontrar el evento de interés. Los operadores primarios se muestran en la tabla a continuación.
 
-![](xxxxxxxxxxxxxx)
+![](capturas/wireshark.png)
 
 ## Barra de Herramientas de Filtro de Paquetes
 La barra de herramientas de filtro es donde creas y aplicas tus filtros de visualización. Es una barra de herramientas inteligente que te ayuda a crear filtros de visualización válidos con facilidad. Antes de comenzar a filtrar paquetes, aquí tienes algunos consejos:
@@ -428,10 +428,10 @@ La barra de herramientas de filtro es donde creas y aplicas tus filtros de visua
   - Red: Filtro Inválido.
   - Amarillo: Filtro de advertencia. Este filtro funciona, pero es poco fiable, y se sugiere cambiarlo por un filtro válido.
 
-![](https://tryhackme-images.s3.amazonaws.com/user-uploads/6131132af49360005df01ae3/room-content/98be05db82a2b7a2fd449c2155512f87.png)
+![](capturas/98be05db82a2b7a2fd449c2155512f87.png)
 
 Las características de la barra de herramientas de filtro se muestran a continuación:
-![](https://tryhackme-images.s3.amazonaws.com/user-uploads/6131132af49360005df01ae3/room-content/b929ceb69199b99071fa95ce11d8ca44.png)
+![](capturas/b929ceb69199b99071fa95ce11d8ca44.png)
 
 -----------------------------------------------
 
