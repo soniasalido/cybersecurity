@@ -414,7 +414,7 @@ Wireshark tiene una opción integrada (Expresión de Filtro de Visualización) q
 ![](capturas/aa2ca30ccfff2d7eba16d031f0ab1f38.png)
 
 
-## Operadores de Comparación
+## Operadores de Comparación & Expresiones Lógicas
 Puedes crear filtros de visualización utilizando diferentes operadores de comparación para encontrar el evento de interés. Los operadores primarios se muestran en la tabla a continuación.
 
 ![](capturas/wireshark-oper.png)
