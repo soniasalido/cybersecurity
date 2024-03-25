@@ -703,6 +703,8 @@ dns.qry.type == 1 && dns.flags.response == 1”
 
 tcp.port == 80 && http.request.method == “GET
 
+http.server matches "Microsoft" && http.server contains "IIS/7.5"
+
 ```
 
 What is the IP address of the hostname starts with "bbc"? --> dns.qry.name contains "bbc"
