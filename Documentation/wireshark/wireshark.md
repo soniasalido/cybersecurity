@@ -318,7 +318,7 @@ Esta opción es similar al "Filtro de Conversación" con una diferencia. Resalta
 Similar a "Aplicar como Filtro", esta opción ayuda a los analistas a crear filtros de visualización usando el menú de "clic derecho". Sin embargo, a diferencia de la anterior, este modelo no aplica los filtros después de la elección. Añade la consulta requerida al panel y espera el comando de ejecución (enter) o otra opción de filtrado elegida usando ".. y/o .." del menú de "clic derecho".
 
 
-![](https://tryhackme-images.s3.amazonaws.com/user-uploads/6131132af49360005df01ae3/room-content/0291e6095277eaebf8f9a8f8df0f1ec6.png)
+![](capturas/0291e6095277eaebf8f9a8f8df0f1ec6.png)
 
 ## Aplicar como Columna
 Por defecto, el panel de lista de paquetes proporciona información básica sobre cada paquete. Puedes usar el "menú de clic derecho" o "Analizar --> Aplicar como Columna" para añadir columnas al panel de lista de paquetes. Una vez que hagas clic en un valor y lo apliques como columna, será visible en el panel de lista de paquetes. Esta función ayuda a los analistas a examinar la aparición de un valor/campo específico en los paquetes disponibles en el archivo de captura. Puedes habilitar/deshabilitar las columnas mostradas en el panel de lista de paquetes haciendo clic en la parte superior del panel de lista de paquetes.
