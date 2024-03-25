@@ -433,6 +433,104 @@ La barra de herramientas de filtro es donde creas y aplicas tus filtros de visua
 Las características de la barra de herramientas de filtro se muestran a continuación:
 ![](capturas/b929ceb69199b99071fa95ce11d8ca44.png)
 
+
+## Advanced Filtering
+
+### Filter: "contains"
+- Filter: contains.
+- Type:	Comparison Operator.
+- Description:	Search a value inside packets. It is case-sensitive and provides similar functionality to the "Find" option by focusing on a specific field.
+- Example: Find all "Apache" servers.
+- Workflow:	List all HTTP packets where packets' "server" field contains the "Apache" keyword.
+```
+http.server contains "Apache"
+```
+![](https://tryhackme-images.s3.amazonaws.com/user-uploads/6131132af49360005df01ae3/room-content/fb733f3af660c22a26d44e4087dc38a3.png(
+
+
+### Filter: "matches"
+- Filter: matches.
+- Type:	Comparison Operator.
+- Description:	Search a pattern of a regular expression. It is case insensitive, and complex queries have a margin of error.
+- Example:	Find all .php and .html pages.
+- Workflow	List all HTTP packets where packets' "host" fields match keywords ".php" or ".html".
+```
+http.host matches "\.(php|html)"
+```
+
+![](https://tryhackme-images.s3.amazonaws.com/user-uploads/6131132af49360005df01ae3/room-content/c7c03c7306f9965b97423f8431a944cb.png)
+
+
+### Filter: "in"
+- Filter: in.
+- Type:	 Set Membership.
+- Description:	Search a value or field inside of a specific scope/range.
+- Example:	Find all packets that use ports 80, 443 or 8080.
+- Workflow:	List all TCP packets where packets' "port" fields have values 80, 443 or 8080.
+```
+tcp.port in {80 443 8080}
+```
+
+![](https://tryhackme-images.s3.amazonaws.com/user-uploads/6131132af49360005df01ae3/room-content/db1cac52cf9ff629c21d104834cb689e.png)
+
+
+### Filter: "upper"
+- Filter: upper.
+- Type:	Function.
+- Description:	Convert a string value to uppercase.
+- Example:	Find all "APACHE" servers.
+- Workflow	Convert all HTTP packets' "server" fields to uppercase and list packets that contain the "APACHE" keyword.
+```
+upper(http.server) contains "APACHE"
+```
+
+![](https://tryhackme-images.s3.amazonaws.com/user-uploads/6131132af49360005df01ae3/room-content/289b8e6c53ab1adfd894874b7053de75.png)
+
+
+### Filter: "lower"
+- Filter: lower.
+- Type:	Function.
+- Description:	Convert a string value to lowercase.
+- Example:	Find all "apache" servers.
+- Workflow:	Convert all HTTP packets' "server" fields info to lowercase and list packets that contain the "apache" keyword.
+```
+lower(http.server) contains "apache"
+```
+
+![](https://tryhackme-images.s3.amazonaws.com/user-uploads/6131132af49360005df01ae3/room-content/6cb5da0c3d4b10a3f29f15a193b9ab92.png)
+
+
+
+### Filter: "string"
+- Filter: string.
+- Type:	Function.
+- Description:	Convert a non-string value to a string.
+- Example:	Find all frames with odd numbers.
+- Workflow:	Convert all "frame number" fields to string values, and list frames end with odd values.
+```
+string(frame.number) matches "[13579]$"
+```
+
+![](https://tryhackme-images.s3.amazonaws.com/user-uploads/6131132af49360005df01ae3/room-content/2f67a74f70e2f1a9acdbeee9bddd31d4.png)
+
+
+### Marcadores y Botones de Filtrado
+Crear filtros y guardarlos como marcadores y botones para su uso posterior. En la barra de herramientas de filtro tiene una sección de marcadores de filtro para guardar los filtros creados por el usuario, lo que ayuda a los analistas a reutilizar filtros favoritos/complejos con un par de clics. Similar a los marcadores, puedes crear botones de filtro listos para aplicar con un solo clic.
+
+![](https://tryhackme-images.s3.amazonaws.com/user-uploads/6131132af49360005df01ae3/room-content/197e4e319adb4b8a70d7a4ca419bd52f.png)
+
+
+Creating and using display filter buttons.
+
+![](https://tryhackme-images.s3.amazonaws.com/user-uploads/6131132af49360005df01ae3/room-content/95212f1e231477a046950011715208ab.png)
+
+
+## Profiles
+Wireshark is a multifunctional tool that helps analysts to accomplish in-depth packet analysis. As we covered during the room, multiple preferences need to be configured to analyse a specific event of interest. It is cumbersome to re-change the configuration for each investigation case, which requires a different set of colouring rules and filtering buttons. This is where Wireshark profiles come into play. You can create multiple profiles for different investigation cases and use them accordingly. You can use the "Edit --> Configuration Profiles" menu or the "lower right bottom of the status bar --> Profile" section to create, modify and change the profile configuration.
+
+![](https://tryhackme-images.s3.amazonaws.com/user-uploads/6131132af49360005df01ae3/room-content/9254b0bb582c55723327550a68c9a11e.png)
+
+
 -----------------------------------------------
 
 https://www.wolf.university/learnwireshark/ebook/learnwireshark.pdf
