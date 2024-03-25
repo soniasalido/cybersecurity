@@ -379,6 +379,57 @@ Endpoints and GeoIP view.
 
 ![](capturas/4056095d90ec25260a5538f23649e057.png)
 
+
+# Packet Filtering using queries
+Ya vimos que existen dos tipos de filtros en Wireshark. Aunque ambos utilizan una sintaxis similar, se utilizan para diferentes propósitos. Recordemos la diferencia entre estas dos categorías.
+- Filtros de Captura: Este tipo de filtro se utiliza para guardar solo una parte específica del tráfico. Se establece antes de capturar el tráfico y no se puede cambiar durante la captura.
+
+- Filtros de Visualización: Este tipo de filtro se utiliza para investigar los paquetes reduciendo el número de paquetes visibles, y se puede cambiar durante la captura.
+
+Nota: No puedes usar las expresiones de filtro de visualización para capturar tráfico y viceversa.
+
+El caso de uso típico es capturar todo y filtrar los paquetes según el evento de interés. Solo los profesionales experimentados utilizan filtros de captura y capturan tráfico. Esta es la razón por la cual Wireshark admite más tipos de protocolos en los filtros de visualización. 
+
+
+## Sintaxis del Filtro de Captura
+Estos filtros utilizan desplazamientos de byte, valores hexadecimales y máscaras con operadores booleanos, y no es fácil entender/predecir el propósito del filtro a primera vista. La sintaxis base se explica a continuación:
+- Ámbito: host, net, port y portrange.
+- Dirección: src, dst, src or dst, src and dst.
+- Protocolo: ether, wlan, ip, ip6, arp, rarp, tcp y udp.
+- Filtro de muestra para capturar tráfico del puerto 80: tcp port 80
+
+Puedes leer más sobre la sintaxis de filtro de captura:
+- https://www.wireshark.org/docs/man-pages/pcap-filter.html
+- https://gitlab.com/wireshark/wireshark/-/wikis/CaptureFilters#useful-filters
+
+![](https://tryhackme-images.s3.amazonaws.com/user-uploads/6131132af49360005df01ae3/room-content/50a3e8a1cce46524f6de3ea14efd99e2.png)
+
+
+## Sintaxis del Filtro de Visualización
+Esta es la característica más poderosa de Wireshark. Soporta 3000 protocolos y permite realizar búsquedas a nivel de paquete bajo la descomposición del protocolo. La "Referencia de Filtro de Visualización" oficial proporciona una descomposición de todos los protocolos soportados para filtrado.
+
+Filtro de muestra para capturar tráfico del puerto 80: tcp.port == 80
+Wireshark tiene una opción integrada (Expresión de Filtro de Visualización) que almacena todas las estructuras de protocolo soportadas para ayudar a los analistas a crear filtros de visualización. 
+
+![](https://tryhackme-images.s3.amazonaws.com/user-uploads/6131132af49360005df01ae3/room-content/aa2ca30ccfff2d7eba16d031f0ab1f38.png)
+
+
+## Operadores de Comparación
+Puedes crear filtros de visualización utilizando diferentes operadores de comparación para encontrar el evento de interés. Los operadores primarios se muestran en la tabla a continuación.
+
+![](xxxxxxxxxxxxxx)
+
+## Barra de Herramientas de Filtro de Paquetes
+La barra de herramientas de filtro es donde creas y aplicas tus filtros de visualización. Es una barra de herramientas inteligente que te ayuda a crear filtros de visualización válidos con facilidad. Antes de comenzar a filtrar paquetes, aquí tienes algunos consejos:
+- Los filtros de paquetes se definen en minúsculas.
+- Los filtros de paquetes tienen una característica de autocompletado para desglosar los detalles del protocolo, y cada detalle se representa con un "punto".
+- Los filtros de paquetes tienen una representación de tres colores explicada a continuación:
+  - Verde: Filtro Válido.
+  - Red: Filtro Inválido.
+  - Amarillo: Filtro de advertencia. Este filtro funciona, pero es poco fiable, y se sugiere cambiarlo por un filtro válido.
+
+![](https://tryhackme-images.s3.amazonaws.com/user-uploads/6131132af49360005df01ae3/room-content/98be05db82a2b7a2fd449c2155512f87.png)
+
 -----------------------------------------------
 
 https://www.wolf.university/learnwireshark/ebook/learnwireshark.pdf
