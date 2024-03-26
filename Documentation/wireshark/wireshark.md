@@ -750,3 +750,39 @@ icmp.type == 3 && icmp.code == 3
 Este filtro mostrará todos los mensajes ICMP de tipo 3, código 3, que corresponden a respuestas de "puerto inalcanzable" enviadas por un host cuando recibe un paquete dirigido a un puerto UDP que no está escuchando.
 
 Es importante tener en cuenta que no todos los sistemas o dispositivos envían respuestas ICMP ante paquetes UDP dirigidos a puertos cerrados, y algunos firewalls o dispositivos de red pueden bloquear estos mensajes ICMP por razones de seguridad. Esto significa que la ausencia de una respuesta ICMP no garantiza que un puerto esté abierto, sino que simplemente no se recibió ninguna confirmación de su estado.                          
+
+
+## TCP Scans
+
+- Filtrar Intentos de Conexión TCP: Filtrar todos los intentos de conexión TCP con:
+```
+tcp.flags.syn == 1 and tcp.flags.ack == 0
+```
+Este filtro mostrará todos los paquetes SYN, que son el primer paso en el establecimiento de una conexión TCP. Sin embargo, este filtro también capturará escaneos SYN y otras conexiones TCP legítimas.
+
+- Buscar Conexiones TCP Completadas: Cconexiones TCP que se completan, es decir, donde hay un "handshake" de tres vías (SYN, SYN-ACK, ACK), podríamos necesitar revisar manualmente las conexiones para confirmar que siguen el patrón completo de conexión. Este enfoque requiere analizar las secuencias de paquetes más que usar un filtro simple.
+
+- Observar Conexiones Rápidamente Terminadas: Muchos escaneos "TCP Connect" terminan la conexión inmediatamente después de establecerla, enviando un paquete FIN o RST para cerrarla:
+```
+tcp.flags.fin == 1 or tcp.flags.reset == 1
+```
+Y luego revisamos si estas terminaciones ocurren poco después de una conexión exitosa, lo que podría indicar un escaneo.
+
+- Análisis Estadístico: Wireshark ofrece herramientas estadísticas que pueden ayudar a identificar patrones anómalos, como un número elevado de intentos de conexión a diferentes puertos de un host en un corto periodo. Ve a Statistics > Endpoints o Statistics > Conversations para tener una visión general de las conexiones y buscar patrones que parezcan inusuales.
+
+
+## Number of “TCP Connect” scans?
+To respond to this question, we should use the next command:
+```
+tcp.flags.syn ==1 and tcp.flags.ack==0 and tcp.window_size>1024
+```
+El filtro en Wireshark tcp.flags.syn == 1 and tcp.flags.ack == 0 and tcp.window_size > 1024 se descompone en tres partes, cada una de las cuales aplica una condición específica para filtrar los paquetes TCP. Aquí te explico qué hace cada parte del filtro:
+
+tcp.flags.syn == 1: Esta condición filtra los paquetes que tienen el flag SYN establecido a 1. El flag SYN se utiliza en el inicio de la conexión TCP para sincronizar los números de secuencia entre el cliente y el servidor. Un paquete con el flag SYN establecido (y ACK no establecido, como veremos en la siguiente condición) indica un intento de iniciar una nueva conexión TCP, comúnmente el primer paso en el handshake de tres vías de TCP.
+
+tcp.flags.ack == 0: Esta condición busca paquetes que no tienen el flag ACK establecido. En el contexto de una conexión TCP, el flag ACK se utiliza para reconocer la recepción de paquetes. Al combinar esta condición con la anterior, el filtro se centra en los paquetes que están intentando iniciar una conexión (con SYN) pero que no son parte de una respuesta en un handshake de TCP (donde se esperaría que ACK estuviera establecido). Esencialmente, esto filtra los paquetes que representan el primer paso de un intento de conexión TCP, excluyendo los paquetes SYN-ACK que son el segundo paso en el proceso de handshake.
+
+tcp.window_size > 1024: Esta condición filtra los paquetes que tienen un tamaño de ventana TCP mayor a 1024 bytes. El tamaño de la ventana TCP indica la cantidad de datos que un lado está dispuesto a recibir (y puede almacenar en su buffer) antes de recibir un acuse de recibo. Un tamaño de ventana mayor a 1024 bytes sugiere que el emisor está dispuesto a recibir una cantidad relativamente grande de datos sin acuse de recibo, lo cual puede ser indicativo de una configuración de host o de las capacidades de red entre los dos puntos finales.
+
+Cuando combinas estas tres condiciones, el filtro selecciona los paquetes que son intentos iniciales de establecer una conexión TCP (indicado por SYN sin ACK) con una capacidad declarada de recibir más de 1024 bytes de datos antes de necesitar un acuse de recibo. Este filtro podría usarse para identificar intentos de conexión inicial bajo ciertas condiciones, posiblemente como parte de una investigación sobre comportamientos de red específicos, escaneos de puertos, o configuraciones de red.
+
