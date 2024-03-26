@@ -739,3 +739,14 @@ Para determinar qué tipo de escaneo se utilizó para escanear el puerto TCP 80 
 - Utilizar "Conversations" y "Endpoints": Las herramientas "Conversations" y "Endpoints" bajo el menú "Statistics" pueden ayudarte a identificar patrones de escaneo al mostrarte una vista resumida de las conexiones y los hosts involucrados.
 
 Estos pasos deberían ayudarte a identificar el tipo de escaneo utilizado para investigar el puerto TCP 80 en tu captura de Wireshark. Sin embargo, la interpretación de los datos capturados puede variar dependiendo del contexto específico del tráfico de red y de las técnicas de escaneo empleadas.
+
+
+## "UDP close port" messages 
+En Wireshark, los mensajes que indican un puerto cerrado para conexiones UDP se identifican generalmente a través de mensajes ICMP de tipo 3, código 3, los cuales indican "Destination Unreachable: Port Unreachable". Esto se debe a que UDP, a diferencia de TCP, no establece una conexión (no hay un handshake de tres pasos), por lo que la única forma de saber si un puerto UDP está cerrado es si el host de destino responde con un mensaje ICMP indicando que el puerto es inalcanzable.
+```
+icmp.type == 3 && icmp.code == 3
+```
+
+Este filtro mostrará todos los mensajes ICMP de tipo 3, código 3, que corresponden a respuestas de "puerto inalcanzable" enviadas por un host cuando recibe un paquete dirigido a un puerto UDP que no está escuchando.
+
+Es importante tener en cuenta que no todos los sistemas o dispositivos envían respuestas ICMP ante paquetes UDP dirigidos a puertos cerrados, y algunos firewalls o dispositivos de red pueden bloquear estos mensajes ICMP por razones de seguridad. Esto significa que la ausencia de una respuesta ICMP no garantiza que un puerto esté abierto, sino que simplemente no se recibió ninguna confirmación de su estado.                          
