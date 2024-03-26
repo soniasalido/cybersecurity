@@ -718,3 +718,24 @@ icmp.type==3 and icmp.code==3
 ```
 
 What is the IP address of the hostname starts with "bbc"? --> dns.qry.name contains "bbc"
+
+
+-------------------------------------------------
+## Determinar el tipo de escaneo se utilizó para escanear el puerto TCP 80 
+Para determinar qué tipo de escaneo se utilizó para escanear el puerto TCP 80 utilizando Wireshark, debemos seguir algunos pasos y prestar atención a ciertos patrones de paquetes que pueden indicar el tipo de escaneo. Los tipos de escaneo más comunes incluyen escaneo SYN (a veces llamado "half-open scan"), escaneo de conexión completa (TCP Connect), escaneo FIN, escaneo Xmas, entre otros. Cada uno tiene características distintivas en términos de los flags de TCP utilizados:
+- Abrir Wireshark y cargar el archivo de captura: Primero, abre Wireshark y carga el archivo de captura que deseas analizar.
+
+- Filtrar por tráfico hacia el puerto 80: Para centrarte en el tráfico dirigido al puerto 80, puedes utilizar el filtro de visualización tcp.port == 80. Esto filtrará tanto el tráfico de salida como el de entrada asociado con el puerto 80.
+
+- Identificar patrones de escaneo:
+  - Escaneo SYN (Half-open Scan): Busca paquetes donde solo el flag SYN está establecido (sin el ACK). Un intento de conexión que no se completa (es decir, sin los paquetes de seguimiento SYN-ACK y ACK) puede indicar un escaneo SYN. Filtro de ejemplo: tcp.flags.syn == 1 && tcp.flags.ack == 0.
+
+  - Escaneo TCP Connect: Este es un escaneo de conexión completa, por lo que buscarías una secuencia completa de handshake TCP (SYN, SYN-ACK, ACK) seguida de un cierre de conexión (FIN o RST). Este tipo de escaneo es más difícil de diferenciar del tráfico normal solo con filtros, pero la presencia de múltiples conexiones completas a diferentes puertos puede ser un indicador.
+
+  - Escaneo FIN, Xmas, o Null: Estos escaneos se caracterizan por el envío de paquetes con combinaciones inusuales de flags o sin flags. Por ejemplo, un escaneo FIN solo tiene el flag FIN establecido, el escaneo Xmas tiene los flags FIN, PSH y URG establecidos, y un escaneo Null no tiene flags establecidos. Filtros de ejemplo: tcp.flags.fin == 1 && tcp.flags.urg == 0 && tcp.flags.push == 0 para FIN, tcp.flags.fin == 1 && tcp.flags.urg == 1 && tcp.flags.push == 1 para Xmas, y tcp.flags == 0 para Null.
+
+- Examinar detalles de los paquetes: Selecciona los paquetes que coincidan con los filtros anteriores y revisa los detalles en el panel inferior de Wireshark. Presta especial atención a los flags de TCP y a cualquier patrón de paquetes que parezca indicar un escaneo.
+
+- Utilizar "Conversations" y "Endpoints": Las herramientas "Conversations" y "Endpoints" bajo el menú "Statistics" pueden ayudarte a identificar patrones de escaneo al mostrarte una vista resumida de las conexiones y los hosts involucrados.
+
+Estos pasos deberían ayudarte a identificar el tipo de escaneo utilizado para investigar el puerto TCP 80 en tu captura de Wireshark. Sin embargo, la interpretación de los datos capturados puede variar dependiendo del contexto específico del tráfico de red y de las técnicas de escaneo empleadas.
