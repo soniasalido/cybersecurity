@@ -709,6 +709,12 @@ string(ip.ttl) matches "[02468]$"
 
 tcp.checksum_bad.expert
 
+tcp.flags.syn==1 and tcp.flags.ack==0 and tcp.window_size > 1024 
+
+icmp.type==3 and icmp.code==3     
+
+
+
 ```
 
 What is the IP address of the hostname starts with "bbc"? --> dns.qry.name contains "bbc"
