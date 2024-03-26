@@ -786,3 +786,10 @@ tcp.window_size > 1024: Esta condición filtra los paquetes que tienen un tamañ
 
 Cuando combinas estas tres condiciones, el filtro selecciona los paquetes que son intentos iniciales de establecer una conexión TCP (indicado por SYN sin ACK) con una capacidad declarada de recibir más de 1024 bytes de datos antes de necesitar un acuse de recibo. Este filtro podría usarse para identificar intentos de conexión inicial bajo ciertas condiciones, posiblemente como parte de una investigación sobre comportamientos de red específicos, escaneos de puertos, o configuraciones de red.
 
+
+
+## Analizar anuncios ARP gratuitos
+Los anuncios ARP gratuitos son respuestas ARP enviadas sin una solicitud previa, a menudo utilizados por dispositivos al asignarse a sí mismos una dirección IP para anunciar su presencia. Estos pueden indicar un cambio de dirección IP o un conflicto:
+```
+arp.isgratuitous == 1
+```
