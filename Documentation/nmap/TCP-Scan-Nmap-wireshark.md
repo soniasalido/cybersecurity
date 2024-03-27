@@ -97,7 +97,7 @@ sudo nmap -sS -V -A -T4 10.0.1.254
 
 ![](capturas/open-tcp-port-SYN.png)
 
-![](capturas/close-tcp-port-SYN.png)
+![](capturas/closed-tcp-port-SYN.png)
 
 
 ### 2. Escaneo de conexión completa (o escaneo TCP connect) 🠲 TCP scan (-sT) (TCP)
