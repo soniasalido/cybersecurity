@@ -247,23 +247,26 @@ nmap -sF 10.0.1.254
 ■ -sF: FIN Scan
 ```
 
+**Tráfico de red durante un FIN Scan -sF en puertos que están cerrados:**
+```
+FIN Scan Dirigido a un puerto cerrado:
+Kali Linux						                     Ubuntu Server
+10.0.2.5:35729  - - - - - - - - - - - - - - - -FIN - - - - - -- - >	10.0.2.4:199
+10.0.2.4:199  <- - - - -  - - - ----- -RST/ACK - - - -  - -	    10.0.2.5:35729
+```
+![](capturas/wireshark-FIN-scan.png)
+
+
+
+**Tráfico de red durante un FIN Scan -sF en puertos que están abiertos:**
 ```
 FIN Scan Dirigido a un puerto abierto:
 Kali Linux						                     Ubuntu Server
 10.0.1.101  - - - - - - - - - - - - - - - -FIN - - - - - -- - >	10.0.1.254:22
 10.0.1.101  <- - - - - - -- -No Response - - - -  -- - -	    10.0.1.254:22
-xxxxxxxxxxx
-![](capturas/open-tcp-port-SYN.png)
-
-
-FIN Scan Dirigido a un puerto cerrado:
-Kali Linux						                     Ubuntu Server
-10.0.1.101  - - - - - - - - - - - - - - - -FIN - - - - - -- - >	10.0.1.254
-10.0.1.101  <- - - - -  - - - ----- -RST/ACK - - - -  - -	    10.0.1.254
 ```
+![](capturas/wireshark-FIN-scan-2.png)
 
-Vemos con wireshark cómo la máquina 10.0.1.101 envía un paquete FIN a la máquina 10.0.1.254 que no obtiene respuesta. Justo encima vemos en rojo, respuestas del servidor de puertos cerrados ya que responden con RST, ACK →
-![](capturas/tcp-port-Fin-scan.png)
 
 
 #### Escaneo Xmas 🠲 (-sX) (Xmas)
