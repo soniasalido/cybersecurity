@@ -61,6 +61,8 @@ El proceso de escaneo de TCP busca determinar qué puertos están escuchando (ab
 
 
 ## Tipos de escaneo de TCP:
+![](capturas/nmap.png)
+
 ### 1. Escaneo SYN (o half-open scan) 🠲 TCP scan (-sS) (Stealth)
 Este método envía un paquete TCP SYN (solicitud de conexión) a un puerto específico del sistema objetivo. Si el puerto está abierto, el sistema responde con un paquete SYN-ACK, lo que indica que está listo para establecer una conexión. El escáner entonces envía un paquete RST (reset) para cerrar la conexión antes de que se complete, evitando así la creación de una conexión completa y posiblemente el registro de la actividad de escaneo.
 
