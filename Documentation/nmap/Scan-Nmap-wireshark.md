@@ -144,6 +144,9 @@ sudo nmap -Pn -sT -p 22,80,8080 -v 10.0.1.254
 ■ -v: Modo detallado, muestra hora de inicio del escáner, cantidad de hosts y puertos escaneados, duración del escaneo y resume brevemente los resultados.
 
 
+![](capturas/open-tcp-port-TCP-scan-sT.png)
+![](capturas/closed-tcp-port-TCP-scan-sT.png)
+
 
 ### 3. Escaneo FIN, Xmas, y Null 
 Estos métodos envían paquetes con banderas (flags) TCP inusuales o inválidas para provocar respuestas de los puertos que pueden ser interpretadas para determinar su estado. No todos los sistemas responden de la misma manera a estos paquetes, por lo que la efectividad de estos métodos puede variar.
