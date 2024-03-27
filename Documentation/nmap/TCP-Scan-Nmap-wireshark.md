@@ -181,7 +181,7 @@ sudo nmap -Pn -sT -p 22,80,8080 -v 10.0.1.254
 ![](capturas/closed-tcp-port-TCP-scan-sT.png)
 
 
-**Tráfico de red durante un TCP Connect Scan -sy en puertos que están cerrados:**
+**Tráfico de red durante un TCP Connect Scan -sT en puertos que están cerrados:**
 ```
 TCP Connect Scan Dirigido a puertos cerrados:
 Kali Linux						                     Ubuntu Server
@@ -190,7 +190,7 @@ Kali Linux						                     Ubuntu Server
 ```
 ![](capturas/wireshark-tcp-connect-scan-sT.png)
 
-**Tráfico de red durante un TCP Connect Scan -sy en puertos que están cerrados:**
+**Tráfico de red durante un TCP Connect Scan -sT en puertos que están cerrados:**
 ```
 TCP Connect Scan Dirigido a un puerto abierto 80:
 Kali Linux						                     Ubuntu Server
