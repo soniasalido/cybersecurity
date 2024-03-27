@@ -272,10 +272,10 @@ Kali Linux						Ubuntu Server
 ```
 
 Vemos con wireshark cómo la máquina 10.0.1.101 envía un paquete sin ningún flag activado [<None>] a la máquina 10.0.1.254 al puerto 43961. También vemos la respuesta de la máquina servidor 10.0.1.254 que responden RST/ACK, lo que implica que ese puerto está cerrado →
-
+![](capturas/closed-tcp-port-null-scan.png)
 
 Aquí vemos como no obtiene respuesta cuando se envía el paquete sin ningún flag al puerto 22 y 80, lo que implica que están abiertos →
-
+![](capturas/open-tcp-port-null-scan.png)
 
 # Otros escaneos
 **Ejemplos:**
