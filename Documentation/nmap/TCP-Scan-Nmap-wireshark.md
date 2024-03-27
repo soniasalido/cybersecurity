@@ -101,8 +101,18 @@ sudo nmap -sS -V -A -T4 10.0.1.254
 
 
 
-**Tráfico de red durante un SYN Scan -sS**
+**Tráfico de red durante un SYN Scan -sS en puertos que están cerrados**
+Vemos cómo desde la ip 10.0.2.5 se manda paquetes con la flag SYN activada a los puerto, 23, 995, 199... y más abajo podemos observar la respuesta de la máquina 10.0.2.4 con los flags RST, ACK activados, que indican:
+- RST (Reset): Este flag se utiliza para terminar una conexión o para indicar que no hay una conexión correspondiente a este paquete. Su presencia en la respuesta indica que el servidor ha rechazado la tentativa de conexión, lo que comúnmente significa que el puerto al que se dirigió el paquete SYN está cerrado.
+- ACK (Acknowledgment): Este flag se utiliza para confirmar la recepción de paquetes. Cuando se envía en combinación con el flag RST, está reconociendo el paquete SYN inicial pero al mismo tiempo indica que la conexión no puede establecerse.
+
 ![](capturas/wireshark-tcp-scan-SYN-sS.png)
+
+
+**Tráfico de red durante un SYN Scan -sS en puertos que están abiertos: puerto 80**
+![](capturas/wireshark-tcp-scan-SYN-sS-2.png)
+
+
 
 
 ### 2. Escaneo de conexión completa (o escaneo TCP connect) 🠲 TCP scan (-sT) (TCP)
