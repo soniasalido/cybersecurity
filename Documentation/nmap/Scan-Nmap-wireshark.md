@@ -72,6 +72,7 @@ FLAGS:
 SYN 🠚
 🠠 SYN, ACK
 RST
+----------------------------
 Data Length: 44
 TTL: <64
 ```
