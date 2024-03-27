@@ -86,6 +86,14 @@ TTL: <64
 
 El escaneo SYN es especialmente útil para los atacantes y profesionales de la seguridad por igual porque permite mapear los puertos abiertos de un servidor sin establecer una conexión completa, lo que podría dejar huellas en los registros del sistema objetivo. Esto lo hace menos intrusivo y más difícil de detectar en comparación con otros métodos de escaneo que completan la conexión TCP. Además, el **escaneo SYN a menudo requiere privilegios de root** en el sistema desde el que se realiza el escaneo, ya que implica la creación directa de paquetes TCP a bajo nivel.
 
+**Ejemplo: Escaneo para ver versiones de la máquina objetivo:**
+```
+sudo nmap -sS -V -A -T4 10.0.1.254
+```
+■ -sS: TCP SYN port scan (Default)
+■ -V: Prints verbose output
+■ -A: Enables OS detection, version detection, script scanning, and traceroute
+■ -T4: T4 timing
 
 ### 2. Escaneo de conexión completa (o escaneo TCP connect) 🠲 TCP scan (-sT) (TCP)
 En este caso, el escáner establece una conexión completa con el puerto objetivo utilizando el procedimiento normal de establecimiento de conexión TCP (handshake de tres vías: SYN, SYN-ACK, ACK). Aunque este método permite determinar si un puerto está abierto, también es más detectable porque la conexión se completa y puede quedar registrada en los sistemas de registro o detección de intrusiones del objetivo.
@@ -120,11 +128,25 @@ Para su funcionamiento, usa las llamadas de alto nivel del sistema operativo par
 - Porque termina todas las conexiones, en lugar de hacer un half-open reset. Por este motivo, es menos sigilosa, siendo probable que un IDS/IPS registre los intentos de conexión.
 
 
+**Ejemplos:**
+```
+sudo nmap -sT 10.0.1.254
+sudo nmap -Pn -sT -p 22,80,8080 -v 10.0.1.254
+```
+■ -sT: TCP connect scan
+■ -Pn: Hace un ping  que envía paquetes de tipo ICMP Address mask
+■ -p: Define los puertos a los que realiza el escáner 22, 80,2022 y 8080
+■ -v: Modo detallado, muestra hora de inicio del escáner, cantidad de hosts y puertos escaneados, duración del escaneo y resume brevemente los resultados.
+
+
+
 ### 3. Escaneo FIN, Xmas, y Null 
 Estos métodos envían paquetes con banderas (flags) TCP inusuales o inválidas para provocar respuestas de los puertos que pueden ser interpretadas para determinar su estado. No todos los sistemas responden de la misma manera a estos paquetes, por lo que la efectividad de estos métodos puede variar.
 
 #### Escaneo FIN 🠲(-sF) (Finish)
 El escaneo FIN se basa en enviar un paquete TCP con el flag FIN (finalizar) activado a un puerto específico del objetivo. La lógica detrás de este tipo de escaneo se aprovecha de un detalle en el comportamiento de los puertos TCP según las especificaciones del protocolo.
+
+En la técnica FIN Scan (-sF) se activa únicamente el flag FIN. Un paquete FIN se usa para terminar la conexión TCP entre el puerto de origen y el puerto de destino, generalmente después de que se completa la transferencia de datos. Nmap inicia un escaneo FIN enviando el paquete FIN. FIN scan sólo funciona en sistemas operativos TCP / IP basados de acuerdo con RFC 793.
 
 **Esquema:**
 ```
@@ -144,6 +166,31 @@ TTL: <64
 La eficacia del escaneo FIN puede variar dependiendo de la configuración del sistema objetivo y de los dispositivos de seguridad en la red (como firewalls y sistemas de detección de intrusos) que pueden interceptar o responder de manera diferente a los paquetes inesperados. Un aspecto clave de este método es que, **al no completar un handshake TCP típico, puede evadir la detección en algunos sistemas que solo registran o alertan sobre conexiones TCP completas.**
 
 El escaneo FIN es especialmente útil en entornos donde los puertos cerrados responden de manera predecible con paquetes RST, permitiendo al atacante o profesional de seguridad diferenciar entre puertos cerrados y potencialmente abiertos o filtrados. Sin embargo, no todos los sistemas operativos responden de la misma manera a los paquetes FIN no solicitados, lo que puede afectar la precisión de este método de escaneo.
+
+**Ejemplo:**
+```
+nmap -sF 10.0.1.254
+```
+■ -sF: FIN Scan
+
+```
+FIN Scan Dirigido a un puerto abierto:
+Kali Linux						                                Ubuntu Server
+10.0.1.101  - - - - - - - - - - - - - - - -FIN - - - - - -- - >	10.0.1.254:22
+10.0.1.101  <- - - - - - -- -No Response - - - -  -- - -	    10.0.1.254:22
+
+![](capturas/open-tcp-port-SYN.png)
+
+
+FIN Scan Dirigido a un puerto cerrado:
+Kali Linux						                                Ubuntu Server
+10.0.1.101  - - - - - - - - - - - - - - - -FIN - - - - - -- - >	10.0.1.254
+10.0.1.101  <- - - - -  - - - ----- -RST/ACK - - - -  - -	    10.0.1.254
+```
+
+
+Vemos con wireshark cómo la máquina 10.0.1.101 envía un paquete FIN a la máquina 10.0.1.254 que no obtiene respuesta. Justo encima vemos en rojo, respuestas del servidor de puertos cerrados ya que responden con RST, ACK→
+
 
 
 #### Escaneo Xmas 🠲 (-sX) (Xmas)
@@ -194,4 +241,40 @@ Una de las ventajas teóricas del escaneo Null es su potencial para evadir la de
 Al igual que con otros métodos de escaneo, el uso del escaneo Null sin autorización en redes que no son de tu propiedad puede ser ilegal y considerado una violación de las políticas de uso aceptable. Es una herramienta útil para profesionales de la seguridad que realizan pruebas de penetración o evaluaciones de seguridad con permiso, permitiéndoles identificar puertos abiertos y evaluar la postura de seguridad de una red.
 
 
+# Otros escaneos
+**Ejemplos:**
+```
+sudo nmap -A -sC -Pn- 10.0.1.254
+```
+■ -A: Perform an Aggresive Scan
+■ -sC: Scan with default NSE scripts. Considered useful for discovery and safe
+■ -Pn: Hace un ping  que envía paquetes de tipo ICMP Addressmask
+
+
+
 # Bloqueo de TCP Scan
+
+## Bloqueo de escaneo de puertos abiertos
+Rechazaremos SYN flags con IPTables en el ubuntu server. Aplicaremos un filtro de firewall que ahora evitará la comunicación de protocolo de enlace de 3 vías en la red y resistirá al atacante para realizar un escaneo TCP al rechazar el paquete SYN en la red.
+
+Ejecutamos el siguiente comando para hacer una regla de filtrado para bloquear el paquete SYN en el ubuntu server→
+```
+iptables -I INPUT -p tcp --tcp-flags ALL SYN -j REJECT --reject-with tcp-reset
+```
+■ -I: Inserta una regla en una cadena en un punto especificado por un valor entero definido por el usuario.
+■ INPUT: Cadenas por donde van a circular los paquetes dentro del sistema: Contiene los paquetes destinados al equipo local con cualquier origen.
+■ -p: Configura el protocolo IP para la regla.
+■ -cp-flags ALL SYN: Permite a los paquetes TCP con bits específicos o banderas, ser coincididos con una regla. Máscara que configura las banderas a ser examinadas en el paquete: ALL. Bandera que se debe configurar para poder coincidir: SYN.
+■ -j REJECT: Salta a un objetivo particular cuando un paquete coincide con una regla particular. Objetivo: REJECT. Envía un paquete de error de vuelta al sistema remoto y deja caer el paquete.
+■ --reject-with tcp-reset: El objetivo REJECT acepta --reject-with <tipo> (donde <tipo> es el tipo de rechazo) el cual permite devolver información más detallada con el paquete de error. Se rechaza con el tipo tcp-reset que se emplea para cerrar de una forma elegante conexiones TCP abiertas.
+
+
+# Bypass del bloqueo de paquetes SYN del Firewall
+Esta técnica se basa en enviar sondas TCP con distintos flags activados, como por ejemplo Null, FIN, Xmas. Se aprovecha de una indefinición en el estándar RFC 793 para provocar una respuesta en el objetivo que determine si un puerto está abierto o cerrado. El fundamento de esta técnica reside en que los puertos cerrados de equipos compatibles con esta RFC responderán con un RST a cualquier paquete que no contenga un flag SYN, RST o ACK, mientras que no emitirán respuesta alguna si el puerto está abierto.
+
+Según las respuestas obtenidas, Nmap clasifica los puertos en:
+- Abiertos/Filtrados: Si no se recibe ninguna respuesta.
+- Cerrados: Si se recibe un paquete RST.
+- Filtrados: Si se recibe algún tipo de error ICMP inalcanzable.
+
+
