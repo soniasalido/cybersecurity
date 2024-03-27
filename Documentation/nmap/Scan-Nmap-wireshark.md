@@ -93,10 +93,12 @@ El escaneo SYN es especialmente útil para los atacantes y profesionales de la s
 En este caso, el escáner establece una conexión completa con el puerto objetivo utilizando el procedimiento normal de establecimiento de conexión TCP (handshake de tres vías: SYN, SYN-ACK, ACK). Aunque este método permite determinar si un puerto está abierto, también es más detectable porque la conexión se completa y puede quedar registrada en los sistemas de registro o detección de intrusiones del objetivo.
 
 **Esquema:**
+```
 SYN 🠚
 🠠 SYN, ACK
 ACK 🠚
 RST, ACK 🠚
+```
 
 **Data Length:**
 60
@@ -129,7 +131,10 @@ Estos métodos envían paquetes con banderas (flags) TCP inusuales o inválidas 
 El escaneo FIN se basa en enviar un paquete TCP con el flag FIN (finalizar) activado a un puerto específico del objetivo. La lógica detrás de este tipo de escaneo se aprovecha de un detalle en el comportamiento de los puertos TCP según las especificaciones del protocolo.
 
 **Esquema:**
+```
 FIN 🠚
+```
+
 
 **Data Length:**
 40
@@ -153,7 +158,9 @@ El escaneo FIN es especialmente útil en entornos donde los puertos cerrados res
 El escaneo Xmas Tree recibe su nombre por la analogía de que los paquetes enviados están "iluminados" como un árbol de Navidad, debido a la combinación de varios flags TCP activados simultáneamente. En un escaneo Xmas Tree, los paquetes TCP se envían con los flags FIN, URG y PSH activados.
 
 **Esquema:**
+```
 NULL 🠚
+```
 
 **Data Length:**
 40
@@ -177,7 +184,9 @@ Es importante destacar que, aunque el escaneo Xmas Tree puede ser útil para ide
 Este tipo de escaneo se caracteriza por enviar paquetes TCP sin ningún flag activado (de ahí el término "Null", que significa "nulo" en inglés). La estrategia detrás del escaneo Null se basa en cómo los diferentes sistemas responden a paquetes TCP inusuales o inesperados, dependiendo de si los puertos están abiertos o cerrados.
 
 **Esquema:**
+```
 FIN, PSH, URG 🠚
+```
 
 **Data Length:**
 40
