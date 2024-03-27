@@ -89,11 +89,11 @@ El escaneo SYN es especialmente útil para los atacantes y profesionales de la s
 **Ejemplo: Escaneo para ver versiones de la máquina objetivo:**
 ```
 sudo nmap -sS -V -A -T4 10.0.1.254
-```
 ■ -sS: TCP SYN port scan (Default)
 ■ -V: Prints verbose output
 ■ -A: Enables OS detection, version detection, script scanning, and traceroute
 ■ -T4: T4 timing
+```
 
 ![](capturas/open-tcp-port-SYN.png)
 
@@ -137,12 +137,11 @@ Para su funcionamiento, usa las llamadas de alto nivel del sistema operativo par
 ```
 sudo nmap -sT 10.0.1.254
 sudo nmap -Pn -sT -p 22,80,8080 -v 10.0.1.254
-```
 ■ -sT: TCP connect scan
 ■ -Pn: Hace un ping  que envía paquetes de tipo ICMP Address mask
 ■ -p: Define los puertos a los que realiza el escáner 22, 80,2022 y 8080
 ■ -v: Modo detallado, muestra hora de inicio del escáner, cantidad de hosts y puertos escaneados, duración del escaneo y resume brevemente los resultados.
-
+```
 
 ![](capturas/open-tcp-port-TCP-scan-sT.png)
 ![](capturas/closed-tcp-port-TCP-scan-sT.png)
@@ -178,8 +177,8 @@ El escaneo FIN es especialmente útil en entornos donde los puertos cerrados res
 **Ejemplo:**
 ```
 nmap -sF 10.0.1.254
-```
 ■ -sF: FIN Scan
+```
 
 ```
 FIN Scan Dirigido a un puerto abierto:
@@ -253,11 +252,10 @@ Al igual que con otros métodos de escaneo, el uso del escaneo Null sin autoriza
 **Ejemplos:**
 ```
 sudo nmap -A -sC -Pn- 10.0.1.254
-```
 ■ -A: Perform an Aggresive Scan
 ■ -sC: Scan with default NSE scripts. Considered useful for discovery and safe
 ■ -Pn: Hace un ping  que envía paquetes de tipo ICMP Addressmask
-
+```
 
 
 # Bloqueo de TCP Scan
@@ -268,13 +266,14 @@ Rechazaremos SYN flags con IPTables en el ubuntu server. Aplicaremos un filtro d
 Ejecutamos el siguiente comando para hacer una regla de filtrado para bloquear el paquete SYN en el ubuntu server→
 ```
 iptables -I INPUT -p tcp --tcp-flags ALL SYN -j REJECT --reject-with tcp-reset
-```
 ■ -I: Inserta una regla en una cadena en un punto especificado por un valor entero definido por el usuario.
 ■ INPUT: Cadenas por donde van a circular los paquetes dentro del sistema: Contiene los paquetes destinados al equipo local con cualquier origen.
 ■ -p: Configura el protocolo IP para la regla.
 ■ -cp-flags ALL SYN: Permite a los paquetes TCP con bits específicos o banderas, ser coincididos con una regla. Máscara que configura las banderas a ser examinadas en el paquete: ALL. Bandera que se debe configurar para poder coincidir: SYN.
 ■ -j REJECT: Salta a un objetivo particular cuando un paquete coincide con una regla particular. Objetivo: REJECT. Envía un paquete de error de vuelta al sistema remoto y deja caer el paquete.
 ■ --reject-with tcp-reset: El objetivo REJECT acepta --reject-with <tipo> (donde <tipo> es el tipo de rechazo) el cual permite devolver información más detallada con el paquete de error. Se rechaza con el tipo tcp-reset que se emplea para cerrar de una forma elegante conexiones TCP abiertas.
+```
+
 
 
 # Bypass del bloqueo de paquetes SYN del Firewall
