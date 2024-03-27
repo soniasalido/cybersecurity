@@ -96,13 +96,11 @@ SYN 🠚
 🠠 SYN, ACK
 ACK 🠚
 RST, ACK 🠚
+----------------------------
+Data Length: 60
+TTL: <64
 ```
 
-**Data Length:**
-60
-
-**TTL:**
-64
 
 **Funcionamiento:** Esta técnica utiliza el procedimiento estándar de tres vías de TCP para establecer una conexión completa con el puerto objetivo:
 - SYN: El cliente (o la herramienta de escaneo) envía un paquete TCP con el flag SYN activado a un puerto específico en el servidor. Este paso solicita abrir una conexión.
@@ -131,14 +129,10 @@ El escaneo FIN se basa en enviar un paquete TCP con el flag FIN (finalizar) acti
 **Esquema:**
 ```
 FIN 🠚
+----------------------------
+Data Length: 40
+TTL: <64
 ```
-
-
-**Data Length:**
-40
-
-**TTL:**
-<64
 
 
 **Funcionamiento el escaneo FIN:**
@@ -158,14 +152,10 @@ El escaneo Xmas Tree recibe su nombre por la analogía de que los paquetes envia
 **Esquema:**
 ```
 NULL 🠚
+----------------------------
+Data Length: 40
+TTL: <64
 ```
-
-**Data Length:**
-40
-
-**TTL:**
-<64
-
 
 **Funcionamiento del escaneo Xmas Tree:**
 - Paquetes "iluminados" enviados: La herramienta de escaneo genera paquetes TCP con los flags FIN, URG, y PSH activados y los envía a puertos específicos en el servidor objetivo. Esta combinación inusual de flags no es típica en el tráfico de red normal, lo que da origen al nombre del escaneo.
@@ -184,13 +174,10 @@ Este tipo de escaneo se caracteriza por enviar paquetes TCP sin ningún flag act
 **Esquema:**
 ```
 FIN, PSH, URG 🠚
+----------------------------
+Data Length: 40
+TTL: <64
 ```
-
-**Data Length:**
-40
-
-**TTL:**
-<64
 
 
 **Funcionamiento del escaneo Null:**
