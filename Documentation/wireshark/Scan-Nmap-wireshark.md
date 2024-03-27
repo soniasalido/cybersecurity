@@ -95,8 +95,6 @@ Para su funcionamiento, usa las llamadas de alto nivel del sistema operativo par
 - Porque termina todas las conexiones, en lugar de hacer un half-open reset. Por este motivo, es menos sigilosa, siendo probable que un IDS/IPS registre los intentos de conexión.
 
 
-
-
 ### 3. Escaneo FIN, Xmas, y Null 
 Estos métodos envían paquetes con banderas (flags) TCP inusuales o inválidas para provocar respuestas de los puertos que pueden ser interpretadas para determinar su estado. No todos los sistemas responden de la misma manera a estos paquetes, por lo que la efectividad de estos métodos puede variar.
 
@@ -115,10 +113,34 @@ El escaneo FIN es especialmente útil en entornos donde los puertos cerrados res
 
 
 #### Escaneo Xmas 🠲 (-sX) (Xmas)
+El escaneo Xmas Tree recibe su nombre por la analogía de que los paquetes enviados están "iluminados" como un árbol de Navidad, debido a la combinación de varios flags TCP activados simultáneamente. En un escaneo Xmas Tree, los paquetes TCP se envían con los flags FIN, URG y PSH activados.
+
+**Funcionamiento del escaneo Xmas Tree:**
+- Paquetes "iluminados" enviados: La herramienta de escaneo genera paquetes TCP con los flags FIN, URG, y PSH activados y los envía a puertos específicos en el servidor objetivo. Esta combinación inusual de flags no es típica en el tráfico de red normal, lo que da origen al nombre del escaneo.
+- Respuestas esperadas:
+    - Si el puerto está abierto o filtrado por un firewall que no responde a los paquetes inesperados, en teoría, no hay respuesta al paquete enviado, ya que el comportamiento estándar TCP es ignorar paquetes que no corresponden al estado actual de una conexión.
+    - Si el puerto está cerrado, el sistema objetivo responde con un paquete TCP que tiene el flag RST activado, indicando que no hay ninguna conexión para cerrar y que el puerto no está escuchando.
+      
+La utilidad del escaneo Xmas Tree radica en su **capacidad para pasar desapercibido** por algunos sistemas de detección de intrusos y firewalls que no están configurados para detectar este tipo de tráfico anómalo. Sin embargo, al igual que el escaneo FIN, la eficacia de esta técnica puede variar significativamente entre diferentes sistemas y configuraciones de red. Algunos sistemas modernos pueden no responder de manera predecible a este tipo de paquetes, o incluso pueden responder a todos los paquetes inesperados con un RST, lo que hace más difícil interpretar los resultados del escaneo.
+
+Es importante destacar que, aunque el escaneo Xmas Tree puede ser útil para identificar puertos abiertos sin ser detectado en ciertos entornos, su comportamiento puede ser inconsistente dependiendo del sistema operativo y de la configuración de la red objetivo. 
 
 
 #### Escaneo Null 🠲 (-sN) (Null)
+Este tipo de escaneo se caracteriza por enviar paquetes TCP sin ningún flag activado (de ahí el término "Null", que significa "nulo" en inglés). La estrategia detrás del escaneo Null se basa en cómo los diferentes sistemas responden a paquetes TCP inusuales o inesperados, dependiendo de si los puertos están abiertos o cerrados.
 
+**Funcionamiento del escaneo Null:**
+- Paquetes Null enviados: La herramienta de escaneo genera y envía paquetes TCP hacia puertos específicos en el servidor objetivo, asegurándose de que ningún flag TCP esté activado en el encabezado del paquete. Esto es atípico para el tráfico TCP normal, ya que los paquetes TCP generalmente tienen al menos un flag activado para indicar el propósito del paquete (como SYN para iniciar conexiones, ACK para reconocer la recepción, FIN para cerrar conexiones, etc.).
+- Respuestas esperadas:
+    - Si el puerto está abierto o filtrado (por ejemplo, por un firewall que no responde a paquetes inesperados), en teoría, el puerto ignora el paquete Null. El estándar TCP no especifica una respuesta para paquetes sin flags activados enviados a puertos abiertos, por lo que la falta de respuesta puede indicar que el puerto está abierto o filtrado.
+    - Si el puerto está cerrado, el sistema objetivo responde con un paquete TCP que tiene el flag RST (reset) activado. Este paquete indica que no hay ninguna conexión asociada a estos paquetes y que el puerto no está escuchando.
+
+
+La efectividad del escaneo Null, al igual que el escaneo FIN y el escaneo Xmas Tree, puede variar según el sistema operativo del host objetivo y la configuración de la red. Algunos sistemas operativos pueden no seguir el comportamiento esperado y podrían, por ejemplo, responder a todos los paquetes inusuales con paquetes RST, independientemente del estado del puerto.
+
+Una de las ventajas teóricas del escaneo Null es su potencial para evadir la detección por parte de sistemas de monitoreo y firewalls que no estén configurados para buscar y responder a este tipo específico de tráfico anómalo. Sin embargo, debido a su naturaleza inusual, el tráfico generado por un escaneo Null puede ser más sospechoso para sistemas de seguridad avanzados o para administradores de red atentos.
+
+Al igual que con otros métodos de escaneo, el uso del escaneo Null sin autorización en redes que no son de tu propiedad puede ser ilegal y considerado una violación de las políticas de uso aceptable. Es una herramienta útil para profesionales de la seguridad que realizan pruebas de penetración o evaluaciones de seguridad con permiso, permitiéndoles identificar puertos abiertos y evaluar la postura de seguridad de una red.
 
 
 # Bloqueo de TCP Scan
