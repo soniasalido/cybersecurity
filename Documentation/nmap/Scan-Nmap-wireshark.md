@@ -67,11 +67,11 @@ El proceso de escaneo de TCP busca determinar qué puertos están escuchando (ab
 Este método envía un paquete TCP SYN (solicitud de conexión) a un puerto específico del sistema objetivo. Si el puerto está abierto, el sistema responde con un paquete SYN-ACK, lo que indica que está listo para establecer una conexión. El escáner entonces envía un paquete RST (reset) para cerrar la conexión antes de que se complete, evitando así la creación de una conexión completa y posiblemente el registro de la actividad de escaneo.
 
 **Esquema:**
+```
 SYN 🠚
-
 🠠 SYN, ACK
-
 RST
+```
 
 **Data Length:**
 44
