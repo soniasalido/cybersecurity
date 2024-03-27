@@ -208,6 +208,8 @@ Kali Linux						                     Ubuntu Server
 #### Escaneo Xmas 🠲 (-sX) (Xmas)
 El escaneo Xmas Tree recibe su nombre por la analogía de que los paquetes enviados están "iluminados" como un árbol de Navidad, debido a la combinación de varios flags TCP activados simultáneamente. En un escaneo Xmas Tree, los paquetes TCP se envían con los flags FIN, URG y PSH activados.
 
+XMAS Scan sólo funciona en sistemas operativos TCP / IP basados de acuerdo con RFC 793. Xmas Scan solo funciona en máquinas Linux y no funciona en la última versión de Windows.
+
 **Esquema:**
 ```
 NULL 🠚
@@ -225,6 +227,31 @@ TTL: <64
 La utilidad del escaneo Xmas Tree radica en su **capacidad para pasar desapercibido** por algunos sistemas de detección de intrusos y firewalls que no están configurados para detectar este tipo de tráfico anómalo. Sin embargo, al igual que el escaneo FIN, la eficacia de esta técnica puede variar significativamente entre diferentes sistemas y configuraciones de red. Algunos sistemas modernos pueden no responder de manera predecible a este tipo de paquetes, o incluso pueden responder a todos los paquetes inesperados con un RST, lo que hace más difícil interpretar los resultados del escaneo.
 
 Es importante destacar que, aunque el escaneo Xmas Tree puede ser útil para identificar puertos abiertos sin ser detectado en ciertos entornos, su comportamiento puede ser inconsistente dependiendo del sistema operativo y de la configuración de la red objetivo. 
+
+**Ejemplo:**
+```
+nmap -sX 10.0.1.254
+```
+
+```
+XMAS Scan Dirigido a un puerto abierto:
+Kali Linux						Ubuntu Server
+10.0.1.101  - - - - - - - -FIN / URG / PSH - - - -- - >	10.0.1.254
+10.0.1.101  <- - - - - - -- -No Response - - - -  -- - -	10.0.1.254
+
+XMAS Scan Dirigido a un puerto cerrado:
+Kali Linux						Ubuntu Server
+10.0.1.101   - - - - - - - -FIN / URG / PSH - - - -- - >10.0.1.254
+10.0.1.101  <- - - - -  - - - ----- -RST/ACK - - - -  - -	10.0.1.254
+```
+
+Vemos cómo en la primera fila, la máquina 10.0.1.101 envía un paquete FIN, PSH, URG a la máquina servidor 10.0.1.254 al puerto 5906. En la última fila, vemos la respuesta del servidor RST, ACK, lo que implica que ese puerto está cerrado.
+
+
+
+Aquí vemos como no obtiene respuesta cuando se envía el paquete con los flags activados FIN, PSH, URG al puerto 22 y 80 del servidor, lo que implica que están abiertos→
+
+
 
 
 #### Escaneo Null 🠲 (-sN) (Null)
