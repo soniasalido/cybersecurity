@@ -188,17 +188,22 @@ Kali Linux						                     Ubuntu Server
 10.0.2.5:38466  - - - - - - - - - - - - - - - -SYN - - - - - -- - >	10.0.2.4:21
 10.0.2.4:21  <- - - - - - -- -RSK, ACK - - - -  -- - -	    10.0.2.5:38466
 ```
-xxxxxxxx
-
+![](capturas/wireshark-tcp-connect-scan-sT.png)
 
 **Tráfico de red durante un TCP Connect Scan -sy en puertos que están cerrados:**
 ```
 TCP Connect Scan Dirigido a un puerto abierto 80:
 Kali Linux						                     Ubuntu Server
-10.0.2.5:45015  - - - - - - - - - - - - - - - -SYN - - - - - -- - >	10.0.2.4:80
-10.0.2.4:80  <- - - - - - -- -SYN, ACK - - - -  -- - -	    10.0.2.5:45015
-10.0.2.5:45015  - - - - - - - - - - - - - - - -RST - - - - - -- - >	10.0.2.4:80
+10.0.2.5:52450  - - - - - - - - - - - - - - - -SYN - - - - - -- - >	10.0.2.4:80
+10.0.2.4:80  <- - - - - - -- -SYN, ACK - - - -  -- - -	    10.0.2.5:52450
+10.0.2.5:52450  - - - - - - - - - - - - - - - -ACK - - - - - -- - >	10.0.2.4:80
+10.0.2.5:52450  - - - - - - - - - - - - - - - -RSK, ACK - - - - - -- - >	10.0.2.4:80
 ```
+![](capturas/wireshark-tcp-connect-scan-sT-3.png)
+
+Limpiamos un poco, mostrando: Seguir --> Secuencia --> TCP  que nos interesa:
+![](capturas/wireshark-tcp-connect-scan-s4.png)
+
 
 
 ### 3. Escaneo FIN, Xmas, y Null 
