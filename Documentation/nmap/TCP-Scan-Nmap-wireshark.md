@@ -202,7 +202,7 @@ Kali Linux						                     Ubuntu Server
 ![](capturas/wireshark-tcp-connect-scan-sT-3.png)
 
 Limpiamos un poco, mostrando: Seguir --> Secuencia --> TCP  que nos interesa:
-![](capturas/wireshark-tcp-connect-scan-s4.png)
+![](capturas/wireshark-tcp-connect-scan-sT-4.png)
 
 
 
