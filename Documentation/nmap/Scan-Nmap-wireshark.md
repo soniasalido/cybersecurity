@@ -204,6 +204,7 @@ Kali Linux						                     Ubuntu Server
 ```
 
 Vemos con wireshark cómo la máquina 10.0.1.101 envía un paquete FIN a la máquina 10.0.1.254 que no obtiene respuesta. Justo encima vemos en rojo, respuestas del servidor de puertos cerrados ya que responden con RST, ACK →
+![](capturas/tcp-port-Fin-scan.png)
 
 
 #### Escaneo Xmas 🠲 (-sX) (Xmas)
