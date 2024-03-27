@@ -95,6 +95,11 @@ sudo nmap -sS -V -A -T4 10.0.1.254
 ■ -A: Enables OS detection, version detection, script scanning, and traceroute
 ■ -T4: T4 timing
 
+![](capturas/open-tcp-port-SYN.png)
+
+![](capturas/close-tcp-port-SYN.png)
+
+
 ### 2. Escaneo de conexión completa (o escaneo TCP connect) 🠲 TCP scan (-sT) (TCP)
 En este caso, el escáner establece una conexión completa con el puerto objetivo utilizando el procedimiento normal de establecimiento de conexión TCP (handshake de tres vías: SYN, SYN-ACK, ACK). Aunque este método permite determinar si un puerto está abierto, también es más detectable porque la conexión se completa y puede quedar registrada en los sistemas de registro o detección de intrusiones del objetivo.
 
@@ -178,7 +183,7 @@ FIN Scan Dirigido a un puerto abierto:
 Kali Linux						                                Ubuntu Server
 10.0.1.101  - - - - - - - - - - - - - - - -FIN - - - - - -- - >	10.0.1.254:22
 10.0.1.101  <- - - - - - -- -No Response - - - -  -- - -	    10.0.1.254:22
-
+xxxxxxxxxxx
 ![](capturas/open-tcp-port-SYN.png)
 
 
