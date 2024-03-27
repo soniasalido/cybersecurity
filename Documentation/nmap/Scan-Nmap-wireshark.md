@@ -150,6 +150,14 @@ sudo nmap -Pn -sT -p 22,80,8080 -v 10.0.1.254
 ### 3. Escaneo FIN, Xmas, y Null 
 Estos métodos envían paquetes con banderas (flags) TCP inusuales o inválidas para provocar respuestas de los puertos que pueden ser interpretadas para determinar su estado. No todos los sistemas responden de la misma manera a estos paquetes, por lo que la efectividad de estos métodos puede variar.
 
+Estas técnicas se basan en enviar sondas TCP con distintos flags activados, como por ejemplo Null, FIN, Xmas. Se aprovecha de una indefinición en el estándar RFC 793 para provocar una respuesta en el objetivo que determine si un puerto está abierto o cerrado. El fundamento de esta técnica reside en que los puertos cerrados de equipos compatibles con esta RFC responderán con un RST a cualquier paquete que no contenga un flag SYN, RST o ACK, mientras que no emitirán respuesta alguna si el puerto está abierto.
+
+Según las respuestas obtenidas, Nmap clasifica los puertos en:
+- Abiertos/Filtrados: Si no se recibe ninguna respuesta.
+- Cerrados: Si se recibe un paquete RST.
+- Filtrados: Si se recibe algún tipo de error ICMP inalcanzable.
+
+
 #### Escaneo FIN 🠲(-sF) (Finish)
 El escaneo FIN se basa en enviar un paquete TCP con el flag FIN (finalizar) activado a un puerto específico del objetivo. La lógica detrás de este tipo de escaneo se aprovecha de un detalle en el comportamiento de los puertos TCP según las especificaciones del protocolo.
 
@@ -182,7 +190,7 @@ nmap -sF 10.0.1.254
 
 ```
 FIN Scan Dirigido a un puerto abierto:
-Kali Linux						                                Ubuntu Server
+Kali Linux						                     Ubuntu Server
 10.0.1.101  - - - - - - - - - - - - - - - -FIN - - - - - -- - >	10.0.1.254:22
 10.0.1.101  <- - - - - - -- -No Response - - - -  -- - -	    10.0.1.254:22
 xxxxxxxxxxx
@@ -190,13 +198,10 @@ xxxxxxxxxxx
 
 
 FIN Scan Dirigido a un puerto cerrado:
-Kali Linux						                                Ubuntu Server
+Kali Linux						                     Ubuntu Server
 10.0.1.101  - - - - - - - - - - - - - - - -FIN - - - - - -- - >	10.0.1.254
 10.0.1.101  <- - - - -  - - - ----- -RST/ACK - - - -  - -	    10.0.1.254
 ```
-
-
-Vemos con wireshark cómo la máquina 10.0.1.101 envía un paquete FIN a la máquina 10.0.1.254 que no obtiene respuesta. Justo encima vemos en rojo, respuestas del servidor de puertos cerrados ya que responden con RST, ACK→
 
 
 
@@ -225,6 +230,8 @@ Es importante destacar que, aunque el escaneo Xmas Tree puede ser útil para ide
 #### Escaneo Null 🠲 (-sN) (Null)
 Este tipo de escaneo se caracteriza por enviar paquetes TCP sin ningún flag activado (de ahí el término "Null", que significa "nulo" en inglés). La estrategia detrás del escaneo Null se basa en cómo los diferentes sistemas responden a paquetes TCP inusuales o inesperados, dependiendo de si los puertos están abiertos o cerrados.
 
+NULL Scan sólo funciona en sistemas operativos TCP / IP basados de acuerdo con RFC 793. Xmas Scan solo funciona en máquinas Linux y no funciona en la última versión de Windows.
+
 **Esquema:**
 ```
 FIN, PSH, URG 🠚
@@ -246,6 +253,28 @@ La efectividad del escaneo Null, al igual que el escaneo FIN y el escaneo Xmas T
 Una de las ventajas teóricas del escaneo Null es su potencial para evadir la detección por parte de sistemas de monitoreo y firewalls que no estén configurados para buscar y responder a este tipo específico de tráfico anómalo. Sin embargo, debido a su naturaleza inusual, el tráfico generado por un escaneo Null puede ser más sospechoso para sistemas de seguridad avanzados o para administradores de red atentos.
 
 Al igual que con otros métodos de escaneo, el uso del escaneo Null sin autorización en redes que no son de tu propiedad puede ser ilegal y considerado una violación de las políticas de uso aceptable. Es una herramienta útil para profesionales de la seguridad que realizan pruebas de penetración o evaluaciones de seguridad con permiso, permitiéndoles identificar puertos abiertos y evaluar la postura de seguridad de una red.
+
+**Ejemplo:**
+```
+nmap -sN 10.0.1.254
+```
+
+```
+NULL Scan Dirigido a un puerto abierto:
+Kali Linux						Ubuntu Server
+10.0.1.101  - - - - - - - - -No Flags Set - - - - - -- - >	10.0.1.254
+10.0.1.101  <- - - - - - -- -No Response - - - -  -- - -	10.0.1.254
+
+NULL Scan Dirigido a un puerto cerrado:
+Kali Linux						Ubuntu Server
+10.0.1.101  - - - - - - - - -No Flags Set - - - - - -- - >	10.0.1.254
+10.0.1.101  <- - - - -  - - - ----- -RST/ACK - - - -  - -	10.0.1.254
+```
+
+Vemos con wireshark cómo la máquina 10.0.1.101 envía un paquete sin ningún flag activado [<None>] a la máquina 10.0.1.254 al puerto 43961. También vemos la respuesta de la máquina servidor 10.0.1.254 que responden RST/ACK, lo que implica que ese puerto está cerrado →
+
+
+Aquí vemos como no obtiene respuesta cuando se envía el paquete sin ningún flag al puerto 22 y 80, lo que implica que están abiertos →
 
 
 # Otros escaneos
