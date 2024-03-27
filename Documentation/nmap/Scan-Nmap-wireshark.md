@@ -66,6 +66,17 @@ El proceso de escaneo de TCP busca determinar qué puertos están escuchando (ab
 ### 1. Escaneo SYN (o half-open scan) 🠲 TCP scan (-sS) (Stealth)
 Este método envía un paquete TCP SYN (solicitud de conexión) a un puerto específico del sistema objetivo. Si el puerto está abierto, el sistema responde con un paquete SYN-ACK, lo que indica que está listo para establecer una conexión. El escáner entonces envía un paquete RST (reset) para cerrar la conexión antes de que se complete, evitando así la creación de una conexión completa y posiblemente el registro de la actividad de escaneo.
 
+**Esquema:**
+SYN 🠚
+🠠 SYN, ACK
+RST
+
+**Data Length:**
+44
+
+**TTL:**
+<64
+
 **Funcionamiento:**
 - SYN: La herramienta de escaneo envía un paquete TCP con el flag SYN (synchronize) activado a un puerto específico del servidor objetivo. Esto indica el deseo de iniciar una conexión TCP.
 - SYN-ACK o RST:
@@ -79,7 +90,19 @@ El escaneo SYN es especialmente útil para los atacantes y profesionales de la s
 ### 2. Escaneo de conexión completa (o escaneo TCP connect) 🠲 TCP scan (-sT) (TCP)
 En este caso, el escáner establece una conexión completa con el puerto objetivo utilizando el procedimiento normal de establecimiento de conexión TCP (handshake de tres vías: SYN, SYN-ACK, ACK). Aunque este método permite determinar si un puerto está abierto, también es más detectable porque la conexión se completa y puede quedar registrada en los sistemas de registro o detección de intrusiones del objetivo.
 
-El escaneo TCP con la opción -sT se refiere al escaneo de conexión completa o escaneo TCP connect. Esta técnica utiliza el procedimiento estándar de tres vías de TCP para establecer una conexión completa con el puerto objetivo:
+**Esquema:**
+SYN 🠚
+🠠 SYN, ACK
+ACK 🠚
+RST, ACK 🠚
+
+**Data Length:**
+60
+
+**TTL:**
+64
+
+**Funcionamiento:** Esta técnica utiliza el procedimiento estándar de tres vías de TCP para establecer una conexión completa con el puerto objetivo:
 - SYN: El cliente (o la herramienta de escaneo) envía un paquete TCP con el flag SYN activado a un puerto específico en el servidor. Este paso solicita abrir una conexión.
 - SYN-ACK: Si el puerto está escuchando (abierto), el servidor responde con un paquete TCP que tiene activados los flags SYN y ACK, indicando que está listo para aceptar la conexión.
 - ACK: El cliente completa el proceso de establecimiento de conexión enviando un paquete ACK al servidor.
@@ -103,6 +126,16 @@ Estos métodos envían paquetes con banderas (flags) TCP inusuales o inválidas 
 #### Escaneo FIN 🠲(-sF) (Finish)
 El escaneo FIN se basa en enviar un paquete TCP con el flag FIN (finalizar) activado a un puerto específico del objetivo. La lógica detrás de este tipo de escaneo se aprovecha de un detalle en el comportamiento de los puertos TCP según las especificaciones del protocolo.
 
+**Esquema:**
+FIN 🠚
+
+**Data Length:**
+40
+
+**TTL:**
+<64
+
+
 **Funcionamiento el escaneo FIN:**
 - Paquete FIN enviado: La herramienta de escaneo envía un paquete TCP con el flag FIN a un puerto del servidor objetivo. Este paquete indica el deseo de cerrar una conexión, aunque en este contexto se envía sin que haya una conexión establecida previamente.
 - Respuestas esperadas:
@@ -117,6 +150,16 @@ El escaneo FIN es especialmente útil en entornos donde los puertos cerrados res
 #### Escaneo Xmas 🠲 (-sX) (Xmas)
 El escaneo Xmas Tree recibe su nombre por la analogía de que los paquetes enviados están "iluminados" como un árbol de Navidad, debido a la combinación de varios flags TCP activados simultáneamente. En un escaneo Xmas Tree, los paquetes TCP se envían con los flags FIN, URG y PSH activados.
 
+**Esquema:**
+NULL 🠚
+
+**Data Length:**
+40
+
+**TTL:**
+<64
+
+
 **Funcionamiento del escaneo Xmas Tree:**
 - Paquetes "iluminados" enviados: La herramienta de escaneo genera paquetes TCP con los flags FIN, URG, y PSH activados y los envía a puertos específicos en el servidor objetivo. Esta combinación inusual de flags no es típica en el tráfico de red normal, lo que da origen al nombre del escaneo.
 - Respuestas esperadas:
@@ -130,6 +173,16 @@ Es importante destacar que, aunque el escaneo Xmas Tree puede ser útil para ide
 
 #### Escaneo Null 🠲 (-sN) (Null)
 Este tipo de escaneo se caracteriza por enviar paquetes TCP sin ningún flag activado (de ahí el término "Null", que significa "nulo" en inglés). La estrategia detrás del escaneo Null se basa en cómo los diferentes sistemas responden a paquetes TCP inusuales o inesperados, dependiendo de si los puertos están abiertos o cerrados.
+
+**Esquema:**
+FIN, PSH, URG 🠚
+
+**Data Length:**
+40
+
+**TTL:**
+<64
+
 
 **Funcionamiento del escaneo Null:**
 - Paquetes Null enviados: La herramienta de escaneo genera y envía paquetes TCP hacia puertos específicos en el servidor objetivo, asegurándose de que ningún flag TCP esté activado en el encabezado del paquete. Esto es atípico para el tráfico TCP normal, ya que los paquetes TCP generalmente tienen al menos un flag activado para indicar el propósito del paquete (como SYN para iniciar conexiones, ACK para reconocer la recepción, FIN para cerrar conexiones, etc.).
