@@ -358,7 +358,7 @@ Kali Linux						Ubuntu Server
 10.0.2.5:34347  - - - - - - - - -No Flags Set - - - - - -- - >	10.0.2.4:8888
 10.0.2.4:8888  <- - - - -  - - - ----- -RST/ACK - - - -  - -	10.0.2.5:34347
 ```
-![](capturas/wireshark-NULL-scan.png)
+![](capturas/wireshark-tcp-NULL-scan.png)
 
 
 **Tráfico de red durante un NULL Scan -sN en puertos que están abiertos:**
@@ -368,7 +368,7 @@ Kali Linux						Ubuntu Server
 10.0.2.5:34347  - - - - - - - - -No Flags Set - - - - - -- - >	10.0.2.4:80
 10.0.2.4:80  <- - - - - - -- -No Response - - - -  -- - -	10.0.2.5:34347
 ```
-![](capturas/wireshark-NULL-scan-2.png)
+![](capturas/wireshark-tcp-NULL-scan-2.png)
 
 
 
