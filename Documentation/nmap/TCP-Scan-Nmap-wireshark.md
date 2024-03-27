@@ -199,10 +199,10 @@ Kali Linux						                     Ubuntu Server
 10.0.2.5:52450  - - - - - - - - - - - - - - - -ACK - - - - - -- - >	10.0.2.4:80
 10.0.2.5:52450  - - - - - - - - - - - - - - - -RSK, ACK - - - - - -- - >	10.0.2.4:80
 ```
-![](capturas/wireshark-tcp-connect-scan-sT-3.png)
+![](capturas/wireshark-tcp-connect-scan-sT-2.png)
 
 Limpiamos un poco, mostrando: Seguir --> Secuencia --> TCP  que nos interesa:
-![](capturas/wireshark-tcp-connect-scan-sT-4.png)
+![](capturas/wireshark-tcp-connect-scan-sT-3.png)
 
 
 
