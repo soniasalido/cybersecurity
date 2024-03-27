@@ -127,6 +127,11 @@ Kali Linux						                     Ubuntu Server
 
 En el paquete numero 65, podemos ver el comportamiento de "medio escaner" 🠚 10.0.2.5 envía un paquete con la flag RST activada: En lugar de completar el proceso de tres vías enviando un paquete ACK para establecer una conexión completa, la herramienta de escaneo envía un paquete RST para cerrar la tentativa de conexión. Esto evita la formación de una conexión completa, lo que podría ser registrado por los sistemas de monitoreo del servidor objetivo, haciendo al escaneo SYN menos detectable que otras formas de escaneo TCP, como el escaneo de conexión completa.
 
+**Filtro Wireshark para identificar paquetes de escaneo SYN:**
+Para identificar un escaneo SYN utilizando Wireshark, puedes aplicar un filtro que te ayude a visualizar los paquetes que son típicamente generados por esta técnica de escaneo. Un escaneo SYN se caracteriza por el envío de paquetes TCP con solo el flag SYN activado (sin el ACK) hacia varios puertos para ver cuáles están abiertos.
+```
+tcp.flags.syn == 1 and tcp.flags.ack == 0
+```
 
 ### 2. Escaneo de conexión completa (o escaneo TCP connect) 🠲 TCP scan (-sT) (TCP)
 En este caso, el escáner establece una conexión completa con el puerto objetivo utilizando el procedimiento normal de establecimiento de conexión TCP (handshake de tres vías: SYN, SYN-ACK, ACK). Aunque este método permite determinar si un puerto está abierto, también es más detectable porque la conexión se completa y puede quedar registrada en los sistemas de registro o detección de intrusiones del objetivo.
