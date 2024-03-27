@@ -68,7 +68,9 @@ Este método envía un paquete TCP SYN (solicitud de conexión) a un puerto espe
 
 **Esquema:**
 SYN 🠚
+
 🠠 SYN, ACK
+
 RST
 
 **Data Length:**
