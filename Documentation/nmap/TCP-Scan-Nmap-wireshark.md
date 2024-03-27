@@ -297,17 +297,24 @@ Es importante destacar que, aunque el escaneo Xmas Tree puede ser útil para ide
 nmap -sX 10.0.1.254
 ```
 
+**Tráfico de red durante un Xmas Scan -sX en puertos que están cerrados:**
+```
+XMAS Scan Dirigido a un puerto cerrado:
+Kali Linux						Ubuntu Server
+10.0.2.5:34847   - - - - - - - -FIN / URG / PSH - - - -- - >10.0.2.4:554
+10.0.2.4:554  <- - - - -  - - - ----- -RST/ACK - - - -  - -	10.0.2.5:34847
+```
+![](capturas/wireshark-Xmas-scan.png)
+
+
+**Tráfico de red durante un Xmas Scan -sX en puertos que están abiertos:**
 ```
 XMAS Scan Dirigido a un puerto abierto:
 Kali Linux						Ubuntu Server
 10.0.1.101  - - - - - - - -FIN / URG / PSH - - - -- - >	10.0.1.254
 10.0.1.101  <- - - - - - -- -No Response - - - -  -- - -	10.0.1.254
-
-XMAS Scan Dirigido a un puerto cerrado:
-Kali Linux						Ubuntu Server
-10.0.1.101   - - - - - - - -FIN / URG / PSH - - - -- - >10.0.1.254
-10.0.1.101  <- - - - -  - - - ----- -RST/ACK - - - -  - -	10.0.1.254
 ```
+![](capturas/wireshark-Xmas-scan-2.png)
 
 Vemos cómo en la primera fila, la máquina 10.0.1.101 envía un paquete FIN, PSH, URG a la máquina servidor 10.0.1.254 al puerto 5906. En la última fila, vemos la respuesta del servidor RST, ACK, lo que implica que ese puerto está cerrado.
 ![](capturas/closed-tcp-port-Xmas.png)
