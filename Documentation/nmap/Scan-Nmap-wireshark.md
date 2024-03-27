@@ -246,11 +246,11 @@ Kali Linux						Ubuntu Server
 ```
 
 Vemos cómo en la primera fila, la máquina 10.0.1.101 envía un paquete FIN, PSH, URG a la máquina servidor 10.0.1.254 al puerto 5906. En la última fila, vemos la respuesta del servidor RST, ACK, lo que implica que ese puerto está cerrado.
-
+![](capturas/closed-tcp-port-Xmas.png)
 
 
 Aquí vemos como no obtiene respuesta cuando se envía el paquete con los flags activados FIN, PSH, URG al puerto 22 y 80 del servidor, lo que implica que están abiertos→
-
+![](capturas/open-tcp-port-Xmas.png)
 
 
 
