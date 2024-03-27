@@ -68,16 +68,13 @@ Este método envía un paquete TCP SYN (solicitud de conexión) a un puerto espe
 
 **Esquema:**
 ```
+FLAGS:
 SYN 🠚
 🠠 SYN, ACK
 RST
+Data Length: 44
+TTL: <64
 ```
-
-**Data Length:**
-44
-
-**TTL:**
-<64
 
 **Funcionamiento:**
 - SYN: La herramienta de escaneo envía un paquete TCP con el flag SYN (synchronize) activado a un puerto específico del servidor objetivo. Esto indica el deseo de iniciar una conexión TCP.
