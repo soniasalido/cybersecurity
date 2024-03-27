@@ -125,6 +125,7 @@ Kali Linux						                     Ubuntu Server
 ```
 ![](capturas/wireshark-tcp-scan-SYN-sS-2.png)
 
+En el paquete numero 65, podemos ver el comportamiento de "medio escaner" 🠚 10.0.2.5 envía un paquete con la flag RST activada: En lugar de completar el proceso de tres vías enviando un paquete ACK para establecer una conexión completa, la herramienta de escaneo envía un paquete RST para cerrar la tentativa de conexión. Esto evita la formación de una conexión completa, lo que podría ser registrado por los sistemas de monitoreo del servidor objetivo, haciendo al escaneo SYN menos detectable que otras formas de escaneo TCP, como el escaneo de conexión completa.
 
 
 ### 2. Escaneo de conexión completa (o escaneo TCP connect) 🠲 TCP scan (-sT) (TCP)
