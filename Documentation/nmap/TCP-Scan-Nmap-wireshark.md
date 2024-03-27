@@ -350,23 +350,27 @@ Al igual que con otros métodos de escaneo, el uso del escaneo Null sin autoriza
 nmap -sN 10.0.1.254
 ```
 
+
+**Tráfico de red durante un NULL Scan -sN en puertos que están cerrados:**
+```
+NULL Scan Dirigido a un puerto cerrado:
+Kali Linux						Ubuntu Server
+10.0.2.5:34347  - - - - - - - - -No Flags Set - - - - - -- - >	10.0.2.4:8888
+10.0.2.4:8888  <- - - - -  - - - ----- -RST/ACK - - - -  - -	10.0.2.5:34347
+```
+![](capturas/wireshark-NULL-scan.png)
+
+
+**Tráfico de red durante un NULL Scan -sN en puertos que están abiertos:**
 ```
 NULL Scan Dirigido a un puerto abierto:
 Kali Linux						Ubuntu Server
-10.0.1.101  - - - - - - - - -No Flags Set - - - - - -- - >	10.0.1.254
-10.0.1.101  <- - - - - - -- -No Response - - - -  -- - -	10.0.1.254
-
-NULL Scan Dirigido a un puerto cerrado:
-Kali Linux						Ubuntu Server
-10.0.1.101  - - - - - - - - -No Flags Set - - - - - -- - >	10.0.1.254
-10.0.1.101  <- - - - -  - - - ----- -RST/ACK - - - -  - -	10.0.1.254
+10.0.2.5:34347  - - - - - - - - -No Flags Set - - - - - -- - >	10.0.2.4:80
+10.0.2.4:80  <- - - - - - -- -No Response - - - -  -- - -	10.0.2.5:34347
 ```
+![](capturas/wireshark-NULL-scan-2.png)
 
-Vemos con wireshark cómo la máquina 10.0.1.101 envía un paquete sin ningún flag activado [<None>] a la máquina 10.0.1.254 al puerto 43961. También vemos la respuesta de la máquina servidor 10.0.1.254 que responden RST/ACK, lo que implica que ese puerto está cerrado →
-![](capturas/closed-tcp-port-null-scan.png)
 
-Aquí vemos como no obtiene respuesta cuando se envía el paquete sin ningún flag al puerto 22 y 80, lo que implica que están abiertos →
-![](capturas/open-tcp-port-null-scan.png)
 
 # Otros escaneos
 **Ejemplos:**
