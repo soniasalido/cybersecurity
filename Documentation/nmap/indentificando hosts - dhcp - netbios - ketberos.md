@@ -58,6 +58,7 @@ El protocolo DHCP, o Protocolo de Configuración Dinámica de Host (DHCP, por su
   - Como el mensaje puede ser único según el caso/situación, se sugiere leer el mensaje en lugar de filtrarlo. Por lo tanto, el analista podría crear una hipótesis/resultado más confiable al comprender las circunstancias del evento.
 
 
+![](capturas/wireshark-dhcp.png)
 
 
 
