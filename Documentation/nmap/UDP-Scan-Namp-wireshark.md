@@ -54,11 +54,17 @@ La imagen anterior muestra que el puerto cerrado devuelve un paquete de error IC
 
 
 ## Tráfico de red durante un UDP Scan -sU en puertos que están abiertos:
+Hacemos un scan de puertos udp:
+```
+udo nmap -sU -p 53,68,5353,39126  10.0.2.4
+```
+![](capturas/wireshark-UDP-scan-5.png)
+
 ```
 UDP Scan Dirigido a un puerto abierto:
 Kali Linux						Ubuntu Server
 10.0.2.5:x  - - - - - - - - -No Flags Set - - - - - -- - >	10.0.2.4:x
 10.0.2.4:x  <- - - - - - -- -No Response - - - -  -- - -	10.0.2.5:xx
 ```
-![](capturas/wireshark-UDP-scan-5.png)
+
 
