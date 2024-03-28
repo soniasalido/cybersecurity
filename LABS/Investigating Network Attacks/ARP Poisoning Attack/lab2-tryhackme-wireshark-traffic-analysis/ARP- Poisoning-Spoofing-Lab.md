@@ -49,4 +49,5 @@ Antes de investigar el tráfico, revisemos algunos paquetes ARP legítimos y sos
   ((arp) && (arp.opcode == 1)) && (arp.src.hw_mac == target-mac-address)
   ```
 
+![](capturas/arp-lab-tryhackme.png)
 
