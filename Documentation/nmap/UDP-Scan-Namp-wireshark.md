@@ -60,10 +60,15 @@ udo nmap -sU -p 53,68,5353,39126  10.0.2.4
 ```
 ![](capturas/wireshark-UDP-scan-5.png)
 
+
+Tráfico generado en wireshark:
+
+![](capturas/wireshark-UDP-scan-6.png)
+
 ```
 UDP Scan Dirigido a un puerto abierto:
 Kali Linux						Ubuntu Server
-10.0.2.5:x  - - - - - - - - -No Flags Set - - - - - -- - >	10.0.2.4:x
+10.0.2.5:33164  - - - - - - - - -No Flags Set - - - - - -- - >	10.0.2.4:5353
 10.0.2.4:x  <- - - - - - -- -No Response - - - -  -- - -	10.0.2.5:xx
 ```
 
