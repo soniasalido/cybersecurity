@@ -75,3 +75,31 @@ Kali Linux						Ubuntu Server
 Seguimos la secuencia UDP del paquete número 4:
 ![](capturas/wireshark-UDP-scan-7.png)
 
+
+## Filtros wireshark para detectar un UDP scan
+Para detectar un escaneo UDP utilizando Wireshark, se pueden emplear varios filtros de visualización que ayuden a identificar patrones de tráfico sospechoso. Un escaneo UDP se realiza típicamente para descubrir puertos abiertos en dispositivos dentro de una red, enviando paquetes UDP a diferentes puertos y observando las respuestas. Dado que UDP es un protocolo sin conexión, la detección de escaneos puede ser menos directa en comparación con los protocolos orientados a conexión como TCP.
+
+Algunos filtros que podemos utilizar:
+- Filtro para tráfico UDP: Comienza por filtrar todo el tráfico UDP para simplificar la visualización de los paquetes relevantes.
+  ```
+  udp
+  ```
+- Puertos de destino no estándar: Los escaneos a menudo se dirigen a puertos que no se utilizan comúnmente para servicios estándar. Puedes filtrar por rangos de puertos o puertos específicos que te interesen. Este filtro excluye el tráfico hacia puertos DNS (53) y NTP (123), que son comunes y probablemente no parte de un escaneo.
+  ```
+  udp.port != 53 && udp.port != 123
+  ```
+- Respuestas de error o sin respuesta: En un escaneo UDP, los paquetes enviados a puertos cerrados pueden generar mensajes de error ICMP tipo 3 (destino inalcanzable). Filtrar por estos mensajes puede ayudar a identificar los puertos que se estaban escaneando.
+  ```
+  icmp.type == 3
+  icmp.type==3 and icmp.code==3     
+  ```
+
+- Actividad sospechosa de una sola fuente: Si sospechas de un host específico que está realizando el escaneo, puedes filtrar el tráfico UDP originado por esa dirección IP.
+  ```
+  ip.src == ipHostSospechoso && udp
+  ```
+
+- Alta frecuencia de solicitudes a diferentes puertos: Un patrón de escaneo puede involucrar una alta frecuencia de paquetes dirigidos a múltiples puertos en un corto período de tiempo. Wireshark no puede filtrar directamente por la frecuencia de los paquetes, pero puedes ordenar los paquetes por dirección de destino y número de puerto para identificar patrones visuales de este tipo de actividad.
+
+- Tamaño de paquete uniforme: Algunas herramientas de escaneo envían paquetes de tamaño uniforme. Aunque este no es un método directo de filtrado en Wireshark, observar el tamaño de los paquetes en las columnas puede ayudar a identificar patrones.
+
