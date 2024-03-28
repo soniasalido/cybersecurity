@@ -72,4 +72,6 @@ Kali Linux						Ubuntu Server
 10.0.2.4:x  <- - - - - - -- -No Response - - - -  -- - -	10.0.2.5:xx
 ```
 
+Seguimos la secuencia UDP del paquete número 4:
+![](capturas/wireshark-UDP-scan-7.png)
 
