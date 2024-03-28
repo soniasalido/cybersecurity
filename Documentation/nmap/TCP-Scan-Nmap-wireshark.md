@@ -60,13 +60,13 @@ El escaneo de TCP (Transmission Control Protocol) es una técnica utilizada en e
 El proceso de escaneo de TCP busca determinar qué puertos están escuchando (abiertos) en un dispositivo. Esto se realiza enviando paquetes de datos a diferentes puertos y analizando las respuestas recibidas. Basándose en cómo responde un puerto a ciertos tipos de mensajes, un atacante o un profesional de seguridad puede inferir si el puerto está abierto, cerrado, o filtrado por un firewall.
 
 
-## Tipos de escaneo de TCP:
+# Tipos de escaneo de TCP:
 ![](capturas/nmap.png)
 
-### 1. Escaneo SYN (o half-open scan) 🠲 TCP scan (-sS) (Stealth)
+## 1. Escaneo SYN (o half-open scan) 🠲 TCP scan (-sS) (Stealth)
 Este método envía un paquete TCP SYN (solicitud de conexión) a un puerto específico del sistema objetivo. Si el puerto está abierto, el sistema responde con un paquete SYN-ACK, lo que indica que está listo para establecer una conexión. El escáner entonces envía un paquete RST (reset) para cerrar la conexión antes de que se complete, evitando así la creación de una conexión completa y posiblemente el registro de la actividad de escaneo.
 
-**Esquema:**
+### 1.1 Esquema:
 ```
 FLAGS:
 SYN 🠚
@@ -77,7 +77,7 @@ Data Length: 44
 TTL: <64
 ```
 
-**Funcionamiento:**
+### 1.2 Funcionamiento:
 - SYN: La herramienta de escaneo envía un paquete TCP con el flag SYN (synchronize) activado a un puerto específico del servidor objetivo. Esto indica el deseo de iniciar una conexión TCP.
 - SYN-ACK o RST:
     - Si el puerto está abierto, el servidor responde con un paquete TCP que tiene activados los flags SYN y ACK, lo que indica su disposición a aceptar conexiones.
@@ -86,7 +86,7 @@ TTL: <64
 
 El escaneo SYN es especialmente útil para los atacantes y profesionales de la seguridad por igual porque permite mapear los puertos abiertos de un servidor sin establecer una conexión completa, lo que podría dejar huellas en los registros del sistema objetivo. Esto lo hace menos intrusivo y más difícil de detectar en comparación con otros métodos de escaneo que completan la conexión TCP. Además, el **escaneo SYN a menudo requiere privilegios de root** en el sistema desde el que se realiza el escaneo, ya que implica la creación directa de paquetes TCP a bajo nivel.
 
-**Ejemplo: Escaneo para ver versiones de la máquina objetivo:**
+### 1.3 Ejemplo: Escaneo para ver versiones de la máquina objetivo:
 ```
 sudo nmap -sS -V -A -T4 10.0.1.254
 ■ -sS: TCP SYN port scan (Default)
@@ -101,7 +101,7 @@ sudo nmap -sS -V -A -T4 10.0.1.254
 
 
 
-**Tráfico de red durante un SYN Scan -sS en puertos que están cerrados:**
+### 1.4 Tráfico de red durante un SYN Scan -sS en puertos que están cerrados:
 ```
 SYN Scan Dirigido a un puerto cerrado:
 Kali Linux						                     Ubuntu Server
@@ -116,7 +116,7 @@ Vemos cómo desde la ip 10.0.2.5 se manda paquetes con la flag SYN activada a lo
 
 
 
-**Tráfico de red durante un SYN Scan -sS en puertos que están abiertos: puerto 80**
+### 1.5 Tráfico de red durante un SYN Scan -sS en puertos que están abiertos: puerto 80
 ```
 SYN Scan Dirigido a un puerto abierto 80:
 Kali Linux						                     Ubuntu Server
@@ -128,16 +128,16 @@ Kali Linux						                     Ubuntu Server
 
 En el paquete numero 65, podemos ver el comportamiento de "medio escaner" 🠚 10.0.2.5 envía un paquete con la flag RST activada: En lugar de completar el proceso de tres vías enviando un paquete ACK para establecer una conexión completa, la herramienta de escaneo envía un paquete RST para cerrar la tentativa de conexión. Esto evita la formación de una conexión completa, lo que podría ser registrado por los sistemas de monitoreo del servidor objetivo, haciendo al escaneo SYN menos detectable que otras formas de escaneo TCP, como el escaneo de conexión completa.
 
-**Filtro Wireshark para identificar paquetes de escaneo SYN:**
+### 1.6 Filtro Wireshark para identificar paquetes de escaneo SYN:**
 Para identificar un escaneo SYN utilizando Wireshark, puedes aplicar un filtro que te ayude a visualizar los paquetes que son típicamente generados por esta técnica de escaneo. Un escaneo SYN se caracteriza por el envío de paquetes TCP con solo el flag SYN activado (sin el ACK) hacia varios puertos para ver cuáles están abiertos.
 ```
 tcp.flags.syn == 1 and tcp.flags.ack == 0
 ```
 
-### 2. Escaneo de conexión completa (o escaneo TCP connect) 🠲 TCP scan (-sT) (TCP)
+## 2. Escaneo de conexión completa (o escaneo TCP connect) 🠲 TCP scan (-sT) (TCP)
 En este caso, el escáner establece una conexión completa con el puerto objetivo utilizando el procedimiento normal de establecimiento de conexión TCP (handshake de tres vías: SYN, SYN-ACK, ACK). Aunque este método permite determinar si un puerto está abierto, también es más detectable porque la conexión se completa y puede quedar registrada en los sistemas de registro o detección de intrusiones del objetivo.
 
-**Esquema:**
+### 2.1 Esquema TCP Connect:
 ```
 SYN 🠚
 🠠 SYN, ACK
@@ -149,25 +149,26 @@ TTL: <64
 ```
 
 
-**Funcionamiento:** Esta técnica utiliza el procedimiento estándar de tres vías de TCP para establecer una conexión completa con el puerto objetivo:
+### 2.2 Funcionamiento:
+Esta técnica utiliza el procedimiento estándar de tres vías de TCP para establecer una conexión completa con el puerto objetivo:
 - SYN: El cliente (o la herramienta de escaneo) envía un paquete TCP con el flag SYN activado a un puerto específico en el servidor. Este paso solicita abrir una conexión.
 - SYN-ACK: Si el puerto está escuchando (abierto), el servidor responde con un paquete TCP que tiene activados los flags SYN y ACK, indicando que está listo para aceptar la conexión.
 - ACK: El cliente completa el proceso de establecimiento de conexión enviando un paquete ACK al servidor.
 
 Una vez establecida la conexión, el escáner puede confirmar que el puerto está abierto. Luego, generalmente, terminará la conexión enviando un paquete TCP con el flag FIN para cerrarla de manera ordenada.
 
-**Esta técnica se utiliza por defecto cuando:**
+### 2.3 Esta técnica se utiliza por defecto cuando:
 - No es posible la utilización de SYN Scan (-sS).
 - Cuando el usuario no tiene suficientes privilegios para crear paquetes RAW IP.
 
 Para su funcionamiento, usa las llamadas de alto nivel del sistema operativo para crear los paquetes (concretamente la llamada connect()) y para obtener la información de los intentos de conexión, al igual que cualquier otra aplicación.
 
-**Esta técnica es menos eficiente que SYN Scan (-sS) porque:**
+### 2.4 Esta técnica es menos eficiente que SYN Scan (-sS) porque:
 - Nmap no toma el control de los paquetes enviados, como hace en la mayoría de las otras técnicas.
 - Porque termina todas las conexiones, en lugar de hacer un half-open reset. Por este motivo, es menos sigilosa, siendo probable que un IDS/IPS registre los intentos de conexión.
 
 
-**Ejemplos:**
+### 2.5 Ejemplos:
 ```
 sudo nmap -sT 10.0.1.254
 sudo nmap -Pn -sT -p 22,80,8080 -v 10.0.1.254
@@ -181,7 +182,7 @@ sudo nmap -Pn -sT -p 22,80,8080 -v 10.0.1.254
 ![](capturas/closed-tcp-port-TCP-scan-sT.png)
 
 
-**Tráfico de red durante un TCP Connect Scan -sT en puertos que están cerrados:**
+### 2.6 Tráfico de red durante un TCP Connect Scan -sT en puertos que están cerrados:
 ```
 TCP Connect Scan Dirigido a puertos cerrados:
 Kali Linux						                     Ubuntu Server
@@ -190,7 +191,8 @@ Kali Linux						                     Ubuntu Server
 ```
 ![](capturas/wireshark-tcp-connect-scan-sT.png)
 
-**Tráfico de red durante un TCP Connect Scan -sT en puertos que están cerrados:**
+
+### 2.7 Tráfico de red durante un TCP Connect Scan -sT en puertos que están cerrados:
 ```
 TCP Connect Scan Dirigido a un puerto abierto 80:
 Kali Linux						                     Ubuntu Server
@@ -206,7 +208,7 @@ Limpiamos un poco, mostrando: Seguir --> Secuencia --> TCP  que nos interesa:
 
 
 
-### 3. Escaneo FIN, Xmas, y Null 
+## 3. Escaneo FIN, Xmas, y Null 
 Estos métodos envían paquetes con banderas (flags) TCP inusuales o inválidas para provocar respuestas de los puertos que pueden ser interpretadas para determinar su estado. No todos los sistemas responden de la misma manera a estos paquetes, por lo que la efectividad de estos métodos puede variar.
 
 Estas técnicas se basan en enviar sondas TCP con distintos flags activados, como por ejemplo Null, FIN, Xmas. Se aprovecha de una indefinición en el estándar RFC 793 para provocar una respuesta en el objetivo que determine si un puerto está abierto o cerrado. El fundamento de esta técnica reside en que los puertos cerrados de equipos compatibles con esta RFC responderán con un RST a cualquier paquete que no contenga un flag SYN, RST o ACK, mientras que no emitirán respuesta alguna si el puerto está abierto.
@@ -217,12 +219,12 @@ Según las respuestas obtenidas, Nmap clasifica los puertos en:
 - Filtrados: Si se recibe algún tipo de error ICMP inalcanzable.
 
 
-#### Escaneo FIN 🠲(-sF) (Finish)
+### 3.1 Escaneo FIN 🠲(-sF) (Finish)
 El escaneo FIN se basa en enviar un paquete TCP con el flag FIN (finalizar) activado a un puerto específico del objetivo. La lógica detrás de este tipo de escaneo se aprovecha de un detalle en el comportamiento de los puertos TCP según las especificaciones del protocolo.
 
 En la técnica FIN Scan (-sF) se activa únicamente el flag FIN. Un paquete FIN se usa para terminar la conexión TCP entre el puerto de origen y el puerto de destino, generalmente después de que se completa la transferencia de datos. Nmap inicia un escaneo FIN enviando el paquete FIN. FIN scan sólo funciona en sistemas operativos TCP / IP basados de acuerdo con RFC 793.
 
-**Esquema:**
+#### 3.1.1 Esquema:
 ```
 FIN 🠚
 ----------------------------
@@ -231,7 +233,7 @@ TTL: <64
 ```
 
 
-**Funcionamiento el escaneo FIN:**
+#### 3.1.2 Funcionamiento el escaneo FIN:
 - Paquete FIN enviado: La herramienta de escaneo envía un paquete TCP con el flag FIN a un puerto del servidor objetivo. Este paquete indica el deseo de cerrar una conexión, aunque en este contexto se envía sin que haya una conexión establecida previamente.
 - Respuestas esperadas:
     - Si el puerto está abierto, en teoría, el puerto ignora el paquete FIN porque no hay una conexión existente para cerrar, y no se envía respuesta alguna. Esto se basa en el comportamiento estándar TCP que espera que los paquetes no solicitados (como un FIN a una conexión no existente) sean simplemente descartados.
@@ -241,13 +243,13 @@ La eficacia del escaneo FIN puede variar dependiendo de la configuración del si
 
 El escaneo FIN es especialmente útil en entornos donde los puertos cerrados responden de manera predecible con paquetes RST, permitiendo al atacante o profesional de seguridad diferenciar entre puertos cerrados y potencialmente abiertos o filtrados. Sin embargo, no todos los sistemas operativos responden de la misma manera a los paquetes FIN no solicitados, lo que puede afectar la precisión de este método de escaneo.
 
-**Ejemplo:**
+#### 3.1.3 Ejemplo:
 ```
 nmap -sF 10.0.1.254
 ■ -sF: FIN Scan
 ```
 
-**Tráfico de red durante un FIN Scan -sF en puertos que están cerrados:**
+#### 3.1.4 Tráfico de red durante un FIN Scan -sF en puertos que están cerrados:
 ```
 FIN Scan Dirigido a un puerto cerrado:
 Kali Linux						                     Ubuntu Server
@@ -258,7 +260,7 @@ Kali Linux						                     Ubuntu Server
 
 
 
-**Tráfico de red durante un FIN Scan -sF en puertos que están abiertos:**
+#### 3.1.5 Tráfico de red durante un FIN Scan -sF en puertos que están abiertos:
 ```
 FIN Scan Dirigido a un puerto abierto:
 Kali Linux						                     Ubuntu Server
@@ -269,12 +271,12 @@ Kali Linux						                     Ubuntu Server
 
 
 
-#### Escaneo Xmas 🠲 (-sX) (Xmas)
+### 3.2 Escaneo Xmas 🠲 (-sX) (Xmas)
 El escaneo Xmas Tree recibe su nombre por la analogía de que los paquetes enviados están "iluminados" como un árbol de Navidad, debido a la combinación de varios flags TCP activados simultáneamente. En un escaneo Xmas Tree, los paquetes TCP se envían con los flags FIN, URG y PSH activados.
 
 XMAS Scan sólo funciona en sistemas operativos TCP / IP basados de acuerdo con RFC 793. Xmas Scan solo funciona en máquinas Linux y no funciona en la última versión de Windows.
 
-**Esquema:**
+#### 3.2.1 Esquema:
 ```
 NULL 🠚
 ----------------------------
@@ -282,7 +284,7 @@ Data Length: 40
 TTL: <64
 ```
 
-**Funcionamiento del escaneo Xmas Tree:**
+#### 3.2.2 Funcionamiento del escaneo Xmas Tree:
 - Paquetes "iluminados" enviados: La herramienta de escaneo genera paquetes TCP con los flags FIN, URG, y PSH activados y los envía a puertos específicos en el servidor objetivo. Esta combinación inusual de flags no es típica en el tráfico de red normal, lo que da origen al nombre del escaneo.
 - Respuestas esperadas:
     - Si el puerto está abierto o filtrado por un firewall que no responde a los paquetes inesperados, en teoría, no hay respuesta al paquete enviado, ya que el comportamiento estándar TCP es ignorar paquetes que no corresponden al estado actual de una conexión.
@@ -292,12 +294,12 @@ La utilidad del escaneo Xmas Tree radica en su **capacidad para pasar desapercib
 
 Es importante destacar que, aunque el escaneo Xmas Tree puede ser útil para identificar puertos abiertos sin ser detectado en ciertos entornos, su comportamiento puede ser inconsistente dependiendo del sistema operativo y de la configuración de la red objetivo. 
 
-**Ejemplo:**
+#### 3.2.3 Ejemplo:
 ```
 nmap -sX 10.0.1.254
 ```
 
-**Tráfico de red durante un Xmas Scan -sX en puertos que están cerrados:**
+#### 3.2.4 Tráfico de red durante un Xmas Scan -sX en puertos que están cerrados:
 ```
 XMAS Scan Dirigido a un puerto cerrado:
 Kali Linux						Ubuntu Server
@@ -307,7 +309,7 @@ Kali Linux						Ubuntu Server
 ![](capturas/wireshark-Xmas-scan.png)
 
 
-**Tráfico de red durante un Xmas Scan -sX en puertos que están abiertos:**
+#### 3.2.5 Tráfico de red durante un Xmas Scan -sX en puertos que están abiertos:
 ```
 XMAS Scan Dirigido a un puerto abierto:
 Kali Linux						Ubuntu Server
@@ -318,12 +320,12 @@ Kali Linux						Ubuntu Server
 
 
 
-#### Escaneo Null 🠲 (-sN) (Null)
+### 3.3 Escaneo Null 🠲 (-sN) (Null)
 Este tipo de escaneo se caracteriza por enviar paquetes TCP sin ningún flag activado (de ahí el término "Null", que significa "nulo" en inglés). La estrategia detrás del escaneo Null se basa en cómo los diferentes sistemas responden a paquetes TCP inusuales o inesperados, dependiendo de si los puertos están abiertos o cerrados.
 
 NULL Scan sólo funciona en sistemas operativos TCP / IP basados de acuerdo con RFC 793. Xmas Scan solo funciona en máquinas Linux y no funciona en la última versión de Windows.
 
-**Esquema:**
+#### 3.3.1 Esquema:
 ```
 FIN, PSH, URG 🠚
 ----------------------------
@@ -332,7 +334,7 @@ TTL: <64
 ```
 
 
-**Funcionamiento del escaneo Null:**
+#### 3.3.2Funcionamiento del escaneo Null:
 - Paquetes Null enviados: La herramienta de escaneo genera y envía paquetes TCP hacia puertos específicos en el servidor objetivo, asegurándose de que ningún flag TCP esté activado en el encabezado del paquete. Esto es atípico para el tráfico TCP normal, ya que los paquetes TCP generalmente tienen al menos un flag activado para indicar el propósito del paquete (como SYN para iniciar conexiones, ACK para reconocer la recepción, FIN para cerrar conexiones, etc.).
 - Respuestas esperadas:
     - Si el puerto está abierto o filtrado (por ejemplo, por un firewall que no responde a paquetes inesperados), en teoría, el puerto ignora el paquete Null. El estándar TCP no especifica una respuesta para paquetes sin flags activados enviados a puertos abiertos, por lo que la falta de respuesta puede indicar que el puerto está abierto o filtrado.
@@ -345,13 +347,13 @@ Una de las ventajas teóricas del escaneo Null es su potencial para evadir la de
 
 Al igual que con otros métodos de escaneo, el uso del escaneo Null sin autorización en redes que no son de tu propiedad puede ser ilegal y considerado una violación de las políticas de uso aceptable. Es una herramienta útil para profesionales de la seguridad que realizan pruebas de penetración o evaluaciones de seguridad con permiso, permitiéndoles identificar puertos abiertos y evaluar la postura de seguridad de una red.
 
-**Ejemplo:**
+#### 3.3.3 Ejemplo:
 ```
 nmap -sN 10.0.1.254
 ```
 
 
-**Tráfico de red durante un NULL Scan -sN en puertos que están cerrados:**
+#### 3.3.4 Tráfico de red durante un NULL Scan -sN en puertos que están cerrados:
 ```
 NULL Scan Dirigido a un puerto cerrado:
 Kali Linux						Ubuntu Server
@@ -361,7 +363,7 @@ Kali Linux						Ubuntu Server
 ![](capturas/wireshark-tcp-NULL-scan.png)
 
 
-**Tráfico de red durante un NULL Scan -sN en puertos que están abiertos:**
+#### 3.3.5 Tráfico de red durante un NULL Scan -sN en puertos que están abiertos:
 ```
 NULL Scan Dirigido a un puerto abierto:
 Kali Linux						Ubuntu Server
