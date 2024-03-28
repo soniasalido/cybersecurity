@@ -60,3 +60,14 @@ Una situación sospechosa significa tener dos respuestas ARP diferentes (conflic
 Aquí, conocer la arquitectura de la red e inspeccionar el tráfico durante un marco de tiempo específico puede ayudar a detectar la anomalía. Como analista, deberías tomar nota de tus hallazgos antes de proceder. Esto te ayudará a estar organizado y facilitará la correlación con los hallazgos posteriores. Mira la imagen proporcionada; hay un conflicto; la dirección MAC que termina en "b4" elaboró una solicitud ARP con la dirección IP "192.168.1.25", luego afirmó tener la dirección IP "192.168.1.1".
 
 ![](capturas/arp-lab-tryhackme-3.png)
+
+
+Sigamos inspeccionando el tráfico para detectar cualquier otra anomalía. Ten en cuenta que el caso se divide en varios archivos de captura para facilitar la investigación.
+
+![](capturas/arp-lab-tryhackme-4.png)
+
+
+En este punto, es evidente que hay una anomalía. Un analista de seguridad no puede ignorar una inundación de solicitudes ARP. Esto podría ser una actividad maliciosa, un escaneo o problemas de red. Hay una nueva anomalía; la dirección MAC que termina en "b4" ha generado múltiples solicitudes ARP con la dirección IP "192.168.1.25". Centrémonos en el origen de esta anomalía y ampliemos las notas tomadas.
+
+![](capturas/arp-lab-tryhackme-5.png)
+
