@@ -62,3 +62,56 @@ El protocolo DHCP, o Protocolo de Configuración Dinámica de Host (DHCP, por su
 
 
 
+# NetBIOS (NBNS) Analysis
+NetBIOS (Network Basic Input/Output System) es la tecnología responsable de permitir que aplicaciones en diferentes hosts se comuniquen entre sí.
+
+## Investigación de NBNS en resumen:
+- Búsqueda global:
+  ```
+  nvns
+  ```
+
+- NBNS:
+  - Queries (consultas): Detalle de la consulta.
+  - Los detalles de la consulta pueden contener:
+    ```
+    nbns.name contains "keyword"
+    ```
+
+![](capturas/netbios.png)
+
+
+# Kerberos Analysis
+Kerberos es el servicio de autenticación predeterminado para dominios de Microsoft Windows. Es responsable de autenticar las solicitudes de servicio entre dos o más computadoras a través de una red que no es de confianza. El objetivo final es demostrar la identidad de forma segura.
+
+## Investigación de Kerberos en resumen:
+- Búsqueda global: 
+  ```
+  kerberos
+  ```
+
+- Búsqueda de cuentas de usuario: Algunos paquetes podrían proporcionar información del nombre de host en este campo. Para evitar esta confusión, filtre el valor "$". Los valores que terminan en "$" son nombres de host y los que no lo tienen son nombres de usuario.
+  - CNameString: el nombre de usuario.
+    ```
+    kerberos.CNameString contains "keyword"
+    kerberos.CNameString and !(kerberos.CNameString contains "$" )
+    ```
+
+
+- Kerberos options:
+  - pvno: Version del Protocolo:
+    ```
+    kerberos.pvno == 5
+    ```
+  - realm: nombre de dominio para el ticket generado:
+    ```
+    kerberos.realm contains ".org"
+    ```
+  - addresses: Dirección IP del cliente y nombre NetBIOS. Nota: la información de "direcciones" solo está disponible en paquetes de solicitud.
+    ```
+    kerberos.SNameString == "krbtg"
+    ```
+
+![](capturas/kerberos.png)
+
+
