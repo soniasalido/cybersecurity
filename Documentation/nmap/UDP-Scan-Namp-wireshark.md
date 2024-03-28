@@ -27,7 +27,7 @@ Debido a estas peculiaridades, el escaneo UDP puede resultar menos fiable y más
 - Impacto en la Red: Este tipo de escaneo puede generar una cantidad significativa de tráfico de red y, potencialmente, afectar el rendimiento de la red o los sistemas objetivo.
 
 
-**Tráfico de red durante un UDP Scan -sU en puertos que están cerrados:**
+## Tráfico de red durante un UDP Scan -sU en puertos que están cerrados:
 ```
 UDP Scan Dirigido a un puerto cerrado:
 Kali Linux						Ubuntu Server
@@ -44,13 +44,18 @@ Vemos un detalle de la respuesta del servidor:
 ![](capturas/wireshark-UDP-scan-2.png)
 
 
+## Otro ejemplo: Tráfico de red durante un UDP Scan -sU en puertos que están cerrados:
+![](capturas/wireshark-udp-scan-3.png)
+![](capturas/wireshark-udp-scan-4.png)
 
-**Tráfico de red durante un UDP Scan -sU en puertos que están abiertos:**
+
+
+## Tráfico de red durante un UDP Scan -sU en puertos que están abiertos:
 ```
 UDP Scan Dirigido a un puerto abierto:
 Kali Linux						Ubuntu Server
 10.0.2.5:x  - - - - - - - - -No Flags Set - - - - - -- - >	10.0.2.4:x
 10.0.2.4:x  <- - - - - - -- -No Response - - - -  -- - -	10.0.2.5:xx
 ```
-![](capturas/wireshark-udp-scan-3.png)
+![](capturas/wireshark-udp-scan-5.png)
 
