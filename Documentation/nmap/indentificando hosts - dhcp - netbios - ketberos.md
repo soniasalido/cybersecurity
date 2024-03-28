@@ -78,7 +78,7 @@ NetBIOS (Network Basic Input/Output System) es la tecnología responsable de per
     nbns.name contains "keyword"
     ```
 
-![](capturas/netbios.png)
+![](capturas/wireshark-netbios.png)
 
 
 # Kerberos Analysis
@@ -112,6 +112,6 @@ Kerberos es el servicio de autenticación predeterminado para dominios de Micros
     kerberos.SNameString == "krbtg"
     ```
 
-![](capturas/kerberos.png)
+![](capturas/wireshark-kerberos.png)
 
 
