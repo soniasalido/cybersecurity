@@ -51,3 +51,11 @@ Antes de investigar el tráfico, revisemos algunos paquetes ARP legítimos y sos
 
 ![](capturas/arp-lab-tryhackme.png)
 
+
+Una situación sospechosa significa tener dos respuestas ARP diferentes (conflicto) para una dirección IP en particular. En ese caso, la pestaña de información de experto de Wireshark advierte al analista. Sin embargo, solo muestra la segunda ocurrencia del valor duplicado para resaltar el conflicto. Por lo tanto, identificar el paquete malicioso del legítimo es el desafío del analista. Un posible caso de suplantación de IP se muestra en la imagen a continuación.
+
+![](capturas/arp-lab-tryhackme-2.png)
+
+
+Aquí, conocer la arquitectura de la red e inspeccionar el tráfico durante un marco de tiempo específico puede ayudar a detectar la anomalía. Como analista, deberías tomar nota de tus hallazgos antes de proceder. Esto te ayudará a estar organizado y facilitará la correlación con los hallazgos posteriores. Mira la imagen proporcionada; hay un conflicto; la dirección MAC que termina en "b4" elaboró una solicitud ARP con la dirección IP "192.168.1.25", luego afirmó tener la dirección IP "192.168.1.1".
+
