@@ -34,8 +34,8 @@ Kali Linux						Ubuntu Server
 10.0.2.5:47536  - - - - - - - - -UDP pcaket - - - - - -- - >	10.0.2.4:19722
 10.0.2.4:19722  <- -  ICMP Type3, code 3 message (Destinatios unreachable, port unreachable) - - -	10.0.2.5:47536
 ```
-![](capturas/wireshark-udp-scan.png)
-![](capturas/wireshark-udp-scan-2.png)
+![](capturas/wireshark-UDP-scan.png)
+![](capturas/wireshark-UDP-scan-2.png)
 
 
 
