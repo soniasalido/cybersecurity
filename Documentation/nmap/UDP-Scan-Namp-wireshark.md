@@ -45,8 +45,11 @@ Vemos un detalle de la respuesta del servidor:
 
 
 ## Otro ejemplo: Tráfico de red durante un UDP Scan -sU en puertos que están cerrados:
-![](capturas/wireshark-udp-scan-3.png)
-![](capturas/wireshark-udp-scan-4.png)
+![](capturas/wireshark-UDP-scan-3.png)
+
+La imagen anterior muestra que el puerto cerrado devuelve un paquete de error ICMP. A primera vista, no se proporciona más información sobre el error, entonces, ¿cómo puede un analista decidir a qué pertenece este mensaje de error? El mensaje de error ICMP utiliza la solicitud original como datos encapsulados para mostrar el origen/razón del paquete. Una vez que expandes la sección ICMP en el panel de detalles del paquete, verás los datos encapsulados y la solicitud original, como se muestra en la imagen a continuación.
+
+![](capturas/wireshark-UDP-scan-4.png)
 
 
 
@@ -57,5 +60,5 @@ Kali Linux						Ubuntu Server
 10.0.2.5:x  - - - - - - - - -No Flags Set - - - - - -- - >	10.0.2.4:x
 10.0.2.4:x  <- - - - - - -- -No Response - - - -  -- - -	10.0.2.5:xx
 ```
-![](capturas/wireshark-udp-scan-5.png)
+![](capturas/wireshark-UDP-scan-5.png)
 
