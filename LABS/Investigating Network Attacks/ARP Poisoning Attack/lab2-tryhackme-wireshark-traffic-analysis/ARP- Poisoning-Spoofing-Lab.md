@@ -71,3 +71,14 @@ En este punto, es evidente que hay una anomalía. Un analista de seguridad no pu
 
 ![](capturas/arp-lab-tryhackme-5.png)
 
+
+
+Hasta este punto, es evidente que la dirección MAC que termina en "b4" posee la dirección IP "192.168.1.25" y ha generado solicitudes ARP sospechosas contra un rango de direcciones IP. También afirmó tener la dirección de la posible puerta de enlace. Centrémonos en otros protocolos y observemos la manifestación de esta anomalía en las siguientes secciones del marco de tiempo.
+
+![](capturas/arp-lab-tryhackme-6.png)
+
+
+¡Una anomalía más! La dirección MAC que termina en "b4" es el destino de todos los paquetes HTTP. Es evidente que hay un ataque de Hombre en el Medio (MITM), y el atacante es el host con la dirección MAC que termina en "b4". Todo el tráfico vinculado a direcciones IP "192.168.1.12" se redirige al host malicioso. Resumamos los hallazgos antes de concluir la investigación.
+
+![](capturas/arp-lab-tryhackme-7.png)
+
