@@ -207,6 +207,20 @@ Limpiamos un poco, mostrando: Seguir --> Secuencia --> TCP  que nos interesa:
 ![](capturas/wireshark-tcp-connect-scan-sT-3.png)
 
 
+### 2.8 Filtros wireshark para detectar TCP Connect Scan:
+```
+tcp.flags.syn == 1 && tcp.flags.ack==0 && tcp.window_size > 1024
+```
+Este filtro de Wireshark se utiliza para seleccionar paquetes TCP específicos basándose en varias condiciones relacionadas con las banderas (flags) del encabezado TCP y el tamaño de la ventana de TCP. Veamos detalladamente qué significa cada parte del filtro:
+- tcp.flags.syn == 1: Esta condición filtra los paquetes que tienen la bandera SYN establecida a 1. En el contexto de TCP, la bandera SYN se utiliza para iniciar una conexión a través del proceso de three-way handshake (acuerdo de tres vías). Un paquete con la bandera SYN establecida a 1 indica una solicitud para establecer una nueva conexión.
+
+- tcp.flags.ack == 0: Esta condición filtra los paquetes cuya bandera ACK está establecida a 0. La bandera ACK es utilizada para indicar que el campo de acuse de recibo (acknowledgement) es significativo; en otras palabras, que el paquete está reconociendo la recepción de datos previos. Al establecer que tcp.flags.ack debe ser 0, se está filtrando por paquetes que no están reconociendo datos previos. En combinación con la primera condición, esto típicamente señala el primer paso de un three-way handshake, donde el cliente inicia una conexión pero aún no está respondiendo a un paquete anterior.
+
+- tcp.window_size > 1024: Esta condición selecciona los paquetes que tienen un tamaño de ventana TCP mayor a 1024 bytes. El tamaño de la ventana TCP indica la cantidad de bytes que están disponibles en el buffer de recepción y, por lo tanto, cuánto puede enviar el remitente antes de recibir un acuse de recibo. Un tamaño de ventana mayor a 1024 bytes sugiere que el receptor está dispuesto y es capaz de manejar una cantidad relativamente grande de datos, lo que puede ser indicativo de buenas condiciones de red entre el emisor y el receptor.
+
+**En Resumen:** El filtro tcp.flags.syn == 1 && tcp.flags.ack == 0 && tcp.window_size > 1024 en Wireshark es utilizado para identificar intentos de inicio de conexión TCP (el primer paso en un three-way handshake) que no son respuestas a otros paquetes (es decir, son solicitudes de conexión iniciales) y donde el receptor anuncia una ventana inicial relativamente grande, indicando la capacidad de recibir una buena cantidad de datos.
+
+
 
 ## 3. Escaneo FIN, Xmas, y Null 
 Estos métodos envían paquetes con banderas (flags) TCP inusuales o inválidas para provocar respuestas de los puertos que pueden ser interpretadas para determinar su estado. No todos los sistemas responden de la misma manera a estos paquetes, por lo que la efectividad de estos métodos puede variar.
