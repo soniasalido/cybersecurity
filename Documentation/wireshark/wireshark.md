@@ -817,3 +817,20 @@ Actualmente, Wireshark puede crear reglas para:
 - Firewall de Windows (netsh formato nuevo/antiguo).
 
 ![](capturas/wireshark-acls.png)
+
+
+
+-----------------------------------------------------
+Congratulations! You just finished the "Wireshark: The Traffic Analysis" room.
+
+In this room, we covered how to use the Wireshark to detect anomalies and investigate events of interest at the packet level. Now, we invite you to complete the Wireshark challenge room: Carnage, Warzone 1 and Warzone 2.
+
+Wireshark is a good tool for starting a network security investigation. However, it is not enough to stop the threats. A security analyst should have IDS/IPS knowledge and extended tool skills to detect and prevent anomalies and threats. As the attacks are getting more sophisticated consistently, the use of multiple tools and detection strategies becomes a requirement. The following rooms will help you step forward in network traffic analysis and anomaly/threat detection.
+
+NetworkMiner
+Snort
+Snort Challenge -  The Basics
+Snort Challenge - Live Attacks
+Zeek
+Zeek Exercises
+Brim
