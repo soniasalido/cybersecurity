@@ -711,7 +711,9 @@ tcp.checksum_bad.expert
 
 tcp.flags.syn==1 and tcp.flags.ack==0 and tcp.window_size > 1024 
 
-icmp.type==3 and icmp.code==3     
+icmp.type==3 and icmp.code==3
+
+http.request.full_uri
 
 
 
