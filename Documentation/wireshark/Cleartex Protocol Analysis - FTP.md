@@ -67,5 +67,7 @@ El Protocolo de Transferencia de Archivos (FTP) está diseñado para transferir 
     (ftp.request.command == "PASS" ) and (ftp.request.arg == "password")
     ```
 
+![](capturas/wireshark-ftp.png)
+
 
 
