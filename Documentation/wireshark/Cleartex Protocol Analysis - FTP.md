@@ -55,7 +55,7 @@ El Protocolo de Transferencia de Archivos (FTP) está diseñado para transferir 
 
 
 - Ejemplos de usos avanzados
-  - Bruteforce signal: List failed login attempts.
+  - Bruteforce signal: Intentos de inicio de sesión incorrectos en Wireshark: buscamos paquetes que contengan respuestas del servidor que indiquen un fallo en la autenticación:
     ```
     ftp.response.code == 530
     ```
