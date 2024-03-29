@@ -158,7 +158,8 @@ El objetivo de esta inyección es forzar al servidor que utiliza Log4j a ejecuta
     ```
 ![](capturas/wireshark-Log4j.png)
 
-
+Detalle del tráfico en el Log4Shell:
+![](capturas/wireshark-log4shell.png)
 
 
 
