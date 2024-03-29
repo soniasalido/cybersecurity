@@ -816,3 +816,4 @@ Actualmente, Wireshark puede crear reglas para:
 - Packet filter (pf).
 - Firewall de Windows (netsh formato nuevo/antiguo).
 
+![](capturas/wireshark-acls.png)
