@@ -30,14 +30,17 @@ El Protocolo de Transferencia de Archivos (FTP) está diseñado para transferir 
   ```
 
 - Opciones de "FTP" "x2x":
-  -  230: User login.
+  -  230: User login. Para un inicio de sesión correcto, el código de respuesta comúnmente utilizado por el servidor FTP es: 230: Este código significa "Usuario logueado, continúe". Indica que la autenticación fue exitosa y que el usuario ha sido correctamente logueado en el servidor.
+    ```
+    ftp.response.code == 230
+    ```
   -  231: User logout.
+    ```
+    ftp.response.code == 221
+    ```
   -  331: Valid username.
   -  430: Invalid username or password.
   -  530: No login, invalid password.
-  ```
-  ftp.response.code == 230
-  ```
 
 - "FTP" commands:
   - USER: Username.
