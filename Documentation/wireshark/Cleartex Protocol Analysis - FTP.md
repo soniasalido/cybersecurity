@@ -46,6 +46,7 @@ El Protocolo de Transferencia de Archivos (FTP) está diseñado para transferir 
     ```
   - PASS: Password.
     ```
+    ftp.request.command == "USER"
     ftp.request.command == "PASS"
     ftp.request.arg == "password"
     ```
