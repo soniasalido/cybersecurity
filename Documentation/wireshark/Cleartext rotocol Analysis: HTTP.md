@@ -117,3 +117,38 @@ Un analista de seguridad no puede confiar únicamente en el campo del user-agent
   ```
 
 ![](capturas/wireshark-http-analysis.png)
+
+
+# Análisis de Log4j
+Revisemos lo conocido sobre el ataque "Log4j" antes de iniciar Wireshark.
+
+
+## Filtros wireshark para Log4j
+- Research outcomes:
+  - The attack starts with a "POST" request.
+    ```
+    http.request.method == "POST"
+    ```
+  - There are known cleartext patterns: "jndi:ldap" and "Exploit.class".
+    ```
+    (ip contains "jndi") or ( ip contains "Exploit")
+    (frame contains "jndi") or ( frame contains "Exploit")
+    (http.user_agent contains "$") or (http.user_agent contains "==")
+    ```
+![](capturas/wireshark-Log4j.png)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
