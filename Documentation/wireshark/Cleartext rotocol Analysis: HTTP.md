@@ -113,7 +113,7 @@ Un analista de seguridad no puede confiar únicamente en el campo del user-agent
   - Audit tools info like Nmap, Nikto, Wfuzz and sqlmap in the user agent field.
   - Payload data in the user agent field.
   ```
-  (http.user_agent contains "sqlmap") || (http.user_agent contains "Nmap") || (http.user_agent contains "Wfuzz") || (http.user_agent contains "Nikto"
+  (http.user_agent contains "sqlmap") || (http.user_agent contains "Nmap") || (http.user_agent contains "Wfuzz") || (http.user_agent contains "Nikto")
   ```
 
 ![](capturas/wireshark-http-analysis.png)
