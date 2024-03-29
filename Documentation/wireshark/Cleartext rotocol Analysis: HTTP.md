@@ -115,7 +115,7 @@ Un analista de seguridad no puede confiar únicamente en el campo del user-agent
   ```
   (http.user_agent contains "sqlmap") || (http.user_agent contains "Nmap") || (http.user_agent contains "Wfuzz") || (http.user_agent contains "Nikto")
 
-  (http.user_agent contains “Wfuzz”) or (http.user_agent contains “Sqlmap”) or (http.user_agent contains “nmap”) or (http.user_agent contains “Mozlila”) or (http.user_agent contains “$”)
+  (http.user_agent contains "Wfuzz") or (http.user_agent contains "Sqlmap") or (http.user_agent contains "nmap") or (http.user_agent contains "Mozlila") or (http.user_agent contains "$")
   ```
 
 ![](capturas/wireshark-http-analysis.png)
