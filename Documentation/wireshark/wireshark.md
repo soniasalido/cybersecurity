@@ -800,3 +800,19 @@ arp.isgratuitous == 1
 "Algunos disectores de Wireshark (FTP, HTTP, IMAP, POP y SMTP) están programados para extraer contraseñas en texto plano del archivo de captura. Puedes ver las credenciales detectadas usando el menú "Herramientas --> Credenciales". Esta característica solo funciona después de versiones específicas de Wireshark (v3.1 y posteriores). Dado que la característica solo funciona con protocolos particulares, se sugiere realizar comprobaciones manuales y no confiar enteramente en esta característica para decidir si hay una credencial en texto plano en el tráfico.
 
 Una vez que uses la característica, se abrirá una nueva ventana y proporcionará las credenciales detectadas. Mostrará el número del paquete, protocolo, nombre de usuario e información adicional. Esta ventana es clickeable; hacer clic en el número del paquete seleccionará el paquete que contiene la contraseña, y hacer clic en el nombre de usuario seleccionará el paquete que contiene la información del nombre de usuario. La parte adicional indica el número del paquete que contiene el nombre de usuario."
+
+
+
+
+
+## ¡Resultados Accionables!
+Wireshark no solo se trata de detalles de paquetes; también puede ayudarte a crear reglas de firewall listas para implementar con un par de clics. Puedes crear reglas de firewall utilizando el menú "Herramientas --> Reglas de ACL de Firewall". Una vez que uses esta característica, se abrirá una nueva ventana y proporcionará una combinación de reglas (basadas en IP, puerto y dirección MAC) para diferentes propósitos. Ten en cuenta que estas reglas se generan para implementación en una interfaz de firewall externa.
+
+Actualmente, Wireshark puede crear reglas para:
+- Netfilter (iptables).
+- Cisco IOS (estándar/extendido).
+- IP Filter (ipfilter).
+- IPFirewall (ipfw).
+- Packet filter (pf).
+- Firewall de Windows (netsh formato nuevo/antiguo).
+
