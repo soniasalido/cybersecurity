@@ -793,3 +793,10 @@ Los anuncios ARP gratuitos son respuestas ARP enviadas sin una solicitud previa,
 ```
 arp.isgratuitous == 1
 ```
+
+
+
+# Herramienta Tools --> Credential
+"Algunos disectores de Wireshark (FTP, HTTP, IMAP, POP y SMTP) están programados para extraer contraseñas en texto plano del archivo de captura. Puedes ver las credenciales detectadas usando el menú "Herramientas --> Credenciales". Esta característica solo funciona después de versiones específicas de Wireshark (v3.1 y posteriores). Dado que la característica solo funciona con protocolos particulares, se sugiere realizar comprobaciones manuales y no confiar enteramente en esta característica para decidir si hay una credencial en texto plano en el tráfico.
+
+Una vez que uses la característica, se abrirá una nueva ventana y proporcionará las credenciales detectadas. Mostrará el número del paquete, protocolo, nombre de usuario e información adicional. Esta ventana es clickeable; hacer clic en el número del paquete seleccionará el paquete que contiene la contraseña, y hacer clic en el nombre de usuario seleccionará el paquete que contiene la información del nombre de usuario. La parte adicional indica el número del paquete que contiene el nombre de usuario."
