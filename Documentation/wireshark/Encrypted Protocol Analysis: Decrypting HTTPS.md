@@ -67,3 +67,17 @@ La imagen anterior muestra que los detalles del tráfico son visibles después d
 - Reassembled TCP (TCP Reensamblado).
 - Reassembled SSL (SSL Reensamblado).
 
+
+
+## Filtros wireshark
+Filtro wireshark para mostrar en una captura https: "Client Hello" message sent to "accounts.google.com"
+```
+((http.request or tls.handshake.type == 1) and !(ssdp))  && tls.handshake.extensions_server_name == "accounts.google.com"
+
+tls.handshake.type == 1 && tls.handshake.extensions_server_name == "accounts.google.com"
+
+tls.handshake.type == 1: Filtra los paquetes que contienen mensajes de tipo "Client Hello", que es el primer paso en el handshake de TLS y tiene un valor de tipo 1.
+
+tls.handshake.extensions_server_name == "accounts.google.com": Filtra los paquetes cuyo mensaje "Client Hello" incluye una extensión de Server Name Indication (SNI) especificando que el cliente está intentando conectarse a "accounts.google.com".
+```
+
