@@ -24,6 +24,7 @@ El riesgo de utilizar componentes vulnerables y desactualizados como Log4j sin a
 ## Filtro wireshark
 ```
 ip contains jndi
+(ip contains "jndi") || (tcp.flags==0x002 && ip.src==198.71.247.91)
 ```
 El filtro de Wireshark ip contains jndi se utiliza para buscar paquetes cuyo contenido en el nivel IP (Protocolo de Internet) incluye la secuencia de caracteres "jndi". Este tipo de filtro es útil para identificar intentos de explotación o actividad maliciosa relacionada con vulnerabilidades específicas que involucran a JNDI (Java Naming and Directory Interface).
 
@@ -66,6 +67,22 @@ IP: 62.210.130.250
 ![](capturas/virustotal.png)
 
 
+Vemos que la comunidad nos avisa que es Log4Shell IOCS
+![](capturas/virustotal-2.png)
 
 
+## Filtros wireshark para Log4Shell
+Paquetes que sean parte de un intento de inicio de conexión TCP (indicado por el flag de SYN) originados desde la dirección IP 198.71.247.91.
+```
+(ip contains "jndi") || (tcp.flags==0x002 && ip.src==198.71.247.91)
+
+tcp.flags==0x002: Esta parte del filtro busca paquetes TCP donde solo esté establecido el bit de SYN. En el contexto de TCP, el flag SYN se utiliza para iniciar una conexión, y un paquete con solo este flag activado indica un intento de inicio de conexión TCP. El valor 0x002 representa el flag de SYN en notación hexadecimal.
+```
+
+Paquetes que son intentos de iniciar una conexión TCP hacia el host con la dirección IP 198.71.247.91.
+```
+(ip contains "jndi") || (tcp.flags==0x002 && ip.dst==198.71.247.91)
+
+tcp.flags==0x002: Esta parte del filtro busca paquetes TCP donde solo esté establecido el bit de SYN. En el contexto de TCP, el flag SYN se utiliza para iniciar una conexión, y un paquete con solo este flag activado indica un intento de inicio de conexión TCP. El valor 0x002 representa el flag de SYN en notación hexadecimal.
+```
 
