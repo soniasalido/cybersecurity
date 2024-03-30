@@ -717,6 +717,11 @@ http.request.full_uri
 
 frame contains "api"
 
+http.content_type contains "application/json"
+
+tls contains "application/json"
+
+
 ```
 
 What is the IP address of the hostname starts with "bbc"? --> dns.qry.name contains "bbc"
