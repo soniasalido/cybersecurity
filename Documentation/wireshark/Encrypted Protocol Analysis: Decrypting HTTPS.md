@@ -79,5 +79,7 @@ tls.handshake.type == 1 && tls.handshake.extensions_server_name == "accounts.goo
 tls.handshake.type == 1: Filtra los paquetes que contienen mensajes de tipo "Client Hello", que es el primer paso en el handshake de TLS y tiene un valor de tipo 1.
 
 tls.handshake.extensions_server_name == "accounts.google.com": Filtra los paquetes cuyo mensaje "Client Hello" incluye una extensión de Server Name Indication (SNI) especificando que el cliente está intentando conectarse a "accounts.google.com".
+
+ssl.handshake.certificate
 ```
 
