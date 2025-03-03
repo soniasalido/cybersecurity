@@ -56,7 +56,7 @@ La tabla de particiones tiene cuatro entradas, cada una de las cuales puede desc
 
 
 ## Direcciones CHS vs. LBA
-- **CHS (Cylinder-Head-Sector)**
+- **CHS (Cylinder-Head-Sector):**
  - Método antiguo de direccionamiento basado en cilindros, cabezales y sectores del disco.
  - Solo funciona para discos de menos de 8 GB debido a las limitaciones del BIOS antiguo.
 
