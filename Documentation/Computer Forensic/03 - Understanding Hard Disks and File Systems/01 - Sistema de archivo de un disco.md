@@ -4,11 +4,11 @@ El sistema de archivos de un disco de almacenamiento es la estructura lógica qu
 Un sistema de archivos define cómo se guardan, acceden y organizan los datos en un disco. Actúa como una "tabla de contenido" que permite al sistema operativo localizar archivos y carpetas de manera eficiente.
 
 ## Funciones del Sistema de Archivos
-✔️ Organizar datos en carpetas y archivos.
-✔️ Gestionar el espacio disponible en el disco.
-✔️ Controlar los permisos de acceso a los archivos.
-✔️ Optimizar la lectura y escritura de datos.
-✔️ Evitar la fragmentación excesiva del disco.
+✔️ Organizar datos en carpetas y archivos.  
+✔️ Gestionar el espacio disponible en el disco.  
+✔️ Controlar los permisos de acceso a los archivos.  
+✔️ Optimizar la lectura y escritura de datos.  
+✔️ Evitar la fragmentación excesiva del disco.  
 
 ## Estructura del Sistema de Archivos. Un sistema de archivos generalmente tiene las siguientes partes:
 **1. Boot Sector (Sector de Arranque)**
