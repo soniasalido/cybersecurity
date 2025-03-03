@@ -30,7 +30,7 @@ Un sistema de archivos define cómo se guardan, acceden y organizan los datos en
 ## Tipos de Sistemas de Archivos
 Existen diferentes sistemas de archivos según el sistema operativo y el tipo de dispositivo.
 | Sistema de Archivos	| SO Compatible	| Tamaño Máx. de Archivo	| Tamaño Máx. de Partición	| Características |
-|  -- | -- | -- |
+| -- | -- | -- | -- |  -- |
 | FAT32		| Windows, Linux, Mac		| 4 GB		| 2 TB	| Compatible con casi todos los dispositivos, pero limitado en tamaño de archivos. |
 | NTFS	| 	Windows		| 16 TB		| 256 TB	| Permite permisos de usuario, cifrado y compresión. |
 | exFAT	| 	Windows, Mac, Linux	| 	16 EB	| 	128 PB	| Ideal para discos USB y tarjetas SD de gran tamaño. |
