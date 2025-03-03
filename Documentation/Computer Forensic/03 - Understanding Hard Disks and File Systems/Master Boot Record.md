@@ -85,8 +85,7 @@ En la tabla de particiones del MBR (Master Boot Record), cada partición tiene u
 - Windows: Depende del campo de tipo de partición para montar el sistema de archivos. Si el tipo de partición no es compatible, Windows no mostrará la partición.
 - Linux: No depende del tipo de partición, puede ignorarlo. Por ejemplo, si un usuario tiene una partición con tipo NTFS, pero dentro hay un sistema de archivos FAT32, Linux lo montará como FAT32 sin problema.
 
-**🔹🔹🔹 Ejemplo de uso para ocultar particiones en Windows:**
-- Algunas herramientas pueden modificar el tipo de partición para que Windows no la reconozca. Por ejemplo, si una partición tiene un sistema de archivos FAT32, pero el tipo de partición se cambia a Linux (0x83), Windows no la mostrará en el Explorador de Archivos.
+**🔹🔹🔹 Ejemplo de uso para ocultar particiones en Windows:** Algunas herramientas pueden modificar el tipo de partición para que Windows no la reconozca. Por ejemplo, si una partición tiene un sistema de archivos FAT32, pero el tipo de partición se cambia a Linux (0x83), Windows no la mostrará en el Explorador de Archivos.
 
 ## El Campo Flag en la Tabla de Particiones
 Cada entrada de la tabla de particiones del MBR también contiene un campo flag, que indica cuál es la partición de arranque.
