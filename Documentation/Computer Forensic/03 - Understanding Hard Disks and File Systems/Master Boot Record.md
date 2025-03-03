@@ -29,16 +29,16 @@ Un **disco organizado mediante particiones DOS tiene un MBR (Master Boot Record)
 
 
 ## Estructura del MBR. El MBR contiene tres partes principales:
-1. Código de arranque (Bootloader)
+**1. Código de arranque (Bootloader)**
 - Es un pequeño programa que se ejecuta al iniciar la computadora.
 - Su función es encontrar y cargar el sistema operativo desde la tabla de particiones.
 - En sistemas Windows, este código puede ser el NTLDR (Windows XP) o BOOTMGR (Windows 7 en adelante).
 
-2. Tabla de particiones (Partition Table)
+**2. Tabla de particiones (Partition Table)**
 - Contiene información sobre las particiones del disco.
 - Puede manejar hasta 4 particiones primarias o 3 primarias + 1 extendida.
 
-3. Firma del disco (Disk Signature)
+**3. Firma del disco (Disk Signature)**
 - Un identificador único que ayuda al sistema operativo a reconocer el disco.
 - Su valor es 0x55AA en hexadecimal, lo que indica que el MBR es válido.
 
@@ -55,16 +55,7 @@ La tabla de particiones tiene cuatro entradas, cada una de las cuales puede desc
 | Flags |		Indicadores especiales, como si la partición es arrancable (bootable). |
 
 
-**El MBR contiene el código de arranque, una tabla de particiones y un valor de firma.** El código de inicio contiene las instrucciones que le indican a la computadora cómo procesar la tabla de particiones y ubicar el sistema operativo. La tabla de particiones tiene cuatro entradas, cada una de las cuales puede describir una partición de DOS. Cada entrada tiene los siguientes campos:
- - Starting CHS address.
- - Ending CHS address.
- - Starting LBA address.
- - Number of sectors in partition.
- - Type of partition.
- - Flags.
-
-Cada entrada de la tabla describe el diseño de una partición en direcciones CHS y LBA.
-Debmos recordar que las direcciones CHS solo funcionan para discos de menos de 8 GB de tamaño, pero las direcciones LBA permiten que los discos tengan un tamaño de terabytes (TB).
+**Cada entrada de la tabla describe el diseño de una partición en direcciones CHS y LBA.** Debemos recordar que las direcciones CHS solo funcionan para discos de menos de 8 GB de tamaño, pero las direcciones LBA permiten que los discos tengan un tamaño de terabytes (TB).
 
 El campo de tipo en la partición identifica qué tipo de datos deben existir en la partición. Los ejemplos comunes incluyen FAT, NTFS, EXT4... El valor de tipo se utiliza de forma diferente en distintos sistemas operativos. A Linux, por ejemplo, no le importa. Puede colocar un sistema de archivos FAT dentro de una partición que tenga un tipo NTFS y lo montará como FAT. Microsoft Windows, por el contrario, depende de ello. Windows no intentará montar un sistema de archivos en una partición si no admite el tipo de partición. Por lo tanto, si un disco tiene un sistema de archivos FAT dentro de una partición con un tipo de sistema de archivos Linux, el usuario no verá el sistema de archivos FAT desde Windows. Este comportamiento se puede utilizar para ocultar particiones de Windows. Por ejemplo, algunas herramientas agregarán un bit a un tipo de partición compatible con Windows para que no se muestre cuando Windows se inicie nuevamente.
 
