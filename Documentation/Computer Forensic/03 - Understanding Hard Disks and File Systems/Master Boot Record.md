@@ -55,11 +55,47 @@ La tabla de particiones tiene cuatro entradas, cada una de las cuales puede desc
 | Flags |		Indicadores especiales, como si la partición es arrancable (bootable). |
 
 
-**Cada entrada de la tabla describe el diseño de una partición en direcciones CHS y LBA.** Debemos recordar que las direcciones CHS solo funcionan para discos de menos de 8 GB de tamaño, pero las direcciones LBA permiten que los discos tengan un tamaño de terabytes (TB).
+## Direcciones CHS vs. LBA
+- **CHS (Cylinder-Head-Sector)**
+ - Método antiguo de direccionamiento basado en cilindros, cabezales y sectores del disco.
+ - Solo funciona para discos de menos de 8 GB debido a las limitaciones del BIOS antiguo.
 
-El campo de tipo en la partición identifica qué tipo de datos deben existir en la partición. Los ejemplos comunes incluyen FAT, NTFS, EXT4... El valor de tipo se utiliza de forma diferente en distintos sistemas operativos. A Linux, por ejemplo, no le importa. Puede colocar un sistema de archivos FAT dentro de una partición que tenga un tipo NTFS y lo montará como FAT. Microsoft Windows, por el contrario, depende de ello. Windows no intentará montar un sistema de archivos en una partición si no admite el tipo de partición. Por lo tanto, si un disco tiene un sistema de archivos FAT dentro de una partición con un tipo de sistema de archivos Linux, el usuario no verá el sistema de archivos FAT desde Windows. Este comportamiento se puede utilizar para ocultar particiones de Windows. Por ejemplo, algunas herramientas agregarán un bit a un tipo de partición compatible con Windows para que no se muestre cuando Windows se inicie nuevamente.
+- **LBA (Logical Block Addressing)**
+ - Sistema moderno basado en bloques lógicos en lugar de cilindros y cabezales.
+ - Permite gestionar discos de varios terabytes (TB).
+ - Es utilizado en todos los sistemas operativos modernos con MBR y GPT.
 
-Cada entrada también contiene un campo flag que identifica qué partición es la de "arranque". Esto se utiliza para identificar dónde se encuentra el sistema operativo cuando se inicia la computadora. Usando las cuatro entradas del MBR, podemos describir un diseño de disco simple con hasta cuatro particiones. 
+
+**Cada entrada de la tabla describe el diseño de una partición en direcciones CHS y LBA.**
+
+## El Campo de Tipo de Partición
+En la tabla de particiones del MBR (Master Boot Record), cada partición tiene un campo de tipo de partición que indica qué tipo de datos se espera que contenga la partición.
+
+**Ejemplos Comunes de Tipos de Partición**
+| Código | Sistema de Archivos |
+| 0x07 | 	NTFS (Windows) |
+| 0x0B / 0x0C | 	FAT32 (Windows) |
+| 0x83 | 	EXT4 (Linux) |
+| 0x82 | 	Swap (Linux) |
+| 0x05 / 0x0F | 	Partición Extendida |
+
+
+**Diferencias entre Windows y Linux en el Uso del Tipo de Partición**
+- Windows: Depende del campo de tipo de partición para montar el sistema de archivos. Si el tipo de partición no es compatible, Windows no mostrará la partición.
+- Linux: No depende del tipo de partición, puede ignorarlo. Por ejemplo, si un usuario tiene una partición con tipo NTFS, pero dentro hay un sistema de archivos FAT32, Linux lo montará como FAT32 sin problema.
+
+**🔹 Ejemplo de uso para ocultar particiones en Windows:**
+- Algunas herramientas pueden modificar el tipo de partición para que Windows no la reconozca. Por ejemplo, si una partición tiene un sistema de archivos FAT32, pero el tipo de partición se cambia a Linux (0x83), Windows no la mostrará en el Explorador de Archivos.
+
+## El Campo Flag en la Tabla de Particiones
+Cada entrada de la tabla de particiones del MBR también contiene un campo flag, que indica cuál es la partición de arranque.
+
+**🔹 ¿Cómo funciona el Flag de Arranque?**
+- El flag de arranque marca una partición como bootable, lo que significa que el BIOS buscará el gestor de arranque en esa partición.
+- Solo una partición primaria puede estar marcada como arrancable en el MBR.
+- Si ninguna partición tiene este flag activado, el sistema no podrá arrancar.
+
+
 
 El MBR es un método sencillo para describir hasta cuatro particiones. Sin embargo, muchos sistemas requieren más particiones que eso. Por ejemplo, consideremos un disco de 12 GB que el usuario desea dividir en seis particiones de 2 GB porque utiliza varios sistemas operativos. No podemos describir las seis particiones utilizando las cuatro entradas de la tabla de particiones. La solución a este problema de diseño es lo que hace que las particiones de DOS sean tan complejas. La teoría básica detrás de la solución es usar una, dos o tres de las entradas en el MBR para particiones normales y luego crear una "partición extendida" que llenará el resto del disco. Las particiones extendidas tienen tipos especiales que se utilizan en las entradas de su tabla de particiones.
 
