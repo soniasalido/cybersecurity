@@ -46,7 +46,7 @@ Existen diferentes sistemas de archivos según el sistema operativo y el tipo de
 ## Diferencias Entre MBR/GPT y el Sistema de Archivos
 | Concepto |	Función |	Ubicación en el Disco |
 | -- | -- | -- | 
-| MBR / GPT | 	Esquema de partición: Define cómo se divide el disco en particiones.	Primeros sectores del disco. |
-| Sistema de Archivos (NTFS, FAT32, EXT4, etc.) | 	Define cómo se almacenan y gestionan los archivos dentro de una partición.	Dentro de cada partición. |
+| MBR / GPT | 	Esquema de partición: Define cómo se divide el disco en particiones. | 	Primeros sectores del disco. |
+| Sistema de Archivos (NTFS, FAT32, EXT4, etc.) | 	Define cómo se almacenan y gestionan los archivos dentro de una partición. | 	Dentro de cada partición. |
 
 🛠 MBR/GPT dividen el disco en particiones, y cada partición usa un sistema de archivos para almacenar datos.
