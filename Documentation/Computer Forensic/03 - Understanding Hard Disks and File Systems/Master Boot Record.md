@@ -56,11 +56,11 @@ La tabla de particiones tiene cuatro entradas, cada una de las cuales puede desc
 
 
 ## Direcciones CHS vs. LBA
-- **CHS (Cylinder-Head-Sector):**
+**CHS (Cylinder-Head-Sector):**
  - Método antiguo de direccionamiento basado en cilindros, cabezales y sectores del disco.
  - Solo funciona para discos de menos de 8 GB debido a las limitaciones del BIOS antiguo.
 
-- **LBA (Logical Block Addressing)**
+**LBA (Logical Block Addressing)**
  - Sistema moderno basado en bloques lógicos en lugar de cilindros y cabezales.
  - Permite gestionar discos de varios terabytes (TB).
  - Es utilizado en todos los sistemas operativos modernos con MBR y GPT.
