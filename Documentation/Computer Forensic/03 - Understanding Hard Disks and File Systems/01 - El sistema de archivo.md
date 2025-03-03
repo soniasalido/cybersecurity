@@ -1,0 +1,1 @@
+El sistema de archivos de un disco de almacenamiento es la estructura lógica que un sistema operativo usa para organizar, gestionar y almacenar datos en un dispositivo de almacenamiento, como un disco duro, SSD, USB o tarjeta de memoria.
