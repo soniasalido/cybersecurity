@@ -1,4 +1,6 @@
 ## Métodos para estructurar la tabla de particiones en una unidad de almacenamiento
+MBR y GPT son los esquemas de partición que organizan el almacenamiento en los discos duros.
+
 ### 1. MBR - Master Boot Record:
 MBR es el esquema de partición más antiguo y se ha utilizado desde 1983 en sistemas con BIOS.
 
