@@ -73,6 +73,7 @@ En la tabla de particiones del MBR (Master Boot Record), cada partición tiene u
 
 **Ejemplos Comunes de Tipos de Partición**
 | Código | Sistema de Archivos |
+| -- | -- |
 | 0x07 | 	NTFS (Windows) |
 | 0x0B / 0x0C | 	FAT32 (Windows) |
 | 0x83 | 	EXT4 (Linux) |
