@@ -24,8 +24,9 @@ GPT es el sucesor de MBR y es parte del estándar UEFI. Almacena información so
 - Usa CRC32 (Cyclic Redundancy Check) para verificar la integridad de los datos.
 
 ## Conceptos básicos de MBR
-Un disco organizado mediante particiones DOS tiene un MBR en el primer sector de 512 bytes. Puede usarse en sistemas de ficheros FAT32 y NTFS.
-El MBR contiene código de arranque, una tabla de particiones y un valor de firma. El código de inicio contiene las instrucciones que le indican a la computadora cómo procesar la tabla de particiones y ubicar el sistema operativo. La tabla de particiones tiene cuatro entradas, cada una de las cuales puede describir una partición de DOS. Cada entrada tiene los siguientes campos:
+Un **disco organizado mediante particiones DOS tiene un MBR en el primer sector de 512 bytes**. Puede usarse en sistemas de ficheros FAT32 y NTFS.
+
+**El MBR contiene código de arranque, una tabla de particiones y un valor de firma.** El código de inicio contiene las instrucciones que le indican a la computadora cómo procesar la tabla de particiones y ubicar el sistema operativo. La tabla de particiones tiene cuatro entradas, cada una de las cuales puede describir una partición de DOS. Cada entrada tiene los siguientes campos:
  - Starting CHS address.
  - Ending CHS address.
  - Starting LBA address.
