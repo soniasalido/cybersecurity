@@ -49,4 +49,21 @@ UEFI (Unified Extensible Firmware Interface)
 - Es el reemplazo moderno de BIOS, diseñado para superar sus limitaciones.
 - Usa una interfaz gráfica y admite funciones avanzadas como arranque seguro (Secure Boot).
 - No depende del MBR, sino que usa el EFI System Partition (ESP) para almacenar archivos de arranque.
-- Funciona con GPT en lugar de MBR.
+- UEFI utiliza GPT para localizar el sistema operativo y arrancar el equipo: UEFI funciona con GPT en lugar de MBR. GUID Partition Table es el esquema de partición moderno, diseñado para reemplazar a MBR. Ubica la tabla de particiones en múltiples ubicaciones en el disco para evitar corrupción de datos.
+
+## ¿UEFI puede usar MBR?
+Sí, UEFI puede arrancar desde un disco MBR, pero no es lo ideal y depende del modo de arranque configurado en el firmware.
+
+### Modos de Arranque en UEFI: UEFI permite dos modos de arranque principales:
+- Modo UEFI Nativo → Requiere discos con GPT.
+- Modo Legacy (Compatibilidad con BIOS) → Permite arrancar desde MBR.
+
+### UEFI puede arrancar desde un disco MBR en los siguientes casos:
+- Modo Legacy Boot (CSM - Compatibility Support Module)
+  - Muchas placas base con UEFI incluyen un modo de compatibilidad con BIOS, llamado CSM.
+  - Si el CSM está activado, UEFI puede arrancar discos configurados con MBR, como si fuera un sistema basado en BIOS.
+  - Esto es útil para sistemas operativos antiguos que no admiten GPT.
+
+- Algunos UEFI Pueden Arrancar MBR sin CSM
+  - En algunos sistemas UEFI, es posible configurar manualmente el firmware para permitir el arranque desde MBR sin necesidad de activar el modo Legacy, pero esto no es común.
+  - Depende de cómo el sistema UEFI esté diseñado y del sistema operativo instalado.
