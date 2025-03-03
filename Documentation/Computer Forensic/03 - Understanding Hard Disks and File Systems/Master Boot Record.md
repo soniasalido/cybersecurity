@@ -24,9 +24,38 @@ GPT es el sucesor de MBR y es parte del estándar UEFI. Almacena información so
 - Usa CRC32 (Cyclic Redundancy Check) para verificar la integridad de los datos.
 
 ## Conceptos básicos de MBR
-Un **disco organizado mediante particiones DOS tiene un MBR en el primer sector de 512 bytes**. Puede usarse en sistemas de ficheros FAT32 y NTFS.
+Un **disco organizado mediante particiones DOS tiene un MBR (Master Boot Record) en el primer sector de 512 bytes del disco**. Este sector es esencial para el arranque del sistema operativo y la gestión de particiones en discos organizados con particiones DOS. Puede ser utilizado con sistemas de archivos como FAT32 y NTFS.
 
-**El MBR contiene código de arranque, una tabla de particiones y un valor de firma.** El código de inicio contiene las instrucciones que le indican a la computadora cómo procesar la tabla de particiones y ubicar el sistema operativo. La tabla de particiones tiene cuatro entradas, cada una de las cuales puede describir una partición de DOS. Cada entrada tiene los siguientes campos:
+
+
+## Estructura del MBR. El MBR contiene tres partes principales:
+1. Código de arranque (Bootloader)
+- Es un pequeño programa que se ejecuta al iniciar la computadora.
+- Su función es encontrar y cargar el sistema operativo desde la tabla de particiones.
+- En sistemas Windows, este código puede ser el NTLDR (Windows XP) o BOOTMGR (Windows 7 en adelante).
+
+2. Tabla de particiones (Partition Table)
+- Contiene información sobre las particiones del disco.
+- Puede manejar hasta 4 particiones primarias o 3 primarias + 1 extendida.
+
+3. Firma del disco (Disk Signature)
+- Un identificador único que ayuda al sistema operativo a reconocer el disco.
+- Su valor es 0x55AA en hexadecimal, lo que indica que el MBR es válido.
+
+
+## Campos de la Tabla de Particiones en MBR
+La tabla de particiones tiene cuatro entradas, cada una de las cuales puede describir una partición de DOS. Cada entrada tiene los siguientes campos:
+| Campo |	Descripción |
+|---|---|
+| Starting CHS address |		Dirección CHS (Cylinder-Head-Sector) de inicio de la partición. |
+| Ending CHS address |		Dirección CHS de final de la partición. |
+| Starting LBA address |		Dirección en LBA (Logical Block Addressing) donde comienza la partición. |
+| Number of sectors in partition |		Cantidad de sectores que conforman la partición. |
+| Type of partition |		Código que indica el tipo de sistema de archivos (FAT32, NTFS, Linux, etc.). |
+| Flags |		Indicadores especiales, como si la partición es arrancable (bootable). |
+
+
+**El MBR contiene el código de arranque, una tabla de particiones y un valor de firma.** El código de inicio contiene las instrucciones que le indican a la computadora cómo procesar la tabla de particiones y ubicar el sistema operativo. La tabla de particiones tiene cuatro entradas, cada una de las cuales puede describir una partición de DOS. Cada entrada tiene los siguientes campos:
  - Starting CHS address.
  - Ending CHS address.
  - Starting LBA address.
