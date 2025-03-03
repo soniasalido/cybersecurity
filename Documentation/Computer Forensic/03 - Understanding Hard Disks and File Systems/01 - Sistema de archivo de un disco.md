@@ -37,3 +37,8 @@ Existen diferentes sistemas de archivos según el sistema operativo y el tipo de
 | EXT4	| 	Linux	| 	16 TB	| 	1 EB	| Rápido y confiable, usado en distribuciones Linux. |
 | APFS	| 	MacOS	| 	8 EB	| 	8 EB	| Optimizado para SSD y encriptación. |
 
+
+## Organización de un Sistema de Archivos. Dentro de un sistema de archivos, los datos están organizados en:
+- Archivos 📄 → Son los datos individuales (documentos, imágenes, videos).
+- Carpetas/Directorios 📂 → Estructuras que organizan los archivos.
+- Metadatos 📊 → Información sobre cada archivo (fecha de creación, permisos, tamaño).
