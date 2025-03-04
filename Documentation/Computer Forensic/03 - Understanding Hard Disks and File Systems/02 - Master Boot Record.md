@@ -9,7 +9,7 @@ MBR es el esquema de partición más antiguo y se ha utilizado desde 1983 en sis
 - La tabla de particiones: Contiene información sobre hasta 4 particiones primarias.
 - El "Magic Number": Un identificador que indica que el MBR es válido.
 
-Un **disco organizado mediante particiones DOS tiene un MBR (Master Boot Record) en el primer sector de 512 bytes del disco**. Este sector es esencial para el arranque del sistema operativo y la gestión de particiones en discos organizados con particiones DOS. Puede ser utilizado con sistemas de archivos como FAT32 y NTFS.
+Un **disco organizado mediante particiones DOS tiene un MBR (Master Boot Record) en el primer sector de 512 bytes del disco**. Este sector es esencial para el arranque del sistema operativo y la gestión de particiones en discos organizados con particiones DOS. **Puede ser utilizado con sistemas de archivos como FAT32 y NTFS.**
 
 
 
