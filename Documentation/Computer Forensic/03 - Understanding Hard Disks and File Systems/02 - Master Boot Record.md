@@ -17,7 +17,7 @@ Un **disco organizado mediante particiones DOS tiene un MBR (Master Boot Record)
 **1. Código de arranque (Bootloader)**
 - Es un pequeño programa que se ejecuta al iniciar la computadora.
 - Su función es encontrar y cargar el sistema operativo desde la tabla de particiones.
-- En sistemas Windows, este código puede ser el NTLDR (Windows XP) o BOOTMGR (Windows 7 en adelante).
+- En sistemas Windows, este código puede ser el **NTLDR** (Windows XP) o **BOOTMGR** (Windows 7 en adelante).
 
 **2. Tabla de particiones (Partition Table)**
 - Contiene información sobre las particiones del disco.
@@ -25,7 +25,7 @@ Un **disco organizado mediante particiones DOS tiene un MBR (Master Boot Record)
 
 **3. Firma del disco (Disk Signature)**
 - Un identificador único que ayuda al sistema operativo a reconocer el disco.
-- Su valor es 0x55AA en hexadecimal, lo que indica que el MBR es válido.
+- Su valor es **0x55AA** en hexadecimal, lo que indica que el MBR es válido.
 
 
 ## Campos de la Tabla de Particiones en MBR
