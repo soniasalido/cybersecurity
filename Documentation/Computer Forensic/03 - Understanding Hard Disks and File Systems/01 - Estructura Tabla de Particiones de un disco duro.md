@@ -23,3 +23,11 @@ GPT es el sucesor de MBR y es parte del estándar UEFI. Almacena información so
 - Mayor seguridad: Contiene copias redundantes de la tabla de particiones en diferentes partes del disco, lo que permite recuperar datos si una copia se corrompe.
 - Usa CRC32 (Cyclic Redundancy Check) para verificar la integridad de los datos.
 
+## ¿Existen otros métodos?
+MBR y GPT son los estándares principales, pero han existido otros métodos más específicos o menos utilizados:
+- Apple Partition Map (APM): Usado antiguamente en Macs antes de la llegada de Intel y GPT.
+- BSD Disklabel: Un esquema utilizado en sistemas BSD.
+- Sun/SGI Label: Usado en estaciones de trabajo de Sun y SGI.
+- LVM (Logical Volume Manager): No es un esquema de particionado en sí, pero permite manejar volúmenes lógicos en Linux.
+
+Sin embargo, en términos de compatibilidad con sistemas operativos modernos, MBR y GPT son los dos métodos universales y recomendados. 
