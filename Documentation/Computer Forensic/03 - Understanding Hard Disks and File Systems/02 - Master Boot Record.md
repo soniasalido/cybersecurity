@@ -1,6 +1,6 @@
 
 ## Conceptos básicos de MBR
-MBR y GPT son los [Esquemas de partición](01%20-%20Estructura%20Tabla%20de%20Particiones%20de%20un%20disco%20duro.md) que organizan el almacenamiento en los discos duros.
+MBR y GPT son [ESQUEMAS DE PARTICIÓN](01%20-%20Estructura%20Tabla%20de%20Particiones%20de%20un%20disco%20duro.md) que organizan el almacenamiento en los discos duros.
 
 MBR es el esquema de partición más antiguo y se ha utilizado desde 1983 en sistemas con BIOS.
 
