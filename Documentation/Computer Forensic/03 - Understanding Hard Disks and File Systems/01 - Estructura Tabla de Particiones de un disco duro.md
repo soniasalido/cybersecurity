@@ -4,7 +4,7 @@ MBR y GPT son los esquemas de partición que organizan el almacenamiento en los 
 ### 1. MBR - Master Boot Record:
 MBR es el esquema de partición más antiguo y se ha utilizado desde 1983 en sistemas con BIOS.
 
-**Se encuentra en el primer sector del disco duro (sector 0) y contiene:**
+**El MBR se encuentra en el primer sector del disco duro (sector 0) y contiene:**
 - El código del gestor de arranque: Un pequeño programa que inicia el sistema operativo.
 - La tabla de particiones: Contiene información sobre hasta 4 particiones primarias.
 - El "Magic Number": Un identificador que indica que el MBR es válido.
