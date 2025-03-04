@@ -28,6 +28,6 @@ MBR y GPT son los estándares principales, pero han existido otros métodos más
 - Apple Partition Map (APM): Usado antiguamente en Macs antes de la llegada de Intel y GPT.
 - BSD Disklabel: Un esquema utilizado en sistemas BSD.
 - Sun/SGI Label: Usado en estaciones de trabajo de Sun y SGI.
-- LVM (Logical Volume Manager): No es un esquema de particionado en sí, pero permite manejar volúmenes lógicos en Linux.
+- **LVM (Logical Volume Manager):** No es un esquema de particionado en sí, pero permite manejar volúmenes lógicos en Linux.
 
 Sin embargo, en términos de compatibilidad con sistemas operativos modernos, MBR y GPT son los dos métodos universales y recomendados. 
