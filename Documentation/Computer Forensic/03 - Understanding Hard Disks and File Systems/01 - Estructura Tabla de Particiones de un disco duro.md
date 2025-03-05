@@ -3,7 +3,7 @@ Una partición de disco es una división lógica dentro de un disco duro o SSD q
 
 ### Tipos de particiones en discos duros:
 MBR → Usa primarias, extendidas y lógicas para superar la limitación de 4 particiones.  
-GPT → Usa solo particiones primarias, sin necesidad de extendidas ni lógicas. Todas las particiones son equivalentes.  
+GPT → Usa solo particiones primarias. No utiliza particiones extendidas ni lógicas.
 
 ### Funciones y beneficios de las particiones:
 - Permiten instalar varios sistemas operativos en un mismo disco (ejemplo: Windows y Linux en diferentes particiones).
