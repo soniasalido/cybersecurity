@@ -2,9 +2,8 @@
 Una partición de disco es una división lógica dentro de un disco duro o SSD que permite organizar y gestionar el almacenamiento de datos de manera más eficiente. Aunque físicamente el disco sea una sola unidad, las particiones permiten que el sistema operativo y los usuarios lo traten como si fueran varias unidades independientes.
 
 ### Tipos de particiones en discos duros:
-- **Primaria:** Es una partición principal donde se puede instalar un sistema operativo. Un disco puede tener hasta 4 particiones primarias o 3 primarias y una extendida.
-- **Extendida:** No contiene datos directamente, sino que permite crear múltiples particiones lógicas dentro de ella, superando la limitación de 4 particiones primarias.
-- **Lógica:** Son particiones creadas dentro de una partición extendida. Funcionan como particiones independientes para almacenar datos o instalar sistemas operativos adicionales.
+MBR → Usa primarias, extendidas y lógicas para superar la limitación de 4 particiones.  
+GPT → Usa solo particiones primarias, sin necesidad de extendidas ni lógicas.
 
 ### Funciones y beneficios de las particiones:
 - Permiten instalar varios sistemas operativos en un mismo disco (ejemplo: Windows y Linux en diferentes particiones).
