@@ -2,8 +2,8 @@
 Una partición de disco es una división lógica dentro de un disco duro o SSD que permite organizar y gestionar el almacenamiento de datos de manera más eficiente. Aunque físicamente el disco sea una sola unidad, las particiones permiten que el sistema operativo y los usuarios lo traten como si fueran varias unidades independientes.
 
 ### Tipos de particiones en discos duros:
-MBR → Usa primarias, extendidas y lógicas para superar la limitación de 4 particiones.  
-GPT → Usa solo particiones primarias. No utiliza particiones extendidas ni lógicas.
+**MBR →** Usa primarias, extendidas y lógicas para superar la limitación de 4 particiones.  
+**GPT →** Usa solo particiones primarias. No utiliza particiones extendidas ni lógicas.
 
 ### Funciones y beneficios de las particiones:
 - Permiten instalar varios sistemas operativos en un mismo disco (ejemplo: Windows y Linux en diferentes particiones).
@@ -14,7 +14,7 @@ GPT → Usa solo particiones primarias. No utiliza particiones extendidas ni ló
 ## Métodos para estructurar la tabla de particiones en una unidad de almacenamiento
 MBR y GPT son los esquemas de partición que organizan el almacenamiento en los discos duros.
 
-### 1. MBR - Master Boot Record (Registro de Arranque Principal):
+#### 1. MBR - Master Boot Record (Registro de Arranque Principal):
 MBR es el esquema de partición más antiguo y se ha utilizado desde 1983 en sistemas con BIOS.
 
 **El MBR se encuentra en el primer sector del disco duro (sector 0) y contiene:**
@@ -27,7 +27,7 @@ MBR es el esquema de partición más antiguo y se ha utilizado desde 1983 en sis
 - Máximo de 4 particiones primarias: Para más particiones, se debe crear una partición extendida con particiones lógicas dentro.
 - No incluye redundancia: Si el MBR se corrompe, el disco puede volverse inaccesible.
 
-### 2. GPT - GUID Partition Table (Tabla de Particiones GUID):
+#### 2. GPT - GUID Partition Table (Tabla de Particiones GUID):
 GPT es el sucesor de MBR y es parte del estándar UEFI. Almacena información sobre particiones en múltiples ubicaciones dentro del disco, lo que lo hace más seguro y flexible.
 
 **Ventajas de GPT sobre MBR**
