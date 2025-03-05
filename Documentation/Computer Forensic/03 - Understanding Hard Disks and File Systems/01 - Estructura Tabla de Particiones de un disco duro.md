@@ -15,7 +15,7 @@ Una partición de disco es una división lógica dentro de un disco duro o SSD q
 ## Métodos para estructurar la tabla de particiones en una unidad de almacenamiento
 MBR y GPT son los esquemas de partición que organizan el almacenamiento en los discos duros.
 
-### 1. MBR - Master Boot Record:
+### 1. MBR - Master Boot Record (Registro de Arranque Principal):
 MBR es el esquema de partición más antiguo y se ha utilizado desde 1983 en sistemas con BIOS.
 
 **El MBR se encuentra en el primer sector del disco duro (sector 0) y contiene:**
@@ -28,7 +28,7 @@ MBR es el esquema de partición más antiguo y se ha utilizado desde 1983 en sis
 - Máximo de 4 particiones primarias: Para más particiones, se debe crear una partición extendida con particiones lógicas dentro.
 - No incluye redundancia: Si el MBR se corrompe, el disco puede volverse inaccesible.
 
-### 2. GPT - GUID Partition Table:
+### 2. GPT - GUID Partition Table (Tabla de Particiones GUID):
 GPT es el sucesor de MBR y es parte del estándar UEFI. Almacena información sobre particiones en múltiples ubicaciones dentro del disco, lo que lo hace más seguro y flexible.
 
 **Ventajas de GPT sobre MBR**
