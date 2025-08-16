@@ -43,3 +43,13 @@ Cada “bloque” en el chip es una puerta lógica independiente, con sus entrad
 - Envía la orden a la ALU para que realice la operación.
 - El resultado se guarda en los registros internos.
 - Desde los registros, los datos pueden enviarse a la memoria, a dispositivos externos o usarse en la siguiente instrucción.
+
+
+## Funcionamiento del procesador
+![Funcionamiento Procesador](capturas/funionamiento-procesador.png)
+
+
+
+|[Funcionamiento Procesador-2](capturas/funcionamiento-procesador-1.png)
+
+|[Funcionamiento Procesador-2](capturas/funcionamiento-procesador-3.png)
