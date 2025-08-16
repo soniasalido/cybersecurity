@@ -46,6 +46,14 @@ Cada “bloque” en el chip es una puerta lógica independiente, con sus entrad
 
 
 ## Funcionamiento del procesador
+En un procesador real (por ejemplo x86, ARM, MIPS…), los códigos de instrucción (opcodes) están definidos por el fabricante y forman parte de la arquitectura. Cada operación (mover, sumar, comparar, saltar, etc.) tiene un código binario único.
+
+🔹 En este ejemplo, lo que se ha hecho se inventa un set de instrucciones muy simplificado para poder ilustrar cómo funcionan la memoria y los registros en un ciclo de ejecución.
+- Se ha decidido que 1111 0011 significa "MOVA"
+- 1111 0111 significa "MOVB"
+- 1100 0011 significa "ADD"
+- 1111 1111 significa "NOP"
+  
 ![Funcionamiento Procesador](capturas/funionamiento-procesador.png)
 
 
