@@ -61,3 +61,18 @@ En un procesador real (por ejemplo x86, ARM, MIPS…), los códigos de instrucci
 ![Funcionamiento Procesador-2](capturas/funcionamiento-procesador-1.png)
 
 ![Funcionamiento Procesador-2](capturas/funcionamiento-procesador-3.png)
+
+### Ejemplo en x86 (32 bits, Intel/AMD)
+En x86 hay opcodes definidos por la arquitectura. Por ejemplo:
+| Instrucción (ensamblador) | Opcode (hex real) | Comentario                                                         |
+| ------------------------- | ----------------- | ------------------------------------------------------------------ |
+| `MOV AL, 02h`             | `B0 02`           | Mueve el valor inmediato `2` al registro AL (parte baja de A/EAX). |
+| `MOV BL, 02h`             | `B3 02`           | Mueve `2` al registro BL (parte baja de B/EBX).                    |
+| `ADD AL, BL`              | `00 D8`           | Suma BL a AL → AL = AL + BL.                                       |
+| `NOP`                     | `90`              | Instrucción de no operación.                                       |
+
+🔹 Aquí los opcodes no son arbitrarios:
+- B0 significa "mov inmediato a AL".
+- B3 significa "mov inmediato a BL".
+- 00 D8 significa "add AL, BL".
+- 90 es el clásico NOP en x86.
