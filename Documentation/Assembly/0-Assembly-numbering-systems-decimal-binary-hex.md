@@ -50,6 +50,6 @@ Cada “bloque” en el chip es una puerta lógica independiente, con sus entrad
 
 
 
-|[Funcionamiento Procesador-2](capturas/funcionamiento-procesador-1.png)
+![Funcionamiento Procesador-2](capturas/funcionamiento-procesador-1.png)
 
-|[Funcionamiento Procesador-2](capturas/funcionamiento-procesador-3.png)
+![Funcionamiento Procesador-2](capturas/funcionamiento-procesador-3.png)
