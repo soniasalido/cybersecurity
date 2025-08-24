@@ -26,6 +26,7 @@ Son como “cajitas” dentro del procesador que almacenan valores temporales, d
 - Fundamental en llamadas a funciones porque almacena parámetros, direcciones de retorno y variables locales.
 
 ## 🔹 EBP (Extended Base Pointer)
+- EBP = Extended Base Pointer.
 - Puntero de base de pila.
 - Se usa para tener una referencia fija dentro del stack frame de una función.
 - Convención típica al entrar en una función:
@@ -59,6 +60,20 @@ Control:
   EIP → instrucción siguiente
 
 ```
+
+## Evolución de los registros
+| 16 bits | 32 bits | 64 bits | Nombre completo / Uso                                                                   |
+| ------- | ------- | ------- | --------------------------------------------------------------------------------------- |
+| **AX**  | **EAX** | **RAX** | *Accumulator* → acumulador principal (resultados de operaciones, retornos de funciones) |
+| **BX**  | **EBX** | **RBX** | *Base* → registro base para direcciones de memoria                                      |
+| **CX**  | **ECX** | **RCX** | *Counter* → contador en bucles, operaciones de desplazamiento                           |
+| **DX**  | **EDX** | **RDX** | *Data* → datos extendidos, divisor/multiplicador en operaciones                         |
+| **SP**  | **ESP** | **RSP** | *Stack Pointer* → puntero a la cima de la pila                                          |
+| **BP**  | **EBP** | **RBP** | *Base Pointer* → puntero base del *stack frame*                                         |
+| **SI**  | **ESI** | **RSI** | *Source Index* → índice origen en operaciones con cadenas/memoria                       |
+| **DI**  | **EDI** | **RDI** | *Destination Index* → índice destino en operaciones con cadenas/memoria                 |
+| (IP)    | **EIP** | **RIP** | *Instruction Pointer* → dirección de la próxima instrucción                             |
+
 
 # Esquema visual de cómo se organiza un stack frame típico en x86 usando EBP, ESP y EIP
 ![Esquema stack frame](capturas/esquema-pila.png)
