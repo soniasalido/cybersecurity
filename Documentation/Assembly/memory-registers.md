@@ -17,14 +17,13 @@ Son como “cajitas” dentro del procesador que almacenan valores temporales, d
 
 
 ## 🔹 ECX – Extended Count Register
-- Es el registro contador.
+- Es el registro contador, es el contador automático de la CPU.
 - Se usa muchísimo en bucles e instrucciones repetitivas.
 - Ejemplos típicos:
   - loop etiqueta → usa ECX para contar cuántas veces repetir.
   - rep movsb → copia bytes en un bucle automático hasta que ECX = 0.
 -También se emplea para pasar argumentos en algunas convenciones de llamada (por ejemplo en fastcall, el primer argumento va en ECX).
 
-👉 ECX es el contador automático de la CPU.
 
 ## 🔹 EDX (Extended Data Register)
 - Suele complementar a EAX en operaciones más grandes.
