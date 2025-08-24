@@ -9,21 +9,29 @@ Son como “cajitas” dentro del procesador que almacenan valores temporales, d
 - Por convención, cuando una función devuelve un valor, suele estar en EAX.
 - Ejemplo: después de un add eax, ebx, el resultado queda en EAX.
 
-## 🔹 EDX (Extended Data Register)
-- Suele complementar a EAX en operaciones más grandes.
-- En multiplicaciones y divisiones de 32 bits, se usan EAX:EDX juntos como un registro de 64 bits.
-- También se emplea en llamadas al sistema (syscalls en Linux, por ejemplo, con int 0x80, el número de syscall suele ir en EAX y parámetros en EBX, ECX, EDX).
 
 ## 🔹 EBX (Extended Base Register)
 - Puede usarse como registro base en operaciones con memoria.
 - Se emplea como “puntero” a datos en estructuras o tablas.
 - Muchas veces lo verás guardando direcciones de buffers.
 
-## 🔹 ESP (Extended Stack Pointer)
-- Puntero de pila, indica la cima de la pila.
-- Cada vez que haces un push, ESP disminuye; con un pop, ESP aumenta.
-- La pila en x86 crece hacia abajo (direcciones decrecientes).
-- Fundamental en llamadas a funciones porque almacena parámetros, direcciones de retorno y variables locales.
+
+## 🔹 ECX – Extended Count Register
+- Es el registro contador.
+- Se usa muchísimo en bucles e instrucciones repetitivas.
+- Ejemplos típicos:
+  - loop etiqueta → usa ECX para contar cuántas veces repetir.
+  - rep movsb → copia bytes en un bucle automático hasta que ECX = 0.
+-También se emplea para pasar argumentos en algunas convenciones de llamada (por ejemplo en fastcall, el primer argumento va en ECX).
+
+👉 ECX es el contador automático de la CPU.
+
+## 🔹 EDX (Extended Data Register)
+- Suele complementar a EAX en operaciones más grandes.
+- En multiplicaciones y divisiones de 32 bits, se usan EAX:EDX juntos como un registro de 64 bits.
+- También se emplea en llamadas al sistema (syscalls en Linux, por ejemplo, con int 0x80, el número de syscall suele ir en EAX y parámetros en EBX, ECX, EDX).
+
+
 
 ## 🔹 EBP (Extended Base Pointer)
 - EBP = Extended Base Pointer.
@@ -38,6 +46,33 @@ Son como “cajitas” dentro del procesador que almacenan valores temporales, d
   [ebp+8] → primer argumento de la función.
   [ebp-4] → una variable local.
 
+
+## 🔹 ESP (Extended Stack Pointer)
+- Puntero de pila, indica la cima de la pila.
+- Cada vez que haces un push, ESP disminuye; con un pop, ESP aumenta.
+- La pila en x86 crece hacia abajo (direcciones decrecientes).
+- Fundamental en llamadas a funciones porque almacena parámetros, direcciones de retorno y variables locales.
+
+
+## 🔹 ESI – Extended Source Index
+- Es el índice fuente (source) en operaciones de copia o cadenas.
+- Se usa junto con EDI en instrucciones de movimiento de memoria.
+- Ejemplo clásico:
+  ```
+  mov esi, origen
+  mov edi, destino
+  mov ecx, longitud
+  rep movsb   ; copia ECX bytes desde [ESI] a [EDI]
+  ```
+- Después de cada copia, ESI avanza (o retrocede, según el flag de dirección DF).
+
+## 🔹 EDI – Extended Destination Index
+- Es el índice destino (destination) en operaciones de copia o cadenas.
+- Funciona como “puntero de escritura”.
+- Usado junto a ESI y ECX en instrucciones de bloque (movsb, stosb, cmpsb).
+-Ejemplo: en un rep movsd, los datos se copian de [ESI] a [EDI], ECX veces.
+
+
 ## 🔹 EIP (Extended Instruction Pointer)
 - Contiene la dirección de la siguiente instrucción a ejecutar.
 - Se actualiza automáticamente por la CPU tras ejecutar cada instrucción.
@@ -47,18 +82,19 @@ Son como “cajitas” dentro del procesador que almacenan valores temporales, d
 ## Resumen
 ```
 General:
-  EAX → resultados, acumulador
-  EBX → base para datos
-  EDX → datos extendidos, complemento
-  ECX → contador (ej. loops)
+EAX → resultados de operaciones, valor de retorno de funciones, acumulador principal.
+EBX → registro base (muy usado para apuntar a estructuras o buffers).
+EDX → datos extendidos (junto a EAX en multiplicaciones/divisiones de 64 bits).
+ECX → contador (loops, instrucciones rep, argumento en fastcall).
+ESI → índice de origen (source) en operaciones de copia/movimiento.
+EDI → índice de destino (destination) en operaciones de copia/movimiento.
 
 Pila:
-  ESP → puntero a la cima
-  EBP → puntero base del frame
+  ESP → Stack Pointer, cima de la pila (se mueve con push/pop).
+  EBP → Base Pointer, referencia estable dentro del stack frame.
 
 Control:
-  EIP → instrucción siguiente
-
+  EIP → Instruction Pointer, apunta a la siguiente instrucción a ejecutar.
 ```
 
 ## Evolución de los registros
