@@ -106,8 +106,6 @@ En esa cajita (en la pila) se guardan:
 - 📍 Variables locales → Las que se crean dentro de la función.
 
 ## 🧩 Ejemplo con una función
-Este código en C:
-```
 
 ## 🔹 Organización en memoria
 - La pila crece hacia abajo (direcciones decrecientes).
