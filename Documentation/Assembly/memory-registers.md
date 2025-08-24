@@ -257,3 +257,72 @@ Cuando comparas números con signo (cmp eax, ebx), los saltos se interpretan dis
 | **JB / JC / JNAE** | Jump if Below (<)          | `CF = 1`            |
 | **JBE / JNA**      | Jump if Below or Equal (≤) | `CF = 1` o `ZF = 1` |
 
+
+# Registros más importantes a vigilar en análisis de malware
+## 🔹 EIP / RIP (Instruction Pointer)
+- El más crítico: indica qué instrucción se ejecutará a continuación.
+- Útil para seguir el flujo del malware, trampas anti-debug, saltos y llamadas a APIs.
+- Si cambia de forma inesperada → posible control de flujo alterado (jmp/call indirecto, shellcode, etc.).
+
+## 🔹 ESP / RSP (Stack Pointer)
+- Marca la cima de la pila.
+- Importante porque el malware puede manipular la pila para:
+- Ofuscar llamadas (call / ret alterados).
+- Guardar direcciones de retorno falsas (ROP).
+- En muchos unpackers, verás ESP moverse raro → señal de stack pivoting.
+
+## 🔹 EBP / RBP (Base Pointer)
+- Marca el inicio de un stack frame.
+- Muy útil cuando estás en análisis manual con depurador para ver parámetros y variables locales.
+- Si está manipulado, puede indicar ofuscación anti-análisis (funciones “sin frame” o con EBP roto).
+
+## 🔹 EAX / RAX (Acumulador principal)
+- Registro de resultados → la mayoría de funciones devuelven el valor en EAX.
+- Al observar EAX después de un call, sabrás qué devolvió esa función (ej: handle de archivo, dirección de memoria, código de error).
+- También se usa en llamadas al sistema (syscalls).
+
+## 🔹 EDX, EBX, ECX
+- EDX → complemento de EAX en operaciones de 64 bits (divisiones/multiplicaciones).
+- EBX → suele usarse como base en tablas o estructuras.
+- ECX → contador en bucles, parámetros en fastcall.
+- Muy interesante si el malware hace cifrado/descifrado, porque ECX suele marcar el tamaño de datos a procesar.
+
+## 🔹 ESI (Source Index) y EDI (Destination Index)
+- Se usan para copiar/transformar datos (rep movs, rep stos, etc.).
+- En malware, suelen indicar dirección origen (payload cifrado en memoria) y destino (buffer descifrado o zona de inyección).
+- Si ves rep movsb/movsd → seguro el malware está moviendo bloques de memoria (desempaquetado o inyección).
+
+## 🔹 EFLAGS / RFLAGS
+- No tanto por sí solos, pero los saltos condicionales dependen de ellos (je, jne, jg, jl...).
+- Observar cómo se ajustan (ZF, CF, SF, OF) te dice qué camino lógico sigue el malware.
+
+## 📊 Resumen práctico para malware
+- EIP/RIP → seguimiento del flujo.
+- ESP/RSP → manipulación de pila, anti-debug, exploits.
+- EBP/RBP → stack frames (o ausencia de ellos = ofuscación).
+- EAX/RAX → valores devueltos (APIs, syscalls).
+- ECX/EDX/ESI/EDI → cifrado, copia de memoria, parámetros ocultos.
+- EFLAGS → control de saltos condicionales.
+
+## Truco de analista:
+- Cuando estés en un unpacker o rutina crítica:
+   - Mira EIP (flujo).
+  - Vigila ESP (¿manipula la pila?).
+  - Observa EAX al volver de llamadas.
+  - Sigue ESI/EDI en rep movs/stos (copias de payload).
+
+## Checklist de Registros en Análisis de Malware
+# 🕵️‍♂️ Checklist de Registros en Análisis de Malware
+
+| ✅ | Registro | ¿Qué mirar? | ¿Por qué es importante? |
+|----|----------|-------------|--------------------------|
+| [ ] | **EIP / RIP** | Dirección actual de ejecución | Seguir el flujo del malware, detectar saltos sospechosos o inyecciones |
+| [ ] | **ESP / RSP** | Cima de la pila | Ver si manipula la pila (stack pivoting, anti-debug, exploits) |
+| [ ] | **EBP / RBP** | Base del frame | Analizar parámetros y locales; si está roto, puede ser ofuscación |
+| [ ] | **EAX / RAX** | Valor devuelto de funciones | Identificar qué devuelve una API o syscall (handles, punteros, códigos de error) |
+| [ ] | **ECX** | Contadores en bucles | Muy usado en cifrado/descifrado o procesar buffers |
+| [ ] | **EDX** | Datos complementarios | Parte alta en operaciones de 64 bits, argumentos en syscalls |
+| [ ] | **EBX** | Registro base para datos | Suele apuntar a estructuras, tablas o buffers |
+| [ ] | **ESI** | Dirección origen | Copias de memoria (`rep movs`), origen de payload o datos cifrados |
+| [ ] | **EDI** | Dirección destino | Copias de memoria, destino de inyección o buffer descifrado |
+| [ ] | **EFLAGS** | Estado de los flags (ZF, CF, SF, OF) | Controlan los saltos condicionales y lógica de ejecución |
