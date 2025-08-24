@@ -191,3 +191,69 @@ Porque es como un marco o bloque delimitado dentro de la pila que corresponde a 
   - argumentos
   - variables locales
 - Cuando acaba, quitamos ese plato y volvemos al anterior.
+
+
+# Eflags
+- Es un registro especial de 32 bits (en x86) que guarda banderas o indicadores que la CPU actualiza automáticamente después de cada instrucción.
+- Es un registro de estado y control.
+- Cada bit dentro de EFLAGS tiene un significado distinto (se llama flag).
+- Estos flags le dicen a la CPU y al programador qué pasó en la última operación (ej. si dio cero, si hubo overflow, si fue negativa).
+
+## Los flags más importantes que vemos en Ghidra / depuradores
+| Flag   | Nombre         | Bit | Significado                                                                                        |
+| ------ | -------------- | --- | -------------------------------------------------------------------------------------------------- |
+| **CF** | Carry Flag     | 0   | Se activa si hubo acarreo en una suma o préstamo en una resta (muy usado en aritmética multiword). |
+| **PF** | Parity Flag    | 2   | Indica si el número de bits a 1 en el resultado es par.                                            |
+| **AF** | Adjust Flag    | 4   | Se activa si hubo acarreo desde el bit 3 → usado en operaciones BCD (antiguo).                     |
+| **ZF** | Zero Flag      | 6   | Se activa si el resultado fue **0**.                                                               |
+| **SF** | Sign Flag      | 7   | Refleja el bit más significativo (si el resultado es negativo).                                    |
+| **OF** | Overflow Flag  | 11  | Se activa si hubo **overflow aritmético con signo**.                                               |
+| **DF** | Direction Flag | 10  | Indica si `ESI/EDI` avanzan o retroceden en instrucciones de cadenas (`movsb`, `stosb`).           |
+| **IF** | Interrupt Flag | 9   | Si está activado, la CPU acepta interrupciones externas.                                           |
+| **TF** | Trap Flag      | 8   | Si está activado, la CPU entra en modo paso a paso (*single-step*).                                |
+
+
+## Ejemplo
+```
+mov eax, 0xFFFFFFFF  ; -1 en signed
+add eax, 1           ; resultado = 0
+```
+- ZF = 1 (resultado es cero).
+- CF = 1 (hubo acarreo).
+- OF = 0 (no hay overflow con signo).
+
+![Registros Eflags](capturas/registros-eflags.png)
+
+
+# Saltos condicionales de x86 y los flags de EFLAGS que usan:
+| Instrucción   | Significado                                      | Flag(s) usado(s) |
+| ------------- | ------------------------------------------------ | ---------------- |
+| **JE / JZ**   | Jump if Equal / Zero (saltar si es cero o igual) | `ZF = 1`         |
+| **JNE / JNZ** | Jump if Not Equal / Not Zero                     | `ZF = 0`         |
+| **JC**        | Jump if Carry                                    | `CF = 1`         |
+| **JNC**       | Jump if Not Carry                                | `CF = 0`         |
+| **JO**        | Jump if Overflow                                 | `OF = 1`         |
+| **JNO**       | Jump if Not Overflow                             | `OF = 0`         |
+| **JS**        | Jump if Sign (negativo)                          | `SF = 1`         |
+| **JNS**       | Jump if Not Sign (no negativo)                   | `SF = 0`         |
+| **JP / JPE**  | Jump if Parity (Even)                            | `PF = 1`         |
+| **JNP / JPO** | Jump if Not Parity (Odd)                         | `PF = 0`         |
+
+# Comparaciones con signo
+Cuando comparas números con signo (cmp eax, ebx), los saltos se interpretan distinto:
+| Instrucción   | Significado              | Condición            |
+| ------------- | ------------------------ | -------------------- |
+| **JG / JNLE** | Jump if Greater          | `ZF = 0` y `SF = OF` |
+| **JGE / JNL** | Jump if Greater or Equal | `SF = OF`            |
+| **JL / JNGE** | Jump if Less             | `SF ≠ OF`            |
+| **JLE / JNG** | Jump if Less or Equal    | `ZF = 1` o `SF ≠ OF` |
+
+
+# Comparaciones sin signo
+| Instrucción        | Significado                | Condición           |
+| ------------------ | -------------------------- | ------------------- |
+| **JA / JNBE**      | Jump if Above (>)          | `CF = 0` y `ZF = 0` |
+| **JAE / JNB**      | Jump if Above or Equal (≥) | `CF = 0`            |
+| **JB / JC / JNAE** | Jump if Below (<)          | `CF = 1`            |
+| **JBE / JNA**      | Jump if Below or Equal (≤) | `CF = 1` o `ZF = 1` |
+
