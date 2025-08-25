@@ -109,6 +109,7 @@ Control:
 | **DI**  | **EDI** | **RDI** | *Destination Index* → índice destino en operaciones con cadenas/memoria                 |
 | (IP)    | **EIP** | **RIP** | *Instruction Pointer* → dirección de la próxima instrucción                             |
 
+1[Registers](capturas/registers.png)
 
 # Esquema visual de cómo se organiza un stack frame típico en x86 usando EBP, ESP y EIP
 ![Esquema stack frame](capturas/esquema-pila.png)
