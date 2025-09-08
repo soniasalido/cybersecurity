@@ -42,6 +42,8 @@ Dirección física = 0x1000 × 0x10 + 0x0020
 = 0x10000 + 0x0020  
 = 0x10020  
 
+(Multiplicamos por 0x10 porque estamos escribiendo en hexadecimal. 0x10 (hex) = 16 (dec). Es exactamente la misma operación.)
+
 ## 🔹 5. Importante
 - Dos segmentos pueden superponerse (ejemplo: CS = 0x1000 y DS = 0x1001), porque se definen solo con el valor base.
 - El direccionamiento efectivo depende de qué registro de segmento se esté usando.
