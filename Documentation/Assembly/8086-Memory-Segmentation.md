@@ -17,7 +17,7 @@ El problema: los registros internos eran de 16 bits, así que no podían direcci
 - Esto da una dirección de 20 bits.
 
 ## 🔹 3. Registros de segmento principales
-[Memory Segmentation](capturas/Memory-Segmentation.png)
+![Memory Segmentation](capturas/Memory-Segmentation.png)
 
 El 8086 tiene 4 registros de segmento:
 - **CS (Code Segment)**
