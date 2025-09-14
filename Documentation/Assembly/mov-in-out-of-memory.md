@@ -9,7 +9,6 @@ DS = 0x1000 → 0x1000 × 0x10 = 0x10000 (inicio del segmento en memoria física
 ## Instrucciones del programa
 ```
 mov byte [0x02], 0xff
-## Instrucciones del programa
 ```
 - Segmento: DS = 0x1000
 - Offset: 0x02
