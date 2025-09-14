@@ -47,3 +47,5 @@ Dirección    Valor
 
 # Sacar de la memoria
 ![mov-in-out-of-memory](capturas/mov-in-out-of-memory-2.png)
+
+![mov-in-out-of-memory](capturas/mov-in-out-of-memory-3.png)
