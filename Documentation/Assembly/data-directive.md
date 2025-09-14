@@ -1,29 +1,44 @@
 # Data Directive - Directiva de Datos
+En ensamblador, **una data directive no es una instrucción de la CPU, sino una indicación para el ensamblador sobre cómo reservar y organizar espacio en memoria para los datos de nuestro programa.**
+
+👉 En otras palabras: le decimos al ensamblador “guárdame esta constante/variable en memoria, con este tamaño”.
+
 En 8086/Assembly, data directive (directiva de datos) es una pseudoinstrucción del ensamblador que le dice cómo reservar e inicializar memoria para nuestras variables. No la ejecuta la CPU; la usa el ensamblador para colocar bytes en el segmento de datos (u otro segmento).
 
 ## Tipos más usados
 - DB (Define Byte): reserva 1 byte por elemento.  
+```
+myByte DB 0xFF   ; reserva 1 byte con valor FF
 msg db 'Hola', 13,10,'$'
+```
 
-- DW (Define Word): reserva palabras de 16 bits.  
+- DW (Define Word): reserva palabras de 16 bits.
+```
+myWord DW 0x1234 ; reserva 2 bytes con valor 3412 (little endian)
 tabla dw 10, 20, 30
+```
 
-- DD (Define Doubleword, 32 bits): útil para direcciones o datos largos (aunque en 8086 se manipula en dos palabras).
+- DD - Define Doubleword, define 4 bytes (32 bits): útil para direcciones o datos largos (aunque en 8086 se manipula en dos palabras).
+```
+myDWord DD 12345678h
 ptr dd 12345678h
-
+```
 (También existen DQ 64-bit y DT 80-bit en algunos ensambladores.)
 
 ## Extras útiles:
 -DUP: repetición/relleno.  
+```
 buffer db 64 dup(?) ← 64 bytes sin inicializar  
 ceros dw 8 dup(0) ← 8 words inicializados a 0  
-
+```
 - ?: reserva sin inicializar.  
+```
 temp db ?
-
+```
 - EQU: constante simbólica (no reserva memoria).  
+```
 FINLINE EQU 13
-
+```
 
 ## .DATA vs directivas de datos
 
