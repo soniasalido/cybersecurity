@@ -53,6 +53,8 @@ mov ax, [bp]    ; recupera el valor desde la pila usando el puntero
 ### Paso 3: `mov AX, word [BX]`
 - Esta instrucción dice: "Ve a la dirección DS:BX, toma un word (2 bytes) y ponlo en AX."
   
+- BX se usa como puntero (indirección).
+  
 - Como DS=0000 y BX=0002:  
   Dirección física 0x0000 × 16 + 0x0002 = 0x0002
 
@@ -62,3 +64,9 @@ mov ax, [bp]    ; recupera el valor desde la pila usando el puntero
 
 - Resultado en AX: `AX = ABCDh`
 
+### Paso 3 sin corchetes: `mov AX, BX`
+![pointers](capturas/pointers-2.png)
+- Esto significa que el procesador copia directamente el contenido de BX en AX.
+- No se va a memoria simplemente hace una copia de registro a registro.
+- Como BX = 0002
+- AX = 0002
