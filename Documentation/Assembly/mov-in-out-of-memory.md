@@ -1,3 +1,5 @@
+# Mover dentro de la memoria
+
 ![mov-in-out-of-memory](capturas/mov-in-out-of-memory.png)
 
 `Dirección física = DS × 16 + Offset`
@@ -41,3 +43,7 @@ Dirección    Valor
 - El segmento lógico DS=1000h equivale al inicio físico 10000h.
 - El simulador pide que pongas 10000 en Start Address porque él trabaja con direcciones físicas.
 - A partir de ahí, ya podemos ver en la memoria el resultado de las instrucciones.
+
+
+# Sacar de la memoria
+![mov-in-out-of-memory](capturas/mov-in-out-of-memory-2.png)
