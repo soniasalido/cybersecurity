@@ -36,3 +36,29 @@ mov ax, [bp]    ; recupera el valor desde la pila usando el puntero
 - Los punteros son registros que guardan offsets de memoria.
 - Con un segmento forman direcciones físicas (DS:SI, ES:DI, SS:BP, etc.).
 - Sirven para recorrer arrays, manejar cadenas o acceder a la pila.
+
+## Ejemplo
+![pointers](capturas/pointers.png)
+
+### Paso 1: `mov word [0x02], 0xabcd`
+- Esto guarda el valor 0xABCD en la memoria a partir de la dirección DS:0002.
+- Como es un word (16 bits), se guardan 2 bytes en little endian:
+  - 0x0002 → CD (byte bajo)
+  - 0x0003 → AB (byte alto)
+
+### Paso 2: `mov BX, 0x02`
+- Aquí cargamos el registro BX con el valor 0x0002.
+- Esto convierte a BX en un puntero (offset) que apunta a la posición DS:0002.
+
+### Paso 3: `mov AX, word [BX]`
+- Esta instrucción dice: "Ve a la dirección DS:BX, toma un word (2 bytes) y ponlo en AX."
+  
+- Como DS=0000 y BX=0002:  
+  Dirección física 0x0000 × 16 + 0x0002 = 0x0002
+
+- El procesador lee:  
+  En 0x0002 → CD (parte baja).  
+  En 0x0003 → AB (parte alta).  
+
+- Resultado en AX: `AX = ABCDh`
+
