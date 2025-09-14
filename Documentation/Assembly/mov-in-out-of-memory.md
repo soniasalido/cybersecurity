@@ -36,3 +36,8 @@ Dirección    Valor
 0x10004      EE   ← word (parte alta)
 0x10005      ??   (no escrito)
 ```
+
+## Conclusión
+- El segmento lógico DS=1000h equivale al inicio físico 10000h.
+- El simulador pide que pongas 10000 en Start Address porque él trabaja con direcciones físicas.
+- A partir de ahí, ya podemos ver en la memoria el resultado de las instrucciones.
