@@ -86,6 +86,50 @@ Dirección    Valor
 
 
 # Sacar de la memoria
+Cuando el procesador necesita leer un dato de memoria, hace el mismo proceso que al escribir, pero al revés:
+- Calcula la dirección física usando:
+`Dirección física = DS × 16 + Offset`
+
+- Va a la RAM y busca esa celda de memoria.
+- Copia el contenido de la celda al registro indicado.
+
+## Ejemplo 1: leer un byte
+```
+mov al, [0x02]
+```
+- Segmento usado: DS
+- Offset: 0x02
+- Dirección física = DS × 16 + 0x02
+
+👉 Supongamos DS = 0x1000 → dirección física = 0x10002.  
+Si en esa celda había guardado antes FF, entonces:  
+
+```
+AL = FFh
+```
+
+## Ejemplo 2: leer un word
+```
+mov ax, [0x03]
+```
+- Segmento: DS
+- Offset: 0x03
+- Dirección física inicial = 0x10003 (si DS=0x1000).
+- Como es un word (16 bits = 2 bytes), el procesador lee dos celdas consecutivas en orden little endian:
+  - 0x10003 → parte baja de AX.
+  - 0x10004 → parte alta de AX.
+
+Si en esas celdas había:
+```
+AX = EEEEh
+```
+
+Entonces.
+```
+0x10003 = EE
+0x10004 = EE
+```
+
 ![mov-in-out-of-memory](capturas/mov-in-out-of-memory-2.png)
 
 ![mov-in-out-of-memory](capturas/mov-in-out-of-memory-3.png)
