@@ -26,7 +26,7 @@ ptr dd 12345678h
 (También existen DQ 64-bit y DT 80-bit en algunos ensambladores.)
 
 ## Extras útiles:
--DUP: repetición/relleno.  
+- DUP: repetición/relleno.  
 ```
 buffer db 64 dup(?) ← 64 bytes sin inicializar  
 ceros dw 8 dup(0) ← 8 words inicializados a 0  
