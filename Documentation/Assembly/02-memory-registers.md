@@ -3,6 +3,9 @@
 
 Son como “cajitas” dentro del procesador que almacenan valores temporales, direcciones o resultados de operaciones, y permiten que la CPU trabaje de forma rápida sin acudir siempre a la RAM.
 
+![registros](capturas/registros.png)
+
+
 ## 🔹 EAX (Extended Accumulator Register)
 - Es el acumulador principal.
 - Se usa mucho en operaciones aritméticas y de retorno de funciones.
