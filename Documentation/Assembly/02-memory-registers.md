@@ -1,5 +1,5 @@
 
-# Registros de la memoria
+# Registros del procesador
 
 Son como “cajitas” dentro del procesador que almacenan valores temporales, direcciones o resultados de operaciones, y permiten que la CPU trabaje de forma rápida sin acudir siempre a la RAM.
 
