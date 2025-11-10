@@ -60,3 +60,6 @@ Durante la ejecución, los stack frames se verían así:
 ```
 Cada vez que una función termina, su stack frame se desapila automáticamente, restaurando el estado anterior.
 
+
+## Memory Management in Linux
+![memory-management-in.linux](capturas/memory-management-in.linux.png)
