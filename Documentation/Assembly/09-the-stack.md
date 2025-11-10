@@ -63,3 +63,7 @@ Cada vez que una función termina, su stack frame se desapila automáticamente, 
 
 ## Memory Management in Linux
 ![memory-management-in.linux](capturas/memory-management-in.linux.png)
+
+
+## Segmentación de memoria de un programa y el stack
+https://netting.wordpress.com/2016/10/01/segmentacion-de-memoria-de-un-programa-y-el-stack/
