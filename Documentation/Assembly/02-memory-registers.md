@@ -5,6 +5,27 @@ Son como “cajitas” dentro del procesador que almacenan valores temporales, d
 
 ![registros](capturas/registros.png)
 
+| Name                | 64-bit | 32-bit | 16-bit | 8-bit | Preserved | Usage                      |
+| ------------------- | ------ | ------ | ------ | ----- | --------- | -------------------------- |
+| Accumulator         | rax    | eax    | ax     | ah:al |           | return                     |
+| Base                | rbx    | ebx    | bx     | bh:bl | ✓         |                            |
+| Counter             | rcx    | ecx    | cx     | ch:cl |           | arg4                       |
+| Data                | rdx    | edx    | dx     | dh:dl |           | arg3                       |
+| Source              | rsi    | esi    | si     | sil   |           | arg2                       |
+| Destination         | rdi    | edi    | di     | dil   |           | arg1                       |
+|                     | r8     | r8d    | r8w    | r8b   |           | arg5                       |
+|                     | r9     | r9d    | r9w    | r9b   |           | arg6                       |
+|                     | r10    | r10d   | r10w   | r10b  |           |                            |
+|                     | r11    | r11d   | r11w   | r11b  |           |                            |
+|                     | r12    | r12d   | r12w   | r12b  | ✓         |                            |
+|                     | r13    | r13d   | r13w   | r13b  | ✓         |                            |
+|                     | r14    | r14d   | r14w   | r14b  | ✓         |                            |
+|                     | r15    | r15d   | r15w   | r15b  | ✓         |                            |
+| Base Pointer        | rbp    | ebp    | bp     | bpl   | ✓         | function stack base (opt.) |
+| Stack Pointer       | rsp    | esp    | sp     | spl   | ✓         | top of stack *             |
+| Instruction Pointer | rip    | eip    | ip     |       |           |                            |
+
+
 
 ## 🔹 EAX (Extended Accumulator Register)
 - Es el acumulador principal.
