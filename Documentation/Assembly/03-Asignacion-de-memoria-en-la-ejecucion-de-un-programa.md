@@ -104,3 +104,73 @@ En resumen, el **Stack** es la columna vertebral de la ejecución de funciones, 
 [1] La estructura de memoria de un proceso en sistemas operativos.
 [2] Funcionamiento de la pila de llamadas y los marcos de pila.
 [3] Diferencias y usos del Heap y el Stack en la programación.
+
+--------
+
+# Modos de memoria y direccionamiento
+## Declarar regiones de datos estáticos
+
+Podemos declarar regiones de datos estáticos (análogas a variables globales) en ensamblador x86 usando directivas especiales del ensamblador para este propósito.
+
+Las declaraciones de datos deben ir precedidas por la directiva `.data`.
+
+Después de esta directiva, las directivas `.byte`, `.short` y `.long` pueden usarse para declarar ubicaciones de datos de uno, dos y cuatro bytes, respectivamente.
+
+Para referirte a la dirección de los datos creados, podemos etiquetarlos. Las etiquetas son muy útiles y versátiles en ensamblador: le dan nombres a ubicaciones de memoria cuya dirección exacta será resuelta más tarde por el ensamblador o el linker. Esto es similar a declarar variables por nombre, pero respetando ciertas reglas de bajo nivel. Por ejemplo, ubicaciones declaradas en secuencia se colocarán en memoria una al lado de la otra.
+
+Ejemplo de declaraciones:
+```asm
+    .data		
+    var:		
+    	.byte 64      /* Declara un byte, llamado var, que contiene el valor 64. */
+    	.byte 10      /* Declara un byte sin etiqueta, que contiene el valor 10.
+                         Su dirección es var + 1. */
+    x:		
+    	.short 42     /* Declara un valor de 2 bytes inicializado a 42, llamado x. */
+    y:		
+    	.long 30000   /* Declara un valor de 4 bytes, llamado y, inicializado a 30000. */
+```
+
+A diferencia de los lenguajes de alto nivel, donde los arrays pueden tener muchas dimensiones y se accede a ellos mediante índices, los arrays en ensamblador x86 son simplemente varias celdas colocadas contiguamente en memoria.
+
+Un array puede declararse simplemente listando los valores, como en el primer ejemplo de abajo. Para el caso especial de un array de bytes, pueden usarse literales de cadena. Si se necesita reservar un área grande de memoria inicializada a cero, puede usarse la directiva .zero.
+
+Algunos ejemplos:
+``` asm
+    s:		
+    	.long 1, 2, 3  /* Declara tres valores de 4 bytes, inicializados a 1, 2 y 3.
+                        El valor en la dirección s + 8 será 3. */
+    barr:		
+    	.zero 10       /* Declara 10 bytes empezando en barr, inicializados a 0. */
+    str:		
+    	.string "hello"/* Declara 6 bytes empezando en str, inicializados con los
+                        valores ASCII de "hello" seguidos de un byte nulo (0). */
+```
+
+## Direccionando memoria
+Los procesadores modernos compatibles con x86 son capaces de direccionar hasta 2³² bytes de memoria: las direcciones de memoria tienen 32 bits de ancho.
+
+En los ejemplos anteriores, donde usamos etiquetas para referirnos a regiones de memoria, esas etiquetas son reemplazadas en realidad por el ensamblador con valores de 32 bits que indican direcciones en memoria.
+
+Además de permitir referirse a regiones de memoria mediante etiquetas (es decir, valores constantes), x86 proporciona un esquema flexible para calcular y referirse a direcciones de memoria: se pueden sumar hasta dos registros de 32 bits y una constante de 32 bits con signo para calcular una dirección de memoria. Uno de los registros puede, opcionalmente, multiplicarse previamente por 2, 4 u 8.
+
+Los modos de direccionamiento pueden usarse con muchas instrucciones x86 (las describiremos en la siguiente sección). Aquí ilustramos algunos ejemplos usando la instrucción mov, que mueve datos entre registros y memoria. Esta instrucción tiene dos operandos: el primero es la fuente (source) y el segundo especifica el destino.
+
+Algunos ejemplos de instrucciones mov que usan cálculos de direcciones:
+```asm
+    mov (%ebx), %eax          /* Carga 4 bytes de la dirección de memoria en EBX a EAX. */
+    mov %ebx, var(,1)         /* Copia el contenido de EBX en los 4 bytes en la dirección var.
+                                  (var es una constante de 32 bits). */
+    mov -4(%esi), %eax        /* Copia 4 bytes en la dirección ESI + (-4) a EAX. */
+    mov %cl, (%esi,%eax,1)    /* Copia el contenido de CL en el byte en la dirección ESI + EAX. */
+    mov (%esi,%ebx,4), %edx   /* Copia los 4 bytes en la dirección ESI + 4*EBX a EDX. */
+```
+
+Algunos ejemplos de cálculos de dirección no válidos incluyen:
+```asm
+    mov (%ebx,%ecx,-1), %eax      /* Solo se pueden sumar valores de registro, no una escala -1. */
+    mov %ebx, (%eax,%esi,%edi,1)  /* Como máximo 2 registros en el cálculo de dirección. */
+```
+
+
+
