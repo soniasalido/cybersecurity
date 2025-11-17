@@ -185,6 +185,8 @@ En esa cajita (en la pila) se guardan:
 - 📍 Argumentos de la función → Los valores que le pasamos.
 - 📍 Variables locales → Las que se crean dentro de la función.
 
+![stack-frame](capturas/stack-frame.png)
+
 ## 🧩 Ejemplo con una función
 
 ## 🔹 Organización en memoria
