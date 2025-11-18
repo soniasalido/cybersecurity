@@ -148,6 +148,8 @@ En lenguajes como C, el programador es responsable de solicitar (`malloc`, `call
 *   **Flexible**: Su tamaño es mucho más grande y solo está limitado por la memoria virtual del sistema.
 *   **Riesgo de Fugas**: Si la memoria asignada en el *heap* no se libera correctamente, puede ocurrir una **fuga de memoria** (*Memory Leak*).
 
+----------------------------------------------
+
 # 4. Relación con la Ejecución del Programa
 
 La interacción entre el **Stack** y el **Heap** es constante y fundamental para la ejecución de cualquier programa. La forma en que se gestionan las variables y las llamadas a funciones ilustra perfectamente esta relación:
@@ -196,7 +198,9 @@ En resumen, el **Stack** es la columna vertebral de la ejecución de funciones, 
 [2] Funcionamiento de la pila de llamadas y los marcos de pila.
 [3] Diferencias y usos del Heap y el Stack en la programación.
 
---------
+
+
+----------------------------------------------
 
 # Modos de memoria y direccionamiento
 ## Declarar regiones de datos estáticos
