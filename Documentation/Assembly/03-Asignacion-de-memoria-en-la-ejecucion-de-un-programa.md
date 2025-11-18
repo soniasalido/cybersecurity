@@ -73,7 +73,7 @@ Direcciones más bajas (memoria ↓)
 **Nota: En el pseudo-C (decompiler):**
 - ebp+12 se ve como param_1
 - ebp+8 se ve como param_2
-- ebp+4 se ve comolocal_4, etc.
+- ebp+4 se ve como local_4, etc.
 
 ## 🔹 Resumen de roles
 - EIP: dirección de retorno (la CPU salta aquí al hacer ret).
