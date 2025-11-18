@@ -16,6 +16,9 @@ El espacio de direcciones de memoria virtual de un proceso se organiza generalme
 
 El **Stack** y el **Heap** son las dos áreas de memoria más dinámicas y cruciales para la ejecución del programa, y crecen en direcciones opuestas para evitar colisiones y permitir que cada uno utilice el espacio disponible de manera eficiente.
 
+![disposicion-de-la-memoria](capturas/disposicion-de-la-memoria.png)
+
+
 ## 2. El Stack (Pila)
 
 El **Stack** (Pila) es una región de memoria que sigue el principio **LIFO** (*Last-In, First-Out* o Último en Entrar, Primero en Salir). Su propósito principal es gestionar el flujo de control de las funciones y almacenar la información necesaria para que las funciones se ejecuten y regresen correctamente.
