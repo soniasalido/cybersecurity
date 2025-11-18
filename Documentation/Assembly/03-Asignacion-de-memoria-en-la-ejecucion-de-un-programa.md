@@ -2,7 +2,7 @@
 
 La gestión de memoria es un concepto fundamental en la informática que describe cómo un sistema operativo asigna y administra la memoria principal (RAM) para los programas en ejecución. Cada programa, o **proceso**, opera dentro de su propio espacio de direcciones de memoria virtual, que el sistema operativo mapea a la memoria física. Este espacio virtual está típicamente dividido en varias secciones o segmentos, cada uno con un propósito específico.
 
-## 1. Estructura de Memoria de un Proceso
+# 1. Estructura de Memoria de un Proceso
 
 El espacio de direcciones de memoria virtual de un proceso se organiza generalmente en los siguientes segmentos principales, que se cargan cuando el programa comienza a ejecutarse:
 
@@ -18,12 +18,12 @@ El **Stack** y el **Heap** son las dos áreas de memoria más dinámicas y cruci
 
 ![disposicion-de-la-memoria](capturas/disposicion-de-la-memoria.png)
 
-
-## 2. El Stack (Pila)
+---------------------------------------
+# 2. El Stack (Pila)
 
 El **Stack** (Pila) es una región de memoria que sigue el principio **LIFO** (*Last-In, First-Out* o Último en Entrar, Primero en Salir). Su propósito principal es gestionar el flujo de control de las funciones y almacenar la información necesaria para que las funciones se ejecuten y regresen correctamente.
 
-### Marcos de Pila (Stack Frames)
+## Marcos de Pila (Stack Frames)
 
 Cada vez que se llama a una función, se crea un bloque de datos en la parte superior de la pila llamado **Marco de Pila** (*Stack Frame* o *Activation Record*). Este marco contiene toda la información necesaria para la ejecución de esa función específica:
 
@@ -34,13 +34,101 @@ Cada vez que se llama a una función, se crea un bloque de datos en la parte sup
 
 Cuando la función termina, su marco de pila se **desapila** (*pop*), liberando automáticamente la memoria utilizada por las variables locales y restaurando el flujo de ejecución a la dirección de retorno. Esta gestión automática y ordenada es lo que hace que la pila sea muy rápida y eficiente.
 
-### Características Clave del Stack:
+## Características Clave del Stack:
 
 *   **Automático**: La memoria se asigna y libera automáticamente por el compilador/sistema operativo.
 *   **Rápido**: Es una operación simple de mover un puntero.
 *   **Tamaño Fijo/Limitado**: El tamaño de la pila suele ser limitado y predefinido. Si una función se llama recursivamente demasiadas veces o si se declaran variables locales muy grandes, puede ocurrir un **desbordamiento de pila** (*Stack Overflow*).
 
-## 3. El Heap (Montón)
+
+## Esquema visual de cómo se organiza un stack frame típico en x86 usando EBP, ESP y EIP
+![Esquema stack frame](capturas/esquema-pila.png)
+
+## 📚 Stack Frame típico (convención estándar)
+- Cuando se entra a una función, normalmente ocurre algo así:
+```
+push ebp        ; guarda el valor antiguo de EBP en la pila
+mov  ebp, esp   ; ahora EBP apunta al inicio del frame
+sub  esp, XX    ; reserva espacio para variables locales
+```
+
+## 🔹 Organización en memoria
+- La pila crece hacia abajo (direcciones decrecientes).
+- Imagina el frame de una función como:
+```
+Direcciones más altas (memoria ↑)
+
+[ebp+12] → Argumento 2
+[ebp+8]  → Argumento 1
+[ebp+4]  → Dirección de retorno (EIP)
+[ebp]    → EBP anterior (saved EBP)
+[ebp-4]  → Variable local 1
+[ebp-8]  → Variable local 2
+...      → Más variables locales
+[esp]    → Cima actual de la pila
+
+Direcciones más bajas (memoria ↓)
+```
+
+**Nota: En el pseudo-C (decompiler):**
+- ebp+12 se ve como param_1
+- ebp+8 se ve como param_2
+- ebp+4 se ve comolocal_4, etc.
+
+## 🔹 Resumen de roles
+- EIP: dirección de retorno (la CPU salta aquí al hacer ret).
+- EBP: referencia fija del frame (para acceder a args y locales).
+- ESP: marca la cima de la pila (se mueve con push y pop).
+
+Con este esquema, cada función tiene su "bloque" ordenado en la pila, lo que facilita el acceso a parámetros y variables.
+
+## 📌 ¿Qué es un stack frame?
+Un frame (o marco de pila) es como una cajita de memoria temporal que se crea cada vez que una función empieza a ejecutarse.
+
+En esa cajita (en la pila) se guardan:
+- 📍 Dirección de retorno (EIP) → Para saber a dónde volver cuando la función termine.
+- 📍 EBP anterior → Para restaurar el estado de la función que llamó.
+- 📍 Argumentos de la función → Los valores que le pasamos.
+- 📍 Variables locales → Las que se crean dentro de la función.
+
+![stack-frame](capturas/stack-frame.png)
+
+## 🧩 Ejemplo con una función
+
+## 🔹 Organización en memoria
+- La pila crece hacia abajo (direcciones decrecientes).
+- Imagina el frame de una función como:
+```
+int suma(int a, int b) {
+    int c = a + b;
+    return c;
+}
+```
+
+Cuando llamamos a suma(2, 3), pasa esto en la pila:
+```
+[ebp+8]  → 2   (primer argumento: a)
+[ebp+12] → 3   (segundo argumento: b)
+[ebp+4]  → dirección a la que volver (EIP)
+[ebp]    → valor antiguo de EBP
+[ebp-4]  → variable local: c
+```
+
+## 🏗️ ¿Por qué se llama frame?
+Porque es como un marco o bloque delimitado dentro de la pila que corresponde a una función. Cuando llamas a otra función, se crea otro frame encima del actual, y así sucesivamente. Cuando una función termina, su frame se destruye y la pila vuelve al estado anterior.
+
+## 📊 Una metáfora:
+- Imagina una pila de platos 🍽️ (la pila en memoria).
+- Cada vez que llamamos a una función, ponemos un plato nuevo (frame) encima con:
+  - la dirección de retorno
+  - argumentos
+  - variables locales
+- Cuando acaba, quitamos ese plato y volvemos al anterior.
+
+
+
+----------------------------------------------
+# 3. El Heap (Montón)
 
 El **Heap** (Montón) es una región de memoria utilizada para la **asignación dinámica de memoria**. A diferencia de la pila, la memoria del *heap* debe ser solicitada explícitamente por el programador en tiempo de ejecución.
 
@@ -60,7 +148,7 @@ En lenguajes como C, el programador es responsable de solicitar (`malloc`, `call
 *   **Flexible**: Su tamaño es mucho más grande y solo está limitado por la memoria virtual del sistema.
 *   **Riesgo de Fugas**: Si la memoria asignada en el *heap* no se libera correctamente, puede ocurrir una **fuga de memoria** (*Memory Leak*).
 
-## 4. Relación con la Ejecución del Programa
+# 4. Relación con la Ejecución del Programa
 
 La interacción entre el **Stack** y el **Heap** es constante y fundamental para la ejecución de cualquier programa. La forma en que se gestionan las variables y las llamadas a funciones ilustra perfectamente esta relación:
 
@@ -71,7 +159,7 @@ La interacción entre el **Stack** y el **Heap** es constante y fundamental para
 
 Esta distinción es crucial. Por ejemplo, si una función crea un objeto en el *Heap* y devuelve el puntero a ese objeto, el objeto puede seguir existiendo y ser accesible por otras partes del programa, incluso después de que la función original haya terminado y su marco de pila haya sido liberado.
 
-### El Ciclo de Vida de una Función
+## El Ciclo de Vida de una Función
 
 Consideremos una función simple `calcular_suma(a, b)`:
 
@@ -92,7 +180,7 @@ Este mecanismo de *Stack* garantiza que las funciones se ejecuten de forma orden
 En resumen, el **Stack** es la columna vertebral de la ejecución de funciones, asegurando que el programa sepa dónde ir y qué variables locales usar en cada momento, mientras que el **Heap** proporciona un espacio flexible para almacenar datos que necesitan vivir más tiempo o cuyo tamaño es variable.
 
 ---
-### Referencias
+## Referencias
 
 La interacción entre el *stack* y el *heap* define cómo se gestionan las variables y las llamadas a funciones:
 
@@ -102,7 +190,7 @@ La interacción entre el *stack* y el *heap* define cómo se gestionan las varia
 En resumen, el **Stack** es la columna vertebral de la ejecución de funciones, asegurando que el programa sepa dónde ir y qué variables locales usar en cada momento, mientras que el **Heap** proporciona un espacio flexible para almacenar datos que necesitan vivir más tiempo o cuyo tamaño es variable.
 
 ---
-### Referencias
+## Referencias
 
 [1] La estructura de memoria de un proceso en sistemas operativos.
 [2] Funcionamiento de la pila de llamadas y los marcos de pila.
