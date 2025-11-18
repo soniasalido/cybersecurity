@@ -54,7 +54,7 @@ sub  esp, XX    ; reserva espacio para variables locales
 
 ## 🔹 Organización en memoria
 - La pila crece hacia abajo (direcciones decrecientes).
-- Imagina el frame de una función como:
+- Ejemplo del frame de una función como:
 ```
 Direcciones más altas (memoria ↑)
 
