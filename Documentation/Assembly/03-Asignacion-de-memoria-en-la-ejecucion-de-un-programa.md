@@ -97,7 +97,7 @@ En esa cajita (en la pila) se guardan:
 
 ## 🔹 Organización en memoria
 - La pila crece hacia abajo (direcciones decrecientes).
-- Imagina el frame de una función como:
+- Ejemplo del frame de una función como:
 ```
 int suma(int a, int b) {
     int c = a + b;
