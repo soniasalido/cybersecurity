@@ -41,6 +41,18 @@ Cuando la función termina, su marco de pila se **desapila** (*pop*), liberando 
 *   **Tamaño Fijo/Limitado**: El tamaño de la pila suele ser limitado y predefinido. Si una función se llama recursivamente demasiadas veces o si se declaran variables locales muy grandes, puede ocurrir un **desbordamiento de pila** (*Stack Overflow*).
 
 
+## Registros que se utilizan para manipular la pila de memoria de un subproceso 
+![registros-para-manejar-la-pila](capturas/registros-para-manejar-la-pila.png)
+
+### ESP: Puntero de Pila - Stack Pointer
+![esp](capturas/esp.png)
+El registro ESP siempre apunta a la parte superior de la pila al contener su dirección de memoria.
+
+**Cuando se ejecuta la instrucción `push`:** Se asignan 4 bytes de espacio en la parte superior de la pila, restando 4 bytes del valor de `ESP`
+![push](capturas/push.png)
+
+
+
 ## Esquema visual de cómo se organiza un stack frame típico en x86 usando EBP, ESP y EIP
 ![Esquema stack frame](capturas/esquema-pila.png)
 
