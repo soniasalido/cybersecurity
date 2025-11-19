@@ -48,11 +48,20 @@ Cuando la función termina, su marco de pila se **desapila** (*pop*), liberando 
 ![esp](capturas/esp.png)
 El registro ESP siempre apunta a la parte superior de la pila al contener su dirección de memoria.
 
-### Cuando se ejecuta la instrucción `push`
-Se asignan 4 bytes de espacio en la parte superior de la pila, restando 4 bytes del valor de `ESP`
+### Cuando se ejecuta la instrucción `push eax`
+Se asignan 4 bytes de espacio en la parte superior de la pila, restando 4 bytes del valor de `ESP` y el valor del registro `eax`se copiará en el espacio asignado.
 ![push](capturas/push.png)
 
 
+### Cuando se ejecuta la instrucción `poop eax`
+Ahora, primero se copian los 4 bytes de datos de la parte superior de la pila al registro `eax`:
+![pop](capturas/pop.png)
+
+A continuación, desasignará los 4 bytes simplemente sumando 4 al valor de `ESP`
+![pop](capturas/pop-2.png)
+
+
+**Tanto si insertamos, como si quitamos datos de la pila, `ESP` siempre apunta a ella.**
 
 ## Esquema visual de cómo se organiza un stack frame típico en x86 usando EBP, ESP y EIP
 ![Esquema stack frame](capturas/esquema-pila.png)
