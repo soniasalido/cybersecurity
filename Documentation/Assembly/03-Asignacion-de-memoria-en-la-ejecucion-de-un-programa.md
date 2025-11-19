@@ -48,7 +48,8 @@ Cuando la función termina, su marco de pila se **desapila** (*pop*), liberando 
 ![esp](capturas/esp.png)
 El registro ESP siempre apunta a la parte superior de la pila al contener su dirección de memoria.
 
-**Cuando se ejecuta la instrucción `push`:** Se asignan 4 bytes de espacio en la parte superior de la pila, restando 4 bytes del valor de `ESP`
+### Cuando se ejecuta la instrucción `push`
+Se asignan 4 bytes de espacio en la parte superior de la pila, restando 4 bytes del valor de `ESP`
 ![push](capturas/push.png)
 
 
