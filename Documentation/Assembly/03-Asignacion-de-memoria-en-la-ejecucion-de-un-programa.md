@@ -44,7 +44,7 @@ Cuando la función termina, su marco de pila se **desapila** (*pop*), liberando 
 ## Registros que se utilizan para manipular la pila de memoria de un subproceso 
 ![registros-para-manejar-la-pila](capturas/registros-para-manejar-la-pila.png)
 
-### ESP: Puntero de Pila - Stack Pointer
+### 1) ESP: Puntero de Pila - Stack Pointer
 ![esp](capturas/esp.png)
 El registro ESP siempre apunta a la parte superior de la pila al contener su dirección de memoria.
 
@@ -67,6 +67,13 @@ A continuación, desasignará los 4 bytes simplemente sumando 4 al valor de `ESP
 
 **Tanto si insertamos, como si extraemos datos de la pila, `ESP` siempre apunta a ella.**
 
+
+### 2) EBP: Puntero Base - Base Pointer
+[Video EBP](https://youtu.be/0jky5t89YHc?si=xo5JgyYDyXkjW4ZB&t=155)
+
+
+
+-------------------------------
 ## Esquema visual de cómo se organiza un stack frame típico en x86 usando EBP, ESP y EIP
 ![Esquema stack frame](capturas/esquema-pila.png)
 
