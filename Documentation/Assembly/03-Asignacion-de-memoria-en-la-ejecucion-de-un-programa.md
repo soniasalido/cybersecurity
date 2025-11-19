@@ -148,7 +148,7 @@ Cuando llamamos a suma(2, 3), pasa esto en la pila:
 ```
 
 ## 🏗️ ¿Por qué se llama frame?
-Porque es como un marco o bloque delimitado dentro de la pila que corresponde a una función. Cuando llamas a otra función, se crea otro frame encima del actual, y así sucesivamente. Cuando una función termina, su frame se destruye y la pila vuelve al estado anterior.
+Porque es como un marco o bloque delimitado dentro de la pila que corresponde a una función. Cuando llamamos a otra función, se crea otro frame encima del actual, y así sucesivamente. Cuando una función termina, su frame se destruye y la pila vuelve al estado anterior.
 
 ## 📊 Una metáfora:
 - Imagina una pila de platos 🍽️ (la pila en memoria).
