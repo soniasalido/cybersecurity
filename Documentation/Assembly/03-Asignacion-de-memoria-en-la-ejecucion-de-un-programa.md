@@ -73,6 +73,8 @@ A continuación, desasignará los 4 bytes simplemente sumando 4 al valor de `ESP
 
 ➤➤➤➤➤ ➤➤➤➤➤ [Binary Exploitation](https://www.youtube.com/playlist?list=PLJnLaWkc9xRg47RpP032jUjitXQbQnpJm) 
 
+➤➤➤➤➤ ➤➤➤➤➤ [Stack Management in 32-bit x86 Architecture](https://www.youtube.com/watch?v=qrwyCB4n_IA)
+
 ➤➤➤➤➤ [Video Visualizing Stack Intel Att Assembly](https://www.youtube.com/watch?v=S-ZDUYMoy3Y&list=PLHMcG0zmCZcj7hKyHgQGGEZ41UWKaISKU)
 
 ➤➤➤➤➤ [The Stack and ESP in Assembly Language](https://www.youtube.com/watch?v=RU5vUIl1vRs)
@@ -81,7 +83,7 @@ A continuación, desasignará los 4 bytes simplemente sumando 4 al valor de `ESP
 
 ➤➤➤➤➤ [Stack Frames, RSP and RBP](https://www.youtube.com/watch?v=S94CHJWBSfw)
 
-➤➤➤➤➤ [Stack Management in 32-bit x86 Architecture](https://www.youtube.com/watch?v=qrwyCB4n_IA)
+
 
 
 -------------------------------
