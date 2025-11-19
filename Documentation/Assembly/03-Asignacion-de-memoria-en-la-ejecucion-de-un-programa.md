@@ -49,8 +49,12 @@ Cuando la función termina, su marco de pila se **desapila** (*pop*), liberando 
 El registro ESP siempre apunta a la parte superior de la pila al contener su dirección de memoria.
 
 ### Cuando se ejecuta la instrucción `push eax`
-Se asignan 4 bytes de espacio en la parte superior de la pila, restando 4 bytes del valor de `ESP` y el valor del registro `eax`se copiará en el espacio asignado.
+Se asignan 4 bytes de espacio en la parte superior de la pila, restando 4 bytes del valor de `ESP`:
 ![push](capturas/push.png)
+
+
+Y a continuación, el valor del registro `eax`se copiará en el espacio asignado.
+![push](capturas/push-2.png)
 
 
 ### Cuando se ejecuta la instrucción `poop eax`
