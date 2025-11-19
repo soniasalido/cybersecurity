@@ -71,6 +71,8 @@ A continuación, desasignará los 4 bytes simplemente sumando 4 al valor de `ESP
 ### 2) EBP: Puntero Base - Base Pointer
 ➤➤➤➤➤ ➤➤➤➤➤ [Video EBP](https://youtu.be/0jky5t89YHc?si=xo5JgyYDyXkjW4ZB&t=155)
 
+➤➤➤➤➤ ➤➤➤➤➤ [Cómo funciona el STACK en memoria](https://www.youtube.com/watch?v=dDYSmIOuURo)
+
 ➤➤➤➤➤ ➤➤➤➤➤ [Binary Exploitation](https://www.youtube.com/playlist?list=PLJnLaWkc9xRg47RpP032jUjitXQbQnpJm) 
 
 ➤➤➤➤➤ ➤➤➤➤➤ [Stack Management in 32-bit x86 Architecture](https://www.youtube.com/watch?v=qrwyCB4n_IA)
