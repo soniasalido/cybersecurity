@@ -71,7 +71,7 @@ A continuación, desasignará los 4 bytes simplemente sumando 4 al valor de `ESP
 ### 2) EBP: Puntero Base - Base Pointer
 ➤➤➤➤➤ [Video EBP](https://youtu.be/0jky5t89YHc?si=xo5JgyYDyXkjW4ZB&t=155)
 
-
+➤➤➤➤➤ [Video Visualizing Stack Intel Att Assembly] (https://www.youtube.com/watch?v=S-ZDUYMoy3Y&list=PLHMcG0zmCZcj7hKyHgQGGEZ41UWKaISKU)
 
 -------------------------------
 ## Esquema visual de cómo se organiza un stack frame típico en x86 usando EBP, ESP y EIP
