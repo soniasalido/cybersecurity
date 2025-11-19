@@ -57,7 +57,7 @@ Y a continuación, el valor del registro `eax`se copiará en el espacio asignado
 ![push](capturas/push-2.png)
 
 
-### Cuando se ejecuta la instrucción `poop eax`
+### Cuando se ejecuta la instrucción `pop eax`
 Ahora, primero se copian los 4 bytes de datos de la parte superior de la pila al registro `eax`:
 ![pop](capturas/pop.png)
 
@@ -65,7 +65,7 @@ A continuación, desasignará los 4 bytes simplemente sumando 4 al valor de `ESP
 ![pop](capturas/pop-2.png)
 
 
-**Tanto si insertamos, como si quitamos datos de la pila, `ESP` siempre apunta a ella.**
+**Tanto si insertamos, como si extraemos datos de la pila, `ESP` siempre apunta a ella.**
 
 ## Esquema visual de cómo se organiza un stack frame típico en x86 usando EBP, ESP y EIP
 ![Esquema stack frame](capturas/esquema-pila.png)
