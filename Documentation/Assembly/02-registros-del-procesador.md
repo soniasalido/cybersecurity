@@ -59,20 +59,21 @@ Son como “cajitas” dentro del procesador que almacenan valores temporales, d
 ## 🔹 EBP (Extended Base Pointer)
 - EBP = Extended Base Pointer.
 - Puntero de base de pila.
-- Se usa para tener una referencia fija dentro del stack frame de una función.
+- **Se usa para tener una referencia fija dentro del stack frame de una función.**
 - Convención típica al entrar en una función:
   ```
   push ebp
   mov  ebp, esp
   ```
   **Ahora EBP apunta al inicio del frame, y desde ahí se accede a parámetros y variables locales:**
-  [ebp+8] → primer argumento de la función.
-  [ebp-4] → una variable local.
+    - `[ebp+8]` → primer argumento de la función.
+    - `[ebp-4]` → una variable local.
 
 
 ## 🔹 ESP (Extended Stack Pointer)
+- **Es la dirección actual del tope de la pila.**
 - Puntero de pila, indica la cima de la pila.
-- Cada vez que haces un push, ESP disminuye; con un pop, ESP aumenta.
+- Cada vez que hacemos un push, ESP disminuye; con un pop, ESP aumenta.
 - La pila en x86 crece hacia abajo (direcciones decrecientes).
 - Fundamental en llamadas a funciones porque almacena parámetros, direcciones de retorno y variables locales.
 
