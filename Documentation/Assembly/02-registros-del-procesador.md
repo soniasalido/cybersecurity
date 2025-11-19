@@ -65,7 +65,7 @@ Son como “cajitas” dentro del procesador que almacenan valores temporales, d
   push ebp
   mov  ebp, esp
   ```
-  Ahora EBP apunta al inicio del frame, y desde ahí se accede a parámetros y variables locales:
+  **Ahora EBP apunta al inicio del frame, y desde ahí se accede a parámetros y variables locales:**
   [ebp+8] → primer argumento de la función.
   [ebp-4] → una variable local.
 
