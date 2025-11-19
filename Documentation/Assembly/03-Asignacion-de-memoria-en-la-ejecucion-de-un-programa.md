@@ -75,6 +75,7 @@ A continuación, desasignará los 4 bytes simplemente sumando 4 al valor de `ESP
 
 ➤➤➤➤➤ [The Stack and ESP in Assembly Language](https://www.youtube.com/watch?v=RU5vUIl1vRs)
 
+➤➤➤➤➤ [Assembly Programming Assembly Function Stack](https://www.youtube.com/watch?v=vcfQVwtoyHY)
 
 -------------------------------
 ## Esquema visual de cómo se organiza un stack frame típico en x86 usando EBP, ESP y EIP
