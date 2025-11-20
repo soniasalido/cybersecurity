@@ -69,7 +69,7 @@ A continuación, desasignará los 4 bytes simplemente sumando 4 al valor de `ESP
 
 
 ### 2) EBP: Puntero Base - Base Pointer
-➤➤➤➤➤ ➤➤➤➤➤ [Video EBP](https://youtu.be/0jky5t89YHc?si=xo5JgyYDyXkjW4ZB&t=155)
+
 
 ➤➤➤➤➤ ➤➤➤➤➤ [Cómo funciona el STACK en memoria](https://www.youtube.com/watch?v=dDYSmIOuURo)
 
@@ -86,7 +86,7 @@ A continuación, desasignará los 4 bytes simplemente sumando 4 al valor de `ESP
 ➤➤➤➤➤ [Stack Frames, RSP and RBP](https://www.youtube.com/watch?v=S94CHJWBSfw)
 
 
-![threadstack](capturas/threadstack.png)
+➤➤➤➤➤ ➤➤➤➤➤ [Video EBP](https://youtu.be/0jky5t89YHc?si=xo5JgyYDyXkjW4ZB&t=155)  ➤➤➤➤➤ ![threadstack](capturas/threadstack.png)
 
 
 -------------------------------
