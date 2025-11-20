@@ -86,6 +86,7 @@ A continuación, desasignará los 4 bytes simplemente sumando 4 al valor de `ESP
 ➤➤➤➤➤ [Stack Frames, RSP and RBP](https://www.youtube.com/watch?v=S94CHJWBSfw)
 
 
+![threadstack](capturas/threadstack.png)
 
 
 -------------------------------
