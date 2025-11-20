@@ -89,13 +89,10 @@ A continuación, desasignará los 4 bytes simplemente sumando 4 al valor de `ESP
 
 ➤➤➤➤➤ ➤➤➤➤➤ [ThreadStack en el ensamblaje x86](https://youtu.be/0jky5t89YHc?si=xo5JgyYDyXkjW4ZB&t=155)
 ![threadstack](capturas/threadstack.png)
--------------------------------
+
 
 ➤➤➤➤➤ ➤➤➤➤➤ [La Pila guía de funciones](https://niguelas.org/extras/plus/La-Pila-Guia-de-Funciones.mp4)
--------------------------------
 
-
--------------------------------
 
 ➤➤➤➤➤ ➤➤➤➤➤ [Viaje de una Llamada a Función](https://niguelas.org/extras/plus/Viaje-de-una-Llamada-a-Funcion.mp4)
 
