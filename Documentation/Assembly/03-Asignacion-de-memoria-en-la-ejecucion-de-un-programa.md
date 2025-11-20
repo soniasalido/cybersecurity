@@ -18,6 +18,7 @@ El **Stack** y el **Heap** son las dos áreas de memoria más dinámicas y cruci
 
 ![disposicion-de-la-memoria](capturas/disposicion-de-la-memoria.png)
 
+
 ---------------------------------------
 # 2. El Stack (Pila)
 
@@ -89,6 +90,8 @@ A continuación, desasignará los 4 bytes simplemente sumando 4 al valor de `ESP
 ➤➤➤➤➤ ➤➤➤➤➤ [ThreadStack en el ensamblaje x86](https://youtu.be/0jky5t89YHc?si=xo5JgyYDyXkjW4ZB&t=155)  ➤➤➤➤➤ ![threadstack](capturas/threadstack.png)
 
 
+
+➤➤➤➤➤ ➤➤➤➤➤ [](https://niguelas.org/extras/plus/La-Pila-Guia-de-Funciones.mp4)
 -------------------------------
 ## Esquema visual de cómo se organiza un stack frame típico en x86 usando EBP, ESP y EIP
 ![Esquema stack frame](capturas/esquema-pila.png)
