@@ -71,6 +71,17 @@ A continuación, desasignará los 4 bytes simplemente sumando 4 al valor de `ESP
 
 ### 2) EBP: Puntero Base - Base Pointer
 
+➤➤➤➤➤ ➤➤➤➤➤ [ThreadStack en el ensamblaje x86](https://youtu.be/0jky5t89YHc?si=xo5JgyYDyXkjW4ZB&t=155)
+![threadstack](capturas/threadstack.png)
+
+
+➤➤➤➤➤ ➤➤➤➤➤ [La Pila guía de funciones](https://niguelas.org/extras/plus/La-Pila-Guia-de-Funciones.mp4)
+
+
+➤➤➤➤➤ ➤➤➤➤➤ [Viaje de una Llamada a Función](https://niguelas.org/extras/plus/Viaje-de-una-Llamada-a-Funcion.mp4)
+
+
+--------------------------------------------
 
 ➤➤➤➤➤ ➤➤➤➤➤ [Cómo funciona el STACK en memoria](https://www.youtube.com/watch?v=dDYSmIOuURo)
 
@@ -85,17 +96,6 @@ A continuación, desasignará los 4 bytes simplemente sumando 4 al valor de `ESP
 ➤➤➤➤➤ [Assembly Programming Assembly Function Stack](https://www.youtube.com/watch?v=vcfQVwtoyHY)
 
 ➤➤➤➤➤ [Stack Frames, RSP and RBP](https://www.youtube.com/watch?v=S94CHJWBSfw)
-
-
-➤➤➤➤➤ ➤➤➤➤➤ [ThreadStack en el ensamblaje x86](https://youtu.be/0jky5t89YHc?si=xo5JgyYDyXkjW4ZB&t=155)
-![threadstack](capturas/threadstack.png)
-
-
-➤➤➤➤➤ ➤➤➤➤➤ [La Pila guía de funciones](https://niguelas.org/extras/plus/La-Pila-Guia-de-Funciones.mp4)
-
-
-➤➤➤➤➤ ➤➤➤➤➤ [Viaje de una Llamada a Función](https://niguelas.org/extras/plus/Viaje-de-una-Llamada-a-Funcion.mp4)
-
 
 
 ## Esquema visual de cómo se organiza un stack frame típico en x86 usando EBP, ESP y EIP
