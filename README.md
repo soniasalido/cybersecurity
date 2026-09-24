@@ -1,3 +1,6 @@
+
+![portada](capturas/portada-github.png)
+
 # Cybersecurity Labs & Research
 
 Repositorio de laboratorios, documentación técnica y proyectos desarrollados
